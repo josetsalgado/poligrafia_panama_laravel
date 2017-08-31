@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -18,334 +18,389 @@
     <!-- FullCalendar -->
     <link href="../vendors/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
     <link href="../vendors/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
-
+    <!-- Switchery -->
+    <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- starrr -->
     <!-- Custom styling plus plugins -->
     <link href="../build/css/custom.css" rel="stylesheet">
-  </head>
+</head>
 
-  <body class="nav-md">
+<body class="nav-md">
     <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-            <div class="profile clearfix">
-              <div class="profile_info">
-                <img src="images/logo.png" alt="..." class="img-rounded img-responsive avatar-view">
-              </div>
-            </div>
-          </div>
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <div class="profile clearfix">
+                            <div class="profile_info">
+                                <img src="images/logo.png" alt="..." class="img-rounded img-responsive avatar-view">
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="clearfix"></div>
+                    <div class="clearfix"></div>
 
-           
 
-            <br />
+
+                    <br />
 
                     <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-              <div class="menu_section">
-                <h3>Bienvenido</h3>
-                <ul class="nav side-menu">
-                  <li>
-                    <a><i class="fa fa-home"></i> Inicio</a>
-                  </li>
-                  <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="crear_usuario.html">Nuevo Usuario</a></li>
-                      <li><a href="ver_usuario.html">Ver Usuarios</a></li>
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>Bienvenido</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a><i class="fa fa-home"></i> Inicio</a>
+                                </li>
+                                <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="crear_usuario.html">Nuevo Usuario</a></li>
+                                        <li><a href="ver_usuario.html">Ver Usuarios</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-user"></i> Clientes <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="crear_cliente.html">Nuevo Cliente</a></li>
+                                        <li><a href="ver_empresas.html">Ver Clientes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="citas.html"><i class="fa fa-calendar"></i> Citas</span></a>
+                                </li>
+                            </li>
+                            <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="cotizar.html">Cotizar</a></li>
+                                    <li><a href="ver_cotizaciones.html">Ver Cotizaciones</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="estados_de_cuenta.html"><i class="fa fa-bar-chart-o"></i> Estados de Cuenta</span></a>
+                            </li>
+                            <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="registro_resultados.html">Registro de Resultados</a></li>
+                                    <li><a href="calidad_prueba.html">Registro de Calidad de Prueba</a></li>
+                                    <li><a href="informe_prueba.html">Informe de Prueba</a></li>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
+                                <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                            </ul>
+                        </li>
                     </ul>
-                  </li>
-                  <li><a><i class="fa fa-user"></i> Clientes <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="crear_cliente.html">Nuevo Cliente</a></li>
-                      <li><a href="ver_empresas.html">Ver Clientes</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="citas.html"><i class="fa fa-calendar"></i> Citas</span></a>
-                  </li>
-                  </li>
-                  <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="cotizar.html">Cotizar</a></li>
-                      <li><a href="ver_cotizaciones.html">Ver Cotizaciones</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="estados_de_cuenta.html"><i class="fa fa-bar-chart-o"></i> Estados de Cuenta</span></a>
-                  </li>
-                  <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="registro_resultados.html">Registro de Resultados</a></li>
-                      <li><a href="calidad_prueba.html">Registro de Calidad de Prueba</a></li>
-                      <li><a href="informe_prueba.html">Informe de Prueba</a></li>
-                     </li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
-                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
+                </div>
             </div>
             <!-- /sidebar menu -->
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
+                <a data-toggle="tooltip" data-placement="top" title="Settings">
+                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                    <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Lock">
+                    <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                </a>
             </div>
             <!-- /menu footer buttons -->
-          </div>
         </div>
+    </div>
 
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
+    <!-- top navigation -->
+    <div class="top_nav">
+        <div class="nav_menu">
             <nav>
-              <div class="nav toggle">
-                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
+                <div class="nav toggle">
+                    <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
 
-              <ul class="nav navbar-nav navbar-right">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt="">John Doe
-                    <span class=" fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Profile</a></li>
-                    <li>
-                      <a href="javascript:;">
-                        <span class="badge bg-red pull-right">50%</span>
-                        <span>Settings</span>
-                      </a>
-                    </li>
-                    <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                  </ul>
-                </li>
-
-                <li role="presentation" class="dropdown">
-                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                    <i class="fa fa-envelope-o"></i>
-                    <span class="badge bg-green">6</span>
-                  </a>
-                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                        <span>
-                          <span>John Smith</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="text-center">
-                        <a>
-                          <strong>See All Alerts</strong>
-                          <i class="fa fa-angle-right"></i>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <img src="images/img.jpg" alt="">John Doe
+                            <span class=" fa fa-angle-down"></span>
                         </a>
-                      </div>
+                        <ul class="dropdown-menu dropdown-usermenu pull-right">
+                            <li><a href="javascript:;"> Profile</a></li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span class="badge bg-red pull-right">50%</span>
+                                    <span>Settings</span>
+                                </a>
+                            </li>
+                            <li><a href="javascript:;">Help</a></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                        </ul>
                     </li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- /top navigation -->
 
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
+                    <li role="presentation" class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="badge bg-green">6</span>
+                        </a>
+                        <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                            <li>
+                                <a>
+                                    <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                    <span>
+                                        <span>John Smith</span>
+                                        <span class="time">3 mins ago</span>
+                                    </span>
+                                    <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                    <span>
+                                        <span>John Smith</span>
+                                        <span class="time">3 mins ago</span>
+                                    </span>
+                                    <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                    <span>
+                                        <span>John Smith</span>
+                                        <span class="time">3 mins ago</span>
+                                    </span>
+                                    <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a>
+                                    <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                                    <span>
+                                        <span>John Smith</span>
+                                        <span class="time">3 mins ago</span>
+                                    </span>
+                                    <span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="text-center">
+                                    <a>
+                                        <strong>See All Alerts</strong>
+                                        <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- /top navigation -->
+
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div class="">
 
             <div class="clearfix"></div>
             <div class="row">
-              <div class="col-md-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Citas</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Citas</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
 
-                    <div id='calendar'></div>
+                            <div id='calendar'></div>
 
-                  </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-        <!-- /page content -->
+    </div>
+    <!-- /page content -->
 
-        <!-- footer content -->
-        <footer>
-          <div class="pull-right">
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
             Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer>
-        <!-- /footer content -->
-      </div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+</div>
+</div>
 
-    <!-- calendar modal -->
-    <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+<!-- calendar modal -->
+<div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
 
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title" id="myModalLabel">New Calendar Entry</h4>
-          </div>
-          <div class="modal-body">
-            <div id="testmodal" style="padding: 5px 20px;">
-              <form id="antoform" class="form-horizontal calender" role="form">
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Title</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="title" name="title">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Description</label>
-                  <div class="col-sm-9">
-                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
-                  </div>
-                </div>
-              </form>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">Agregar nueva cita</h4>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary antosubmit">Save changes</button>
-          </div>
+            <div class="modal-body">
+                <div id="testmodal" style="padding: 5px 20px;">
+                    <form id="antoform" class="form-horizontal calender" role="form">
+                        <label class="col-sm-3 control-label">Poligrafista</label>
+                        <div class="col-sm-9">
+                            <select id="heard" class="form-control" required="">
+                                <option value="">Seleccione</option>
+                                <option value="press">Press</option>
+                                <option value="net">Internet</option>
+                                <option value="mouth">Word of mouth</option>
+                            </select>
+                        </div>
+                        <label class="col-sm-3 control-label">Cliente</label>
+                        <div class="col-sm-9">
+                            <select id="heard" class="form-control" required="">
+                                <option value="">Seleccione</option>
+                                <option value="press">Press</option>
+                                <option value="net">Internet</option>
+                                <option value="mouth">Word of mouth</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Horario</label>
+                            <div class="col-sm-9">
+                                <label>
+                                    <input type="checkbox" class="js-switch" checked /> 07:30
+                                    </label><br>
+                                <label>
+                                    <input type="checkbox" class="js-switch" checked /> 10:00
+                                </label><br>
+                                <label>
+                                    <input type="checkbox" class="js-switch" checked /> 01:30
+                                </label><br>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                        <p>Candidatos</p>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Nombre</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="candidato" name="candidato">
+                            </div>
+                            <label class="col-sm-3 control-label">Apellido</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="apellido" name="apellido">
+                            </div>
+                            <label class="col-sm-3 control-label">Cedula</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="cedula" name="cedula">
+                            </div>
+                            <label class="col-sm-3 control-label">Puesto</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="puesto" name="puesto">
+                            </div>
+                            <label class="col-sm-3 control-label">Celular</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="celular" name="celular">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Comentarios</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary antosubmit">Guardar Cita</button>
+            </div>
         </div>
-      </div>
     </div>
-    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+</div>
+<div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
 
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title" id="myModalLabel2">Edit Calendar Entry</h4>
-          </div>
-          <div class="modal-body">
-
-            <div id="testmodal2" style="padding: 5px 20px;">
-              <form id="antoform2" class="form-horizontal calender" role="form">
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Title</label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="title2" name="title2">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label class="col-sm-3 control-label">Description</label>
-                  <div class="col-sm-9">
-                    <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
-                  </div>
-                </div>
-
-              </form>
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel2">Editar cita</h4>
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
-          </div>
+            <div class="modal-body">
+
+                <div id="testmodal2" style="padding: 5px 20px;">
+                    <form id="antoform2" class="form-horizontal calender" role="form">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Title</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="title2" name="title2">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Description</label>
+                            <div class="col-sm-9">
+                                <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
+            </div>
         </div>
-      </div>
     </div>
+</div>
 
-    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
-    <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
-    <!-- /calendar modal -->
-        
-    <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- FullCalendar -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+<div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+<div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+<!-- /calendar modal -->
 
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- FullCalendar -->
+<script src="../vendors/moment/min/moment.min.js"></script>
+<script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+<!-- Switchery -->
+<script src="../vendors/switchery/dist/switchery.min.js"></script>
 
-  </body>
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+
+</body>
 </html>
