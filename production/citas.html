@@ -252,7 +252,7 @@
     <!-- footer content -->
     <footer>
         <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            B&G THECNOLOGY 2017</a>
         </div>
         <div class="clearfix"></div>
     </footer>
@@ -267,35 +267,39 @@
 
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h4 class="modal-title" id="myModalLabel">Agregar nueva cita</h4>
+                <h4 class="modal-title" id="myModalLabel">Citas</h4>
             </div>
             <div class="modal-body">
                 <div id="testmodal" style="padding: 5px 20px;">
                     <form id="antoform" class="form-horizontal calender" role="form">
-                        <label class="col-sm-3 control-label">Poligrafista</label>
-                        <div class="col-sm-9">
-                            <select id="heard" class="form-control" required="">
-                                <option value="">Seleccione</option>
-                                <option value="press">Press</option>
-                                <option value="net">Internet</option>
-                                <option value="mouth">Word of mouth</option>
-                            </select>
-                        </div>
-                        <label class="col-sm-3 control-label">Cliente</label>
-                        <div class="col-sm-9">
-                            <select id="heard" class="form-control" required="">
-                                <option value="">Seleccione</option>
-                                <option value="press">Press</option>
-                                <option value="net">Internet</option>
-                                <option value="mouth">Word of mouth</option>
-                            </select>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label col-xs-12">Poligrafista</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <select id="heard" class="form-control" required="">
+                                    <option value="">Seleccione</option>
+                                    <option value="poligrafista">Poligrafista 1</option>
+                                    <option value="poligrafista">Poligrafista 2</option>
+                                    <option value="poligrafista">Poligrafista 3</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Horario</label>
-                            <div class="col-sm-9">
+                            <label class="col-sm-3 control-label">Cliente</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <select id="heard" class="form-control col-xs-12" required="">
+                                    <option value="">Seleccione</option>
+                                    <option value="cliente">Cliente 1</option>
+                                    <option value="cliente">Cliente 2</option>
+                                    <option value="cliente">Cliente 3</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label col-xs-12">Horario</label>
+                            <div class="col-sm-9 col-xs-12">
                                 <label>
                                     <input type="checkbox" class="js-switch" checked /> 07:30
-                                    </label><br>
+                                </label><br>
                                 <label>
                                     <input type="checkbox" class="js-switch" checked /> 10:00
                                 </label><br>
@@ -304,34 +308,57 @@
                                 </label><br>
                             </div>
                         </div>
-                        <div class="form-group">
-                        <p>Candidatos</p>
+                         <div class="form-group">
+                            <label class="col-sm-3 control-label">Tipo de Prueba</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <select id="prueba" class="form-control col-xs-12" required="">
+                                    <option value="">Seleccione</option>
+                                    <option value="prueba-pre-empleo">Prueba Pre Empleo</option>
+                                    <option value="prueba-permanencia">Prueba Permanencia</option>
+                                    <option value="prueba-especifica">Prueba Especifica</option>
+                                    <option value="pruebas-psicologicas">Pruebas Psicologícas</option>
+                                     <option value="pruebas-socioeconomicas">Pruebas Socioeconómicas</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Nombre</label>
-                            <div class="col-sm-9">
+                            <h4>Candidato</h4>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label col-xs-12">Nombre</label>
+                            <div class="col-sm-9 col-xs-12">
                                 <input type="text" class="form-control" id="candidato" name="candidato">
                             </div>
-                            <label class="col-sm-3 control-label">Apellido</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="apellido" name="apellido">
                             </div>
-                            <label class="col-sm-3 control-label">Cedula</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="cedula" name="cedula">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label col-xs-12">Apellido</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="apellido" name="apellido">
+                                </div>
                             </div>
-                            <label class="col-sm-3 control-label">Puesto</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="puesto" name="puesto">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label col-xs-12">Cedula</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="cedula" name="cedula">
+                                </div>
                             </div>
-                            <label class="col-sm-3 control-label">Celular</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="celular" name="celular">
+                            <div class="form-group">
+
+                                <label class="col-sm-3 control-label col-xs-12">Puesto</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="puesto" name="puesto">
+                                </div>
                             </div>
-                        </div>
+                            <div class="form-group">
+
+                                <label class="col-sm-3 control-label col-xs-12">Celular</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="celular" name="celular">
+                                </div>
+                            </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Comentarios</label>
-                            <div class="col-sm-9">
+                            <label class="col-sm-3 control-label col-xs-12">Comentarios</label>
+                            <div class="col-sm-9 col-xs-12">
                                 <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
                             </div>
                         </div>
@@ -356,26 +383,103 @@
             <div class="modal-body">
 
                 <div id="testmodal2" style="padding: 5px 20px;">
-                    <form id="antoform2" class="form-horizontal calender" role="form">
+                <form id="antoform2" class="form-horizontal calender" role="form">
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Title</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" id="title2" name="title2">
+                            <label class="col-sm-3 control-label col-xs-12">Poligrafista</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <select id="heard" class="form-control" required="">
+                                    <option value="">Seleccione</option>
+                                    <option value="poligrafista">Poligrafista 1</option>
+                                    <option value="poligrafista">Poligrafista 2</option>
+                                    <option value="poligrafista">Poligrafista 3</option>
+                                </select>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-3 control-label">Description</label>
-                            <div class="col-sm-9">
-                                <textarea class="form-control" style="height:55px;" id="descr2" name="descr"></textarea>
+                            <label class="col-sm-3 control-label">Cliente</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <select id="heard" class="form-control col-xs-12" required="">
+                                    <option value="">Seleccione</option>
+                                    <option value="cliente">Cliente 1</option>
+                                    <option value="cliente">Cliente 2</option>
+                                    <option value="cliente">Cliente 3</option>
+                                </select>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label col-xs-12">Horario</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <label>
+                                    <input type="checkbox" class="js-switch" checked /> 07:30
+                                </label><br>
+                                <label>
+                                    <input type="checkbox" class="js-switch" checked /> 10:00
+                                </label><br>
+                                <label>
+                                    <input type="checkbox" class="js-switch" checked /> 01:30
+                                </label><br>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">Tipo de Prueba</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <select id="prueba" class="form-control col-xs-12" required="">
+                                    <option value="">Seleccione</option>
+                                    <option value="prueba-pre-empleo">Prueba Pre Empleo</option>
+                                    <option value="prueba-permanencia">Prueba Permanencia</option>
+                                    <option value="prueba-especifica">Prueba Especifica</option>
+                                    <option value="pruebas-psicologicas">Pruebas Psicologícas</option>
+                                     <option value="pruebas-socioeconomicas">Pruebas Socioeconómicas</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h4>Candidato</h4>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label col-xs-12">Nombre</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <input type="text" class="form-control" id="candidato" name="candidato">
+                            </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label col-xs-12">Apellido</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="apellido" name="apellido">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label col-xs-12">Cedula</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="cedula" name="cedula">
+                                </div>
+                            </div>
+                            <div class="form-group">
 
+                                <label class="col-sm-3 control-label col-xs-12">Puesto</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="puesto" name="puesto">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="col-sm-3 control-label col-xs-12">Celular</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="celular" name="celular">
+                                </div>
+                            </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label col-xs-12">Comentarios</label>
+                            <div class="col-sm-9 col-xs-12">
+                                <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary antosubmit2">Save changes</button>
+                <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary antosubmit2">Guardar Cita</button>
             </div>
         </div>
     </div>
@@ -395,12 +499,120 @@
 <script src="../vendors/nprogress/nprogress.js"></script>
 <!-- FullCalendar -->
 <script src="../vendors/moment/min/moment.min.js"></script>
-<script src="../vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+
+
 <!-- Switchery -->
 <script src="../vendors/switchery/dist/switchery.min.js"></script>
 
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
+
+<script src="../vendors/fullcalendar/dist/fullcalendar.js"></script>
+<script src='../vendors/fullcalendar/dist/lang-all.js'></script>
+<script src='../vendors/fullcalendar/lib/moment.min.js'></script>
+
+<script src='../vendors/fullcalendar/lib/moment.min.js'></script>
+<!-- 
+el que explota
+<script src='../vendors/fullcalendar/lib/jquery.min.js'></script> -->
+<script src='../vendors/fullcalendar/fullcalendar.min.js'></script>
+<script src='../vendors/fullcalendar/locale-all.js'></script>
+
+<script>
+
+    $(document).ready(function() {
+        var initialLocaleCode = 'es';
+
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,agendaWeek,agendaDay,listMonth'
+            },
+            defaultDate: '2017-09-12',
+            locale: initialLocaleCode,
+            buttonIcons: false, // show the prev/next text
+            weekNumbers: true,
+            navLinks: true, // can click day/week names to navigate views
+            editable: true,
+            eventLimit: true, // allow "more" link when too many events
+            events: [
+                {
+                    title: 'All Day Event',
+                    start: '2017-09-01'
+                },
+                {
+                    title: 'Long Event',
+                    start: '2017-09-07',
+                    end: '2017-09-10'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2017-09-09T16:00:00'
+                },
+                {
+                    id: 999,
+                    title: 'Repeating Event',
+                    start: '2017-09-16T16:00:00'
+                },
+                {
+                    title: 'Conference',
+                    start: '2017-09-11',
+                    end: '2017-09-13'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2017-09-12T10:30:00',
+                    end: '2017-09-12T12:30:00'
+                },
+                {
+                    title: 'Lunch',
+                    start: '2017-09-12T12:00:00'
+                },
+                {
+                    title: 'Meeting',
+                    start: '2017-09-12T14:30:00'
+                },
+                {
+                    title: 'Happy Hour',
+                    start: '2017-09-12T17:30:00'
+                },
+                {
+                    title: 'Dinner',
+                    start: '2017-09-12T20:00:00'
+                },
+                {
+                    title: 'Birthday Party',
+                    start: '2017-09-13T07:00:00'
+                },
+                {
+                    title: 'Click for Google',
+                    url: 'http://google.com/',
+                    start: '2017-09-28'
+                }
+            ]
+        });
+
+        // build the locale selector's options
+        $.each($.fullCalendar.locales, function(localeCode) {
+            $('#locale-selector').append(
+                $('<option/>')
+                    .attr('value', localeCode)
+                    .prop('selected', localeCode == initialLocaleCode)
+                    .text(localeCode)
+            );
+        });
+
+        // when the selected option changes, dynamically change the calendar option
+        $('#locale-selector').on('change', function() {
+            if (this.value) {
+                $('#calendar').fullCalendar('option', 'locale', this.value);
+            }
+        });
+    });
+
+</script>
 
 </body>
 </html>

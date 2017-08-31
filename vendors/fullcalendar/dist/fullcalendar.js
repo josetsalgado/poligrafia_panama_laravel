@@ -11140,15 +11140,15 @@ Calendar.defaults = {
 	// locale
 	isRTL: false,
 	buttonText: {
-		prev: "prev",
-		next: "next",
+		prev: "ant",
+		next: "sig",
 		prevYear: "prev year",
 		nextYear: "next year",
-		year: 'year', // TODO: locale files need to specify this
-		today: 'today',
-		month: 'month',
-		week: 'week',
-		day: 'day'
+		year: 'año', // TODO: locale files need to specify this
+		today: 'diario',
+		month: 'semana',
+		week: 'mes',
+		day: 'dia'
 	},
 
 	buttonIcons: {
@@ -11416,7 +11416,7 @@ function getMomentLocaleData(localeCode) {
 
 // Initialize English by forcing computation of moment-derived options.
 // Also, sets it as the default.
-FC.locale('en', Calendar.englishDefaults);
+FC.locale('es', Calendar.englishDefaults);
 
 ;;
 
