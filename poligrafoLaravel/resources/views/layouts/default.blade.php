@@ -83,7 +83,7 @@
                   </li>
                   <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="registro_resultados.html">Registro de Resultados</a></li>
+                      <li><a href="/create_result">Registro de Resultados</a></li>
                       <li><a href="calidad_prueba.html">Registro de Calidad de Prueba</a></li>
                       <li><a href="informe_prueba.html">Informe de Prueba</a></li>
                      </li>

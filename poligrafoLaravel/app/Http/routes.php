@@ -11,6 +11,8 @@
 |
 */
 //index del dashboard
+Route::get('/', 'HomeController@index');
+//no se sabe para que es
 Route::get('/quotes', 'QuotesController@index');
 //crear usuario
 Route::get('/create_user', 'QuotesController@create');
@@ -26,3 +28,6 @@ Route::get('/quotes_client', 'QuotesController@store');
 Route::get('/butget_client', 'BudgetController@create');
 //mostrar solicitudes de cotizaciones
 Route::get('/show_budget', 'BudgetController@show');
+//Crear registro de resultados
+Route::get('/create_result', 'ResultController@create');
+
