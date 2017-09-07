@@ -19,7 +19,7 @@ Route::get('/create_user', 'UserController@create');
 //insert user db usuario
 Route::post('/create_user', 'UserController@store');
 //mostrar todos los usuarios
-Route::get('/show_user', 'QuotesController@show');
+Route::get('/show_user', 'UserController@show');
 //crear cliente
 Route::get('/create_client', 'ClientController@create');
 //mostrar clientes

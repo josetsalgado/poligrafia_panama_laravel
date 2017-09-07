@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\User;
+use App\Rol;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use DB;
 use function view;
 
 class UserController extends Controller
@@ -91,9 +93,13 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+         $users = DB::table('itcp_users')
+                ->join('itcl_rols', 'itcp_users.rol_id', '=', 'itcl_rols.id_rol')
+                ->select('*')
+                ->get();
+        return view('user.show', compact('users'));
     }
 
     /**
