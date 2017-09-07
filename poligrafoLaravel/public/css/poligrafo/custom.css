@@ -18,3 +18,9 @@ input[type=number] {
     -moz-appearance:textfield;
 }
 /*quitar signos mayor y menos de input type number html*/
+
+/*margin alert valid*/
+#form-errors{
+    margin-top: 60px;
+}
+/*margin alert valid*/

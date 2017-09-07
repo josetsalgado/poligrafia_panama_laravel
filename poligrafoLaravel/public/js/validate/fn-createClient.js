@@ -1,21 +1,18 @@
 $(document).ready(function(){
-    $("#createUser").validate({
+    $("#createClient").validate({
         
         wrapper: "div",
         errorClass: "text-danger",
         
 	rules: {
             name: { required:true },
-            lastname: { required:true },
             email: { required:true, email: true  },
             tel: { required:true, number:true },
-            rol: { required:true },
-            password: { required:true },
-            password_confirmation: { required:true, equalTo: password },
+            country: { required:true },
+            city: { required:true },
 	},
 	messages: {
             name: { required: "El campo nombre es obligatorio." },
-            lastname: { required: "El campo apellido es obligatorio." },
             email: { 
                     required: "El campo email es obligatorio.",
                     email: "Debe ingresar un campo con formato correo",
@@ -24,23 +21,19 @@ $(document).ready(function(){
                     required: "El campo telefono es obligatorio.",
                     number: "Debe ingresar un campo con formato correo",
                 },
-            rol: { required: "El campo rol es obligatorio." },
-            password: { required: "El campo clave es obligatorio." },
-            password_confirmation: { 
-                required: "El campo confirmar clave es obligatorio.",
-                equalTo: "Este campo debe ser igual que el campo clave",
-            },
+            country: { required: "El campo rol es obligatorio." },
+            city: { required: "El campo clave es obligatorio." },
 	},
 	submitHandler: function(form){
-            var dataString = $('#createUser').serialize();
+            var dataString = $('#createClient').serialize();
             console.log(dataString);
             $.ajax({
 	        type: "POST",
-	        url: "create_user",
+	        url: "create_client",
 	        data: dataString,
 	        success: function(data) {
                    	alert("bien");
-                        $('#createUser')[0].reset();
+                        $('#createClient')[0].reset();
 	       	},error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.
