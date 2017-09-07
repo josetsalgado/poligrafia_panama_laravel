@@ -11140,15 +11140,15 @@ Calendar.defaults = {
 	// locale
 	isRTL: false,
 	buttonText: {
-		prev: "ant",
-		next: "sig",
+		prev: "Anterior",
+		next: "Siguiente",
 		prevYear: "prev year",
 		nextYear: "next year",
 		year: 'año', // TODO: locale files need to specify this
-		today: 'diario',
-		month: 'semana',
-		week: 'mes',
-		day: 'dia'
+		today: 'Diario',
+		month: 'Semana',
+		week: 'Mes',
+		day: 'Día'
 	},
 
 	buttonIcons: {
