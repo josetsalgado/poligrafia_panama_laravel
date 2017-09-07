@@ -33,7 +33,13 @@
     <link href="css/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
     <!-- Switchery -->
     <link href="css/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- custom poligrafo css -->
+    <link href="css/poligrafo/custom.css" rel="stylesheet">
     
+    <!-- jQuery -->
+    <script src="js/jquery/dist/jquery.min.js"></script>
+    <!--validate jquery-->
+    <script src="js/validate/jquery.validate.js"></script>
 </head>
 <body class="nav-md">
     <div class="container body">
@@ -233,10 +239,8 @@
         <!-- /footer content -->
       </div>
     </div>
-
-
-    <!-- jQuery -->
-    <script src="js/jquery/dist/jquery.min.js"></script>
+    
+    
     <!-- Bootstrap -->
     <script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
@@ -288,8 +292,5 @@
 
     <!-- Switchery -->
     <script src="js/switchery/dist/switchery.min.js"></script>
-
-
-
 </body>
 </html>

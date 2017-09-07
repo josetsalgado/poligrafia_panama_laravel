@@ -15,7 +15,9 @@ Route::get('/', 'HomeController@index');
 //no se sabe para que es
 Route::get('/quotes', 'QuotesController@index');
 //crear usuario
-Route::get('/create_user', 'QuotesController@create');
+Route::get('/create_user', 'UserController@create');
+//insert user db usuario
+Route::post('/create_user', 'UserController@store');
 //mostrar todos los usuarios
 Route::get('/show_user', 'QuotesController@show');
 //crear cliente
