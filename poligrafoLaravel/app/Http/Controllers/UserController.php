@@ -38,7 +38,7 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $this->ValidateCreate($request);
         User::insert([
           'id_user' => '',
           'name_user' => $request->name,
@@ -47,21 +47,34 @@ class UserController extends Controller
           'rol_id' => intval($request->rol),
           'tel_user' => $request->tel,
           'email_user' => $request->email,
-          
-      ]);
+        ]);
         
         return view('user.create');
     }
     
     /**
-     * Store a newly created resource in storage.
+     * .
      *
      * @param  Request  $request
      * @return Response
      */
-    public function ValidateCreate(Request $request)
+    public function ValidateCreate($request)
     {
-        //
+        $this->validate($request,[
+            'name' => 'required|min:5|max:35',
+            'lastname' => 'required|min:5|max:35',
+            'email' => 'required|email',
+            
+                ], [
+            'firstname.required' => ' The first name field is required.',
+            'firstname.min' => ' The first name must be at least 5 characters.',
+            'firstname.max' => ' The first name may not be greater than 35 characters.',
+            'lastname.required' => ' The last name field is required.',
+            'lastname.min' => ' The last name must be at least 5 characters.',
+            'lastname.max' => ' The last name may not be greater than 35 characters.',
+            'email.required' => ' Email obligatorio.',
+            'email.email' => ' No es correo.',
+        ]);
     }
     /**
      * Display the specified resource.
