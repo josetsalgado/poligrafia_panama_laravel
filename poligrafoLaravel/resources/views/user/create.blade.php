@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-
+<div id="form-errors"></div>
     <div class="">
         <div class="clearfix"></div>
         <div class="row">
