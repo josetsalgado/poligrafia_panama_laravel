@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>DataTables | Gentelella</title>
+    <title>Gentelella Alela! | </title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,17 +15,17 @@
     <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- Datatables -->
+
+    <!-- Custom styling plus plugins -->
+    <link href="../build/css/custom.css" rel="stylesheet">
+
+    <link href="../vendors/css/css.css" rel="stylesheet">
+
     <link href="../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
-    <link href="../build/css/custom.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -40,6 +40,7 @@
                     <div class="clearfix"></div>
 
                     <br />
+
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
@@ -100,6 +101,7 @@
                 </div>
             </div>
             <!-- /sidebar menu -->
+
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
                 <a href="editar_perfil.html" data-toggle="tooltip" data-placement="top" title="Editar Perfil">
@@ -148,155 +150,166 @@
     <div class="right_col" role="main">
         <div class="">
             <div class="page-title">
+                <div class="title_left">
+                    <h3></h3>
+                </div>
+
                 <div class="title_right">
                     <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <form class="form-horizontal form-label-left input_mask">
+                            <div class="input-group">
+                                <select id="pais" class="form-control selc-empresa" required>
+                                    <option value="">Cliente</option>
+                                    <option value="cliente1">cliente 1</option>
+                                    <option value="cliente2">cliente 2</option>
+                                    <option value="cliente3">cliente 3</option>
+                                    <option value="cliente4">cliente 4</option>
+                                    <option value="cliente5">cliente 5</option>
+                                </select>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
 
             <div class="clearfix"></div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                    <div class="x_title">
-                        <h2><i class="fa fa-file-text"></i> Productos</h2>
-                        <ul class="nav navbar-right panel_toolbox">
-                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Settings 1</a>
-                                    </li>
-                                    <li><a href="#">Settings 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                            </li>
-                        </ul>
-                        <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Pagos Registrados</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+
+                            <section class="content invoice">
+                                <!-- title row -->
+                                <div class="row">
+                                    <div class="col-xs-12 invoice-header">
+                                        <h1>
+                                            <i class="fa fa-globe"></i> IPTC
+                                            <small class="pull-right">Fecha: 16/08/2017</small>
+                                        </h1>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+
+                                <!-- Table row -->
+                                <div class="row">
+                                    <div class="col-xs-12 table">
+                                        <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                                            <thead>
+                                                <tr> 
+                                                    <th># </th>
+                                                    <th>Fecha </th>
+                                                    <th>Cantidad</th>
+                                                    <th>Producto</th>
+                                                    <th>Comentario</th>
+                                                    <th>Precio Unitario</th>
+                                                    <th>Sub Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>#31567</td>
+                                                    <td>20/08/2017</td>
+                                                    <td>31</td>
+                                                    <td>Prueba Permanencia</td>
+                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
+                                                    <td>$53.05</td>
+                                                    <td>$534.25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#31567</td>
+                                                    <td>23/08/2017</td>
+                                                    <td>31</td>
+                                                    <td>Prueba Pre Empleo</td>
+                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
+                                                    <td>$42.56</td>
+                                                    <td>$425.66</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#31567</td>
+                                                    <td>25/08/2017</td>
+                                                    <td>31</td>
+                                                    <td>Prueba Permanencia</td>
+                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
+                                                    <td>$53.05</td>
+                                                    <td>$534.25</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#31567</td>
+                                                    <td>27/08/2017</td>
+                                                    <td>31</td>
+                                                    <td>Prueba Pre Empleo</td>
+                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
+                                                    <td>$42.56</td>
+                                                    <td>$425.66</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>#31567</td>
+                                                    <td>30/08/2017</td>
+                                                    <td>31</td>
+                                                    <td>Prueba Permanencia</td>
+                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
+                                                    <td>$53.05</td>
+                                                    <td>$534.25</td>
+                                                </tr>
+                                               
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+
+                                <div class="row">
+                                    <!-- accepted payments column -->
+                                    <div class="col-xs-6">
+                                        <!-- <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                                            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                                        </p> -->
+                                    </div>
+                                    
+                                </div>
+                                <!-- /.row -->
+
+                            </section>
+                        </div>
                     </div>
-                    <div class="x_content">
-                        <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
-                            <thead>
-                                <tr>
-                                    <th>Nombre del Producto</th>
-                                    <th>Precio</th>
-                                    <th>Descripción</th>
-                                    <th>#edit</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Prueba Pre Empleo</td>
-                                    <td>555 55 55</td>
-                                    <td>Edinburgh</td>
-                                    <td>  
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Prueba Permanencia</td>
-                                    <td>555 55 55</td>
-                                    <td>New York</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>Prueba Especifica</td>
-                                    <td>555 55 55</td>
-                                    <td>London</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                    </td>
-
-                                </tr>
-                                <tr>
-                                    <td>Pruebas Psicologícas</td>
-                                    <td>555 55 55</td>
-                                    <td>London</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Pruebas Socioeconómicas</td>
-                                    <td>555 55 55</td>
-                                    <td>San Francisco</td>
-                                    <td>
-                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                                    </td>
-                                </tr>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
                 </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-<!-- /page content -->
-<!-- Modal -->
-<div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
+    <!-- /page content -->
 
-        <!-- Modal content-->
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><i class="fa fa-edit"></i>Editar Producto</h4>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal form-label-left input_mask">
-
-                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre del producto" value="Prueba Pre Empleo  ">
-                        <span class="fa fa-hospital-o form-control-feedback left" aria-hidden="true"></span>
-                    </div>
-
-                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Precio" value="1000.00">
-                        <span class="fa fa-dollar form-control-feedback right" aria-hidden="true"></span>
-                    </div>
-
-
-                    <div class=" col-md-12 col-sm-6 col-xs-12 form-group">
-                        <textarea class="resizable_textarea form-control" placeholder="Descripción" value="Prueba Pre Empleo"></textarea>
-                        <span class="fa fa-sort-alpha-desc form-control-feedback right" aria-hidden="true"></span>
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-
-                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                    </div>
-                </div>
-            </form>
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
         </div>
-
-    </div>
-</div>
-
-<!-- footer content -->
-<footer>
-    <div class="pull-right">
-        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-    </div>
-    <div class="clearfix"></div>
-</footer>
-<!-- /footer content -->
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
 </div>
 </div>
 
@@ -308,9 +321,7 @@
 <script src="../vendors/fastclick/lib/fastclick.js"></script>
 <!-- NProgress -->
 <script src="../vendors/nprogress/nprogress.js"></script>
-<!-- iCheck -->
-<script src="../vendors/iCheck/icheck.min.js"></script>
-<!-- Datatables -->
+
 <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
@@ -323,17 +334,14 @@
 <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
 <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
 <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-<script src="../vendors/jszip/dist/jszip.min.js"></script>
-<script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
-<script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
-
 <script type="text/javascript">
     $('#datatable-responsive').DataTable( {
         language: {
             search: "Buscar",
+
             paginate: {
                 first:      "Primero",
                 previous:   "<",
@@ -345,6 +353,5 @@
         }
     } );
 </script>
-
 </body>
 </html>

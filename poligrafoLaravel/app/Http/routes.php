@@ -32,4 +32,5 @@ Route::get('/butget_client', 'BudgetController@create');
 Route::get('/show_budget', 'BudgetController@show');
 //Crear registro de resultados
 Route::get('/create_result', 'ResultController@create');
-
+//Ver estados de cuenta
+Route::get('/show_accountstatus', 'AccountStatusController@show');
