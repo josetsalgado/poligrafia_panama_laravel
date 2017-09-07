@@ -90,6 +90,9 @@
     <!-- Switchery -->
     <script src="js/switchery/dist/switchery.min.js"></script>
     
+    <!--validate jquery-->
+    <script src="js/validate/jquery.validate.js"></script>
+    
 </head>
 <body class="nav-md">
     <div class="container body">

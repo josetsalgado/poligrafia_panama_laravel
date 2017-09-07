@@ -44,7 +44,7 @@ class UserController extends Controller
           'name_user' => $request->name,
           'last_name_user' => $request->lastname,
           'password_user' => $request->password,
-          'rol_id' => intval($request->rol),
+          'rol_id' => intval($request->rol), //
           'tel_user' => $request->tel,
           'email_user' => $request->email,
         ]);
@@ -61,20 +61,29 @@ class UserController extends Controller
     public function ValidateCreate($request)
     {
         $this->validate($request,[
-            'name' => 'required|min:5|max:35',
-            'lastname' => 'required|min:5|max:35',
-            'email' => 'required|email',
-            
-                ], [
-            'firstname.required' => ' The first name field is required.',
-            'firstname.min' => ' The first name must be at least 5 characters.',
-            'firstname.max' => ' The first name may not be greater than 35 characters.',
-            'lastname.required' => ' The last name field is required.',
-            'lastname.min' => ' The last name must be at least 5 characters.',
-            'lastname.max' => ' The last name may not be greater than 35 characters.',
-            'email.required' => ' Email obligatorio.',
-            'email.email' => ' No es correo.',
-        ]);
+                'name' => 'required',
+                'lastname' => 'required',
+                'email' => 'required|email|unique:itcp_users,email_user',
+                'tel' => 'required|numeric',
+                'rol' => 'required',
+                'password' => 'required|confirmed',
+                'password_confirmation' => 'required',
+            ], 
+            [
+                'name.required' => trans("validations.input_required", ['input' => 'nombre']),
+                'lastname.required' => trans("validations.input_required", ['input' => 'apellido']),
+                'email.required' => trans("validations.input_required", ['input' => 'correo']),
+                'email.email' => trans("validations.input_format", ['input' => 'correo']),
+                'email.unique' => trans("validations.input_unique", ['input' => 'usuario', 'other' => 'correo']),
+                'tel.required' => trans("validations.input_required", ['input' => 'telefono']),
+                'tel.numeric' => trans("validations.input_format", ['input' => 'telefono']),
+                'rol.required' => trans("validations.input_required", ['input' => 'tipo de usuario']),
+                'password.required' => trans("validations.input_required", ['input' => 'clave']),
+                'password.confirmed' => trans("validations.input_equal", ['input' => 'clave', 'other' => 'confirmar clave']),
+                'password_confirmation.required' => trans("validations.input_required", ['input' => 'confirmar clave']),
+                
+            ]
+        );
     }
     /**
      * Display the specified resource.
