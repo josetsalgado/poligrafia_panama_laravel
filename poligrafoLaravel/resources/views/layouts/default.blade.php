@@ -85,7 +85,7 @@
                       <li><a href="show_budget">Ver Cotizaciones</a></li>
                     </ul>
                   </li>
-                  <li><a href="estados_de_cuenta.html"><i class="fa fa-bar-chart-o"></i> Estados de Cuenta</span></a>
+                  <li><a href="show_accountstatus"><i class="fa fa-bar-chart-o"></i> Estados de Cuenta</span></a>
                   </li>
                   <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
