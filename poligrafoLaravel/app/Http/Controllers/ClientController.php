@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
-use App\Client;
+use App\Service;
 use DB;
 
 class ClientController extends Controller
@@ -41,7 +41,7 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $this->ValidateCreate($request);
-        Client::insert([
+        Service::insert([
           'id_client' => '',
           'name_client' => $request->name,
           'tel_client' => $request->tel,
@@ -90,7 +90,8 @@ class ClientController extends Controller
      */
     public function show()
     {
-        return view('client.show');
+        $clients = Client::all();
+        return view('client.show', compact('clients'));
     }
 
     /**
@@ -101,7 +102,12 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        //
+        $client = DB::table('itcp_clients')
+                ->join('itcp_citys', 'itcp_clients.city_id', '=', 'itcp_citys.id_city')
+                ->where('itcp_clients.id_client', '=', $id)
+                ->select('*')
+                ->get();
+        return view('client.edit', compact('client'));
     }
 
     /**
@@ -111,9 +117,17 @@ class ClientController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $this->ValidateCreate($request);
+        DB::table('itcp_clients')->where('id_client', $request->id)->update([
+            'name_client' => $request->name,
+            'tel_client' => $request->tel,
+            'email_client' => $request->email,
+            'rif_client' => '',
+            'city_id' => intval($request->city),
+            'country_id' => $request->country,
+        ]);
     }
 
     /**

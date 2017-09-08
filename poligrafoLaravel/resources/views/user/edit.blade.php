@@ -1,7 +1,7 @@
 <div id="form-error"></div>
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">&times;</button>
-    <h4 class="modal-title"> <i class="fa fa-edit"></i>{{ trans("poligrafo.edit_user") }}</h4>
+    <h4 class="modal-title"> <i class="fa fa-edit"></i>{{ trans("poligrafo.edit_user", ['modal' => 'usuario']) }}</h4>
 </div>
 <div class="modal-body">
 

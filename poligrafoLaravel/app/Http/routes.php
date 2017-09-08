@@ -10,6 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
+Route::get('/', 'HomeController@index');
 //index del dashboard
 Route::get('/', 'HomeController@index');
 //no se sabe para que es
@@ -30,6 +32,10 @@ Route::get('/create_client', 'ClientController@create');
 Route::post('/create_client', 'ClientController@store');
 //mostrar clientes
 Route::get('/show_client', 'ClientController@show');
+//editar un clientes por id
+Route::get('/show_client/{id}', 'ClientController@edit');
+//actualizar informacion de un cliente 
+Route::post('/update_client', 'ClientController@update');
 //solicitudes de citas
 Route::get('/quotes_client', 'QuotesController@store');
 //solicitudes de cotizaciones
@@ -40,3 +46,7 @@ Route::get('/show_budget', 'BudgetController@show');
 Route::get('/create_result', 'ResultController@create');
 //Ver estados de cuenta
 Route::get('/show_accountstatus', 'AccountStatusController@show');
+//crear nuevo producto
+Route::get('/create_product', 'ServiceController@create');
+//crear nuevo producto
+Route::post('/create_product', 'ServiceController@store');
