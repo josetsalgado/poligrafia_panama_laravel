@@ -64,7 +64,7 @@
                                     </li>
                                     <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            <li><a href="crear_usuario.html">Nuevo Usuario</a></li>
+                                            <li><a href="create_user">Nuevo Usuario</a></li>
                                             <li><a href="show_user">Ver Usuarios</a></li>
                                         </ul>
                                     </li>
