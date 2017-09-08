@@ -7,4 +7,5 @@ return [
     'name_client' => 'Nombre del Cliente',
     'tel_client' => 'Número Telefonico',
     'email_client' => 'Correo',
+    'edit_user' => 'Editar Usuario',
 ];

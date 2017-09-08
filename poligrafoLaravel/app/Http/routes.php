@@ -20,6 +20,10 @@ Route::get('/create_user', 'UserController@create');
 Route::post('/create_user', 'UserController@store');
 //mostrar todos los usuarios
 Route::get('/show_user', 'UserController@show');
+//informacion de un usuario por id
+Route::post('/update_user', 'UserController@update');
+//actualizar datos del usuario por id
+Route::get('/show_user/{id}', 'UserController@edit');
 //crear cliente
 Route::get('/create_client', 'ClientController@create');
 //insertar registros del cliente en la bd y validar los mismos

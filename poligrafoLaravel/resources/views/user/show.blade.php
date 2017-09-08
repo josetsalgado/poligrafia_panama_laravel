@@ -49,7 +49,7 @@
                                             </p>
                                         </div>
                                         <div class="col-xs-12 col-sm-6 emphasis">
-                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i> Editar Usuario</button>
+                                            <a type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" href="show_user/{{ $user->id_user }}" ><i class="fa fa-edit"></i> Editar Usuario</a>
                                         </div>
                                     </div>
                                 </div>
@@ -62,4 +62,19 @@
             </div>
         </div>
     </div>
+
+
+    <div class="modal fade" id="myModal" >
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+            
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $(this).removeData('bs.modal');
+        });
+    </script>
 @stop

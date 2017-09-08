@@ -78,7 +78,6 @@ class ClientController extends Controller
                 'tel.numeric' => trans("validations.input_format", ['input' => 'telefono']),
                 'country.required' => trans("validations.input_required", ['input' => 'pais']),
                 'city.required' => trans("validations.input_required", ['input' => 'ciudad']),
-                
             ]
         );
     }
