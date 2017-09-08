@@ -49,4 +49,4 @@ Route::get('/show_accountstatus', 'AccountStatusController@show');
 //crear nuevo producto
 Route::get('/create_product', 'ServiceController@create');
 //crear nuevo producto
-Route::post('/create_product', 'ServiceController@store');
+Route::get('/show_product', 'ServiceController@show');

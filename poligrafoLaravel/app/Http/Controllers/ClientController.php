@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
-use App\Service;
+use App\Client;
 use DB;
 
 class ClientController extends Controller
@@ -41,7 +41,7 @@ class ClientController extends Controller
     public function store(Request $request)
     {
         $this->ValidateCreate($request);
-        Service::insert([
+        Client::insert([
           'id_client' => '',
           'name_client' => $request->name,
           'tel_client' => $request->tel,
