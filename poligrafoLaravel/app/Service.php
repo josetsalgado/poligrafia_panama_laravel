@@ -12,4 +12,5 @@ class Service extends Model
      * @var string
      */
     protected $table = 'itcp_service';
+    public $timestamps = false;
 }

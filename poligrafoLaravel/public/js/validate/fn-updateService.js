@@ -1,34 +1,27 @@
 $(document).ready(function(){
-    $("#updateClient").validate({
-        
+    $("#updateService").validate({
         wrapper: "div",
         errorClass: "text-danger",
         
 	rules: {
             name: { required:true },
-            email: { required:true, email: true  },
-            tel: { required:true, number:true },
-            city: { required:true },
-            country: { required:true },
+            price: { required:true, number:true },
+            description: { required:true },
 	},
 	messages: {
             name: { required: "El campo nombre es obligatorio." },
-            email: { 
-                    required: "El campo email es obligatorio.",
-                    email: "Debe ingresar un campo con formato correo",
-                },
-            tel: { 
-                    required: "El campo telefono es obligatorio.",
+            price: { 
+                    required: "El campo precio es obligatorio.",
                     number: "Debe ingresar un campo con formato correo",
                 },
-            city: { required: "El campo rol es obligatorio." },
-            country: { required: "El campo clave es obligatorio." },
+            description: { required: "El campo descripción es obligatorio." },
 	},
 	submitHandler: function(form){
-            var dataString = $('#updateClient').serialize();
+            var dataString = $('#updateService').serialize();
+            console.log(dataString);
             $.ajax({
 	        type: "POST",
-	        url: "update_client",
+	        url: "update_service",
 	        data: dataString,
 	        success: function(data) {
                     $(".close").click();
@@ -37,13 +30,13 @@ $(document).ready(function(){
                         $errors = err.responseJSON; //this will get the errors response data.
                         //show them somewhere in the markup
                         //e.g
-                        errorsHtml = '<div class="alert alert-danger form-errors" role="alert">';
+                        errorsHtml = '<div class="alert alert-danger" role="alert">';
                         errorsHtml += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><ul>';
 
                         $.each($errors, function (key, value) {
                             errorsHtml += '<li>' + value[0] + '</li>'; //showing only the first error.
                         });
-                        errorsHtml += '</ul></div>';
+                        errorsHtml += '</ul></di>';
 
                         $('#form-error').html(errorsHtml); //appending to a <div id="form-errors"></div> inside form
 

@@ -48,5 +48,9 @@ Route::get('/create_result', 'ResultController@create');
 Route::get('/show_accountstatus', 'AccountStatusController@show');
 //crear nuevo producto
 Route::get('/create_product', 'ServiceController@create');
-//crear nuevo producto
+//ver lista de productos
 Route::get('/show_product', 'ServiceController@show');
+//editar un producto
+Route::get('/show_product/{id}', 'ServiceController@edit');
+//actualizar informacion de un cliente 
+Route::post('/update_service', 'ServiceController@update');

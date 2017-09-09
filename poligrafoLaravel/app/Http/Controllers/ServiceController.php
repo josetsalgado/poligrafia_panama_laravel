@@ -81,7 +81,9 @@ class ServiceController extends Controller
      */
     public function show()
     {
-        return "bien";
+        $services = Service::All();
+        
+        return view("service.show", compact('services'));
     }
 
     /**
@@ -92,7 +94,8 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        //
+        $models = Service::whereIn('id_service', [$id])->get();
+        return view("service.edit", compact("models"));
     }
 
     /**
@@ -102,9 +105,16 @@ class ServiceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        
+        $this->ValidateCreate($request);
+        Service::where('id_service', $request->id)
+                ->update([
+                    'name_service' => $request->name,
+                    'price_service' => $request->price,
+                    'description_service' => $request->description
+        ]);
     }
 
     /**
