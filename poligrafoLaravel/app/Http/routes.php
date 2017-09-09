@@ -10,6 +10,8 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+
+Route::get('/', 'HomeController@index');
 //index del dashboard
 Route::get('/', 'HomeController@index');
 //no se sabe para que es
@@ -20,12 +22,20 @@ Route::get('/create_user', 'UserController@create');
 Route::post('/create_user', 'UserController@store');
 //mostrar todos los usuarios
 Route::get('/show_user', 'UserController@show');
+//informacion de un usuario por id
+Route::post('/update_user', 'UserController@update');
+//actualizar datos del usuario por id
+Route::get('/show_user/{id}', 'UserController@edit');
 //crear cliente
 Route::get('/create_client', 'ClientController@create');
 //insertar registros del cliente en la bd y validar los mismos
 Route::post('/create_client', 'ClientController@store');
 //mostrar clientes
 Route::get('/show_client', 'ClientController@show');
+//editar un clientes por id
+Route::get('/show_client/{id}', 'ClientController@edit');
+//actualizar informacion de un cliente 
+Route::post('/update_client', 'ClientController@update');
 //solicitudes de citas
 Route::get('/quotes_client', 'QuotesController@store');
 //solicitudes de cotizaciones
@@ -36,3 +46,11 @@ Route::get('/show_budget', 'BudgetController@show');
 Route::get('/create_result', 'ResultController@create');
 //Ver estados de cuenta
 Route::get('/show_accountstatus', 'AccountStatusController@show');
+//crear nuevo producto
+Route::get('/create_product', 'ServiceController@create');
+//ver lista de productos
+Route::get('/show_product', 'ServiceController@show');
+//editar un producto
+Route::get('/show_product/{id}', 'ServiceController@edit');
+//actualizar informacion de un cliente 
+Route::post('/update_service', 'ServiceController@update');

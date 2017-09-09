@@ -1,5 +1,6 @@
 @extends('layouts.default')
 @section('content')
+    <div id="form-errors"></div>
     <div class="">
         <div class="page-title">
             <div class="title_right">
@@ -12,7 +13,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Clientes</h2>
+                    <h2><i class="fa fa-file-text"></i> Productos</h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
@@ -25,22 +26,20 @@
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>{{ trans("poligrafo.name") }}</th>
-                                <th>{{ trans("poligrafo.tel") }}</th>
-                                <th>{{ trans("poligrafo.email") }}</th>
-                                <th>{{ trans("poligrafo.city") }}</th>
-                                <th>{{ trans("poligrafo.edit") }}</th>
+                                <th>Nombre del Producto</th>
+                                <th>Precio</th>
+                                <th>Descripción</th>
+                                <th>#edit</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($clients as $client)
+                            @foreach ($services as $service)
                                 <tr>
-                                    <td>{{ $client->name_client }}</td>
-                                    <td>{{ $client->tel_client }}</td>
-                                    <td>{{ $client->email_client }}</td>
-                                    <td>{{ $client->city_id }}</td>
-                                    <td>
-                                        <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal" href="show_client/{{ $client->id_client }}"><i class="fa fa-pencil"></i> {{ trans("poligrafo.edit") }}</a>
+                                    <td>{{ $service->name_service }}</td>
+                                    <td>{{ $service->price_service }}</td>
+                                    <td>{{ $service->description_service }}</td>
+                                    <td>  
+                                        <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal" href="show_product/{{ $service->id_service }}"><i class="fa fa-pencil"></i> {{ trans("poligrafo.edit") }}</a>
                                         <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
                                     </td>
                                 </tr>
@@ -51,7 +50,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="modal fade" id="myModal" >
         <div class="modal-dialog">
             <!-- Modal content-->
@@ -60,7 +59,6 @@
             </div>
         </div>
     </div>
-
     <script>
         $('#myModal').on('shown.bs.modal', function () {
             $(this).removeData('bs.modal');

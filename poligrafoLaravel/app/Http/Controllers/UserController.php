@@ -46,7 +46,7 @@ class UserController extends Controller
           'name_user' => $request->name,
           'last_name_user' => $request->lastname,
           'password_user' => $request->password,
-          'rol_id' => intval($request->rol), //
+          'rol_id' => intval($request->rol),
           'tel_user' => $request->tel,
           'email_user' => $request->email,
         ]);
@@ -110,7 +110,13 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = DB::table('itcp_users')
+                ->join('itcl_rols', 'itcp_users.rol_id', '=', 'itcl_rols.id_rol')
+                ->where('itcp_users.id_user', '=', $id)
+                ->select('*')
+                ->get();
+
+        return view('user.edit', compact('user'));
     }
 
     /**
@@ -120,9 +126,17 @@ class UserController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $this->ValidateCreate($request);
+        DB::table('itcp_users')->where('id_user', $request->id)->update([
+            'name_user' => $request->name,
+            'last_name_user' => $request->lastname,
+            'password_user' => $request->password,
+            'rol_id' => intval($request->rol),
+            'tel_user' => $request->tel,
+            'email_user' => $request->email,
+        ]);
     }
 
     /**
