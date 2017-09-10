@@ -37,7 +37,8 @@ Route::get('/show_client/{id}', 'ClientController@edit');
 //actualizar informacion de un cliente 
 Route::post('/update_client', 'ClientController@update');
 //solicitudes de citas
-Route::get('/quotes_client', 'QuotesController@store');
+Route::get('/quotes_client', 'QuotesController@index');
+Route::get('/modal_quote', 'QuotesController@quote');
 //solicitudes de cotizaciones
 Route::get('/butget_client', 'BudgetController@create');
 //mostrar solicitudes de cotizaciones

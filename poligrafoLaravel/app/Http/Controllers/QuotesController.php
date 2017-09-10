@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Client;
+use App\User;
+use App\Service;
 
 class QuotesController extends Controller
 {
@@ -16,9 +19,18 @@ class QuotesController extends Controller
      */
     public function index()
     {
-        return view('quotes.index');
+        $clients = Client::All();
+        $users = User::All();
+        $services = Service::All();
+        
+        return view('quotes.index', compact("clients", "users", "services"));
     }
 
+    public function quote()
+    {
+        return view("quote.modal_quote");
+    }
+    
     /**
      * Show the form for creating a new resource.
      *
@@ -37,7 +49,7 @@ class QuotesController extends Controller
      */
     public function store()
     {
-        return view('quotes.quotes');
+        //
     }
 
     /**
