@@ -1,76 +1,86 @@
-$(document).ready(function() {
-		
-		$('#calendar').fullCalendar({
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,agendaWeek,agendaDay'
-			},
-			defaultDate: '2017-09-12',
-			navLinks: true, // can click day/week names to navigate views
-			selectable: true,
-			selectHelper: true,
-			dayClick: function(date, jsEvent, view) {
-    $("#myModal").modal("show");
-},
-			editable: true,
-			eventLimit: true, // allow "more" link when too many events
-			events: [
-				{
-					title: 'All Day Event',
-					start: '2017-09-01'
-				},
-				{
-					title: 'Long Event',
-					start: '2017-09-07',
-					end: '2017-09-10'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2017-09-09T16:00:00'
-				},
-				{
-					id: 999,
-					title: 'Repeating Event',
-					start: '2017-09-16T16:00:00'
-				},
-				{
-					title: 'Conference',
-					start: '2017-09-11',
-					end: '2017-09-13'
-				},
-				{
-					title: 'Meeting',
-					start: '2017-09-12T10:30:00',
-					end: '2017-09-12T12:30:00'
-				},
-				{
-					title: 'Lunch',
-					start: '2017-09-12T12:00:00'
-				},
-				{
-					title: 'Meeting',
-					start: '2017-09-12T14:30:00'
-				},
-				{
-					title: 'Happy Hour',
-					start: '2017-09-12T17:30:00'
-				},
-				{
-					title: 'Dinner',
-					start: '2017-09-12T20:00:00'
-				},
-				{
-					title: 'Birthday Party',
-					start: '2017-09-13T07:00:00'
-				},
-				{
-					title: 'Click for Google',
-					url: 'http://google.com/',
-					start: '2017-09-28'
-				}
-			]
-		});
-		
-	});
+$(document).ready(function () {
+
+    $('#calendar').fullCalendar({
+        header: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'month,agendaWeek,agendaDay'
+        },
+        locale: 'es',
+        navLinks: true, // can click day/week names to navigate views
+        selectable: true,
+        selectHelper: true,
+        dayClick: function (date, jsEvent, view) {
+            $("#myModal").modal("show");
+//            console.log(date._i);
+        },
+        editable: true,
+        eventLimit: true, // allow "more" link when too many events
+        events: [
+            {
+                title: 'All Day Event',
+                start: '2017-09-01'
+            },
+            {
+                title: 'Long Event',
+                start: '2017-09-07',
+                end: '2017-09-10'
+            }
+        ]
+    });
+
+    $("#createQuote").validate({
+        
+        wrapper: "div",
+        errorClass: "text-danger",
+        
+	rules: {
+            polygraphist: { required:true },
+            client: { required:true },
+            schedule: { required:true },
+            candidato: { required:true },
+        },
+	messages: {
+            polygraphist: { required: "El campo poligrafista es obligatorio." },
+            client: { required: "El campo cliente es obligatorio." },
+            schedule: { required: "El campo cliente es obligatorio." },
+            candidato: { required: "El campo nombre es obligatorio." },
+	},
+	submitHandler: function(form){
+            var dataString = $('#createQuote').serialize();
+            $.ajax({
+	        type: "POST",
+	        url: "create_quote",
+	        data: dataString,
+	        success: function(data) {
+                   	alert("bien");
+                        $('#createUser')[0].reset();
+	       	},error: function (err) {
+                    if (err.status === 422) {
+                        $errors = err.responseJSON; //this will get the errors response data.
+                        //show them somewhere in the markup
+                        //e.g
+                        errorsHtml = '<div class="alert alert-danger" role="alert">';
+                        errorsHtml += '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><ul>';
+
+                        $.each($errors, function (key, value) {
+                            errorsHtml += '<li>' + value[0] + '</li>'; //showing only the first error.
+                        });
+                        errorsHtml += '</ul></di>';
+
+                        $('#form-errors').html(errorsHtml); //appending to a <div id="form-errors"></div> inside form
+
+                        window.setTimeout(function () {
+                            $(".alert").fadeTo(500, 0).slideUp(500, function () {
+                                $(this).remove();
+                            });
+                        }, 4000);
+                    } else {
+                        /// do some thing else
+                    }
+                }
+            });
+            //$('#createUser')[0].reset();
+	}//cerrado de la accion del submiting  
+    });//cerrada validating jquery 
+});
