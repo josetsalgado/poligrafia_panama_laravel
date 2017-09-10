@@ -38,18 +38,58 @@ class QuotesController extends Controller
      */
     public function create()
     {
-        return view("quotes.index");
+        //
     }
-
+    
+    /**
+     * .
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function validateCreate($request)
+    {
+        
+        $this->validate($request,[
+                'polygraphist' => 'required',
+                'client' => 'required',
+                'schedule' => 'required',
+                'service' => 'required',
+                'candidateName' => 'required',
+                'candidateLastname' => 'required',
+                'ciCandidate' => 'required|numeric',
+                'jobCandidate' => 'required',
+                'telCandidate' => 'required|numeric',
+                'descriptionCandidate' => 'required',
+            ], 
+            [
+                'polygraphist.required' => trans("validations.input_required", ['input' => 'poligrafista']),
+                'client.required' => trans("validations.input_required", ['input' => 'cliente']),
+                'schedule.required' => trans("validations.input_required", ['input' => 'horario']),
+                'service.required' => trans("validations.input_required", ['input' => 'tipo de prueba']),
+                'candidateName.required' => trans("validations.input_required", ['input' => 'nombre']),
+                'candidateLastname.required' => trans("validations.input_required", ['input' => 'apellido']),
+                'ciCandidate.required' => trans("validations.input_required", ['input' => 'cedula']),
+                'ciCandidate.numeric' => trans("validations.input_format", ['input' => 'cedula']),
+                'jobCandidate.required' => trans("validations.input_required", ['input' => 'puesto']),
+                'telCandidate.required' => trans("validations.input_required", ['input' => 'cedular']),
+                'telCandidate.numeric' => trans("validations.input_format", ['input' => 'cedular']),
+                'descriptionCandidate.required' => trans("validations.input_required", ['input' => 'comentario']),
+                
+            ]
+        );
+    }
+    
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store()
+    public function store(Request  $request)
     {
-        //
+        $this->validateCreate($request);
+        return view("quotes.index");
     }
 
     /**

@@ -39,7 +39,7 @@ Route::post('/update_client', 'ClientController@update');
 //solicitudes de citas
 Route::get('/quotes_client', 'QuotesController@index');
 //crear citas
-Route::post('/create_quote', 'QuotesController@create');
+Route::post('/create_quote', 'QuotesController@store');
 //solicitudes de cotizaciones
 Route::get('/butget_client', 'BudgetController@create');
 //mostrar solicitudes de cotizaciones

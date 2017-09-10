@@ -31,6 +31,7 @@
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
+                <div id="form-errors"></div>
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                     <h4 class="modal-title" id="myModalLabel2">Editar cita</h4>
@@ -56,7 +57,7 @@
                                 <div class="col-sm-9 col-xs-12">
                                     <select class="form-control col-xs-12" id="client" name="client">
                                         <option value="">Seleccione</option>
-                                         @foreach($clients as $client)
+                                        @foreach($clients as $client)
                                             <option value="{{ $client->id_client }}">{{ $client->name_client }}</option>
                                         @endforeach
                                     </select>
@@ -74,18 +75,17 @@
                                     <label>
                                         <input type="radio" name="schedule" id="schedule" class="js-switch" value="01:30" /> 01:30
                                     </label><br>
+                                    <div id="validSchedule"></div>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Tipo de Prueba</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <select id="prueba" class="form-control col-xs-12">
+                                    <select class="form-control col-xs-12" id="service" name="service">
                                         <option value="">Seleccione</option>
-                                        <option value="prueba-pre-empleo">Prueba Pre Empleo</option>
-                                        <option value="prueba-permanencia">Prueba Permanencia</option>
-                                        <option value="prueba-especifica">Prueba Especifica</option>
-                                        <option value="pruebas-psicologicas">Pruebas Psicologícas</option>
-                                        <option value="pruebas-socioeconomicas">Pruebas Socioeconómicas</option>
+                                        @foreach($services as $service)
+                                            <option value="{{ $service->id_service }}">{{ $service->name_service }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -95,39 +95,39 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Nombre</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="candidato" name="candidato">
+                                    <input type="text" class="form-control" id="candidateName" name="candidateName">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Apellido</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="apellido" name="apellido">
+                                    <input type="text" class="form-control" id="candidateLastname" name="candidateLastname">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Cedula</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="cedula" name="cedula">
+                                    <input type="number" class="form-control" id="ciCandidate" name="ciCandidate">
                                 </div>
                             </div>
                             <div class="form-group">
 
                                 <label class="col-sm-3 control-label col-xs-12">Puesto</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="puesto" name="puesto">
+                                    <input type="text" class="form-control" id="jobCandidate" name="jobCandidate">
                                 </div>
                             </div>
                             <div class="form-group">
 
                                 <label class="col-sm-3 control-label col-xs-12">Celular</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="celular" name="celular">
+                                    <input type="number" class="form-control" id="telCandidate" name="telCandidate">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Comentarios</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                                    <textarea class="form-control" style="height:55px;" id="descriptionCandidate" name="descriptionCandidate"></textarea>
                                 </div>
                             </div>
                             <div class="modal-footer">
