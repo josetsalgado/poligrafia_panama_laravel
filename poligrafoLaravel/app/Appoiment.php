@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Patient;
 
 class Appoiment extends Model
 {
@@ -12,6 +13,11 @@ class Appoiment extends Model
      * @var string
      */
     protected $table = 'itcp_appoiments';
+    protected $primaryKey = 'id_appoiment';
     public $timestamps = false;
     
+    public function patient()
+    {
+        return $this->belongsTo('Patient', 'id_patient');
+    }
 }

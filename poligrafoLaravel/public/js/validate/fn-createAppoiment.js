@@ -35,34 +35,34 @@ $(document).ready(function () {
         errorClass: "text-danger",
         
 	rules: {
-            polygraphist: { required:true },
-            client: { required:true },
-            schedule: { required:true },
-            service: { required:true },
-            service: { required:true },
-            candidateLastname: { required:true },
-            ciCandidate: { required:true, number:true },
-            jobCandidate: { required:true },
-            telCandidate: { required:true, number:true },
-            descriptionCandidate: { required:true },
+//            polygraphist: { required:true },
+//            client: { required:true },
+//            schedule: { required:true },
+//            service: { required:true },
+//            candidateName: { required:true },
+//            candidateLastname: { required:true },
+//            ciCandidate: { required:true, number:true },
+//            jobCandidate: { required:true },
+//            telCandidate: { required:true, number:true },
+//            descriptionCandidate: { required:true },
         },
 	messages: {
-            polygraphist: { required: "El campo poligrafista es obligatorio." },
-            client: { required: "El campo cliente es obligatorio." },
-            schedule: { required: "El campo horario es obligatorio." },
-            service: { required: "El campo tipo de prueba es obligatorio." },
-            candidateName: { required: "El campo nombre del candidato es obligatorio." },
-            candidateLastname: { required: "El campo apellido del candidato es obligatorio." },
-            ciCandidate: { 
-                required: "El campo cedula del candidato es obligatorio.",
-                number: "Este campo no tiene un formato correcto"
-            },
-            jobCandidate: { required: "El campo puesto del candidato es obligatorio." },
-            telCandidate: { 
-                required: "El campo telefono del candidato es obligatorio.",
-                number: "Este campo no tiene un formato correcto"
-            },
-            descriptionCandidate: { required: "El descripción del candidato es obligatorio." },
+//            polygraphist: { required: "El campo poligrafista es obligatorio." },
+//            client: { required: "El campo cliente es obligatorio." },
+//            schedule: { required: "El campo horario es obligatorio." },
+//            service: { required: "El campo tipo de prueba es obligatorio." },
+//            candidateName: { required: "El campo nombre del candidato es obligatorio." },
+//            candidateLastname: { required: "El campo apellido del candidato es obligatorio." },
+//            ciCandidate: { 
+//                required: "El campo cedula del candidato es obligatorio.",
+//                number: "Este campo no tiene un formato correcto"
+//            },
+//            jobCandidate: { required: "El campo puesto del candidato es obligatorio." },
+//            telCandidate: { 
+//                required: "El campo telefono del candidato es obligatorio.",
+//                number: "Este campo no tiene un formato correcto"
+//            },
+//            descriptionCandidate: { required: "El descripción del candidato es obligatorio." },
 	},
 	submitHandler: function(form){
             var dataString = $('#createQuote').serialize();
@@ -72,7 +72,8 @@ $(document).ready(function () {
 	        data: dataString,
 	        success: function(data) {
                    	alert("bien");
-                        $('#createUser')[0].reset();
+                        $('#createQuote')[0].reset();
+                        $('.close').click();
 	       	},error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.

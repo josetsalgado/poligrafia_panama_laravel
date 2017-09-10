@@ -9,6 +9,8 @@ use App\Http\Controllers\Controller;
 use App\Client;
 use App\User;
 use App\Service;
+use App\Patient;
+use App\Appoiment;
 
 class QuotesController extends Controller
 {
@@ -72,8 +74,8 @@ class QuotesController extends Controller
                 'ciCandidate.required' => trans("validations.input_required", ['input' => 'cedula']),
                 'ciCandidate.numeric' => trans("validations.input_format", ['input' => 'cedula']),
                 'jobCandidate.required' => trans("validations.input_required", ['input' => 'puesto']),
-                'telCandidate.required' => trans("validations.input_required", ['input' => 'cedular']),
-                'telCandidate.numeric' => trans("validations.input_format", ['input' => 'cedular']),
+                'telCandidate.required' => trans("validations.input_required", ['input' => 'celular']),
+                'telCandidate.numeric' => trans("validations.input_format", ['input' => 'celular']),
                 'descriptionCandidate.required' => trans("validations.input_required", ['input' => 'comentario']),
                 
             ]
@@ -88,8 +90,30 @@ class QuotesController extends Controller
      */
     public function store(Request  $request)
     {
-        $this->validateCreate($request);
-        return view("quotes.index");
+//        $this->validateCreate($request);
+        //insertar data paciente
+//        Patient::insert([
+//          'id_patient' => '',
+//          'name_patient' => $request->candidateName,
+//          'last_name_patient' => $request->candidateLastname,
+//          'ci_patient' => $request->ciCandidate,
+//          'job_patient' => $request->jobCandidate,
+//          'phone' => $request->telCandidate,
+//        ]);
+//        //insertar data de la cita
+//        
+//        Appoiment::insert([
+//          'id_appoiment' => '',
+//          'service_id' => 'cita',
+//          'user_id' => $request->polygraphist,
+//          'client_id' => $request->client,
+//          'patient_id' => intval(Patient::all()->last()->id_patient),
+//          'city_appoiment' => 'Ciudad de panama',
+//          'date_appoiment' => time(),
+//          'time_appoiment' => time(),
+//          'comentary_appoiment' => $request->descriptionCandidate,
+//            
+//        ]);
     }
 
     /**

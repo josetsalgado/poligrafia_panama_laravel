@@ -55,7 +55,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Cliente</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <select class="form-control col-xs-12" id="client" name="client">
+                                        <select class="form-control col-xs-12" id="client" name="client">
                                         <option value="">Seleccione</option>
                                         @foreach($clients as $client)
                                             <option value="{{ $client->id_client }}">{{ $client->name_client }}</option>
