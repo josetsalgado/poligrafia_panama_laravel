@@ -52,7 +52,7 @@
 
             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="h" class="btn btn-primary">Guardar</button>
             </div>
         </div>
     </form>

@@ -285,7 +285,6 @@
         <script src="js/build/js/custom.min.js"></script>
 
         <script src="js/fullcalendar/dist/fullcalendar.js"></script>
-        <script src='js/fullcalendar/dist/lang-all.js'></script>
         <script src='js/fullcalendar/lib/moment.min.js'></script>
 
         <!--
@@ -296,5 +295,6 @@
 
         <!-- Switchery -->
         <script src="js/switchery/dist/switchery.min.js"></script>
+        
     </body>
 </html>
