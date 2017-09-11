@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    
     $('#calendar').fullCalendar({
         header: {
             left: 'prev,next today',
@@ -11,22 +12,23 @@ $(document).ready(function () {
         selectable: true,
         selectHelper: true,
         dayClick: function (date, jsEvent, view) {
+
+            var date = new Date(date._i);
+
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var day = date.getDate() + 1;
+            var getDate = year + "-" + month + "-" + day;
+
             $("#myModal").modal("show");
-//            console.log(date._i);
+            $("#dateEpoch").attr("value", getDate);
         },
-        editable: true,
         eventLimit: true, // allow "more" link when too many events
-        events: [
-            {
-                title: 'All Day Event',
-                start: '2017-09-01'
-            },
-            {
-                title: 'Long Event',
-                start: '2017-09-07',
-                end: '2017-09-10'
-            }
-        ]
+        events: {
+            url: 'getQuotes',
+          
+        },
+        
     });
 
     $("#createQuote").validate({
@@ -35,34 +37,34 @@ $(document).ready(function () {
         errorClass: "text-danger",
         
 	rules: {
-//            polygraphist: { required:true },
-//            client: { required:true },
-//            schedule: { required:true },
-//            service: { required:true },
-//            candidateName: { required:true },
-//            candidateLastname: { required:true },
-//            ciCandidate: { required:true, number:true },
-//            jobCandidate: { required:true },
-//            telCandidate: { required:true, number:true },
-//            descriptionCandidate: { required:true },
+            polygraphist: { required:true },
+            client: { required:true },
+            schedule: { required:true },
+            service: { required:true },
+            candidateName: { required:true },
+            candidateLastname: { required:true },
+            ciCandidate: { required:true, number:true },
+            jobCandidate: { required:true },
+            telCandidate: { required:true, number:true },
+            descriptionCandidate: { required:true },
         },
 	messages: {
-//            polygraphist: { required: "El campo poligrafista es obligatorio." },
-//            client: { required: "El campo cliente es obligatorio." },
-//            schedule: { required: "El campo horario es obligatorio." },
-//            service: { required: "El campo tipo de prueba es obligatorio." },
-//            candidateName: { required: "El campo nombre del candidato es obligatorio." },
-//            candidateLastname: { required: "El campo apellido del candidato es obligatorio." },
-//            ciCandidate: { 
-//                required: "El campo cedula del candidato es obligatorio.",
-//                number: "Este campo no tiene un formato correcto"
-//            },
-//            jobCandidate: { required: "El campo puesto del candidato es obligatorio." },
-//            telCandidate: { 
-//                required: "El campo telefono del candidato es obligatorio.",
-//                number: "Este campo no tiene un formato correcto"
-//            },
-//            descriptionCandidate: { required: "El descripción del candidato es obligatorio." },
+            polygraphist: { required: "El campo poligrafista es obligatorio." },
+            client: { required: "El campo cliente es obligatorio." },
+            schedule: { required: "El campo horario es obligatorio." },
+            service: { required: "El campo tipo de prueba es obligatorio." },
+            candidateName: { required: "El campo nombre del candidato es obligatorio." },
+            candidateLastname: { required: "El campo apellido del candidato es obligatorio." },
+            ciCandidate: { 
+                required: "El campo cedula del candidato es obligatorio.",
+                number: "Este campo no tiene un formato correcto"
+            },
+            jobCandidate: { required: "El campo puesto del candidato es obligatorio." },
+            telCandidate: { 
+                required: "El campo telefono del candidato es obligatorio.",
+                number: "Este campo no tiene un formato correcto"
+            },
+            descriptionCandidate: { required: "El descripción del candidato es obligatorio." },
 	},
 	submitHandler: function(form){
             var dataString = $('#createQuote').serialize();

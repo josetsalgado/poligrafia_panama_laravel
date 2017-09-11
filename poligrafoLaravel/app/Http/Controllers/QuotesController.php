@@ -11,6 +11,8 @@ use App\User;
 use App\Service;
 use App\Patient;
 use App\Appoiment;
+use Carbon\Carbon;
+use DB;
 
 class QuotesController extends Controller
 {
@@ -24,13 +26,25 @@ class QuotesController extends Controller
         $clients = Client::All();
         $users = User::All();
         $services = Service::All();
+        $appoiments = DB::table('itcp_appoiments')
+                ->join('itcp_patients', 'itcp_patients.id_patient', '=', 'itcp_appoiments.patient_id')
+                ->select('name_patient AS title', 'date_appoiment AS start')
+                ->get();
+        $appoiments = json_encode($appoiments);
         
-        return view('quotes.index', compact("clients", "users", "services"));
+        return view('quotes.index', compact("clients", "users", "services", "appoiments"));
     }
 
-    public function quote()
+   
+    
+    public function getQuotes()
     {
-        return view("quote.modal_quote");
+        $appoiments = DB::table('itcp_appoiments')
+                ->join('itcp_patients', 'itcp_patients.id_patient', '=', 'itcp_appoiments.patient_id')
+                ->select('name_patient AS title', 'date_appoiment AS start', ' AS titleHtml')
+                ->get();
+        $appoiments = $appoiments;
+        return view("quotes.getQuotes", compact("appoiments"));
     }
     
     /**
@@ -90,30 +104,31 @@ class QuotesController extends Controller
      */
     public function store(Request  $request)
     {
-//        $this->validateCreate($request);
+        $this->validateCreate($request);
         //insertar data paciente
-//        Patient::insert([
-//          'id_patient' => '',
-//          'name_patient' => $request->candidateName,
-//          'last_name_patient' => $request->candidateLastname,
-//          'ci_patient' => $request->ciCandidate,
-//          'job_patient' => $request->jobCandidate,
-//          'phone' => $request->telCandidate,
-//        ]);
-//        //insertar data de la cita
-//        
-//        Appoiment::insert([
-//          'id_appoiment' => '',
-//          'service_id' => 'cita',
-//          'user_id' => $request->polygraphist,
-//          'client_id' => $request->client,
-//          'patient_id' => intval(Patient::all()->last()->id_patient),
-//          'city_appoiment' => 'Ciudad de panama',
-//          'date_appoiment' => time(),
-//          'time_appoiment' => time(),
-//          'comentary_appoiment' => $request->descriptionCandidate,
-//            
-//        ]);
+        Patient::insert([
+          'id_patient' => '',
+          'name_patient' => $request->candidateName,
+          'last_name_patient' => $request->candidateLastname,
+          'ci_patient' => $request->ciCandidate,
+          'job_patient' => $request->jobCandidate,
+          'phone' => $request->telCandidate,
+        ]);
+        //insertar data de la cita
+        
+        Appoiment::insert([
+          'id_appoiment' => '',
+          'service_id' => intval($request->service),
+          'user_id' => intval($request->polygraphist),
+          'client_id' => intval($request->client),
+          'patient_id' => intval(Patient::all()->last()->id_patient),
+          'city_appoiment' => 'Ciudad de panama',
+          'date_appoiment' => $request->dateEpoch,
+          'time_appoiment' => $request->schedule,
+          'comentary_appoiment' => $request->descriptionCandidate,
+            
+        ]);
+        
     }
 
     /**
