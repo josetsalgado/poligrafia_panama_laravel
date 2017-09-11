@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Moris JS Chart Examples | Gentelella Alela! by Colorlib</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+</head>
+
+<body class="nav-md">
+    <div class="container body">
+        <div class="main_container">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                        <a href="index.html" class="site_title"><i class="fa fa-globe"></i> <span>IPTC</span></a>
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <br />
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>Bienvenido</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href="index.html"><i class="fa fa-home"></i> Inicio</a>
+                                </li>
+                                <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="crear_usuario.html">Nuevo Usuario</a></li>
+                                        <li><a href="ver_usuario.html">Ver Usuarios</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-suitcase"></i> Clientes <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="crear_cliente.html">Nuevo Cliente</a></li>
+                                        <li><a href="ver_empresas.html">Ver Clientes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-hospital-o"></i> Productos <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="crear_producto.html">Nuevo Producto</a></li>
+                                        <li><a href="ver_productos.html">Ver Productos</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="citas.html"><i class="fa fa-calendar"></i> Citas</span></a>
+                                </li>
+                            </li>
+                            <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="cotizar.html">Cotizar</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-credit-card"></i> Pagos <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="registrar_pagos.html">Registrar Pago</a></li>
+                                    <li><a href="ver_pagos.html">Ver Pago</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="estados_de_cuenta.html"><i class="fa fa-bar-chart-o"></i> Estados de Cuenta</span></a>
+                            </li>
+                            <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="registro_resultados.html">Registro de Resultados</a></li>
+                                    <li><a href="calidad_prueba.html">Registro de Calidad de Prueba</a></li>
+                                    <li><a href="informe_prueba.html">Informe de Prueba</a></li>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a href="informe_1.html">Informe por Fechas</a></li>
+                                <li><a href="informe_2.html">Informe por Clientes</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+                <a href="editar_perfil.html" data-toggle="tooltip" data-placement="top" title="Editar Perfil">
+                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                    <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Lock">
+                    <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Salir" href="login.html">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- /menu footer buttons -->
+        </div>
+    </div>
+
+    <!-- top navigation -->
+    <div class="top_nav">
+        <div class="nav_menu">
+            <nav>
+                <div class="nav toggle">
+                    <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <img src="images/user.png" alt="">John Doe
+                            <span class=" fa fa-caret-down"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-usermenu pull-right">
+                            <li><a href="editar_perfil.html"><i class="fa fa-edit pull-right"></i> Editar Perfil</a></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Salir</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation" class="dropdown">
+                        <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                            PANAMA <i class="fa fa-caret-down"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-usermenu pull-right">
+                            <li><a href="login.html"><b> CHIRIQUI </b> </a></li>
+                            <li><a href="editar_perfil.html"><b>PROVINCIAS CENTRALES </b></a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+    <!-- /top navigation -->
+
+
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div class="">
+
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="">
+                        <div class="row x_title">
+                            <div class="col-md-6">
+                                <h3>Citas Atendidas por fechas</h3>
+                            </div>
+                            <div class="col-md-6">
+                                <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                                    <span>August 10, 2017 - September 8, 2017</span> <b class="caret"></b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <!-- bar chart -->
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Grafico</h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">Settings 1</a>
+                                                </li>
+                                                <li><a href="#">Settings 2</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="x_content">
+                                    <div id="graph_bar" style="width:100%; height:280px;"></div>
+                                </div>
+                            </div>
+                            <!-- /bar charts -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>Ultimas Citas</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Settings 1</a>
+                                        </li>
+                                        <li><a href="#">Settings 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a class="close-link"><i class="fa fa-close"></i></a>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="dashboard-widget-content">
+
+                                <ul class="list-unstyled timeline widget">
+                                    <li>
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <h2 class="title">
+                                                    <a><b>Nicole Pearson</b></a> - Empresa3
+                                                </h2>
+                                                <div class="byline">
+                                                    <span>Hace 13 horas </span> por  <a>Poligrafista 3</a>
+                                                </div>
+                                                <p class="excerpt">Comentarios</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                     <li>
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <h2 class="title">
+                                                    <a><b>Jhon Smit</b></a> - Empresa1
+                                                </h2>
+                                                <div class="byline">
+                                                    <span>Hace 13 horas </span> por  <a>Poligrafista 1</a>
+                                                </div>
+                                                <p class="excerpt">Comentarios</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                     <li>
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <h2 class="title">
+                                                    <a><b>Nicole Pearson</b></a> - Empresa2
+                                                </h2>
+                                                <div class="byline">
+                                                    <span>Hace 13 horas </span> por  <a>Poligrafista 2</a>
+                                                </div>
+                                                <p class="excerpt">Comentarios</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                     <li>
+                                        <div class="block">
+                                            <div class="block_content">
+                                                <h2 class="title">
+                                                    <a><b>Jhon Smit</b></a> - Empresa1
+                                                </h2>
+                                                <div class="byline">
+                                                    <span>Hace 13 horas </span> por  <a>Poligrafista 1</a>
+                                                </div>
+                                                <p class="excerpt">Comentarios</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /page content -->
+
+    <!-- footer content -->
+    <footer>
+        <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+        </div>
+        <div class="clearfix"></div>
+    </footer>
+    <!-- /footer content -->
+</div>
+</div>
+
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- morris.js -->
+<script src="../vendors/raphael/raphael.min.js"></script>
+<script src="../vendors/morris.js/morris.min.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+
+<!-- bootstrap-daterangepicker -->
+<script src="../vendors/moment/min/moment.min.js"></script>
+<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+</body>
+</html>
