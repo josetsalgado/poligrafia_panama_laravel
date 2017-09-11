@@ -16,15 +16,6 @@
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a>
-                                </li>
-                                <li><a href="#">Settings 2</a>
-                                </li>
-                            </ul>
-                        </li>
                         <li><a class="close-link"><i class="fa fa-close"></i></a>
                         </li>
                     </ul>
@@ -33,109 +24,46 @@
                 <div class="x_content">
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                         <thead>
-                        <tr>
-                            <th>Nombre</th>
-                            <th>Telefono</th>
-                            <th>Correo</th>
-                            <th>Ciudad</th>
-                            <th>#edit</th>
-                        </tr>
+                            <tr>
+                                <th>{{ trans("poligrafo.name") }}</th>
+                                <th>{{ trans("poligrafo.tel") }}</th>
+                                <th>{{ trans("poligrafo.email") }}</th>
+                                <th>{{ trans("poligrafo.city") }}</th>
+                                <th>{{ trans("poligrafo.edit") }}</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>Jennifer</td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>Edinburgh</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Cara</td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>New York</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Hermione</td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>London</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Lael</td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>London</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jonas</td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>San Francisco</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Shad</td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>Edinburgh</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Michael</td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>Singapore</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Donna</td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>New York</td>
-                            <td>
-                                <a href="#" class="btn btn-info btn-xs"><i class="fa fa-pencil"></i> Edit </a>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
+                            @foreach ($clients as $client)
+                                <tr>
+                                    <td>{{ $client->name_client }}</td>
+                                    <td>{{ $client->tel_client }}</td>
+                                    <td>{{ $client->email_client }}</td>
+                                    <td>{{ $client->city_id }}</td>
+                                    <td>
+                                        <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal" href="show_client/{{ $client->id_client }}"><i class="fa fa-pencil"></i> {{ trans("poligrafo.edit") }}</a>
+                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
-
-
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="myModal" >
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+            
+            </div>
+        </div>
     </div>
 
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $(this).removeData('bs.modal');
+        });
+    </script>
 @stop

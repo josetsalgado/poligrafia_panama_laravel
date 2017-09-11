@@ -10,7 +10,15 @@ html , body{
  width:100%;
  
  }
- 
+ .dash_titulo{
+    margin: 5px 0 6px;
+    float: left;
+}
+
+.selc-empresa{
+    padding-left: 43px;
+}
+
 .full-height{
  height:100%;
  }
@@ -1787,7 +1795,7 @@ ul.top_profiles li:nth-child(odd) {
     font-size: 30px
 }
 .media .date {
-    background: #ccc;
+    background: #395d81;
     width: 52px;
     margin-right: 10px;
     border-radius: 10px;

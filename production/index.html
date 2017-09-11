@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Gentelella Alela! | </title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+           <div class="navbar nav_title" style="border: 0;">
+            <a href="index.html" class="site_title"><i class="fa fa-globe"></i> <span>IPTC</span></a>
+          </div>
+
+            <div class="clearfix"></div>
+
+            <br />
+
+                   <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>Bienvenido</h3>
+                            <ul class="nav side-menu">
+                                <li>
+                                    <a href="index.html"><i class="fa fa-home"></i> Inicio</a>
+                                </li>
+                                <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="crear_usuario.html">Nuevo Usuario</a></li>
+                                        <li><a href="ver_usuario.html">Ver Usuarios</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-suitcase"></i> Clientes <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="crear_cliente.html">Nuevo Cliente</a></li>
+                                        <li><a href="ver_empresas.html">Ver Clientes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-hospital-o"></i> Productos <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="crear_producto.html">Nuevo Producto</a></li>
+                                        <li><a href="ver_productos.html">Ver Productos</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="citas.html"><i class="fa fa-calendar"></i> Citas</span></a>
+                                </li>
+                            </li>
+                            <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="cotizar.html">Cotizar</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-credit-card"></i> Pagos <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="registrar_pagos.html">Registrar Pago</a></li>
+                                    <li><a href="ver_pagos.html">Ver Pago</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="estados_de_cuenta.html"><i class="fa fa-bar-chart-o"></i> Estados de Cuenta</span></a>
+                            </li>
+                            <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="registro_resultados.html">Registro de Resultados</a></li>
+                                    <li><a href="calidad_prueba.html">Registro de Calidad de Prueba</a></li>
+                                    <li><a href="informe_prueba.html">Informe de Prueba</a></li>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>
+                            <ul class="nav child_menu">
+                                <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
+                                <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+                <a href="editar_perfil.html" data-toggle="tooltip" data-placement="top" title="Editar Perfil">
+                    <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                    <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Lock">
+                    <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                </a>
+                <a data-toggle="tooltip" data-placement="top" title="Salir" href="login.html">
+                    <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                </a>
+            </div>
+            <!-- /menu footer buttons -->
+        </div>
+    </div>
+
+    <!-- top navigation -->
+    <div class="top_nav">
+        <div class="nav_menu">
+            <nav>
+                <div class="nav toggle">
+                    <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                        <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <img src="images/user.png" alt="">John Doe
+                            <span class=" fa fa-angle-down"></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-usermenu pull-right">
+                            <li><a href="editar_perfil.html">Editar Perfil</a></li>
+                            <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Salir</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- /top navigation -->
+  
+     <!-- page content -->
+        <div class="right_col" role="main">
+          <!-- top tiles -->
+          <div class="row tile_count">
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Usuarios</span>
+              <div class="count">2500</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-suitcase"></i> Total Clientes  </span>
+              <div class="count">12350</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-hospital-o"></i> Total Productos</span>
+              <div class="count">2,315</div>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-calendar"></i> Citas Pendientes</span>
+              <div class="count green">500</div>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-credit-card"></i> Total Pagos Pendientes</span>
+              <div class="count">4567</div>
+            </div>
+          </div>
+          <!-- /top tiles -->
+          <br />
+
+          <div class="row">
+
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile">
+                <div class="x_title">
+                  <h4 class="dash_titulo">Ultimas Citas Pendientes</h4>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item One Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item Two Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item Two Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item Two Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item Three Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                  </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile overflow_hidden">
+                <div class="x_title">
+                  <h4 class="dash_titulo">Ultimas Citas Atendidas</h4>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item One Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item Two Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item Two Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item Two Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                    <article class="media event">
+                      <a class="pull-left date">
+                        <p class="month">April</p>
+                        <p class="day">23</p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">Item Three Title</a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      </div>
+                    </article>
+                  </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile">
+                <div class="x_title">
+                  <h4 class="dash_titulo">Ultimos Clientes</h4>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                    <ul class="list-unstyled top_profiles scroll-view">
+                      <li class="media event">
+                        <a class="pull-left border-aero profile_thumb">
+                          <i class="fa fa-user aero"></i>
+                        </a>
+                        <div class="media-body">
+                          <a class="title" href="#">Ms. Mary Jane</a>
+                          <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                          <p> <small>12 Sales Today</small>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="media event">
+                        <a class="pull-left border-green profile_thumb">
+                          <i class="fa fa-user green"></i>
+                        </a>
+                        <div class="media-body">
+                          <a class="title" href="#">Ms. Mary Jane</a>
+                          <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                          <p> <small>12 Sales Today</small>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="media event">
+                        <a class="pull-left border-blue profile_thumb">
+                          <i class="fa fa-user blue"></i>
+                        </a>
+                        <div class="media-body">
+                          <a class="title" href="#">Ms. Mary Jane</a>
+                          <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                          <p> <small>12 Sales Today</small>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="media event">
+                        <a class="pull-left border-aero profile_thumb">
+                          <i class="fa fa-user aero"></i>
+                        </a>
+                        <div class="media-body">
+                          <a class="title" href="#">Ms. Mary Jane</a>
+                          <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                          <p> <small>12 Sales Today</small>
+                          </p>
+                        </div>
+                      </li>
+                      <li class="media event">
+                        <a class="pull-left border-green profile_thumb">
+                          <i class="fa fa-user green"></i>
+                        </a>
+                        <div class="media-body">
+                          <a class="title" href="#">Ms. Mary Jane</a>
+                          <p><strong>$2300. </strong> Agent Avarage Sales </p>
+                          <p> <small>12 Sales Today</small>
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+
+             <a href="http://www.monitorbg.com/web/">
+               <img class="center-block" src="images/logobg.png">
+               <b> Desarrollado por B&G Consulting and Technologies</b> <a/>
+           </div>
+           <div class="clearfix"></div>
+       </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="../vendors/moment/min/moment.min.js"></script>
+    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+  </body>
+</html>
