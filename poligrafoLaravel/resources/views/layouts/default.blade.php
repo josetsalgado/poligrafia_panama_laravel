@@ -58,7 +58,7 @@
                 <div class="col-md-3 left_col">
                     <div class="left_col scroll-view">
                         <div class="navbar nav_title" style="border: 0;">
-                            <a href="index.html" class="site_title"><i class="fa fa-globe"></i> <span>IPTC</span></a>
+                            <a href="dashboard_home" class="site_title"><i class="fa fa-globe"></i> <span>IPTC</span></a>
                         </div>
 
                         <div class="clearfix"></div>
@@ -71,7 +71,8 @@
                                 <h3>Bienvenido</h3>
                                 <ul class="nav side-menu">
                                     <li>
-                                        <a><i class="/"></i> Inicio</a>
+                                        <a href="dashboard_home"><i class="fa fa-home"></i> Inicio</a>
+
                                     </li>
                                     <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
@@ -154,8 +155,8 @@
                                         <span class=" fa fa-caret-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                        <li><a href="editar_perfil.html"><i class="fa fa-edit pull-right"></i> Editar Perfil</a></li>
-                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Salir</a></li>
+                                        <li><a href="edit_user"><i class="fa fa-edit pull-right"></i> Editar Perfil</a></li>
+                                        <li><a href="/"><i class="fa fa-sign-out pull-right"></i> Salir</a></li>
                                     </ul>
                                 </li>
                                 <li role="presentation" class="dropdown">
