@@ -12,6 +12,8 @@
 */
 
 //index del dashboard
+Route::get('/dashboard_home', 'DashboardController@index');
+//index del loguin
 Route::get('/', 'HomeController@index');
 //no se sabe para que es
 Route::get('/quotes', 'QuotesController@index');
@@ -68,3 +70,5 @@ Route::post('/update_service', 'ServiceController@update');
 Route::get('/record_result', 'ResultController@create');
 //registro de calidad de pruebas
 Route::get('/quality_test', 'ResultController@show');
+//editar perfil de usuario
+Route::get('/edit_user', 'EditUserController@edit');
