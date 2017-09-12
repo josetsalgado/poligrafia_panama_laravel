@@ -46,11 +46,11 @@ class BudgetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show()
+    /**public function show()
     {
         return view('budget.show');
     }
-
+**/
     /**
      * Show the form for editing the specified resource.
      *

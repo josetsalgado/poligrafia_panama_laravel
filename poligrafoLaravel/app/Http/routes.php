@@ -50,7 +50,7 @@ Route::get('/getQuotes', 'QuotesController@getQuotes');
 //solicitudes de cotizaciones
 Route::get('/butget_client', 'BudgetController@create');
 //mostrar solicitudes de cotizaciones
-Route::get('/show_budget', 'BudgetController@show');
+//Route::get('/show_budget', 'BudgetController@show');
 //Crear registro de resultados
 Route::get('/create_result', 'ResultController@create');
 //Ver estados de cuenta
@@ -65,3 +65,5 @@ Route::get('/show_product', 'ServiceController@show');
 Route::get('/show_product/{id}', 'ServiceController@edit');
 //actualizar informacion de un cliente 
 Route::post('/update_service', 'ServiceController@update');
+//actualizar informacion de un cliente
+Route::get('/record_result', 'ResultController@create');

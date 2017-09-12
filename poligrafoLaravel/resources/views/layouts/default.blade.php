@@ -90,14 +90,13 @@
                                     <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="butget_client">Cotizar</a></li>
-                                            <li><a href="show_budget">Ver Cotizaciones</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="show_accountstatus"><i class="fa fa-bar-chart-o"></i> Estados de Cuenta</span></a>
                                     </li>
                                     <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
-                                            <li><a href="/create_result">Registro de Resultados</a></li>
+                                            <li><a href="record_result">Registro de Resultados</a></li>
                                             <li><a href="calidad_prueba.html">Registro de Calidad de Prueba</a></li>
                                             <li><a href="informe_prueba.html">Informe de Prueba</a></li>
                                     </li>
