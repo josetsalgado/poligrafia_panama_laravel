@@ -125,6 +125,6 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Service::where('id_service', '=', $id)->delete();
     }
 }

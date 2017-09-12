@@ -40,7 +40,9 @@
                                     <td>{{ $service->description_service }}</td>
                                     <td>  
                                         <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal" href="show_product/{{ $service->id_service }}"><i class="fa fa-pencil"></i> {{ trans("poligrafo.edit") }}</a>
-                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                        <button class="btn btn-danger btn-xs" id="delete" name="delete" value="{{ $service->id_service }}" onclick="fnDelete('{{ $service->id_service }}')" data-toggle="tooltip" data-placement="right" title="Eliminar servicio {{ $service->name_servicio }}">
+                                            <i class="fa fa-trash-o"></i> {{ trans('poligrafo.delete') }} </a>
+                                        </button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -64,4 +66,6 @@
             $(this).removeData('bs.modal');
         });
     </script>
+    
+    <script src="js/validate/fn-deleteService.js"></script>
 @stop

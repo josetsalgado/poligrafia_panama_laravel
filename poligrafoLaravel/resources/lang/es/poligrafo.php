@@ -9,6 +9,7 @@ return [
     'edit' => 'Editar',
     'lastname' => 'Apellido',
     'price' => 'Precio',
+    'delete' => 'Borrar',
     'description' => 'Descripción',
     'new_client' => 'Nuevo Cliente',
     'name_client' => 'Nombre del Cliente',

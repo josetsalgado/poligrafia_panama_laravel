@@ -35,21 +35,16 @@ Route::get('/show_client', 'ClientController@show');
 Route::get('/show_client/{id}', 'ClientController@edit');
 //actualizar informacion de un cliente 
 Route::post('/update_client', 'ClientController@update');
-
 //borrar clientes
 Route::get('/delete_client/{id}', 'ClientController@destroy');
-
 //solicitudes de citas
 Route::get('/quotes_client', 'QuotesController@index');
-
 //crear citas
 Route::post('/create_quote', 'QuotesController@store');
-
+//lista de citas que se cargaran en el calendario
 Route::get('/getQuotes', 'QuotesController@getQuotes');
 //solicitudes de cotizaciones
 Route::get('/butget_client', 'BudgetController@create');
-//mostrar solicitudes de cotizaciones
-//Route::get('/show_budget', 'BudgetController@show');
 //Crear registro de resultados
 Route::get('/create_result', 'ResultController@create');
 //Ver estados de cuenta
@@ -64,6 +59,8 @@ Route::get('/show_product', 'ServiceController@show');
 Route::get('/show_product/{id}', 'ServiceController@edit');
 //actualizar informacion de un cliente 
 Route::post('/update_service', 'ServiceController@update');
+//borrar servicios
+Route::get('/delete_service/{id}', 'ServiceController@destroy');
 //registrar resultados
 Route::get('/record_result', 'ResultController@create');
 //registro de calidad de pruebas

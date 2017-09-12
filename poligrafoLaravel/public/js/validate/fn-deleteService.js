@@ -1,10 +1,10 @@
 function fnDelete(id) {
-    alertify.confirm("¿Esta seguro que desea eliminar este cliente?",
+    alertify.confirm("¿Esta seguro que desea eliminar este servicio?",
             function (e) {
                 if (e) {
-                    var success = alertify.success('Cliente eliminado');
+                    var success = alertify.success('Servicio eliminado');
                     $.ajax({
-                        url: 'delete_client/' + id,
+                        url: 'delete_service/' + id,
                         type: 'get'
                     });
                     return false;
