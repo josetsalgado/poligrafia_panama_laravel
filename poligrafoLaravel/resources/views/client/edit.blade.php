@@ -21,7 +21,7 @@
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-            <input type="text" id="city" name="city" class="form-control selc-empresa">
+            <input type="text" id="city" name="city" class="form-control">
             <span class="fa fa-map-marker form-control-feedback right" aria-hidden="true"></span>
         </div>
 

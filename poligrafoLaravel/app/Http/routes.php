@@ -37,8 +37,8 @@ Route::get('/show_client/{id}', 'ClientController@edit');
 //actualizar informacion de un cliente 
 Route::post('/update_client', 'ClientController@update');
 
-//borrar citas
-Route::post('/delete_client', 'ClientController@destroy');
+//borrar clientes
+Route::get('/delete_client/{id}', 'ClientController@destroy');
 
 //solicitudes de citas
 Route::get('/quotes_client', 'QuotesController@index');

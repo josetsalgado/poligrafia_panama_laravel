@@ -1,16 +1,11 @@
-//funcion para borrar usuarios
 function fnDelete(id) {
     alertify.confirm("¿Esta seguro que desea eliminar este cliente?",
             function (e) {
                 if (e) {
                     var success = alertify.success('Encuestdo eliminado');
                     $.ajax({
-                        url: 'create_user',
-//                        data: id,
-                        type: 'post',
-                        success: function(){
-                            console.log("bien");
-                        }
+                        url: 'delete_client/' + id,
+                        type: 'get'
                     });
                     return false;
                 } else {
@@ -21,5 +16,4 @@ function fnDelete(id) {
             function () {
                 var error = alertify.error('Cancel');
             });
-
 }
