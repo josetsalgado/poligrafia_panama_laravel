@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
 //index del dashboard
 Route::get('/', 'HomeController@index');
 //no se sabe para que es
@@ -65,5 +64,7 @@ Route::get('/show_product', 'ServiceController@show');
 Route::get('/show_product/{id}', 'ServiceController@edit');
 //actualizar informacion de un cliente 
 Route::post('/update_service', 'ServiceController@update');
-//actualizar informacion de un cliente
+//registrar resultados
 Route::get('/record_result', 'ResultController@create');
+//registro de calidad de pruebas
+Route::get('/quality_test', 'ResultController@show');

@@ -9,6 +9,13 @@
 
         <title>IPTC</title>
 
+        <!-- Datatables -->
+        <link href="css/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+        <link href="css/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+        <link href="css/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+        <link href="css/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+        <link href="css/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
         <!-- Bootstrap -->
         <link media="all" type="text/css" rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
         <!-- Font Awesome -->
@@ -64,7 +71,7 @@
                                 <h3>Bienvenido</h3>
                                 <ul class="nav side-menu">
                                     <li>
-                                        <a><i class="fa fa-home"></i> Inicio</a>
+                                        <a><i class="/"></i> Inicio</a>
                                     </li>
                                     <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
@@ -97,7 +104,7 @@
                                     <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu">
                                             <li><a href="record_result">Registro de Resultados</a></li>
-                                            <li><a href="calidad_prueba.html">Registro de Calidad de Prueba</a></li>
+                                            <li><a href="quality_test">Registro de Calidad de Prueba</a></li>
                                             <li><a href="informe_prueba.html">Informe de Prueba</a></li>
                                     </li>
                                 </ul>
@@ -187,6 +194,22 @@
             </div>
         </div>
 
+        <!-- Datatables -->
+        <script src="js/datatables.net/js/jquery.dataTables.min.js"></script>
+        <script src="js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="js/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+        <script src="js/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="js/datatables.net-buttons/js/buttons.flash.min.js"></script>
+        <script src="js/datatables.net-buttons/js/buttons.html5.min.js"></script>
+        <script src="js/datatables.net-buttons/js/buttons.print.min.js"></script>
+        <script src="js/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+        <script src="js/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+        <script src="js/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+        <script src="js/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+        <script src="js/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+        <script src="js/jszip/dist/jszip.min.js"></script>
+        <script src="js/pdfmake/build/pdfmake.min.js"></script>
+        <script src="js/pdfmake/build/vfs_fonts.js"></script>
 
         <!-- Bootstrap -->
         <script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
