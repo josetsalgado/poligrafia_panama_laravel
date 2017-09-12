@@ -33,7 +33,6 @@ $(document).ready(function(){
 	},
 	submitHandler: function(form){
             var dataString = $('#createUser').serialize();
-            console.log(dataString);
             $.ajax({
 	        type: "POST",
 	        url: "create_user",

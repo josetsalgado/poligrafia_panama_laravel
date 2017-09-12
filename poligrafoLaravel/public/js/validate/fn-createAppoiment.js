@@ -23,12 +23,11 @@ $(document).ready(function () {
             $("#myModal").modal("show");
             $("#dateEpoch").attr("value", getDate);
         },
+        editable: true,
         eventLimit: true, // allow "more" link when too many events
         events: {
             url: 'getQuotes',
-          
         },
-        
     });
 
     $("#createQuote").validate({

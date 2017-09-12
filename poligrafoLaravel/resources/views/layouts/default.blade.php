@@ -40,6 +40,10 @@
         <script src="js/jquery/dist/jquery.min.js"></script>
         <!--validate jquery-->
         <script src="js/validate/jquery.validate.js"></script>
+        <!--alertify-->
+        <link rel="stylesheet" href="js/alertify/themes/alertify.core.css" />
+        <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" id="toggleCSS" />
+
     </head>
     <body class="nav-md">
         <div class="container body">
@@ -140,92 +144,29 @@
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="images/img.jpg" alt="">John Doe
-                                        <span class=" fa fa-angle-down"></span>
+                                        <img src="images/user.png" alt="">John Doe
+                                        <span class=" fa fa-caret-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                        <li><a href="javascript:;"> Profile</a></li>
-                                        <li>
-                                            <a href="javascript:;">
-                                                <span class="badge bg-red pull-right">50%</span>
-                                                <span>Settings</span>
-                                            </a>
-                                        </li>
-                                        <li><a href="javascript:;">Help</a></li>
-                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                        <li><a href="editar_perfil.html"><i class="fa fa-edit pull-right"></i> Editar Perfil</a></li>
+                                        <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Salir</a></li>
                                     </ul>
                                 </li>
-
                                 <li role="presentation" class="dropdown">
                                     <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                                        <i class="fa fa-envelope-o"></i>
-                                        <span class="badge bg-green">6</span>
+                                        PANAMA <i class="fa fa-caret-down"></i>
                                     </a>
-                                    <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a>
-                                                <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
-                                                <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
-                                                </span>
-                                                <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
-                                                </span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <div class="text-center">
-                                                <a>
-                                                    <strong>See All Alerts</strong>
-                                                    <i class="fa fa-angle-right"></i>
-                                                </a>
-                                            </div>
-                                        </li>
+                                    <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                        <li><a href="login.html"><b> CHIRIQUI </b> </a></li>
+                                        <li><a href="editar_perfil.html"><b>PROVINCIAS CENTRALES </b></a></li>
                                     </ul>
                                 </li>
                             </ul>
+
                         </nav>
                     </div>
                 </div>
                 <!-- /top navigation -->
-
                 <!-- page content -->
                 <div class="right_col" role="main">
                     <!-- content page -->
@@ -236,7 +177,10 @@
                 <!-- footer content -->
                 <footer>
                     <div class="pull-right">
-                        Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+
+                        <a href="http://www.monitorbg.com/web/">
+                            <img class="center-block" src="images/logobg.png">
+                            <b> Desarrollado por B&G Consulting and Technologies</b> <a/>
                     </div>
                     <div class="clearfix"></div>
                 </footer>
@@ -295,6 +239,8 @@
 
         <!-- Switchery -->
         <script src="js/switchery/dist/switchery.min.js"></script>
-        
+        <!--alertify-->
+        <script src="js/alertify/lib/alertify.min.js"></script> 
+
     </body>
 </html>

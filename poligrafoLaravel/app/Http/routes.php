@@ -36,8 +36,13 @@ Route::get('/show_client', 'ClientController@show');
 Route::get('/show_client/{id}', 'ClientController@edit');
 //actualizar informacion de un cliente 
 Route::post('/update_client', 'ClientController@update');
+
+//borrar citas
+Route::post('/delete_client', 'ClientController@destroy');
+
 //solicitudes de citas
 Route::get('/quotes_client', 'QuotesController@index');
+
 //crear citas
 Route::post('/create_quote', 'QuotesController@store');
 
@@ -50,8 +55,10 @@ Route::get('/show_budget', 'BudgetController@show');
 Route::get('/create_result', 'ResultController@create');
 //Ver estados de cuenta
 Route::get('/show_accountstatus', 'AccountStatusController@show');
-//crear nuevo producto
+//vista crear nuevo producto
 Route::get('/create_product', 'ServiceController@create');
+//crear nuevo producto en la bd
+Route::post('/create_product', 'ServiceController@store');
 //ver lista de productos
 Route::get('/show_product', 'ServiceController@show');
 //editar un producto

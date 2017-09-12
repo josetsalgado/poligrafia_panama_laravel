@@ -34,16 +34,18 @@ class QuotesController extends Controller
         
         return view('quotes.index', compact("clients", "users", "services", "appoiments"));
     }
-
+    /**
+     * get quotes of mounth
+     *
+     */
    
     
     public function getQuotes()
     {
         $appoiments = DB::table('itcp_appoiments')
                 ->join('itcp_patients', 'itcp_patients.id_patient', '=', 'itcp_appoiments.patient_id')
-                ->select('name_patient AS title', 'date_appoiment AS start', ' AS titleHtml')
+                ->select('name_patient AS title', 'date_appoiment AS start')
                 ->get();
-        $appoiments = $appoiments;
         return view("quotes.getQuotes", compact("appoiments"));
     }
     

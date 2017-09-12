@@ -6,7 +6,7 @@
 <div class="modal-body">
     <form id="updateClient" name="updateClient" class="form-horizontal form-label-left input_mask">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <input type="hidden" name="id" value="{{ $client[0]->id_client }}">
+        <input type="hidden" name="id" value="{{ $client[0]->id_client or '' }}">
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
             <input type="text" class="form-control has-feedback-left" id="name" name="name" placeholder="Nombre" value="{{ $client[0]->name_client }}">
             <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
@@ -21,18 +21,13 @@
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-            <select id="city" name="city" class="form-control selc-empresa">
-                <option value="{{ $client[0]->city_id }}">{{ $client[0]->city_id }}</option>
-                <option value="1">ciudad de Panama</option>
-                <option value="2">Santiago</option>
-                <option value="3">Colon</option>
-            </select> 
+            <input type="text" id="city" name="city" class="form-control selc-empresa">
             <span class="fa fa-map-marker form-control-feedback right" aria-hidden="true"></span>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
             <select id="country" name="country" class="form-control selc-empresa">
-                <option value="{{ $client[0]->country_id }}">{{ $client[0]->name_city }}</option>
+                <option value="{{ $client[0]->country_id or '' }}">{{ $client[0]->name_city or '' }}</option>
                 <option value="1">Panamá</option>
                 <option value="2">Venezuela</option>
             </select> 
