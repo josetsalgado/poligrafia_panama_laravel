@@ -1,4 +1,5 @@
 function fnDelete(id) {
+    console.log(id);
     alertify.confirm("¿Esta seguro que desea eliminar este servicio?",
             function (e) {
                 if (e) {

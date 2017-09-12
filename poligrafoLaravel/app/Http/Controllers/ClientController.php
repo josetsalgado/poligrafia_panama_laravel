@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use Illuminate\Http\Response;
+use App\Appoiment;
 use App\Client;
+use App\Http\Controllers\Controller;
 use DB;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
 class ClientController extends Controller
 {
@@ -138,6 +137,20 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
+        $this->deleteClientQuote($id);
         Client::where('id_client', '=', $id)->delete();
+        
+    }
+    
+    public function deleteClientQuote($id){
+
+       $quotesClient = DB::table('itcp_appoiments')
+                ->where('itcp_appoiments.client_id', '=', $id)
+                ->select('*')
+                ->get();
+
+        if($quotesClient){
+            Appoiment::where('client_id', '=', $id)->delete();
+        }
     }
 }
