@@ -1,5 +1,7 @@
 @extends('layouts.default')
 @section('content')
+
+
     <div class="">
 
         <div class="clearfix"></div>
@@ -41,6 +43,7 @@
                     <div id="testmodal2" style="padding: 5px 20px;">
                         <form id="createQuote" name="createQuote" class="form-horizontal calender" role="form">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="dateEpoch" id="dateEpoch">
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Poligrafista</label>
                                 <div class="col-sm-9 col-xs-12">
@@ -141,5 +144,7 @@
             </div>
         </div>
     </div>
+
+    
     <script src="js/validate/fn-createAppoiment.js"></script>
 @stop
