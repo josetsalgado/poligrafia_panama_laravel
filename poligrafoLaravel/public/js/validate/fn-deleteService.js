@@ -5,7 +5,7 @@ function fnDelete(id) {
                 if (e) {
                     var success = alertify.success('Servicio eliminado');
                     $.ajax({
-                        url: 'delete_service/' + id,
+                        url: 'delete_service/'+id,
                         type: 'get'
                     });
                     return false;

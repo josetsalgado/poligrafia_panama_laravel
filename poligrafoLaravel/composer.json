@@ -7,14 +7,10 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-<<<<<<< HEAD
-        "laravelcollective/html": "5.1.*"
-
-=======
         "laravelcollective/html": "5.1.*",
         "barryvdh/laravel-dompdf": "0.6.*",
         "nesbot/carbon": "^1.22"
->>>>>>> 805c5b219964860ce74959b2537fe911a2899f22
+
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

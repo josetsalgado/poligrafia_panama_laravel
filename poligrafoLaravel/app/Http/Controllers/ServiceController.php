@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Service;
+use App\Appoiment;
 use App\Http\Controllers\Controller;
+use App\Service;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use DB;
 
 class ServiceController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
@@ -23,7 +24,7 @@ class ServiceController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -33,8 +34,8 @@ class ServiceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  Request  $request
+     * @return Response
      */
     public function store(Request $request)
     {
@@ -77,7 +78,7 @@ class ServiceController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show()
     {
@@ -90,7 +91,7 @@ class ServiceController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
@@ -101,9 +102,9 @@ class ServiceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request)
     {
@@ -121,10 +122,23 @@ class ServiceController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
+        $this->deleteServiceQuote($id);
         Service::where('id_service', '=', $id)->delete();
+    }
+    
+    public function deleteServiceQuote($id){
+
+       $quotesService = DB::table('itcp_appoiments')
+                ->where('itcp_appoiments.service_id', '=', $id)
+                ->select('*')
+                ->get();
+
+        if($quotesService){
+            Appoiment::where('service_id', '=', $id)->delete();
+        }
     }
 }
