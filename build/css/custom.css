@@ -15,6 +15,16 @@ html , body{
     float: left;
 }
 
+.bordertab{
+    border: 1px solid;
+}
+
+.alert-primary{
+    color: #fff;
+    background-color: #73879C;
+    border-color: #73879C;
+}
+
 .selc-empresa{
     padding-left: 43px;
 }
