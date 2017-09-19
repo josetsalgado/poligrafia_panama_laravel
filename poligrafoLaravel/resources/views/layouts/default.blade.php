@@ -34,7 +34,7 @@
 
         <!-- Custom Theme Style -->
         <link href="css/build/css/custom.css" rel="stylesheet">
-
+	<link href="css/css.css" rel="stylesheet">
         <!-- FullCalendar -->
         <link href="css/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
         <link href="css/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
@@ -255,8 +255,8 @@
         <script src='js/fullcalendar/lib/moment.min.js'></script>
 
         <!--
-        el que explota
-        <script src='../vendors/fullcalendar/lib/jquery.min.js'></script> -->
+        el que explota-->
+        <script src='js/fullcalendar/lib/jquery.min.js'></script> 
         <script src='js/fullcalendar/fullcalendar.min.js'></script>
         <script src='js/fullcalendar/locale-all.js'></script>
 

@@ -37,7 +37,7 @@
                                 <div class="col-md-2 col-sm-6 col-xs-12 form-group">
                                     <div class="col-md-offset-3  input-group spinner col-md-3">
                                         <input type="text" class="form-control" value="0">
-                                        <span class="fa fa-scalculator form-control-feedback left" aria-hidden="true"></span>
+                                        <span class="fa fa-calculator form-control-feedback left" aria-hidden="true"></span>
                                         <div class="input-group-btn-vertical">
                                             <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
                                             <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
