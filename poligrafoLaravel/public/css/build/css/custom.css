@@ -10,7 +10,25 @@ html , body{
  width:100%;
  
  }
- 
+ .dash_titulo{
+    margin: 5px 0 6px;
+    float: left;
+}
+
+.bordertab{
+    border: 1px solid;
+}
+
+.alert-primary{
+    color: #fff;
+    background-color: #73879C;
+    border-color: #73879C;
+}
+
+.selc-empresa{
+    padding-left: 43px;
+}
+
 .full-height{
  height:100%;
  }
@@ -1787,7 +1805,7 @@ ul.top_profiles li:nth-child(odd) {
     font-size: 30px
 }
 .media .date {
-    background: #ccc;
+    background: #395d81;
     width: 52px;
     margin-right: 10px;
     border-radius: 10px;
@@ -2200,7 +2218,7 @@ legend {
     right: 13px
 }
 .form-control.has-feedback-left {
-    padding-left: 45px
+    padding-left: 55px
 }
 .form-control.has-feedback-right {
     padding-right: 45px
@@ -4249,3 +4267,48 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     background-color: #ffff !important;
 }
 /** /bootstrap-datetimepicker **/
+
+/** Estilos Adicionales*/
+.selc-empresa{
+    padding-left: 43px;
+}
+
+.spinner {
+    width: 100px;
+}
+.spinner input {
+    text-align: right;
+}
+.input-group-btn-vertical {
+    position: relative;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+}
+.input-group-btn-vertical > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    margin-left: -1px;
+    position: relative;
+    border-radius: 0;
+    margin-bottom: -1px !important;
+}
+.input-group-btn-vertical > .btn:first-child {
+    border-top-right-radius: 4px;
+}
+.input-group-btn-vertical > .btn:last-child {
+    margin-top: -2px;
+    border-bottom-right-radius: 4px;
+}
+.input-group-btn-vertical i{
+    position: absolute;
+    top: 0;
+    left: 4px;
+}
+.sel-poligrafista{
+    margin-left: -10px;
+}

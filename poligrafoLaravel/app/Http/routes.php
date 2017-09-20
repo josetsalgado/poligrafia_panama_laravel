@@ -69,3 +69,5 @@ Route::get('/record_result', 'ResultController@create');
 Route::get('/quality_test', 'ResultController@show');
 //editar perfil de usuario
 Route::get('/edit_user', 'EditUserController@edit');
+//informe de Prueba de resultados
+Route::get('/test_report', 'TestReportController@show');
