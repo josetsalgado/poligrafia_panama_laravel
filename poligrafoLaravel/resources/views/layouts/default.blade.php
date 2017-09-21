@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>IPTC</title>
+    <link rel="shortcut icon" href="{{ asset('public/favicon.png') }}">
+
 
     <!-- Datatables -->
     <link href="css/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">

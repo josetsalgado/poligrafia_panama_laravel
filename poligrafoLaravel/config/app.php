@@ -146,6 +146,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        ZanySoft\LaravelPDF\PdfServiceProvider::class, /*FUNCIONA CON LOADVIEW*/
 
     ],
 
@@ -196,6 +197,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form'      => Collective\Html\FormFacade::class,
         'Html'      => Collective\Html\HtmlFacade::class,
+        'PDF'       => ZanySoft\LaravelPDF\Facades\PDF::class,  /*FUNCIONA CON LOADVIEW*/
 
     ],
 
