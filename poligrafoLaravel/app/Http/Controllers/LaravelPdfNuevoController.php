@@ -18,7 +18,7 @@ class LaravelPdfNuevoController extends Controller
             'foo' => 'bar'
         ];
         $pdf = PDF::Make();
-        $pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');
+        /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
         $pdf->loadView('pdf.document', $data);
         return $pdf->Stream('document.pdf');
         //return $pdf->download('Poligrafo.pdf');
