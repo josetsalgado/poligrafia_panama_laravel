@@ -111,7 +111,7 @@
                                                     <th>Fecha </th>
                                                     <th>Cantidad</th>
                                                     <th>Producto</th>
-                                                    <th>Comentario</th>
+
                                                     <th>Precio Unitario</th>
                                                     <th>Sub Total</th>
                                                 </tr>
@@ -122,7 +122,6 @@
                                                     <td>20/08/2017</td>
                                                     <td>31</td>
                                                     <td>Prueba Permanencia</td>
-                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
                                                     <td>$53.05</td>
                                                     <td>$534.25</td>
                                                 </tr>
@@ -131,7 +130,6 @@
                                                     <td>23/08/2017</td>
                                                     <td>31</td>
                                                     <td>Prueba Pre Empleo</td>
-                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
                                                     <td>$42.56</td>
                                                     <td>$425.66</td>
                                                 </tr>
@@ -140,7 +138,6 @@
                                                     <td>25/08/2017</td>
                                                     <td>31</td>
                                                     <td>Prueba Permanencia</td>
-                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
                                                     <td>$53.05</td>
                                                     <td>$534.25</td>
                                                 </tr>
@@ -149,7 +146,6 @@
                                                     <td>27/08/2017</td>
                                                     <td>31</td>
                                                     <td>Prueba Pre Empleo</td>
-                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
                                                     <td>$42.56</td>
                                                     <td>$425.66</td>
                                                 </tr>
@@ -158,7 +154,6 @@
                                                     <td>30/08/2017</td>
                                                     <td>31</td>
                                                     <td>Prueba Permanencia</td>
-                                                    <td>Pagaron el 12 julio 2017  Cheque 2674</td>
                                                     <td>$53.05</td>
                                                     <td>$534.25</td>
                                                 </tr>
