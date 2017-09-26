@@ -46,11 +46,11 @@
     <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" id="toggleCSS" />
 </head>
 
-<body>
+<body style="background:#d8d8d8; ">
 
     <div class="row">
-        <div class="col-md-12">
-            <div class="x_panel">
+        <div class="col-md-12" >
+            <div class="x_panel " style="border: 2px solid #2a3f54; border-radius: 5px">
                 <div class="x_title">
                     <h2>Estado de Cuenta</h2>
 
@@ -84,7 +84,7 @@
                       El Polígrafo es utilizado mundialmente por gobiernos federales y sus diversas instituciones, servicios de inteligencia, instituciones militares, policía, agencias de investigación, así como seguimiento para procesos de libertad condicional. Los gobiernos ponen su confianza en esta herramienta científica, por su gran utilidad en la toma de decisiones.
                     </div><br><br>--}}
                     <!-- info row -->
-                    <div class="row invoice-info" style="font-size: 8px">
+                    <div class="row invoice-info" style="font-size: 14px">
                         <div class="col-xs-4 invoice-col">
                             <address>
                                 <strong>INTERNATIONAL POLYGRAPH TRAINING CENTER, S.A.</strong>
@@ -106,7 +106,7 @@
                             </address>
                         </div>
                         <!-- /.col -->
-                        <div class="col-xs-4 invoice-col">
+                        <div class="col-md-4 invoice-col">
                             <b>Factura Fiscal #007612</b>
                             <br>
                             <b>Monto Facturado: 5.000 $</b>
@@ -192,7 +192,7 @@
                             </p> -->
                         </div>
                         <!-- /.col -->
-                        <div class="col-xs-6">
+                        <div class="col-xs-4" style="float: right">
                             <p class="lead">Cantidad a Pagar 16/09/2017</p>
                             <div class="table-responsive">
                                 <table class="table">
