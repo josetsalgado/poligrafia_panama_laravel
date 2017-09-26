@@ -66,9 +66,26 @@
                         </div>
                         <!-- /.col -->
                     </div>
+
+                {{--   <div style="text-align: center; line-height: 24px; ">
+                     Panamá a 14 de Septiembre del 2017
+                      ATENCION: Licdo. Luis Perez
+                      COCA COLA
+
+                      ¿Quiénes Somos?
+
+                      Somos una empresa con más de  20 años de experiencia en todo el ámbito de la poligrafía, tenemos oficinas en la Ciudad de Panamá, Provincias Centrales y Chiriquí.
+                      Realizamos evaluaciones poligráficas con la más alta calidad y profesionalismo, todos nuestros poligrafista son Psicólogos.
+                      Somos la única empresa privada en Panamá,  que realiza proceso de control de calidad en todos sus procesos.
+                      Contamos con una escuela de poligrafistas la cual está acreditada internacionalmente por la APA (AMERICAN POLYGRAPH ASSOCIATION), nuestro director es ex presidente de la APA y nuestra escuela a entrenado a la unidad de poligrafía de diversas instituciones gubernamentales en diferentes pises de Latinoamérica, desde México, hasta Argentina y en nuestro país, participó en el entrenamiento de las unidades de poligrafía de: La Policía Nacional, el Senan, Senafrond, Dirección de Migración entre otros.
+                      Somos distribuidores exclusivos de equipos poligráficos computarizados Lafayette en Panamá.
+
+                      ¿Por qué utilizar el polígrafo?
+                      El Polígrafo es utilizado mundialmente por gobiernos federales y sus diversas instituciones, servicios de inteligencia, instituciones militares, policía, agencias de investigación, así como seguimiento para procesos de libertad condicional. Los gobiernos ponen su confianza en esta herramienta científica, por su gran utilidad en la toma de decisiones.
+                    </div><br><br>--}}
                     <!-- info row -->
-                    <div class="row invoice-info">
-                        <div class="col-sm-4 invoice-col">
+                    <div class="row invoice-info" style="font-size: 8px">
+                        <div class="col-xs-4 invoice-col">
                             <address>
                                 <strong>INTERNATIONAL POLYGRAPH TRAINING CENTER, S.A.</strong>
                                 <br>Edificio Edison Corporate Center
@@ -79,7 +96,7 @@
                             </address>
                         </div>
                         <!-- /.col -->
-                        <div class="col-sm-4 invoice-col">
+                        <div class="col-xs-4 invoice-col">
                             <address>
                                 <strong>John Doe</strong>
                                 <br>795 Freedom Ave, Suite 600
@@ -89,7 +106,7 @@
                             </address>
                         </div>
                         <!-- /.col -->
-                        <div class="col-sm-4 invoice-col">
+                        <div class="col-xs-4 invoice-col">
                             <b>Factura Fiscal #007612</b>
                             <br>
                             <b>Monto Facturado: 5.000 $</b>
