@@ -22,7 +22,9 @@ class AuthController extends Controller
     */
 
     use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-
+    protected $redirectTo = '/dashboard_home';
+    protected $loginPath = '/';
+    protected $redirectPath = '/dashboard_home';
     /**
      * Create a new authentication controller instance.
      *
@@ -61,5 +63,15 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+    
+    public function getLogin()
+    {
+        return view('home.index');
+    }
+
+    public function loginUsername()
+    {
+        return property_exists($this, 'email_user') ? $this->username : 'email_user';
     }
 }

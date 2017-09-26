@@ -23,11 +23,19 @@ $(document).ready(function () {
             $("#myModal").modal("show");
             $("#dateEpoch").attr("value", getDate);
         },
+        eventClick: function(calEvent, jsEvent, view) {
+console.log(view);
+            alert('Event: ' + calEvent.title);
+            alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+            alert('View: ' + view.name);
+
+        },
         editable: true,
         eventLimit: true, // allow "more" link when too many events
         events: {
             url: 'getQuotes',
         },
+       
     });
 
     $("#createQuote").validate({

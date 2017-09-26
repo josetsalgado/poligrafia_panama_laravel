@@ -7,10 +7,15 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
+<<<<<<< HEAD
         "laravelcollective/html": "5.1.*",
         "nesbot/carbon": "^1.22",
         "zanysoft/laravel-pdf": "^1.0"
 
+=======
+        "barryvdh/laravel-dompdf": "0.6.*",
+        "nesbot/carbon": "^1.22"
+>>>>>>> da95421afbfaa266702a0b109636fdc5cc424dce
 
     },
     "require-dev": {
