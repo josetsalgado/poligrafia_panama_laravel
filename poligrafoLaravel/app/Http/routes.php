@@ -71,5 +71,5 @@ Route::get('/quality_test', 'ResultController@show');
 Route::get('/edit_user', 'EditUserController@edit');
 //informe de Prueba de resultados
 Route::get('/test_report', 'TestReportController@show');
-/*//Generar pdf estado de cuenta
-Route::get('/pdf', 'AccountStatusController@generarpdf');*/
+Route::get('/pdf', 'LaravelPdfNuevoController@pdfA');
+

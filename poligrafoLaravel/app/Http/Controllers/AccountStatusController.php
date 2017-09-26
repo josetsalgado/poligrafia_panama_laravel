@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use PDF;
+
 class AccountStatusController extends Controller
 {
     /**
@@ -57,17 +57,7 @@ class AccountStatusController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    function generarpdf()
-    {
-        $data = [
-            'foo' => 'bar'
-        ];
-        $pdf = PDF::Make();
-        /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
-        $pdf->loadView('Accountstatus.show', $data);
-        return $pdf->Stream('document.pdf');
-        //return $pdf->download('EstadodeCuenta.pdf');
-    }
+
 
     /**
      * Update the specified resource in storage.
