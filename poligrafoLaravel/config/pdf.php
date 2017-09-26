@@ -3,10 +3,10 @@
 return [
     'mode'                 => 'UTF-8',
     'format'               => 'A4',
-    'default_font_size'    => '13',
+    'default_font_size'    => '10',
     'default_font'         => 'sans-serif',
     'custom_font_path'     => base_path('/resources/fonts/'), // don't forget the trailing slash!
-    'direction'            => 'rtl',
+    'direction'            => 'ltr',
     'margin_left'          => 10,
     'margin_right'         => 10,
     'margin_top'           => 10,
