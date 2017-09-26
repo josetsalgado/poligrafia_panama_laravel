@@ -128,6 +128,7 @@ class QuotesController extends Controller
           'date_appoiment' => $request->dateEpoch,
           'time_appoiment' => $request->schedule,
           'comentary_appoiment' => $request->descriptionCandidate,
+          'status' => 'Pendiente',
             
         ]);
         

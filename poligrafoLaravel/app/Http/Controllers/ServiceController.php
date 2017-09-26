@@ -132,7 +132,7 @@ class ServiceController extends Controller
     
     public function deleteServiceQuote($id){
 
-       $quotesService = DB::table('itcp_appoiments')
+        $quotesService = DB::table('itcp_appoiments')
                 ->where('itcp_appoiments.service_id', '=', $id)
                 ->select('*')
                 ->get();
