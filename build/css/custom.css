@@ -32,7 +32,9 @@ html , body{
 .full-height{
  height:100%;
  }
-
+.thumbnail_logo{
+    height: 97px !important;
+}
 .daterangepicker .ranges li {
     color: #73879C
 }
@@ -4195,6 +4197,9 @@ ul.notifications {
     }
     .dataTables_wrapper .col-sm-6 .dataTables_filter {
         float: none;
+    }
+    .thumbnail_logo{
+        height: 110px !important;
     }
 }
 
