@@ -1,5 +1,6 @@
 /nbproject/private/
 /nbproject
-/idea
+/.idea
 /poligrafoLaravel/idea
 /vendor
+/.idea/*
