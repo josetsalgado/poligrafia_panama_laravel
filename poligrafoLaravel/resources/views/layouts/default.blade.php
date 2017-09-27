@@ -106,6 +106,12 @@
                                     <li><a href="butget_client">Cotizar</a></li>
                                 </ul>
                             </li>
+                            <li><a><i class="fa fa-credit-card"></i> Pagos <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="payment_record">Registrar Pago</a></li>
+                                    <li><a href="ver_pagos.html">Ver Pago</a></li>
+                                </ul>
+                            </li>
                             <li><a href="show_accountstatus"><i class="fa fa-bar-chart-o"></i> Estados de Cuenta</span></a>
                             </li>
                             <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>

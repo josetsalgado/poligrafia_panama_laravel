@@ -79,3 +79,5 @@ Route::get('/pdf_budget', 'BudgetController@pdfA');
 Route::get('/create_company', 'CompanyController@create');
 //ver empresas
 Route::get('/show_company', 'CompanyController@show');
+//registro de pago
+Route::get('/payment_record', 'PaymentController@create');
