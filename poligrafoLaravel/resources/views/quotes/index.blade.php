@@ -13,13 +13,24 @@
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Settings 1</a>
+                                    </li>
+                                    <li><a href="#">Settings 2</a>
+                                    </li>
+                                </ul>
+                            </li>
                             <li><a class="close-link"><i class="fa fa-close"></i></a>
                             </li>
                         </ul>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="x_content">     
+                    <div class="x_content">
+
                         <div id='calendar'></div>
+
                     </div>
                 </div>
             </div>
@@ -29,121 +40,274 @@
 
 
 
-    <div class="modal fade" id="myModal" >
+    <!-- calendar modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <!-- Modal content-->
             <div class="modal-content">
-                <div id="form-errors"></div>
+
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title" id="myModalLabel2">Editar cita</h4>
+                    <h4 class="modal-title" id="myModalLabel"><i class="fa fa-calendar"></i> Nueva Citas</h4>
                 </div>
                 <div class="modal-body">
-
-                    <div id="testmodal2" style="padding: 5px 20px;">
-                        <form id="createQuote" name="createQuote" class="form-horizontal calender" role="form">
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                            <input type="hidden" name="dateEpoch" id="dateEpoch">
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label col-xs-12">Poligrafista</label>
-                                <div class="col-sm-9 col-xs-12">
-                                    <select class="form-control" id="polygraphist" name="polygraphist">
-                                        <option value="">Seleccione</option>
-                                        @foreach($users as $user)
-                                            <option value="{{ $user->id_user }}">{{ $user->name_user }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
+                    <div id="testmodal" style="padding: 5px 20px;">
+                        <form id="antoform" class="form-horizontal calender" role="form">
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Cliente</label>
                                 <div class="col-sm-9 col-xs-12">
-                                        <select class="form-control col-xs-12" id="client" name="client">
+                                    <select id="heard" class="form-control col-xs-12" required="">
                                         <option value="">Seleccione</option>
-                                        @foreach($clients as $client)
-                                            <option value="{{ $client->id_client }}">{{ $client->name_client }}</option>
-                                        @endforeach
+                                        <option value="cliente">Cliente 1</option>
+                                        <option value="cliente">Cliente 2</option>
+                                        <option value="cliente">Cliente 3</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label col-xs-12">Horario</label>
-                                <div class="col-sm-9 col-xs-12">
-                                    <label>
-                                        <input type="radio" name="schedule" id="schedule" class="js-switch" value="07:30" /> 07:30
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="schedule" id="schedule" class="js-switch" value="10:00" /> 10:00
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="schedule" id="schedule" class="js-switch" value="01:30" /> 01:30
-                                    </label><br>
-                                    <div id="validSchedule"></div>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Horaio</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <select id="heard" class="form-control col-xs-12" required="">
+                                        <option>7:00</option>
+                                        <option>7:30</option>
+                                        <option>8:00</option>
+                                        <option>8:30</option>
+                                        <option>9:00</option>
+                                        <option>9:30</option>
+                                        <option>10:00</option>
+                                        <option>11:00</option>
+                                        <option>11:30</option>
+                                        <option>12:00</option>
+                                        <option>12:30</option>
+                                        <option>1:00</option>
+                                        <option>1:30</option>
+                                        <option>2:00</option>
+                                        <option>2:30</option>
+                                        <option>3:00</option>
+                                        <option>3:30</option>
+                                        <option>4:00</option>
+                                        <option>4:30</option>
+                                        <option>5:00</option>
+                                        <option>5:30</option>
+                                        <option>6:00</option>
+                                        <option>6:30</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Tipo de Prueba</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <select class="form-control col-xs-12" id="service" name="service">
+                                    <select id="prueba" class="form-control col-xs-12" required="">
                                         <option value="">Seleccione</option>
-                                        @foreach($services as $service)
-                                            <option value="{{ $service->id_service }}">{{ $service->name_service }}</option>
-                                        @endforeach
+                                        <option value="prueba-pre-empleo">Prueba Pre Empleo</option>
+                                        <option value="prueba-permanencia">Prueba Permanencia</option>
+                                        <option value="prueba-especifica">Prueba Especifica</option>
+                                        <option value="pruebas-psicologicas">Pruebas Psicologícas</option>
+                                        <option value="pruebas-socioeconomicas">Pruebas Socioeconómicas</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <h4>Candidato</h4>
+                                <label class="col-sm-3 control-label">Estatus</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="inputSuccess4" placeholder="Pendiente"  disabled="disabled">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4><i class="fa fa-user"></i> Candidato</h4>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Nombre</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="candidateName" name="candidateName">
+                                    <input type="text" class="form-control" id="candidato" name="candidato">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Apellido</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="candidateLastname" name="candidateLastname">
+                                    <input type="text" class="form-control" id="apellido" name="apellido">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Cedula</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="number" class="form-control" id="ciCandidate" name="ciCandidate">
+                                    <input type="text" class="form-control" id="cedula" name="cedula">
                                 </div>
                             </div>
                             <div class="form-group">
 
                                 <label class="col-sm-3 control-label col-xs-12">Puesto</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="jobCandidate" name="jobCandidate">
+                                    <input type="text" class="form-control" id="puesto" name="puesto">
                                 </div>
                             </div>
                             <div class="form-group">
 
                                 <label class="col-sm-3 control-label col-xs-12">Celular</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="number" class="form-control" id="telCandidate" name="telCandidate">
+                                    <input type="text" class="form-control" id="celular" name="celular">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Comentarios</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <textarea class="form-control" style="height:55px;" id="descriptionCandidate" name="descriptionCandidate"></textarea>
+                                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
                                 </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="reset" class="btn btn-default antoclose2" data-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-primary antosubmit2">Guardar Cita</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary antosubmit">Guardar Cita</button>
+                </div>
             </div>
         </div>
     </div>
+    <!-- Modal editar -->
+    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title" id="myModalLabel2"> <i class="fa fa-edit"></i> Editar cita</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div id="testmodal2" style="padding: 5px 20px;">
+                        <form id="antoform2" class="form-horizontal calender" role="form">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label col-xs-12">Poligrafista</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <select id="heard" class="form-control" required="">
+                                        <option value="">Seleccione</option>
+                                        <option value="poligrafista">Poligrafista 1</option>
+                                        <option value="poligrafista">Poligrafista 2</option>
+                                        <option value="poligrafista">Poligrafista 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Cliente</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <select id="heard" class="form-control col-xs-12" required="">
+                                        <option value="">Seleccione</option>
+                                        <option value="cliente">Cliente 1</option>
+                                        <option value="cliente">Cliente 2</option>
+                                        <option value="cliente">Cliente 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Horaio</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <select id="heard" class="form-control col-xs-12" required="">
+                                        <option>7:00</option>
+                                        <option>7:30</option>
+                                        <option>8:00</option>
+                                        <option>8:30</option>
+                                        <option>9:00</option>
+                                        <option>9:30</option>
+                                        <option>10:00</option>
+                                        <option>11:00</option>
+                                        <option>11:30</option>
+                                        <option>12:00</option>
+                                        <option>12:30</option>
+                                        <option>1:00</option>
+                                        <option>1:30</option>
+                                        <option>2:00</option>
+                                        <option>2:30</option>
+                                        <option>3:00</option>
+                                        <option>3:30</option>
+                                        <option>4:00</option>
+                                        <option>4:30</option>
+                                        <option>5:00</option>
+                                        <option>5:30</option>
+                                        <option>6:00</option>
+                                        <option>6:30</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Tipo de Prueba</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <select id="prueba" class="form-control col-xs-12" required="">
+                                        <option value="">Seleccione</option>
+                                        <option value="prueba-pre-empleo">Prueba Pre Empleo</option>
+                                        <option value="prueba-permanencia">Prueba Permanencia</option>
+                                        <option value="prueba-especifica">Prueba Especifica</option>
+                                        <option value="pruebas-psicologicas">Pruebas Psicologícas</option>
+                                        <option value="pruebas-socioeconomicas">Pruebas Socioeconómicas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Estatus</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <select id="prueba" class="form-control col-xs-12" required="">
+                                        <option value="">Seleccione</option>
+                                        <option value="no-asistio">No asistio</option>
+                                        <option value="re-agendada">Re-agendada</option>
+                                        <option value="procesada">Procesada</option>
+                                        <option value="aprobada">Aprobada</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4><i class="fa fa-user"></i> Candidato</h4>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label col-xs-12">Nombre</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="candidato" name="candidato">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label col-xs-12">Apellido</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="apellido" name="apellido">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label col-xs-12">Cedula</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="cedula" name="cedula">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="col-sm-3 control-label col-xs-12">Puesto</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="puesto" name="puesto">
+                                </div>
+                            </div>
+                            <div class="form-group">
+
+                                <label class="col-sm-3 control-label col-xs-12">Celular</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" id="celular" name="celular">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label col-xs-12">Comentarios</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary antosubmit2">Guardar Cita</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+    <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+    <!-- /calendar modal -->
 
     
     <script src="js/validate/fn-createAppoiment.js"></script>
