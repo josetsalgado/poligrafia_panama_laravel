@@ -23,11 +23,9 @@
     <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/css/css.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
-
 </head>
 
 <body class="nav-md">
@@ -43,7 +41,7 @@
 
                     <br />
 
-                 <!-- sidebar menu -->
+                   <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
                             <h3>Bienvenido</h3>
@@ -162,7 +160,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
-                        <h2>Registrar Pago</h2>
+                        <h2><i class="fa fa-money"></i> Registro de Pagos</h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -181,193 +179,249 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <form class="form-horizontal form-label-left input_mask">
+                        <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                            <thead>
+                                <tr>
+                                    <th>Razón Social</th>
+                                    <th>Fecha</th>
+                                    <th>Evaluacion Poligrafica</th>
+                                    <th>Candidatos</th>
+                                    <th>Precio Unitario</th>
+                                    <th>Sub total</th>
+                                    <th>#Pago</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Coca Cola</td>
+                                    <td>23/09/2017</td>
+                                    <td>
+                                        <ul>
+                                            <li>8 pruebas Especificas</li>
+                                            <li>8 pruebas Pre empleo</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Nicole Pearson</li>
+                                            <li>Jhon Doe</li>
+                                            <li>Jonas Brother</li>
+                                            <li>Michael Jackson</li>
+                                            <li>Shad friend</li>
+                                        </ul>
+                                    </td>
+                                    <td>150.00</td>
+                                    <td>1500.00</td>
+                                    <td>  
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-credit-card"></i> Pagar</button>
+                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                    </td>
+                                </tr>
+                                  <tr>
+                                    <td>Coca Cola</td>
+                                    <td>23/09/2017</td>
+                                    <td>
+                                        <ul>
+                                            <li>8 pruebas Especificas</li>
+                                            <li>8 pruebas Pre empleo</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Nicole Pearson</li>
+                                            <li>Jhon Doe</li>
+                                            <li>Jonas Brother</li>
+                                            <li>Michael Jackson</li>
+                                            <li>Shad friend</li>
+                                        </ul>
+                                    </td>
+                                    <td>150.00</td>
+                                    <td>1500.00</td>
+                                    <td>  
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-credit-card"></i> Pagar</button>
+                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                    </td>
+                                </tr>
+                                  <tr>
+                                    <td>Coca Cola</td>
+                                    <td>23/09/2017</td>
+                                    <td>
+                                        <ul>
+                                            <li>8 pruebas Especificas</li>
+                                            <li>8 pruebas Pre empleo</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Nicole Pearson</li>
+                                            <li>Jhon Doe</li>
+                                            <li>Jonas Brother</li>
+                                            <li>Michael Jackson</li>
+                                            <li>Shad friend</li>
+                                        </ul>
+                                    </td>
+                                    <td>150.00</td>
+                                    <td>1500.00</td>
+                                    <td>  
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-credit-card"></i> Pagar</button>
+                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                    </td>
+                                </tr>
+                                  <tr>
+                                    <td>Coca Cola</td>
+                                    <td>23/09/2017</td>
+                                    <td>
+                                        <ul>
+                                            <li>8 pruebas Especificas</li>
+                                            <li>8 pruebas Pre empleo</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Nicole Pearson</li>
+                                            <li>Jhon Doe</li>
+                                            <li>Jonas Brother</li>
+                                            <li>Michael Jackson</li>
+                                            <li>Shad friend</li>
+                                        </ul>
+                                    </td>
+                                    <td>150.00</td>
+                                    <td>1500.00</td>
+                                    <td>  
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-credit-card"></i> Pagar</button>
+                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                    </td>
+                                </tr>
+                                  <tr>
+                                    <td>Coca Cola</td>
+                                    <td>23/09/2017</td>
+                                    <td>
+                                        <ul>
+                                            <li>8 pruebas Especificas</li>
+                                            <li>8 pruebas Pre empleo</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            <li>Nicole Pearson</li>
+                                            <li>Jhon Doe</li>
+                                            <li>Jonas Brother</li>
+                                            <li>Michael Jackson</li>
+                                            <li>Shad friend</li>
+                                        </ul>
+                                    </td>
+                                    <td>150.00</td>
+                                    <td>1500.00</td>
+                                    <td>  
+                                        <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-credit-card"></i> Pagar</button>
+                                        <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
+                                    </td>
+                                </tr>   
+                            </tbody>
+                        </table>
 
-                            <div class="row">
-                                <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
-                                    <div class="profile_img">
-                                        <div id="crop-avatar">
-                                            <!-- Current avatar -->
-                                            <img class="img-responsive avatar-view" src="images/pago.png" alt="Avatar" title="Change the avatar">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-9 col-sm-9 col-xs-12">
-                                    <!-- form input mask -->
 
-                                    <form class="form-horizontal form-label-left">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-3">Numero de Factura Fiscal</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-9">
-                                                <input type="text" class="form-control has-feedback-left" data-inputmask="'mask' : '*************-**********'" placeholder="TBSR110000623-00003021">
-                                                <span class="fa fa-file-text-o form-control-feedback left" aria-hidden="true"></span>                     
-
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-3">Cliente</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-9">
-                                                <select id="cliente" class="form-control selc-empresa" required>
-                                                    <option value="">Seleccione</option>
-                                                    <option value="cliente1">cliente 1</option>
-                                                    <option value="cliente2">cliente 2</option>
-                                                    <option value="cliente3">cliente 3</option>
-                                                    <option value="cliente4">cliente 4</option>
-                                                    <option value="cliente5">cliente 5</option>
-                                                </select> 
-                                                <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
-
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-3">Fecha</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-9">
-                                                <input type="text" class="form-control has-feedback-left" placeholder="12/09/2017" disabled="disabled">
-                                                <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>                     
-
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-3">Producto</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-9">
-                                                <select id="tipo_prueba" class="form-control selc-empresa" required>
-                                                    <option value="">Seleccione</option>
-                                                    <option value="prueba-pre-empleo">Prueba Pre Empleo</option>
-                                                    <option value="prueba-permanencia">Prueba Permanencia</option>
-                                                    <option value="prueba-especifica">Prueba Especifica</option>
-                                                    <option value="pruebas-psicologicas">Pruebas Psicologícas</option>
-                                                    <option value="pruebas-socioeconomicas">Pruebas Socioeconómicas</option>
-                                                </select> 
-                                                <span class="fa fa-hospital-o form-control-feedback left" aria-hidden="true"></span>
-
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-3">Cantidad</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-9">
-                                                <select id="cantidad" class="form-control selc-empresa" required>
-                                                    <option value="">Seleccione</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                </select> 
-                                                <span class="fa fa-calculator form-control-feedback left" aria-hidden="true"></span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-3">Forma de Pago</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-9">
-                                                <select id="cantidad" class="form-control selc-empresa" required>
-                                                    <option value="">Seleccione</option>
-                                                    <option value="cheque">Cheque</option>
-                                                    <option value="transferencia">Transferencia</option>
-                                                    <option value="efectivo">Efectivo</option>
-                                                    <option value="tarjeta">Tarjeta</option>
-                                                </select> 
-                                                <span class="fa fa-calculator form-control-feedback left" aria-hidden="true"></span>
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3 col-sm-3 col-xs-3">Cantidad a Pagar</label>
-                                            <div class="col-md-9 col-sm-9 col-xs-9">
-                                                <input type="text" class="form-control has-feedback-left" data-inputmask="'mask' : ''" placeholder="379,00">
-                                                <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>                     
-
-                                            </div>
-                                        </div>
-                                        <div class="ln_solid"></div>
-
-                                        <div class="form-group">
-                                            <div class="col-md-9 col-md-offset-3">
-                                                <button type="button" class="btn btn-default">Cancelar</button>
-                                                <button type="submit" class="btn btn-primary">Guardar Pago</button>
-                                            </div>
-                                        </div>
-
-                                    </form>
-                                    <!-- /form input mask -->
-
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
-            <!-- /page content -->
-
-
-             <!-- footer content -->
-        <footer>
-          <div class="pull-right">
-
-             <a href="http://www.monitorbg.com/web/">
-               <img class="center-block" src="images/logobg.png">
-               <b> Desarrollado por B&G Consulting and Technologies</b> <a/>
-           </div>
-           <div class="clearfix"></div>
-       </footer>
-        <!-- /footer content -->
         </div>
     </div>
+</div>
+<!-- /page content -->
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
 
-    <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
-    <!-- iCheck -->
-    <script src="../vendors/iCheck/icheck.min.js"></script>
-    <!-- Datatables -->
-    <script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-    <script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-    <script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-    <script src="../vendors/jszip/dist/jszip.min.js"></script>
-    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
-    <!-- jquery.inputmask -->
-    <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
-    <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title"><i class="fa fa-money"></i> Agregar Pago </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal form-label-left input_mask">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">N° Factura Fiscal:</label>
+                    <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="TBSR110000623-00003021">
+                        <span class="fa fa-file-text-o form-control-feedback left" aria-hidden="true"></span>
+                    </div>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Monto a Pagar:</label>
+                    <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="1500.00">
+                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                    </div>   
+                </div>
+                <div class="modal-footer">
 
-    <script type="text/javascript">
-        $('#datatable-responsive').DataTable( {
-            language: {
-                search: "Buscar",
-                paginate: {
-                    first:      "Primero",
-                    previous:   "<",
-                    next:       ">",
-                    last:       "Último"
-                },
-                info:           "",
-                "lengthMenu":     "_MENU_",
-            }
-        } );
-    </script>
-    <script type="text/javascript">
-        (function ($) {
-            $('.spinner .btn:first-of-type').on('click', function() {
-                $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
-            });
-            $('.spinner .btn:last-of-type').on('click', function() {
-                $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-            });
-        })(jQuery);
-    </script>
+                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-eye-slash "></i> Cerrar</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-credit-card"></i> Pagar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<!-- footer content -->
+<footer>
+  <div class="pull-right">
+
+     <a href="http://www.monitorbg.com/web/">
+       <img class="center-block" src="images/logobg.png">
+       <b> Desarrollado por B&G Consulting and Technologies</b> <a/>
+   </div>
+   <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
+</div>
+</div>
+
+<!-- jQuery -->
+<script src="../vendors/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="../vendors/nprogress/nprogress.js"></script>
+<!-- iCheck -->
+<script src="../vendors/iCheck/icheck.min.js"></script>
+<!-- Datatables -->
+<script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+<script src="../vendors/jszip/dist/jszip.min.js"></script>
+<script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="../build/js/custom.min.js"></script>
+
+<script type="text/javascript">
+    $('#datatable-responsive').DataTable( {
+        language: {
+            search: "Buscar",
+            paginate: {
+                first:      "Primero",
+                previous:   "<",
+                next:       ">",
+                last:       "Último"
+            },
+            info:           "",
+            "lengthMenu":     "_MENU_"
+        }
+    } );
+</script>
 
 </body>
 </html>
