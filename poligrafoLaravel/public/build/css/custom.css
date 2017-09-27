@@ -32,7 +32,9 @@ html , body{
 .full-height{
  height:100%;
  }
-
+.thumbnail_logo{
+    height: 97px !important;
+}
 .daterangepicker .ranges li {
     color: #73879C
 }
@@ -3139,7 +3141,7 @@ ul.project_files li a i {
     margin-bottom: 5px
 }
 .thumbnail {
-    height: 190px;
+    /*height: 190px;*/
     overflow: hidden
 }
 .view {
@@ -4196,6 +4198,9 @@ ul.notifications {
     .dataTables_wrapper .col-sm-6 .dataTables_filter {
         float: none;
     }
+    .thumbnail_logo{
+        height: 110px !important;
+    }
 }
 
 
@@ -4312,3 +4317,4 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 .sel-poligrafista{
     margin-left: -10px;
 }
+

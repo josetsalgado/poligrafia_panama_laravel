@@ -82,6 +82,12 @@
                                     <li><a href="show_user">Ver Usuarios</a></li>
                                 </ul>
                             </li>
+                            <li><a><i class="fa fa-building"></i> Empresas <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="crear_empresa.html">Nueva Empresa</a></li>
+                                    <li><a href="ver_empresas.html">Ver Empresas</a></li>
+                                </ul>
+                            </li>
                             <li><a><i class="fa fa-suitcase"></i> Clientes <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="create_client">Nuevo Cliente</a></li>
