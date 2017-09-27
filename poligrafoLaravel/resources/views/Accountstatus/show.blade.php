@@ -202,7 +202,7 @@
                                 <div class="row no-print">
                                     <div class="col-xs-12">
                                         <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Imprimir</button>
-                                        <button class="btn btn-primary pull-right" style="margin-right: 5px;"><a href="pdf" target="_blank" style="color: white"><i class="fa fa-download"></i> Generar en PDF</button></a>
+                                        <button class="btn btn-primary pull-right" style="margin-right: 5px;"><a href="pdf_account" target="_blank" style="color: white"><i class="fa fa-download"></i> Generar en PDF</button></a>
                                     </div>
                                 </div>
                             </section>

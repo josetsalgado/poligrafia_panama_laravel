@@ -9,8 +9,8 @@
         "laravel/framework": "5.1.*",
         "laravelcollective/html": "5.1.*",
         "nesbot/carbon": "^1.22",
-        "zanysoft/laravel-pdf": "^1.0",
-        "nesbot/carbon": "^1.22"
+        "zanysoft/laravel-pdf": "^1.0"
+
 
 
     },

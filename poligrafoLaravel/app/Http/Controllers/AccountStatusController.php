@@ -83,7 +83,7 @@ class AccountStatusController extends Controller
         //
     }
 
-    function pdfA() {
+    function pdfE() {
         $data = [
             'foo' => 'bar'
         ];

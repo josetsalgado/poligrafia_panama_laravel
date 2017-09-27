@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use PDF;
-class BudgetController extends Controller
+
+class CompanyController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class BudgetController extends Controller
      */
     public function create()
     {
-        return view('budget.create');
+        return view("company.create");
     }
 
     /**
@@ -35,17 +35,6 @@ class BudgetController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    function pdfA() {
-        $data = [
-            'foo' => 'bar'
-        ];
-        $pdf = PDF::Make();
-        /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
-        $pdf->loadView('pdf.butget', $data);
-        return $pdf->Stream('document.pdf');
-        //return $pdf->download('Poligrafo.pdf');
-    }
-
     public function store(Request $request)
     {
         //
@@ -57,11 +46,11 @@ class BudgetController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    /**public function show()
+    public function show()
     {
-        return view('budget.show');
+        return view("company.show");
     }
-**/
+
     /**
      * Show the form for editing the specified resource.
      *

@@ -71,5 +71,11 @@ Route::get('/quality_test', 'ResultController@show');
 Route::get('/edit_user', 'EditUserController@edit');
 //informe de Prueba de resultados
 Route::get('/test_report', 'TestReportController@show');
-Route::get('/pdf', 'LaravelPdfNuevoController@pdfA');
-
+//pdf estado de cuenta
+Route::get('/pdf_account', 'AccountStatusController@pdfE');
+//pdf cotizacion
+Route::get('/pdf_budget', 'BudgetController@pdfA');
+//crear empresa
+Route::get('/create_company', 'CompanyController@create');
+//ver empresas
+Route::get('/show_company', 'CompanyController@show');
