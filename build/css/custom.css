@@ -18,6 +18,16 @@ html , body{
 .bordertab{
     border: 1px solid;
 }
+.bordertab_total{
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border: 1px solid #ddd;
+}
+.back_table{
+   background:#f9f9f9;
+   border-top: 1px solid #ddd;
+}
 
 .alert-primary{
     color: #fff;

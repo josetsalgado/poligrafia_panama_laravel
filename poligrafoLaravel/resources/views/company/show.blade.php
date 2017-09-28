@@ -36,6 +36,7 @@
                         <tr>
                             <th>Razón Social</th>
                             <th>R.U.C</th>
+                            <th>Cliente</th>
                             <th>Número Telefonico</th>
                             <th>Correo</th>
                             <th>Dirección</th>
@@ -46,6 +47,12 @@
                         <tr>
                             <td>Coca Cola</td>
                             <td>1631480-1-671929 D.V. 62</td>
+                            <td>
+                                <ul>
+                                    <li>Michael Jonas</li>
+                                    <li>jackson salga</li>
+                                </ul>
+                            </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
                             <td>Edinburgh</td>
@@ -57,6 +64,12 @@
                         <tr>
                             <td>Chevrolet</td>
                             <td>1631480-1-671929 D.V. 62</td>
+                            <td>
+                                <ul>
+                                    <li>Michael Jonas</li>
+                                    <li>jackson salga</li>
+                                </ul>
+                            </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
                             <td>New York</td>
@@ -69,6 +82,12 @@
                         <tr>
                             <td>Pepsi</td>
                             <td>1631480-1-671929 D.V. 62</td>
+                            <td>
+                                <ul>
+                                    <li>Michael Jonas</li>
+                                    <li>jackson salga</li>
+                                </ul>
+                            </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
                             <td>London</td>
@@ -81,6 +100,12 @@
                         <tr>
                             <td>Lael</td>
                             <td>1631480-1-671929 D.V. 62</td>
+                            <td>
+                                <ul>
+                                    <li>Michael Jonas</li>
+                                    <li>jackson salga</li>
+                                </ul>
+                            </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
                             <td>London</td>
@@ -92,6 +117,12 @@
                         <tr>
                             <td>Jonas</td>
                             <td>1631480-1-671929 D.V. 62</td>
+                            <td>
+                                <ul>
+                                    <li>Michael Jonas</li>
+                                    <li>jackson salga</li>
+                                </ul>
+                            </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
                             <td>San Francisco</td>
@@ -104,6 +135,12 @@
                         <tr>
                             <td>Shad</td>
                             <td>1631480-1-671929 D.V. 62</td>
+                            <td>
+                                <ul>
+                                    <li>Michael Jonas</li>
+                                    <li>jackson salga</li>
+                                </ul>
+                            </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
                             <td>Edinburgh</td>
@@ -116,6 +153,12 @@
                         <tr>
                             <td>Michael</td>
                             <td>1631480-1-671929 D.V. 62</td>
+                            <td>
+                                <ul>
+                                    <li>Michael Jonas</li>
+                                    <li>jackson salga</li>
+                                </ul>
+                            </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
                             <td>Singapore</td>
@@ -128,6 +171,12 @@
                         <tr>
                             <td>Donna</td>
                             <td>1631480-1-671929 D.V. 62</td>
+                            <td>
+                                <ul>
+                                    <li>Michael Jonas</li>
+                                    <li>jackson salga</li>
+                                </ul>
+                            </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
                             <td>New York</td>
@@ -146,4 +195,56 @@
         </div>
     </div>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><i class="fa fa-edit"></i>Editar Empresa</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal form-label-left input_mask">
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                            <input type="text" class="form-control has-feedback-left" id="razon-social" name="razon-social" placeholder="Razón Social">
+                            <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                            <input type="text" class="form-control" id="ruc" name="ruc" placeholder="R.U.C">
+                            <span class="fa fa-barcode form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                            <input type="text" class="form-control has-feedback-left" id="correo" name="correo" placeholder="Correo">
+                            <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                        </div>
+
+                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                            <input type="text" class="form-control" id="numero-telefonico" name="numero-telefonico" placeholder="Número Telefonico">
+                            <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
+                            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección">
+                            <span class="fa fa-map-marker form-control-feedback right" aria-hidden="true"></span>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
 @stop
