@@ -3,7 +3,7 @@
 return [
     'mode'                 => 'UTF-8',
     'format'               => 'A4',
-    'default_font_size'    => '20',
+    'default_font_size'    => '',
     'default_font'         => 'sans-serif',
     'custom_font_path'     => base_path('/resources/fonts/'), // don't forget the trailing slash!
     'direction'            => 'ltr',
