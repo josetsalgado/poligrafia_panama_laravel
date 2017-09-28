@@ -41,14 +41,16 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $this->ValidateCreate($request);
+        $token = str_random(60);
         User::insert([
-          'id_user' => '',
-          'name_user' => $request->name,
-          'last_name_user' => $request->lastname,
-          'password_user' => $request->password,
+          'id' => '',
+          'name' => $request->name,
+          'last_name' => $request->lastname,
+          'password' => bcrypt($request->password),
           'rol_id' => intval($request->rol),
-          'tel_user' => $request->tel,
-          'email_user' => $request->email,
+          'tel' => $request->tel,
+          'email' => $request->email,
+          'remember_token' => $token,
         ]);
         
         return view('user.create');
@@ -65,7 +67,7 @@ class UserController extends Controller
         $this->validate($request,[
                 'name' => 'required',
                 'lastname' => 'required',
-                'email' => 'required|email|unique:itcp_users,email_user',
+                'email' => 'required|email|unique:users,email',
                 'tel' => 'required|numeric',
                 'rol' => 'required',
                 'password' => 'required|confirmed',

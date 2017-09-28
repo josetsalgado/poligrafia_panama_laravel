@@ -36,9 +36,9 @@ class Authenticate
     {
         if ($this->auth->guest()) {
             if ($request->ajax()) {
-                return response('Unauthorized.', 401);
+                return redirect()->guest('dashboard_home');
             } else {
-                return redirect()->guest('auth/login');
+                return redirect()->guest('/');
             }
         }
 

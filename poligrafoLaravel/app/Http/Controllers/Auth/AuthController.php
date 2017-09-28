@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
@@ -21,15 +20,18 @@ class AuthController extends Controller
     |
     */
 
-    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
-    protected $redirectTo = '/dashboard_home';
-    protected $loginPath = '/';
-    protected $redirectPath = '/dashboard_home';
+    use AuthenticatesAndRegistersUsers;
     /**
      * Create a new authentication controller instance.
      *
      * @return void
      */
+
+    protected $redirectTo = '/create_user';
+    protected $loginPath = '/';
+    protected $redirectPath = '/create_user';
+
+
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
@@ -44,9 +46,27 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
+          'name' => 'required',
+            'lastname' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'tel' => 'required|numeric',
+            'rol' => 'required',
+            'password' => 'required|confirmed',
+            'password_confirmation' => 'required',
+        ],
+        [
+            'name.required' => trans("validations.input_required", ['input' => 'nombre']),
+            'lastname.required' => trans("validations.input_required", ['input' => 'apellido']),
+            'email.required' => trans("validations.input_required", ['input' => 'correo']),
+            'email.email' => trans("validations.input_format", ['input' => 'correo']),
+            'email.unique' => trans("validations.input_unique", ['input' => 'usuario', 'other' => 'correo']),
+            'tel.required' => trans("validations.input_required", ['input' => 'telefono']),
+            'tel.numeric' => trans("validations.input_format", ['input' => 'telefono']),
+            'rol.required' => trans("validations.input_required", ['input' => 'tipo de usuario']),
+            'password.required' => trans("validations.input_required", ['input' => 'clave']),
+            'password.confirmed' => trans("validations.input_equal", ['input' => 'clave', 'other' => 'confirmar clave']),
+            'password_confirmation.required' => trans("validations.input_required", ['input' => 'confirmar clave']),
+
         ]);
     }
 
@@ -59,12 +79,15 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+          'name' => $data['name'],
+          'last_name' => $data['lastname'],
+          'password' => bcrypt($data['password']),
+          'rol_id' => intval($data['rol']),
+          'tel' => $data['tel'],
+          'email' => $data['email'],
         ]);
     }
-    
+
     public function getLogin()
     {
         return view('home.index');
@@ -72,6 +95,6 @@ class AuthController extends Controller
 
     public function loginUsername()
     {
-        return property_exists($this, 'email_user') ? $this->username : 'email_user';
+        return property_exists($this, 'username') ? $this->username : 'email';
     }
 }
