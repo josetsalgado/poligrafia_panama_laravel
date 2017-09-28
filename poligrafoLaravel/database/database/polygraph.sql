@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-09-2017 a las 20:35:45
+-- Tiempo de generación: 28-09-2017 a las 22:28:43
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -49,7 +49,6 @@ INSERT INTO `itcl_rols` (`id_rol`, `name_rol`, `description_rol`) VALUES
 CREATE TABLE `itcp_appoiments` (
   `id_appoiment` int(25) UNSIGNED NOT NULL,
   `service_id` int(25) UNSIGNED NOT NULL,
-  `user_id` int(25) UNSIGNED NOT NULL,
   `client_id` int(25) UNSIGNED NOT NULL,
   `patient_id` int(25) UNSIGNED NOT NULL,
   `city_appoiment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
@@ -63,14 +62,15 @@ CREATE TABLE `itcp_appoiments` (
 -- Volcado de datos para la tabla `itcp_appoiments`
 --
 
-INSERT INTO `itcp_appoiments` (`id_appoiment`, `service_id`, `user_id`, `client_id`, `patient_id`, `city_appoiment`, `date_appoiment`, `time_appoiment`, `comentary_appoiment`, `status`) VALUES
-(8, 5, 1, 4, 15, 'Ciudad de panama', '2017-09-07', '10:00:00', 'asd', 'Pendiente'),
-(9, 5, 2, 2, 16, 'Ciudad de panama', '2017-09-07', '10:00:00', 'asd', 'Pendiente'),
-(10, 5, 3, 4, 17, 'Ciudad de panama', '0000-00-00', '01:30:00', 'candidato 1', 'Pendiente'),
-(11, 5, 1, 3, 18, 'Ciudad de panama', '2017-09-02', '10:00:00', 'candidato2', 'Aprobado'),
-(12, 5, 4, 2, 19, 'Ciudad de panama', '2017-09-09', '07:30:00', 'candidato3', 'Pendiente'),
-(13, 5, 2, 2, 20, 'Ciudad de panama', '2017-09-11', '10:00:00', 'empleado5', 'Pendiente'),
-(14, 5, 2, 4, 21, 'Ciudad de panama', '2017-09-14', '10:00:00', 'empleado6', 'Aprobado');
+INSERT INTO `itcp_appoiments` (`id_appoiment`, `service_id`, `client_id`, `patient_id`, `city_appoiment`, `date_appoiment`, `time_appoiment`, `comentary_appoiment`, `status`) VALUES
+(8, 5, 4, 15, 'Ciudad de panama', '2017-09-07', '10:00:00', 'asd', 'Pendiente'),
+(9, 5, 2, 16, 'Ciudad de panama', '2017-09-07', '10:00:00', 'asd', 'Pendiente'),
+(10, 5, 4, 17, 'Ciudad de panama', '0000-00-00', '01:30:00', 'candidato 1', 'Pendiente'),
+(11, 5, 3, 18, 'Ciudad de panama', '2017-09-02', '10:00:00', 'candidato2', 'Aprobado'),
+(12, 5, 2, 19, 'Ciudad de panama', '2017-09-09', '07:30:00', 'candidato3', 'Pendiente'),
+(13, 5, 2, 20, 'Ciudad de panama', '2017-09-11', '10:00:00', 'empleado5', 'Pendiente'),
+(14, 5, 4, 21, 'Ciudad de panama', '2017-09-14', '10:00:00', 'empleado6', 'Aprobado'),
+(15, 5, 2, 22, 'Ciudad de panama', '2017-09-17', '08:00:00', '312', 'Pendiente');
 
 -- --------------------------------------------------------
 
@@ -159,7 +159,8 @@ INSERT INTO `itcp_patients` (`id_patient`, `name_patient`, `last_name_patient`, 
 (18, 'candidato2', 'candidato2', '123', 'candidato2', '234'),
 (19, 'candidato3', 'candidato3', '34', 'candidato3', '3'),
 (20, 'empleado5', 'empleado5', '123', 'empleado5', '324'),
-(21, 'empleado6', 'empleado6', '213', 'empleado5', '56');
+(21, 'empleado6', 'empleado6', '213', 'empleado5', '56'),
+(22, '321', '321', '321', '321', '312');
 
 -- --------------------------------------------------------
 
@@ -279,7 +280,6 @@ ALTER TABLE `itcp_appoiments`
   ADD PRIMARY KEY (`id_appoiment`),
   ADD KEY `patient_id` (`patient_id`),
   ADD KEY `service_id` (`service_id`),
-  ADD KEY `user_id` (`user_id`),
   ADD KEY `client_id` (`client_id`);
 
 --
@@ -339,7 +339,7 @@ ALTER TABLE `itcl_rols`
 -- AUTO_INCREMENT de la tabla `itcp_appoiments`
 --
 ALTER TABLE `itcp_appoiments`
-  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- AUTO_INCREMENT de la tabla `itcp_citys`
 --
@@ -354,7 +354,7 @@ ALTER TABLE `itcp_clients`
 -- AUTO_INCREMENT de la tabla `itcp_patients`
 --
 ALTER TABLE `itcp_patients`
-  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT de la tabla `itcp_service`
 --
@@ -369,7 +369,7 @@ ALTER TABLE `itcp_status`
 -- AUTO_INCREMENT de la tabla `itcp_users`
 --
 ALTER TABLE `itcp_users`
-  MODIFY `id_user` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_user` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
@@ -385,7 +385,6 @@ ALTER TABLE `users`
 ALTER TABLE `itcp_appoiments`
   ADD CONSTRAINT `itcp_appoiments_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `itcp_patients` (`id_patient`),
   ADD CONSTRAINT `itcp_appoiments_ibfk_2` FOREIGN KEY (`service_id`) REFERENCES `itcp_service` (`id_service`),
-  ADD CONSTRAINT `itcp_appoiments_ibfk_3` FOREIGN KEY (`user_id`) REFERENCES `itcp_users` (`id_user`),
   ADD CONSTRAINT `itcp_appoiments_ibfk_4` FOREIGN KEY (`client_id`) REFERENCES `itcp_clients` (`id_client`);
 
 --

@@ -69,7 +69,6 @@ class QuotesController extends Controller
     {
         
         $this->validate($request,[
-                'polygraphist' => 'required',
                 'client' => 'required',
                 'schedule' => 'required',
                 'service' => 'required',
@@ -81,7 +80,6 @@ class QuotesController extends Controller
                 'descriptionCandidate' => 'required',
             ], 
             [
-                'polygraphist.required' => trans("validations.input_required", ['input' => 'poligrafista']),
                 'client.required' => trans("validations.input_required", ['input' => 'cliente']),
                 'schedule.required' => trans("validations.input_required", ['input' => 'horario']),
                 'service.required' => trans("validations.input_required", ['input' => 'tipo de prueba']),
@@ -121,7 +119,6 @@ class QuotesController extends Controller
         Appoiment::insert([
           'id_appoiment' => '',
           'service_id' => intval($request->service),
-          'user_id' => intval($request->polygraphist),
           'client_id' => intval($request->client),
           'patient_id' => intval(Patient::all()->last()->id_patient),
           'city_appoiment' => 'Ciudad de panama',
