@@ -162,7 +162,7 @@
                     <br>
                     <h5 style="font-size: 14px; font-weight: bold;"><b>Forma de Pago</b></h5>
                     <p>Cheque, ACH, Tarjeta de crédito  o transferencia electrónica. Otorgamos crédito a 15 o 30 días.</p>
-                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                    <br><br>
                     <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>PRUEBAS POLIGRAFICAS EN PANAMA, PROVINCIAS CENTRALES DAVID</b></h5>
                     <div class="col-md-12" style="position: relative; min-height: 1px; float: left; padding-right: 10px; padding-left: 10px">
                         <div class="" style="margin-left: 10.66666667%; padding-right: 80px">
@@ -190,6 +190,7 @@
                             </table>
                         </div>
                     </div>
+                    <br>
                     <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>PRUEBAS POLIGRAFICAS EN PANAMA, PROVINCIAS CENTRALES DAVID</b></h5>
                     <div class="col-md-12">
                         <div class="" style="margin-left: 10.66666667%; padding-right: 80px">
@@ -253,7 +254,34 @@
                 <!-- /.col -->
             </div>
             <!-- /.row -->
-
+            <div class="row">
+                <!-- accepted payments column -->
+                <div class="col-xs-6">
+                </div>
+                <!-- /.col -->
+                <div class="col-xs-9 pull-right">
+                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th style="height: 30px !important; padding-left: 5px">SUBTOTAL </th>
+                            <td style="height: 30px !important; padding-left: 5px">B/.760.00</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th style="background-color: #d8d8d8; padding-left: 5px; height: 30px !important;">ITBM</th>
+                            <td style="background-color: #d8d8d8; padding-left: 5px; height: 30px !important;">EXCENTO</td>
+                        </tr>
+                        <tr>
+                            <th style="padding-left: 5px; height: 30px !important;">TOTAL</th>
+                            <td style="padding-left: 5px; height: 30px !important;">B/.760.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
         </section>
     </div>
 
