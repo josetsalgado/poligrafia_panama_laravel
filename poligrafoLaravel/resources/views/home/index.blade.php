@@ -7,19 +7,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Gentelella Alela! | </title>
+        <title>ITCP</title>
 
         <!-- Bootstrap -->
-        <link href="css/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{ url('css/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
         <!-- Font Awesome -->
-        <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="{{ url('css/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
         <!-- NProgress -->
-        <link href="css/nprogress/nprogress.css" rel="stylesheet">
+        <link href="{{ url('css/nprogress/nprogress.css') }}" rel="stylesheet">
         <!-- Animate.css -->
-        <link href="css/animate.css/animate.min.css" rel="stylesheet">
+        <link href="{{ url('css/animate.css/animate.min.css') }}" rel="stylesheet">
 
         <!-- Custom Theme Style -->
-        <link href="build/css/custom.min.css" rel="stylesheet">
+        <link href="{{ url('build/css/custom.min.css') }}" rel="stylesheet">
     </head>
 
     <body class="login">
@@ -31,26 +31,26 @@
                 <div class="animate form login_form">
                     <section class="login_content">
                         @if (count($errors) > 0)
-                        <div class="alert alert-danger">
-                            <strong>Whoops!</strong> There were some problems with your input.<br><br>
-                            <ul>
-                                @foreach ($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
+                            <div class="alert alert-danger">
+                                <strong>Whoops!</strong> There were some problems with your input.<br><br>
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
                         @endif
-                        <form method="POST" action="{{ url('/auth/login') }}">
+                        <form class="form-horizontal" role="form" method="POST" action="{{ url('/auth/login') }}">
                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <h1><i class="fa fa-globe"></i> IPTC</h1>
                             <div>
-                                <input type="text" name="username" id="username" class="form-control" placeholder="Correo" required="" />
+                                <input type="text" class="form-control" name="email" value="{{ old('email') }}">
                             </div>
                             <div>
-                                <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="" />
+                                <input type="password" class="form-control" name="password">
                             </div>
                             <div>
-                                <a class="btn btn-default submit" href="index.html">Entrar</a>
+                                <button type="submit" class="btn btn-primary">Entrar</button>
                                 <a class="reset_pass" href="#">Olvidaste tú contraseña?</a>
                             </div>
 

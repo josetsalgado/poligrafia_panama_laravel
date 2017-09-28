@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 26-09-2017 a las 16:43:18
+-- Tiempo de generación: 28-09-2017 a las 20:35:45
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -209,40 +209,58 @@ INSERT INTO `itcp_status` (`id_status`, `name_status`, `description_status`) VAL
 
 CREATE TABLE `itcp_users` (
   `id_user` int(25) UNSIGNED NOT NULL,
-  `name_user` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `name` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `last_name_user` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `password_user` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
   `rol_id` int(25) UNSIGNED NOT NULL,
   `tel_user` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `email_user` varchar(45) COLLATE utf8_spanish_ci NOT NULL
+  `email` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `itcp_users`
 --
 
-INSERT INTO `itcp_users` (`id_user`, `name_user`, `last_name_user`, `password_user`, `remember_token`, `rol_id`, `tel_user`, `email_user`) VALUES
+INSERT INTO `itcp_users` (`id_user`, `name`, `last_name_user`, `password`, `remember_token`, `rol_id`, `tel_user`, `email`) VALUES
 (1, 'juan', 'hca', '333', NULL, 1, '333', '333@333.com'),
 (2, 'pedro', 'picapiedra', 'jose', NULL, 1, 'jose', 'jose'),
 (3, 'jesus', 'jose', '222', NULL, 1, '123', 'josepp@h.com'),
-(4, 'maria', 'antonia', '333', NULL, 1, '333', 'joseii@g.com'),
-(5, 'jose', 'jose', 'jose', NULL, 1, 'jose', 'jose'),
-(6, 'jose', 'jose', 'jose', NULL, 1, 'jose', 'jose'),
-(7, 'sss', 'jose', 'jose', NULL, 1, 'jose', 'ham_1230@hotmail.com'),
-(8, 'tomas', 'to', 'Abcd1234$#', NULL, 1, '12321', 'josetomassalgado91@gmail.com'),
-(13, 'cenen', 'salgado', '121', NULL, 2, '121', 'cenen'),
-(14, 'bernardo', 'salgado', '543543', NULL, 1, '1213', 'jjj'),
-(15, 'bernardo', 'salgado', '543543', NULL, 1, '1213', 'jjj'),
-(16, 'bernardo', 'salgado', '543543', NULL, 1, '1213', 'jjj'),
-(17, 'rafael', 'velasquez', '123', NULL, 1, '123123', 'jrvo@gmail.com'),
-(18, 'jose', 'salgado', '111', NULL, 2, '123', 'jjkkkk@11.com'),
-(19, 'jose salgado', 'velasquez', '1', NULL, 2, '123123', 'ezebarazarte@gmail.com'),
-(20, 'jose salgado', 'salgado', '11', NULL, 2, '123', 'josetomassalgado911@gmail.com'),
-(21, 'jose', 'jose', '1', NULL, 1, '123', 'jose@gmail.com'),
-(22, 'juan', 'hca', '11', NULL, 1, '111', 'jose2@gmail.com'),
-(23, 'juan', 'hca', '11', NULL, 1, '11', 'jose3@gmail.com'),
-(24, 'rafaeldas', 'velasquez', '22', NULL, 2, '123213', 'jvelasdsaqu@gmail.com');
+(4, 'jose', 'antonia', '$2y$10$ChssUbg80qaHuHkTTGX0HusFHPGxQe3YfDH.mV', NULL, 1, '333', 'jose@jose.com');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(25) UNSIGNED NOT NULL,
+  `name` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `last_name` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `rol_id` int(25) UNSIGNED NOT NULL,
+  `tel` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(45) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `last_name`, `password`, `remember_token`, `rol_id`, `tel`, `email`) VALUES
+(1, 'jose salgado', 'salgado', '$2y$10$H0iX9rZ0Pj823fc2Ci5Ddufx4R8oh.5WtWZJUCuTocPLcYcWt5oB6', 'QC68gSZbafm4iQLiW0pryOjzxxAenpn41RqmcYYeG3dq7TnTRk6rreCGyxbq', 2, '', '1122jose@jose.com'),
+(2, 'jose salgado', 'velasquez', '$2y$10$7pG.q39RWhpYEmZ/Y3gF..1CRYApXz8RPx7QrZf1aDQrOEUhQCqAK', '6PGwhKJJGa0PQRiqyFYIk4Z3BYMycmbb07NEb7cJtTLabFNErAkxq0N4ot1f', 2, '', '1jose@jose.com'),
+(3, '123', '123', '$2y$10$YSvfDbJ.aSZpySAYiThrS.fqFABsr9SQCccIZ9.q/dVRaBqpaNip6', 'VO0I7K8VpwYzoRwhqE99pUInml0hPIaspEYk3VsLSDixwC2Lt3t5Agp85fW2', 2, '', '123@123.com'),
+(4, 'jose salgado', 'salgado', '$2y$10$UiBIJ/jI6KUk15/JpHf.A.YXOG95sqJJ5dP7.kPpwU1r.xvCWMUv2', 'YWbm23KeVixvg2iQZvSLPcjPuPd36J3ln8sGKYe2MTf8tGmGHQqzII1uRxXi', 1, '', 'josetomassalgado91@gmail.com'),
+(5, 'jose', 'salga', '$2y$10$HVuy3HmAEqPkGmTKcJ3wuu7eHfivYmenPaSdXqt/MKDLbcAvOXhym', 'kyBRhCC5sxfxeO0LcBn0nMdKFH0UxhrIHkx8OELcNxkGF1LIRfApMhzM3556', 2, '', 'salgado@salgado.com'),
+(6, 'salgado', 'salgado', '$2y$10$fT35BEVAnKOdmYiJjzMvT.FAtrYG2Rye0csuCu9rd6DvH1h5kGBUm', '5FqKodvaT8x8L0eIgKDi1bn0MAfoibnZmT6MsTbgKo8PBeCybdM4yoBjjZka', 2, '', 'salgado1@salgado.com'),
+(7, '123123', '123', '123', NULL, 2, '123', '12233@123.com'),
+(8, '123', '123', '123', 'vsLDe6O2OnJPkNphprMQw5Qu0MfQ4lx1DS4Oz8y5EnQXIF9aNG6NKoYhiDmO', 2, '123', '23112232@123.com'),
+(9, 'jose salgado', 'salgado', '123', 'I022tY8ULLMOkvErmgpKX6IHhLFq32h8BSDDZewn36pZYDFB3WfSr0pVo31o', 2, '123', 'jsalgado@ilernus.com'),
+(10, 'jose salgado', 'salgado', '123', 'nDSV6LcLDiMvI3tmh01KQclmkk0EYqT7rl07EQN3UbfIWVLQPd9456w1kR2Q', 2, '123', 'jsalgado2@ilernus.com'),
+(11, 'sa', 'sa', '$2y$10$qhmuF1qgzWgswY29IEWm3et7cOqCcNPrVdRN9ltImWhGZ1Ab.Drxm', 'U1RLgupD1SzcxQYgQ4K5BvtkZd3iW6XluSHscUq2JuYh1oa3IidCSnDQQRrO', 2, '123', 'jsalgado3@ilernus.com');
 
 --
 -- Índices para tablas volcadas
@@ -303,6 +321,12 @@ ALTER TABLE `itcp_users`
   ADD KEY `rol_id` (`rol_id`);
 
 --
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -345,7 +369,12 @@ ALTER TABLE `itcp_status`
 -- AUTO_INCREMENT de la tabla `itcp_users`
 --
 ALTER TABLE `itcp_users`
-  MODIFY `id_user` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id_user` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- Restricciones para tablas volcadas
 --

@@ -17,9 +17,11 @@ class PasswordController extends Controller
     | explore this trait and override any methods you wish to tweak.
     |
     */
-
+    //protected $redirectTo = '/dashboard';
     use ResetsPasswords;
-
+    protected $redirectTo = '/dashboard';
+    protected $loginPath = '/';
+    protected $redirectPath = '/';
     /**
      * Create a new password controller instance.
      *
@@ -27,6 +29,6 @@ class PasswordController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 }
