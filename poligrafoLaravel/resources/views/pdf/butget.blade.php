@@ -134,8 +134,125 @@
                                 <div>* Aplicación y análisis de gráficas</div>
                                 <div>* Emisión de un diagnóstico</div>
                             </div>
-                </div>
+                    <br>
+                    <h5 style="font-size: 14px; font-weight: bold;"><b>Casos susceptibles de evaluación</b></h5>
+                    <p>Todos aquellos donde la veracidad en la declaración de una persona sea el factor determinante.</p><br>
+                    <h5 style="font-size: 14px; font-weight: bold;"><b>Confiabilidad y Validez del uso del polígrafo</b></h5>
+                    <p>Para probar la confiabilidad y validez del uso del polígrafo se han realizado más de 250  investigaciones a nivel mundial, en los cuales se han encontrado los siguientes porcentajes de validez:
+                    <div style="padding-left: 30px;" >
+                        <p>* 90%  al 95%</p>
+                    </div>
+                     <br>
+                    <h5 style="font-size: 14px; font-weight: bold;"><b>Calidad y Profesionalismo</b></h5>
+                    <div style="padding-left: 30px;">
+                        <div>* Una evaluación poligráfica tiene una duración aproximada de hora y media a 2 horas </div>
+                        <div>* Se lleva a cabo en apego estricto a las garantías individuales y a los derechos humanos. </div>
+                        <div>* Se garantiza el manejo de la confidencialidad de la información y respeto a la intimidad de los evaluados. </div>
+                        <div>* Nuestros poligrafistas cuentan con doble acreditación; nacional e internacional</div>
+                        <div>* Seguimiento estricto de los  estándares internacionales en el procedimiento</div>
+                        <div>* Nos acoplamos siempre a las necesidades del cliente, en cuanto al tipo de preguntas que ustedes quieran hacer.</div>
+                    </div>
+                    <br>
+                    <h5 style="font-size: 14px; font-weight: bold;"><b>Requisitos para el Evaluado</b></h5>
+                    <div style="padding-left: 30px;">
+                        <div>* Que tenga conocimiento que viene a una prueba de polígrafo</div>
+                        <div>* Que sepa que va a estar al menos dos horas con nosotros en esta prueba</div>
+                        <div>* Que no esté visiblemente enfermo (con un resfriado y tos que no pueda ni hablar)</div>
+                    </div>
+                    <br>
+                    <h5 style="font-size: 14px; font-weight: bold;"><b>Forma de Pago</b></h5>
+                    <p>Cheque, ACH, Tarjeta de crédito  o transferencia electrónica. Otorgamos crédito a 15 o 30 días.</p>
+                    <br><br><br><br><br><br><br><br><br><br><br><br>
+                    <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>PRUEBAS POLIGRAFICAS EN PANAMA, PROVINCIAS CENTRALES DAVID</b></h5>
+                    <div class="col-md-12" style="position: relative; min-height: 1px; float: left; padding-right: 10px; padding-left: 10px">
+                        <div class="" style="margin-left: 10.66666667%; padding-right: 80px">
+                            <table id="datatable-responsive2" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="80%">
+                                <thead>
+                                <tr>
+                                    <th style="height: 30px !important; padding-left: 5px"> EVALUACIONES POLIGRÁFICAS <br>Pre empleo/Rutina</th>
+                                    <th style="height: 30px !important; padding-left: 5px"> COSTO UNITARIO <br>(No incluye ITBM)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td style="background-color: #d8d8d8; height: 30px !important; padding-left: 5px"> 1 a 4 prueba al mes</td>
+                                    <td style="background-color: #d8d8d8; height: 30px !important; padding-left: 5px"> B/.125.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 30px !important; padding-left: 5px"> 5 ó más pruebas al mes</td>
+                                    <td style="height: 30px !important; padding-left: 5px"> B/.100.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #d8d8d8; height: 30px !important; padding-left: 5px"> 10 o más pruebas al mes</td>
+                                    <td style="background-color: #d8d8d8; height: 30px !important; padding-left: 5px"> B/.80.00</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>PRUEBAS POLIGRAFICAS EN PANAMA, PROVINCIAS CENTRALES DAVID</b></h5>
+                    <div class="col-md-12">
+                        <div class="" style="margin-left: 10.66666667%; padding-right: 80px">
+                            <table id="datatable-responsive2" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="80%">
+                                <thead>
+                                <tr>
+                                    <th style="height: 30px !important; padding-left: 5px">EVALUACIONES POLIGRÁFICAS <br>Especificas</th>
+                                    <th style="height: 30px !important; padding-left: 5px">COSTO UNITARIO <br>(No incluye ITBM)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td style="background-color: #d8d8d8; height: 30px !important; padding-left: 5px">1 a 5 pruebas</td>
+                                    <td style="background-color: #d8d8d8; height: 30px !important; padding-left: 5px">B/.150.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="height: 30px !important; padding-left: 5px">5 ó más pruebas al mes</td>
+                                    <td style="height: 30px !important; padding-left: 5px">B/.135.00</td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #d8d8d8; height: 30px !important; padding-left: 5px">10 ó más pruebas al mes</td>
+                                    <td style="background-color: #d8d8d8; height: 30px !important; padding-left: 5px">B/.115.00</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>COTIZACIÓN</b></h5>
             </div>
+
+            <!-- Table row -->
+            <div class="row">
+                <div class="col-xs-12 table">
+                    <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                        <thead>
+                        <tr >
+                            <th style="height: 30px !important; padding-left: 5px">EVALUACION POLIGRÁFICA </th>
+                            <th style="height: 30px !important; padding-left: 5px">COSTO UNITARIO</th>
+                            <th style="height: 30px !important; padding-left: 5px">VALOR TOTAL</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td style="background-color: #d8d8d8; padding-left: 5px; height: 30px !important;">8 pruebas Pre empleo</td>
+                            <td style="background-color: #d8d8d8; padding-left: 5px ; height: 30px !important;">B/.125.00</td>
+                            <td style="background-color: #d8d8d8; padding-left: 5px ; height: 30px !important;">B/.1,200.00</td>
+                        </tr>
+                        <tr>
+                            <td style="padding-left: 5px; height: 30px !important;">8 pruebas Especificas</td>
+                            <td style="padding-left: 5px; height: 30px !important;">B/.150.00</td>
+                            <td style="padding-left: 5px; height: 30px !important;">B/.1,200.00</td>
+                        </tr>
+                        <tr>
+                            <td style="background-color: #d8d8d8; padding-left: 5px; height: 30px !important;">Descuento</td>
+                            <td style="background-color: #d8d8d8; padding-left: 5px; height: 30px !important;">-B/.55.00</td>
+                            <td style="background-color: #d8d8d8; padding-left: 5px; height: 30px !important;">-B/.440.00</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
 
         </section>
     </div>
