@@ -1,9 +1,10 @@
 $(document).ready(function () {
     //funcion para mostrar lista de clientes asociados a la empresa
-    $("#empresa").change(function(){getClient();});
-    $("#client").attr("disabled",true);
+    getClient();
+    $("#empresaEdit").change(function(){getClient();});
+    $("#clientEdit").attr("disabled",true);
     function getClient(){
-        var code = $("#empresa").val();
+        var code = $("#empresaEdit").val();
 
         $.get("appoiment_company/"+code, function (resultado) {
             if (resultado == false)
@@ -12,76 +13,43 @@ $(document).ready(function () {
             }
             else
             {
-                $("#client").attr("disabled", false);
-                document.getElementById("client").options.length = 1;
-                $('#client').append(resultado);
+                $("#clientEdit").attr("disabled", false);
+                document.getElementById("clientEdit").options.length = 1;
+                $('#clientEdit').append(resultado);
             }
         });
     }
     
-    //calendario
-    $('#calendar').fullCalendar({
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,agendaWeek,agendaDay'
-        },
-        locale: 'es',
-        navLinks: true, // can click day/week names to navigate views
-        selectable: true,
-        selectHelper: true,
-        dayClick: function (date, jsEvent, view) {
-            //modal para pedir una cita
-            var date = new Date(date._i);
-            var year = date.getFullYear();
-            var month = date.getMonth() + 1;
-            var day = date.getDate() + 1;
-            var getDate = year + "-" + month + "-" + day;
-
-            $("#myModal").modal("show");
-            $("#dateEpoch").attr("value", getDate);
-        },
-        eventClick: function (calEvent, jsEvent, view) {
-            //modal para editar una cita
-            $("#CalenderModalEdit").load("editQuote/" + calEvent._id);
-            $("#CalenderModalEdit").modal("show");
-        },
-        editable: true,
-        eventLimit: true, 
-        events: {
-            //data que se carga en el modal mediante json
-            url: 'getQuotes',
-        },
-       
-    });
+    
     
     //validar solicitud de cita
-    $("#createQuote").validate({
+    $("#editQuotePatien").validate({
         
         wrapper: "div",
         errorClass: "text-danger",
         
 	rules: {
-            client: { required:true },
-            schedule: { required:true },
-            service: { required:true }, 
+            clientEdit: { required:true },
+            scheduleEdit: { required:true },
+            serviceEdit: { required:true }, 
         },
 	messages: {
-            client: { required: "El campo cliente es obligatorio." },
-            schedule: { required: "El campo horario es obligatorio." },
-            service: { required: "El campo tipo de prueba es obligatorio." }, 
+            clientEdit: { required: "El campo cliente es obligatorio." },
+            scheduleEdit: { required: "El campo horario es obligatorio." },
+            serviceEdit: { required: "El campo tipo de prueba es obligatorio." }, 
 	},
 	submitHandler: function(form){
-            var dataString = $('#createQuote').serialize();
+            var dataString = $('#editQuotePatien').serialize();
             $.ajax({
 	        type: "POST",
-	        url: "create_quote",
+	        url: "update_quote",
 	        data: dataString,
 	        success: function(data) {
                    	alert("bien");
-                        $('#createQuote')[0].reset();
+                        $('#editQuotePatien')[0].reset();
                         $('.close').click();
 	       	},error: function (err) {
+                    console.log(err);
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.
                         //show them somewhere in the markup

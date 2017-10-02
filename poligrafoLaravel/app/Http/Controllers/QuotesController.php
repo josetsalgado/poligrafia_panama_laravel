@@ -2,27 +2,29 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use App\Client;
-use App\User;
-use App\Service;
-use App\Patient;
 use App\Appoiment;
-use Carbon\Carbon;
+use App\Client;
+use App\Company;
+use App\Http\Controllers\Controller;
+use App\Patient;
+use App\Service;
+use App\User;
 use DB;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use function trans;
+use function view;
 
 class QuotesController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function index()
     {
+        $companys = Company::All();
         $clients = Client::All();
         $users = User::All();
         $services = Service::All();
@@ -32,7 +34,7 @@ class QuotesController extends Controller
                 ->get();
         $appoiments = json_encode($appoiments);
         
-        return view('quotes.index', compact("clients", "users", "services", "appoiments"));
+        return view('quotes.index', compact("clients", "users", "services", "appoiments", "companys"));
     }
     /**
      * get quotes of mounth
@@ -44,7 +46,7 @@ class QuotesController extends Controller
     {
         $appoiments = DB::table('itcp_appoiments')
                 ->join('itcp_patients', 'itcp_patients.id_patient', '=', 'itcp_appoiments.patient_id')
-                ->select('name_patient AS title', 'date_appoiment AS start')
+                ->select('id_appoiment AS id', 'name_patient AS title', 'date_appoiment AS start')
                 ->get();
         return view("quotes.getQuotes", compact("appoiments"));
     }
@@ -52,7 +54,7 @@ class QuotesController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function create()
     {
@@ -99,8 +101,8 @@ class QuotesController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  Request  $request
+     * @return Response
      */
     public function store(Request  $request)
     {
@@ -119,6 +121,7 @@ class QuotesController extends Controller
         Appoiment::insert([
           'id_appoiment' => '',
           'service_id' => intval($request->service),
+          'company_id' => intval($request->empresa),
           'client_id' => intval($request->client),
           'patient_id' => intval(Patient::all()->last()->id_patient),
           'city_appoiment' => 'Ciudad de panama',
@@ -135,7 +138,7 @@ class QuotesController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show()
     {
@@ -146,33 +149,83 @@ class QuotesController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function edit($id)
     {
-        //
+        
+        $companys = Company::All();
+        $clients = Client::All();
+        $users = User::All();
+        $services = Service::All();
+        
+        $getQuote = DB::table('itcp_appoiments')
+                ->join('itcp_patients', 'itcp_appoiments.patient_id', '=', 'itcp_patients.id_patient')
+                ->join('itcp_companys', 'itcp_appoiments.company_id', '=', 'itcp_companys.id_company')
+                ->join('itcp_service', 'itcp_appoiments.service_id', '=', 'itcp_service.id_service')
+                ->join('itcp_clients', 'itcp_appoiments.client_id', '=', 'itcp_clients.id_client')
+                ->where('itcp_appoiments.id_appoiment', '=', $id)
+                ->select('*')
+                ->get();
+        
+        $getUser = DB::table('itcp_appoiments')
+                ->join('users', 'itcp_appoiments.user_id', '=', 'users.id')
+                ->where('itcp_appoiments.id_appoiment', '=', $id)
+                ->select('*')
+                ->get();
+        
+        return view("quotes.editQuote", compact("getQuote", "companys", "clients", "users", "services", "getUser"));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        Patient::where("id_patient", "=", $request->id_patient)
+                ->update(array(
+                    "name_patient" => $request->descriptionCandidateEdit,
+                    "last_name_patient" => $request->candidateLastnameEdit,
+                    "ci_patient" => $request->ciCandidateEdit,
+                    "job_patient" => $request->jobCandidateEdit,
+                    "phone" => $request->telCandidateEdit,
+        ));
+
+        Appoiment::where("id_appoiment", "=", $request->id)
+                ->update(array(
+                    "user_id" => $request->polygraphist,
+                    "comentary_appoiment" => $request->descriptionCandidateEdit
+        ));
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
         //
+    }
+    
+    /**
+     * Get company form the specified resource from storage.
+     *
+     * @param  int  $code
+     * @return Response
+     */
+    public function getClient($code)
+    {
+        $companys = DB::table('itcp_clients')
+                ->join('itcp_companys', 'itcp_clients.company_id', '=', 'itcp_companys.id_company')
+                ->where('itcp_companys.id_company', '=', $code)
+                ->select('*')
+                ->get();
+        return view("quotes.getClient", compact("companys"));    
     }
 }

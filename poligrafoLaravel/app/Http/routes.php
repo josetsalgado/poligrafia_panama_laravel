@@ -49,12 +49,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/update_client', 'ClientController@update');
     //borrar clientes
     Route::get('/delete_client/{id}', 'ClientController@destroy');
+    
     //solicitudes de citas
     Route::get('/quotes_client', 'QuotesController@index');
     //crear citas
     Route::post('/create_quote', 'QuotesController@store');
     //lista de citas que se cargaran en el calendario
     Route::get('/getQuotes', 'QuotesController@getQuotes');
+    //solicitudes de citas
+    Route::get('/appoiment_company/{code}', 'QuotesController@getClient');
+    //iditar una cita
+    Route::get('/editQuote/{id}', 'QuotesController@edit');
+    //actualizar datos de la cita
+    Route::post('/update_quote', 'QuotesController@update');
+    
     //solicitudes de cotizaciones
     Route::get('/butget_client', 'BudgetController@create');
     //Crear registro de resultados
