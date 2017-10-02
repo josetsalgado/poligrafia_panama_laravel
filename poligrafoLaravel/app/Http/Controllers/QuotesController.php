@@ -42,7 +42,7 @@ class QuotesController extends Controller
      */
    
     
-    public function getQuotes()
+        public function getQuotes()
     {
         $appoiments = DB::table('itcp_appoiments')
                 ->join('itcp_patients', 'itcp_patients.id_patient', '=', 'itcp_appoiments.patient_id')
@@ -167,7 +167,7 @@ class QuotesController extends Controller
                 ->where('itcp_appoiments.id_appoiment', '=', $id)
                 ->select('*')
                 ->get();
-        
+//        dd($getPatient);
         $getUser = DB::table('itcp_appoiments')
                 ->join('users', 'itcp_appoiments.user_id', '=', 'users.id')
                 ->where('itcp_appoiments.id_appoiment', '=', $id)
@@ -188,17 +188,25 @@ class QuotesController extends Controller
     {
         Patient::where("id_patient", "=", $request->id_patient)
                 ->update(array(
-                    "name_patient" => $request->descriptionCandidateEdit,
+                    "name_patient" => $request->candidateNameEdit,
                     "last_name_patient" => $request->candidateLastnameEdit,
                     "ci_patient" => $request->ciCandidateEdit,
                     "job_patient" => $request->jobCandidateEdit,
                     "phone" => $request->telCandidateEdit,
         ));
 
+        
         Appoiment::where("id_appoiment", "=", $request->id)
                 ->update(array(
                     "user_id" => $request->polygraphist,
-                    "comentary_appoiment" => $request->descriptionCandidateEdit
+                    "service_id" => $request->serviceEdit,
+                    "company_id" => $request->empresaEdit,
+                    "client_id" => $request->clientEdit,
+                    "patient_id" => Patient::where("id_patient", $request->id_patient)->get()[0]->id_patient,
+                    "city_appoiment" => "Ciudad de panama",
+                    "time_appoiment" => $request->scheduleEdit,
+                    "comentary_appoiment" => $request->descriptionCandidateEdit,
+                    "status" => $request->statusEdit
         ));
     }
 

@@ -83,7 +83,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Tipo de Prueba</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <select id="prueba" class="form-control col-xs-12" required="">
+                                    <select id="serviceEdit" name="serviceEdit" class="form-control col-xs-12" required="">
                                         <option value="{{ $getQuote[0]->service_id }}">{{ $getQuote[0]->name_service }}</option>
                                         @foreach($services as $service)
                                             <option value="{{ $service->id_service }}">{{ $service->name_service }}</option>
@@ -121,7 +121,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Cedula</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="ciCandidateEdit" name="ciCandidateEdit" value="{{ $getQuote[0]->ci_patient }}">
+                                    <input type="number" class="form-control" id="ciCandidateEdit" name="ciCandidateEdit" value="{{ $getQuote[0]->ci_patient }}">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -135,7 +135,7 @@
 
                                 <label class="col-sm-3 control-label col-xs-12">Celular</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="telCandidateEdit" name="telCandidateEdit" value="{{ $getQuote[0]->phone }}">
+                                    <input type="number" class="form-control" id="telCandidateEdit" name="telCandidateEdit" value="{{ $getQuote[0]->phone }}">
                                 </div>
                             </div>
                             <div class="form-group">
