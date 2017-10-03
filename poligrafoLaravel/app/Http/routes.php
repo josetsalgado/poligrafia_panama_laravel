@@ -93,10 +93,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/pdf_account', 'AccountStatusController@pdfE');
     //pdf cotizacion
     Route::get('/pdf_budget', 'BudgetController@pdfA');
+    
     //crear empresa
     Route::get('/create_company', 'CompanyController@create');
+    //crear empresas post form
+    Route::post('/create_company', 'CompanyController@store');
     //ver empresas
     Route::get('/show_company', 'CompanyController@show');
+    
     //registro de pago
     Route::get('/payment_record', 'PaymentController@create');
 
