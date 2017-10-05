@@ -8,7 +8,7 @@ $(document).ready(function () {
         $.get("appoiment_company/"+code, function (resultado) {
             if (resultado == false)
             {
-                alert("Error");
+                alert("Usted debe crear un cliente asociado a esta compañia");
             }
             else
             {

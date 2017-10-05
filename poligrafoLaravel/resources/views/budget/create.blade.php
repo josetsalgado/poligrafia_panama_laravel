@@ -16,15 +16,6 @@
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a>
-                                </li>
-                                <li><a href="#">Settings 2</a>
-                                </li>
-                            </ul>
-                        </li>
                         <li><a class="close-link"><i class="fa fa-close"></i></a>
                         </li>
                     </ul>
@@ -32,26 +23,20 @@
                 </div>
                 <div class="x_content">
                     <form class="form-horizontal">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="col-md-offset-1 col-md-9 col-sm-9 col-xs-12">
                             <div class="col-md-5 col-sm-6 col-xs-12 form-group has-feedback">
-                                <select id="pais" class="form-control selc-empresa" required>
+                                <select id="empresa" name="empresa" class="form-control selc-empresa" required>
                                     <option value="">Empresa</option>
-                                    <option value="empresa1">empresa 1</option>
-                                    <option value="empresa2">empresa 2</option>
-                                    <option value="empresa3">empresa 3</option>
-                                    <option value="empresa4">empresa 4</option>
-                                    <option value="empresa5">empresa 5</option>
+                                    @foreach($companys as $company)
+                                        <option value="{{ $company->id_company }}">{{ $company->name_company }}</option>
+                                    @endforeach
                                 </select>
                                 <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
                             </div>
                             <div class="col-md-5 col-sm-6 col-xs-12 form-group has-feedback">
-                                <select id="pais" class="form-control selc-empresa" required>
+                                <select id="client" name="client" class="form-control selc-empresa" required>
                                     <option value="">Cliente</option>
-                                    <option value="cliente1">cliente 1</option>
-                                    <option value="cliente2">cliente 2</option>
-                                    <option value="cliente3">cliente 3</option>
-                                    <option value="cliente4">cliente 4</option>
-                                    <option value="cliente5">cliente 5</option>
                                 </select>
                                 <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
                             </div>
@@ -64,45 +49,24 @@
                             <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
                                 <div class="ln_solid"></div>
                             </div>
-                            <div class="row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Prueba Pre-empleo:</label>
-                                <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="00">
-                                    <span class="fa fa-calculator form-control-feedback left" aria-hidden="true"></span>
+                            
+                            @foreach($services as $service)
+                                <div class="row">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">{{ $service->name_service }}:</label>
+                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                        <input type="text" class="form-control has-feedback-left quantity" id="quantity_{{ $service->id_service }}" name="quantity_{{ $service->id_service }}" placeholder="00">
+                                        <span class="fa fa-calculator form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
+                                        <input type="text" class="form-control has-feedback-left price" id="price_{{ $service->id_service }}" name="price_{{ $service->id_service }}" placeholder="{{ $service->price_service }}"  disabled="disabled">
+                                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                    </div>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="150.00"  disabled="disabled">
-                                    <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
+                                    <div class="ln_solid"></div>
                                 </div>
-                            </div>
-                            <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                <div class="ln_solid"></div>
-                            </div>
-                            <div class="row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Prueba Especifica:</label>
-                                <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="00">
-                                    <span class="fa fa-calculator form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="150.00"  disabled="disabled">
-                                    <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                <div class="ln_solid"></div>
-                            </div>
-                            <div class="row">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Descuento:</label>
-                                <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="00">
-                                    <span class="fa fa-calculator form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="55.00"  disabled="disabled">
-                                    <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-                            </div>
+                            @endforeach
+                            
                             <div class="form-group">
                                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"> Ver </button>
@@ -372,4 +336,8 @@
         </div>
     </div>
     <!-- /. modal -->
+    
+    
+    
+    <script src="js/validate/fn-createBudget.js"></script>
 @stop

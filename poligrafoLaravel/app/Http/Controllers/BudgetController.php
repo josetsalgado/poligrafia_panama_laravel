@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use PDF;
+use App\Company;
+use App\Service;
+
 class BudgetController extends Controller
 {
     /**
@@ -26,7 +29,10 @@ class BudgetController extends Controller
      */
     public function create()
     {
-        return view('budget.create');
+        $companys = Company::all();
+        $services = Service::all();
+
+        return view('budget.create', compact('companys', 'services'));
     }
 
     /**

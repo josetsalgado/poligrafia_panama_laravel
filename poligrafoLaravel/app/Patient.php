@@ -17,7 +17,7 @@ class Patient extends Model
     public $timestamps = false;
     
     public function appoiment()
-{
-  return $this->belongsToMany('App\Appoiment', 'id_appoiment');
-}
+    {
+      return $this->belongsToMany('App\Appoiment', 'id_appoiment');
+    }
 }
