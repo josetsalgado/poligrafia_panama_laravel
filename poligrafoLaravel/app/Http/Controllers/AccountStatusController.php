@@ -15,9 +15,9 @@ class AccountStatusController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function register()
     {
-        //
+        return view('Accountstatus.register');
     }
 
     /**

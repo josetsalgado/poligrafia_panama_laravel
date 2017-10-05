@@ -104,6 +104,7 @@
                             <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="butget_client">Cotizar</a></li>
+                                    <li><a href="butget_show">Ver Cotizaciones</a></li>
                                 </ul>
                             </li>
                            {{-- <li><a><i class="fa fa-credit-card"></i> Pagos <span class="fa fa-chevron-down"></span></a>
@@ -112,14 +113,16 @@
                                     <li><a href="ver_pagos.html">Ver Pago</a></li>
                                 </ul>
                             </li>--}}
-                            <li><a href="show_accountstatus"><i class="fa fa-bar-chart-o"></i> Estados de Cuenta</span></a>
+                            <li><a><i class="fa fa-bar-chart-o"></i> Estados de Cuenta<span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="payment_record">Registrar Pago</a></li>
+                                </ul>
                             </li>
                             <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="record_result">Registro de Resultados</a></li>
                                     <li><a href="quality_test">Registro de Calidad de Prueba</a></li>
                                     <li><a href="test_report">Informe de Prueba</a></li>
-
                                 </ul>
                             </li>
                             <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>

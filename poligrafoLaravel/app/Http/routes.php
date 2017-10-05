@@ -65,6 +65,8 @@ Route::group(['middleware' => 'auth'], function () {
     
     //solicitudes de cotizaciones
     Route::get('/butget_client', 'BudgetController@create');
+    //ver cotizaciones
+    Route::get('/butget_show', 'BudgetController@show');
     //Crear registro de resultados
     Route::get('/create_result', 'ResultController@create');
     //Ver estados de cuenta
@@ -102,6 +104,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/show_company', 'CompanyController@show');
     
     //registro de pago
-    Route::get('/payment_record', 'PaymentController@create');
+    Route::get('/payment_record', 'AccountStatusController@register');
 
 });
