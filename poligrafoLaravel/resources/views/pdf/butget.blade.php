@@ -46,7 +46,14 @@
     <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" id="toggleCSS" />
 </head>
 
+
 <body style="background:#fff; ">
+
+<style>
+
+   /* aca van los estilos*/
+
+</style>
 
  <div class="row">
         <div class="col-sm-6 col-md-3">
