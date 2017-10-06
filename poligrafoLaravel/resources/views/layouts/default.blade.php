@@ -210,6 +210,7 @@
     </div>
 </div>
 
+
 <!-- Datatables -->
 <script src="js/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
@@ -279,6 +280,27 @@ el que explota
 <script src="js/switchery/dist/switchery.min.js"></script>
 <!--alertify-->
 <script src="js/alertify/lib/alertify.min.js"></script>
+
+{{--script para calidad de prueba--}}
+<script type="text/javascript">
+    var options = {
+        unico : ["UTAH zona 3 (ZCT)","ZCT FEDERAL","BIZONA"],
+        multiple : ["AF MGQT V.1","AF MGQT V.2","MGQT UTAH"],
+        laborales : ["DLST (screening) TES"]
+    }
+
+    $(function(){
+        var fillSecondary = function(){
+            var selected = $('#primary').val();
+            $('#secondary').empty();
+            options[selected].forEach(function(element,index){
+                $('#secondary').append('<option value="'+element+'">'+element+'</option>');
+            });
+        }
+        $('#primary').change(fillSecondary);
+        fillSecondary();
+    });
+</script>
 
 </body>
 </html>
