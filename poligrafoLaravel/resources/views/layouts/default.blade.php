@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="js/alertify/themes/alertify.core.css" />
     <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" id="toggleCSS" />
 
+
 </head>
 <body class="nav-md">
 <div class="container body">
@@ -100,19 +101,13 @@
                                     <li><a href="show_product">Ver Productos</a></li>
                                 </ul>
                             </li>
-                            <li><a href="quotes_client"><i class="fa fa-calendar"></i> Citas</span></a></li>
+                            <li><a href="quotes_client"><i class="fa fa-calendar"></i> Citas</a></li>
                             <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="butget_client">Cotizar</a></li>
                                     <li><a href="butget_show">Ver Cotizaciones</a></li>
                                 </ul>
                             </li>
-                           {{-- <li><a><i class="fa fa-credit-card"></i> Pagos <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="payment_record">Registrar Pago</a></li>
-                                    <li><a href="ver_pagos.html">Ver Pago</a></li>
-                                </ul>
-                            </li>--}}
                             <li><a><i class="fa fa-bar-chart-o"></i> Estados de Cuenta<span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="payment_record">Registrar Pago</a></li>
@@ -211,96 +206,6 @@
 </div>
 
 
-<!-- Datatables -->
-<script src="js/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="js/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="js/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-<script src="js/datatables.net-buttons/js/buttons.flash.min.js"></script>
-<script src="js/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="js/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="js/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-<script src="js/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-<script src="js/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="js/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-<script src="js/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
-<script src="js/jszip/dist/jszip.min.js"></script>
-<script src="js/pdfmake/build/pdfmake.min.js"></script>
-<script src="js/pdfmake/build/vfs_fonts.js"></script>
-
-<!-- Bootstrap -->
-<script src="js/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- FastClick -->
-<script src="js/fastclick/lib/fastclick.js"></script>
-<!-- NProgress -->
-<script src="js/nprogress/nprogress.js"></script>
-<!-- Chart.js -->
-<script src="js/Chart.js/dist/Chart.min.js"></script>
-<!-- gauge.js -->
-<script src="js/gauge.js/dist/gauge.min.js"></script>
-<!-- bootstrap-progressbar -->
-<script src="js/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-<!-- iCheck -->
-<script src="js/iCheck/icheck.min.js"></script>
-<!-- Skycons -->
-<script src="js/skycons/skycons.js"></script>
-<!-- Flot -->
-<script src="js/Flot/jquery.flot.js"></script>
-<script src="js/Flot/jquery.flot.pie.js"></script>
-<script src="js/Flot/jquery.flot.time.js"></script>
-<script src="js/Flot/jquery.flot.stack.js"></script>
-<script src="js/Flot/jquery.flot.resize.js"></script>
-<!-- Flot plugins -->
-<script src="js/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-<script src="js/flot-spline/js/jquery.flot.spline.min.js"></script>
-<script src="js/flot.curvedlines/curvedLines.js"></script>
-<!-- DateJS -->
-<script src="js/DateJS/build/date.js"></script>
-<!-- JQVMap -->
-<script src="js/jqvmap/dist/jquery.vmap.js"></script>
-<script src="js/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-<script src="js/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-<!-- bootstrap-daterangepicker -->
-<script src="js/moment/min/moment.min.js"></script>
-<script src="js/bootstrap-daterangepicker/daterangepicker.js"></script>
-
-<!-- Custom Theme Scripts -->
-<script src="js/build/js/custom.min.js"></script>
-
-<script src="js/fullcalendar/dist/fullcalendar.js"></script>
-<script src='js/fullcalendar/lib/moment.min.js'></script>
-
-<!--
-el que explota
-<script src='../vendors/fullcalendar/lib/jquery.min.js'></script> -->
-<script src='js/fullcalendar/fullcalendar.min.js'></script>
-<script src='js/fullcalendar/locale-all.js'></script>
-
-<!-- Switchery -->
-<script src="js/switchery/dist/switchery.min.js"></script>
-<!--alertify-->
-<script src="js/alertify/lib/alertify.min.js"></script>
-
-{{--script para calidad de prueba--}}
-<script type="text/javascript">
-    var options = {
-        unico : ["UTAH zona 3 (ZCT)","ZCT FEDERAL","BIZONA"],
-        multiple : ["AF MGQT V.1","AF MGQT V.2","MGQT UTAH"],
-        laborales : ["DLST (screening) TES"]
-    }
-
-    $(function(){
-        var fillSecondary = function(){
-            var selected = $('#primary').val();
-            $('#secondary').empty();
-            options[selected].forEach(function(element,index){
-                $('#secondary').append('<option value="'+element+'">'+element+'</option>');
-            });
-        }
-        $('#primary').change(fillSecondary);
-        fillSecondary();
-    });
-</script>
 
 </body>
 </html>
