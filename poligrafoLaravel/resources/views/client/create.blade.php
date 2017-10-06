@@ -28,7 +28,16 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-md-9 col-sm-9 col-xs-12">
+                                <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
+                                    <select id="empresa" name="empresa" class="form-control selc-empresa" required>
+                                        <option value="">Empresa </option>
+                                        <option value="press">Coca cola</option>
+                                        <option value="net">B&G</option>
+                                    </select>
+                                    <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
+                                </div>
                                 <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('name') ? 'has-error' : '' }}">
                                     <input type="text" class="form-control has-feedback-left" id="name_client" name="name" placeholder="{{ trans("poligrafo.name_client") }}">
                                     <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
@@ -46,16 +55,6 @@
                                     <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                                     <span class="text-danger">{{ $errors->first('email') }}</span>
                                 </div>
-
-                                <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('country') ? 'has-error' : '' }}">
-                                    <select id="country" name="country" class="form-control selc-empresa">
-                                        <option value="">País </option>
-                                        <option value="1">Panama</option>
-                                        <option value="2">Venezuela</option>
-                                    </select> 
-                                    <span class="fa fa-globe form-control-feedback left" aria-hidden="true"></span>
-                                    <span class="text-danger">{{ $errors->first('country') }}</span>
-                                </div> 
 
                                 <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('city') ? 'has-error' : '' }}">
                                     <input type="text" class="form-control has-feedback-left" id="city" name="city" placeholder="Ciudad">
