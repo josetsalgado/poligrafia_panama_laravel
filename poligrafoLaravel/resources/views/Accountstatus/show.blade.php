@@ -221,10 +221,10 @@
                         </div>
                     </div>
                     <div class="row">
-                        <a class="col-md-12 col-sm-12 col-xs-12">
+                        <a class="">
                             <br>
                             <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Imprimir</button>
-                            <button type="button" class="btn btn-primary pull-right" style=""><a href="pdf_account" target="_blank" style="color: white"><i class="fa fa-download"></i> Generar PDF</button></a>
+                            <button type="button" class="btn btn-primary pull-right" style=""><a href="pdf_account" target="_blank" style="color: white;"><i class="fa fa-download"></i>Generar PDF</button></a>
                         </div>
                     </div>
 

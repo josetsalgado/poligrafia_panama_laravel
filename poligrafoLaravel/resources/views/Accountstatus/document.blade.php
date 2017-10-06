@@ -46,6 +46,15 @@
     <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" id="toggleCSS" />
 </head>
 
+<style type="text/css">
+
+ td, th {
+
+     height: 30px !important; padding-left: 5px;
+ }
+
+</style>
+
 <body style="background:#fff; ">
 <div class="">
     <div class="">
@@ -59,11 +68,11 @@
                 <!-- /.col -->
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
-                        <span><strong>INTERNATIONAL POLYGRAPH TRAINING CENTER, S.A.</strong>
+                        <span style="font-weight: bold;"><strong>INTERNATIONAL POLYGRAPH TRAINING CENTER, S.A.</strong>
                             <br> <b> R.U.C. 1631480-1-671929 D.V. 62</b></span>
                 <br>Edificio Edison Corporate Center, Piso 8 oficina 8A de la Torre A.
                 <br>Tel. 279 08 06 y 279 08 04
-                <br>PANAMA, REP. DE PANAMA
+                <br>PANAMA, REP. DE PANAMA<br><br>
             </div>
         </div>
     </div>
@@ -74,9 +83,9 @@
             <section class="content invoice">
                 <!-- info row -->
                 <div class="row invoice-info">
-                    <div class="col-sm-6 invoice-col">
+                    <div class="col-xs-6 invoice-col">
                         <address>
-                            <strong>COCA COLA</strong>
+                            <strong style="font-weight: bold;">COCA COLA</strong>
                             <br>1631480-1-671929 D.V. 62
                             <br>795 Freedom Ave, Suite 600, New York, CA 94107
                             <br>Phone: 1 (804) 123-9876
@@ -85,8 +94,8 @@
                     </div>
                     <!-- /.col -->
                     <div class="col-md-6 invoice-col pull-right">
-                        <address class="pull-right">
-                            <strong >Panamá a 14 de Septiembre del 2017</strong>
+                        <address class="pull-right" style="margin-left: 80px;">
+                            <strong style="font-weight: bold;">Panamá a 14 de Septiembre del 2017</strong>
                             <br>
                             <br>
                         </address>
@@ -129,8 +138,8 @@
                             </tr>
                             <tr>
                                 <td></td>
-                                <td><b>DESCUENTO</b></td>
-                                <td><b>-B/.55.00</b></td>
+                                <td ><b>DESCUENTO</b></td>
+                                <td ><b>-B/.55.00</b></td>
                                 <td><b>-B/.440.00</b></td>
                             </tr>
                             </tbody>
@@ -150,7 +159,7 @@
                         <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                             <thead>
                             <tr>
-                                <th>SUBTOTAL </th>
+                                <th id="style_pdf_table">SUBTOTAL </th>
                                 <td>B/.760.00</td>
                             </tr>
                             </thead>
