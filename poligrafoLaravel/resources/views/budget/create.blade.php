@@ -22,7 +22,8 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                    <form class="form-horizontal">
+                    <div id="form-errors"></div>
+                    <form class="form-horizontal" id="createBudget">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
                         <div class="col-md-offset-1 col-md-9 col-sm-9 col-xs-12">
                             <div class="col-md-5 col-sm-6 col-xs-12 form-group has-feedback">
@@ -54,11 +55,13 @@
                                 <div class="row">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">{{ $service->name_service }}:</label>
                                     <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="text" class="form-control has-feedback-left quantity" id="quantity_{{ $service->id_service }}" name="quantity_{{ $service->id_service }}" placeholder="00">
+                                        <input type="number"  class="form-control has-feedback-left quantity" id="quantity_{{ $service->id_service }}" name="quantity_{{ $service->id_service }}" placeholder="00" min="0" required>
+                                        <input type="hidden"  class="form-control has-feedback-left quantity" id="service_id_{{ $service->id_service }}" name="service_id_{{ $service->id_service }}" value="{{ $service->id_service }}">
                                         <span class="fa fa-calculator form-control-feedback left" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="text" class="form-control has-feedback-left price" id="price_{{ $service->id_service }}" name="price_{{ $service->id_service }}" placeholder="{{ $service->price_service }}"  disabled="disabled">
+                                        <input type="number" class="form-control has-feedback-left" id="price_{{ $service->id_service }}" name="price_{{ $service->id_service }}" placeholder="{{ $service->price_service }}" disabled="disabled" required>
+                                        <input type="hidden" class="form-control has-feedback-left" id="price_origin_{{ $service->id_service }}" name="price_origin_{{ $service->id_service }}" placeholder="{{ $service->price_service }}"  value="{{ $service->price_service }}" disabled="disabled">
                                         <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
                                     </div>
                                 </div>
@@ -71,7 +74,7 @@
                                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"> Ver </button>
 
-                                    <button type="submit" class="btn btn-primary"><a href="pdf_budget" target="_blank" style="color: white"><i class="fa fa-download"></i> PDF</button></a>
+                                    <button type="submit" class="btn btn-primary"><!-- a href="pdf_budget" target="_blank" style="color: white" --><i class="fa fa-download"></i> PDF</button></a>
                                 </div>
                             </div>
                         </div>
