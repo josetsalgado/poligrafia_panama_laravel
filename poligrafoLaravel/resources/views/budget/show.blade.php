@@ -207,8 +207,7 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
+
     <!-- /page content -->
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
