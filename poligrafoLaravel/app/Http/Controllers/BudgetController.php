@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use PDF;
 use Log;
+use Carbon\Carbon;
 
 class BudgetController extends Controller
 {
@@ -104,42 +105,48 @@ class BudgetController extends Controller
     }
     
     public function storm(Request $request) {
+        $carbon = new Carbon();
         $this->ValidateCreate($request);
         $company = "";
         $client = "";
-         Log::error("____________");
-//        Log::error(print_r($request->all(), TRUE));
-//        
-        $arrayRequests = $request->all();
-        foreach ($arrayRequests as $key => $arrayRequest){
+        $serviceId = "";
+        $price = "";
+        $quantity = "";
+
+        $numberBudget = str_random(8);
+        
+        foreach ($request->all() as $key => $arrayRequest){
             if($key == "empresa"){
-                $company = $key;
+                $company = $arrayRequest;
             }
             
             if($key == "client"){
-                $company = $key;
+                $client = $arrayRequest;
+            }
+            if(strstr($key, 'service_id') ){
+                $serviceId = $arrayRequest;
             }
             
-            if($key != "empresa" || $key != "client"){
+            if(strstr($key, 'price_') ){
+                $price = $arrayRequest;
+            }
+            if(strstr($key, 'quantity_') ){
+                $quantity = $arrayRequest;
+            }
+            if ($price && $quantity) {
                 Budget::insert([
-                    'client_id' => $arrayRequest
+                    'company_id' => $company,
+                    'client_id' => $client,
+                    'service_id' => $serviceId,
+                    'date_init_budget' => Carbon::now(),
+                    'number_budget' => $numberBudget,
+                    'quantity_budget' => $quantity,
+                    'total_budget' => $price
                 ]);
+                $price = '';
+                $quantity = '';
             }
-            
         }
-        
-         
-         
-//        Company::insert([
-//            'id_company' => '',
-//            'name_company' => $request->name_company,
-//            'ruc_company' => $request->ruc_company,
-//            'tel_company' => $request->tel_company,
-//            'email_compamy' => $request->email_compamy,
-//            'address_company' => $request->address_company,
-//        ]);
-
-        return view('company.create');
     }
     
     public function ValidateCreate($request)
