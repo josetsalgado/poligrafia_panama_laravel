@@ -71,7 +71,7 @@
                             <td>1500.00</td>
                             <td>
                                 <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <a href="" class="btn btn-success btn-xs"><i class="fa fa-download"></i> PDF </a><br>
+                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
 
                             </td>
                         </tr>
@@ -102,7 +102,7 @@
                             <td>B/.1500.00</td>
                             <td>
                                 <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <a href="" class="btn btn-success btn-xs"><i class="fa fa-download"></i> PDF </a><br>
+                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
 
                             </td>
                         </tr>
@@ -133,7 +133,7 @@
                             <td>1500.00</td>
                             <td>
                                 <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <a href="" class="btn btn-success btn-xs"><i class="fa fa-download"></i> PDF </a><br>
+                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
 
                             </td>
                         </tr>
@@ -164,7 +164,7 @@
                             <td>1500.00</td>
                             <td>
                                 <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <a href="" class="btn btn-success btn-xs"><i class="fa fa-download"></i> PDF </a><br>
+                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
 
                             </td>
                         </tr>
@@ -195,7 +195,7 @@
                             <td>1500.00</td>
                             <td>
                                 <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <a href="" class="btn btn-success btn-xs"><i class="fa fa-download"></i> PDF </a><br>
+                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
 
                             </td>
                         </tr>

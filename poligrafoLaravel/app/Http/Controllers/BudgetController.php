@@ -48,7 +48,7 @@ class BudgetController extends Controller
         ];
         $pdf = PDF::Make();
         /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
-        $pdf->loadView('pdf.butget', $data);
+        $pdf->loadView('budget.butget', $data);
         return $pdf->Stream('document.pdf');
         //return $pdf->download('Poligrafo.pdf');
     }

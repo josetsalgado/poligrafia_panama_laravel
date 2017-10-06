@@ -96,8 +96,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/test_report', 'TestReportController@show');
     //pdf estado de cuenta
     Route::get('/pdf_account', 'AccountStatusController@pdfE');
-    //pdf cotizacion
-    Route::get('/pdf_budget', 'BudgetController@pdfA');
     
     //crear empresa
     Route::get('/create_company', 'CompanyController@create');
@@ -109,4 +107,6 @@ Route::group(['middleware' => 'auth'], function () {
     //registro de pago
     Route::get('/payment_record', 'AccountStatusController@register');
 
+    //pdf cotizaciones
+    Route::get('/pdf_butget', 'BudgetController@pdfA');
 });
