@@ -13,6 +13,7 @@ use PDF;
 use Log;
 use Carbon\Carbon;
 use DB;
+use Illuminate\Support\Facades\Crypt;
 
 class BudgetController extends Controller
 {
@@ -45,15 +46,23 @@ class BudgetController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    function pdfA() {
-        $data = [
-            'foo' => 'bar'
-        ];
+    function pdfBudget($id) {
+        
+        $budgets = DB::table('itcp_budgets')
+            ->select('*')
+            ->where('itcp_budgets.id_budget', '=', Crypt::decrypt($id))
+            ->get();
+        
+        foreach ($budgets as $budget){
+            $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
+            $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
+            $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
+            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
+        }
+        
         $pdf = PDF::Make();
-        /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
-        $pdf->loadView('budget.butget', $data);
+        $pdf->loadView('budget.pdfButget', compact('budgets'));
         return $pdf->Stream('document.pdf');
-        //return $pdf->download('Poligrafo.pdf');
     }
 
     public function store(Request $request)
@@ -80,24 +89,29 @@ class BudgetController extends Controller
      */
     public function show()
     {
+//        $encrypted = 
+        
+        
         $budgets = DB::table('itcp_budgets')
             ->select('*')
             ->get();
         
         foreach ($budgets as $budget){
+            $budget->id_budget = Crypt::encrypt($budget->id_budget);
             $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
             $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
             $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
-            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
+            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);    
         }
         
         return view('budget.show', compact('budgets'));
     }
     
     public function modalBudget($id) {
+        
         $budgets = DB::table('itcp_budgets')
             ->select('*')
-            ->where('itcp_budgets.id_budget', '=', $id)
+            ->where('itcp_budgets.id_budget', '=', Crypt::decrypt($id))
             ->get();
         
         foreach ($budgets as $budget){

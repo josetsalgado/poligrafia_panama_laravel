@@ -60,8 +60,8 @@
                                         $ {{ $budget->total_budget }}
                                     </td>
                                     <td>
-                                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" onclick="modalBudget({{ $budget->id_budget }});"><i class="fa fa-money"></i> Ver</button><br>
-                                        <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button>
+                                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" onclick="modalBudget('{{ $budget->id_budget }}');"><i class="fa fa-money"></i> Ver</button><br>
+                                        <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
                                     </td>
                                 </tr>
                             @endforeach

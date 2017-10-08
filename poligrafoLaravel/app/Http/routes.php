@@ -110,5 +110,5 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/payment_record', 'AccountStatusController@register');
 
     //pdf cotizaciones
-    Route::get('/pdf_butget', 'BudgetController@pdfA');
+    Route::get('/pdf_butget/{id}', 'BudgetController@pdfBudget');
 });
