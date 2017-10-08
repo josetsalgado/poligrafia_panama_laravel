@@ -69,6 +69,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/create_butget', 'BudgetController@storm');
     //ver cotizaciones
     Route::get('/butget_show', 'BudgetController@show');
+    //modal de crear cotizacion
+    Route::get('/modalBudget/{id}', 'BudgetController@modalBudget');
     
     //Crear registro de resultados
     Route::get('/create_result', 'ResultController@create');
