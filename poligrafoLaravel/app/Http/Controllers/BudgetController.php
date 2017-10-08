@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Company;
 use App\Budget;
+use App\RegisterBudget;
 use App\Http\Controllers\Controller;
 use App\Service;
 use Illuminate\Http\Request;
@@ -11,6 +12,7 @@ use Illuminate\Http\Response;
 use PDF;
 use Log;
 use Carbon\Carbon;
+use DB;
 
 class BudgetController extends Controller
 {
@@ -78,9 +80,42 @@ class BudgetController extends Controller
      */
     public function show()
     {
-        return view('budget.show');
+        $budgets = DB::table('itcp_budgets')
+            ->select('*')
+            ->get();
+        
+        foreach ($budgets as $budget){
+            $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
+            $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
+            $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
+            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
+        }
+        
+        return view('budget.show', compact('budgets'));
+    }
+    /**
+     * get array of register comanies of budgets
+     */
+    public function getBudgetRegisterCompanies($id){
+        $budgetsRegisters = DB::table('itcp_budgets_register')
+            ->join('itcp_service', 'itcp_budgets_register.service_id', '=', 'itcp_service.id_service')
+            ->select('*')
+            ->where('itcp_budgets_register.id_register_budgets', '=', $id)
+            ->get();
+        
+        foreach ($budgetsRegisters as $budgetsRegister){
+          $budgetsRegister->service_id = $this->getRelationship($budgetsRegister->service_id, 'itcp_service', 'id_service');
+        }
+        return $budgetsRegisters;
     }
 
+    public function getRelationship($id_client, $tb,$tbgRelationship){
+        return DB::table($tb)
+            ->select('*')
+            ->where($tb.'.'.$tbgRelationship, '=', $id_client)
+            ->get();
+    }
+           
     /**
      * Update the specified resource in storage.
      *
@@ -112,6 +147,7 @@ class BudgetController extends Controller
         $serviceId = "";
         $price = "";
         $quantity = "";
+        $total = 0;
 
         $numberBudget = str_random(8);
         
@@ -134,19 +170,25 @@ class BudgetController extends Controller
                 $quantity = $arrayRequest;
             }
             if ($price && $quantity) {
-                Budget::insert([
-                    'company_id' => $company,
-                    'client_id' => $client,
-                    'service_id' => $serviceId,
-                    'date_init_budget' => Carbon::now(),
-                    'number_budget' => $numberBudget,
+                RegisterBudget::insert([
+                    'id_register_budgets' => $numberBudget,
                     'quantity_budget' => $quantity,
-                    'total_budget' => $price
+                    'total_budget' => $price,
+                    'service_id' => $serviceId
                 ]);
+                $total = $total + $price;
                 $price = '';
                 $quantity = '';
             }
         }
+        
+        Budget::insert([
+            'company_id' => $company,
+            'client_id' => $client,
+            'date_init_budget' => Carbon::now(),
+            'budgets_register_id' => $numberBudget,
+            'total_budget' => $total
+        ]);
     }
     
     public function ValidateCreate($request)

@@ -16,15 +16,6 @@
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a>
-                                </li>
-                                <li><a href="#">Settings 2</a>
-                                </li>
-                            </ul>
-                        </li>
                         <li><a class="close-link"><i class="fa fa-close"></i></a>
                         </li>
                     </ul>
@@ -33,172 +24,47 @@
                 <div class="x_content">
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                         <thead>
-                        <tr>
-                            <th>Razón Social</th>
-                            <th>Fecha</th>
-                            <th>Evaluacion Poligrafica</th>
-                            <th>Candidatos</th>
-                            <th>Precio Unitario</th>
-                            <th>Sub total</th>
-                            <th>#Pago</th>
-                        </tr>
+                            <tr>
+                                <th>Razón Social</th>
+                                <th>Fecha</th>
+                                <th>Evaluacion Poligrafica</th>
+                                <th>Precio Unitario</th>
+                                <th>Total</th>
+                                <th>#Pago</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>Coca Cola</td>
-                            <td>23/09/2017</td>
-                            <td>
-                                <ul>
-                                    <li>8 pruebas Especificas</li>
-                                    <li>8 pruebas Pre empleo</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Nicole Pearson</li>
-                                    <li>Jhon Doe</li>
-                                    <li>Jonas Brother</li>
-                                    <li>Michael Jackson</li>
-                                    <li>Shad friend</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>B/.150.00</li>
-                                    <li>B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>1500.00</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>B&G consultores</td>
-                            <td>23/09/2017</td>
-                            <td>
-                                <ul>
-                                    <li>8 pruebas Especificas</li>
-                                    <li>8 pruebas Pre empleo</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Nicole Pearson</li>
-                                    <li>Jhon Doe</li>
-                                    <li>Jonas Brother</li>
-                                    <li>Michael Jackson</li>
-                                    <li>Shad friend</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>B/.150.00</li>
-                                    <li>B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>B/.1500.00</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>B&G</td>
-                            <td>23/09/2017</td>
-                            <td>
-                                <ul>
-                                    <li>8 pruebas Especificas</li>
-                                    <li>8 pruebas Pre empleo</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Nicole Pearson</li>
-                                    <li>Jhon Doe</li>
-                                    <li>Jonas Brother</li>
-                                    <li>Michael Jackson</li>
-                                    <li>Shad friend</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>B/.150.00</li>
-                                    <li>B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>1500.00</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>iLernus</td>
-                            <td>23/09/2017</td>
-                            <td>
-                                <ul>
-                                    <li>8 pruebas Especificas</li>
-                                    <li>8 pruebas Pre empleo</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Nicole Pearson</li>
-                                    <li>Jhon Doe</li>
-                                    <li>Jonas Brother</li>
-                                    <li>Michael Jackson</li>
-                                    <li>Shad friend</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>B/.150.00</li>
-                                    <li>B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>1500.00</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Axionti</td>
-                            <td>23/09/2017</td>
-                            <td>
-                                <ul>
-                                    <li>8 pruebas Especificas</li>
-                                    <li>8 pruebas Pre empleo</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>Nicole Pearson</li>
-                                    <li>Jhon Doe</li>
-                                    <li>Jonas Brother</li>
-                                    <li>Michael Jackson</li>
-                                    <li>Shad friend</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <ul>
-                                    <li>B/.150.00</li>
-                                    <li>B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>1500.00</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
-                                <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
-
-                            </td>
-                        </tr>
+                            @foreach($budgets as $budget)
+                                <tr>
+                                    <td>
+                                        {{ $budget->company_id[0]->name_company }}
+                                    </td>
+                                    <td>
+                                        {{ $budget->date_init_budget }}
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            @foreach($budget->budgets_register_id as $budgetRegister)
+                                                <li>{{ $budgetRegister->quantity_budget }} {{ $budgetRegister->service_id[0]->name_service }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul>
+                                            @foreach($budget->budgets_register_id as $budgetRegister)
+                                                <li>$ {{ $budgetRegister->service_id[0]->price_service }}</li>
+                                            @endforeach
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        {{ $budget->total_budget }}
+                                    </td>
+                                    <td>
+                                        <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button><br>
+                                        <button type="button" class="btn btn-success btn-xs" style=""><a href="pdf_butget" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
 

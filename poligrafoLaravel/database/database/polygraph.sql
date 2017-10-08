@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 05-10-2017 a las 21:37:00
+-- Tiempo de generación: 08-10-2017 a las 02:52:51
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -76,6 +76,52 @@ INSERT INTO `itcp_appoiments` (`id_appoiment`, `user_id`, `service_id`, `company
 (19, NULL, 5, 2, 5, 26, 'Ciudad de panama', '2017-10-03', '11:30:00', '444', 'Pendiente'),
 (20, 3, 5, 2, 5, 27, 'Ciudad de panama', '2017-10-04', '11:00:00', '7', 'Re agendada<'),
 (21, 2, 5, 1, 3, 28, 'Ciudad de panama', '2017-10-04', '08:30:00', '123 1', 'Pendiente');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `itcp_budgets`
+--
+
+CREATE TABLE `itcp_budgets` (
+  `id_budget` int(25) UNSIGNED NOT NULL,
+  `company_id` int(45) UNSIGNED NOT NULL,
+  `client_id` int(45) UNSIGNED NOT NULL,
+  `date_init_budget` date DEFAULT NULL,
+  `budgets_register_id` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `total_budget` varchar(45) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `itcp_budgets`
+--
+
+INSERT INTO `itcp_budgets` (`id_budget`, `company_id`, `client_id`, `date_init_budget`, `budgets_register_id`, `total_budget`) VALUES
+(1, 1, 3, '2017-10-08', 'SbIN9NVJ', '400'),
+(2, 2, 4, '2017-10-08', 'iuEEukQ7', '220');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `itcp_budgets_register`
+--
+
+CREATE TABLE `itcp_budgets_register` (
+  `id_register_budgets` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `quantity_budget` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `total_budget` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `service_id` int(25) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `itcp_budgets_register`
+--
+
+INSERT INTO `itcp_budgets_register` (`id_register_budgets`, `quantity_budget`, `total_budget`, `service_id`) VALUES
+('SbIN9NVJ', '10', '100', 5),
+('SbIN9NVJ', '15', '300', 6),
+('iuEEukQ7', '2', '20', 5),
+('iuEEukQ7', '10', '200', 6);
 
 -- --------------------------------------------------------
 
@@ -216,7 +262,7 @@ CREATE TABLE `itcp_service` (
 --
 
 INSERT INTO `itcp_service` (`id_service`, `name_service`, `price_service`, `description_service`) VALUES
-(5, 'Prueba pre empleo', '123123', 'prueba preempleo'),
+(5, 'Prueba pre empleo', '10', 'prueba preempleo'),
 (6, 'Prueba especifica', '20', 'Prueba especifica para usuarios');
 
 -- --------------------------------------------------------
@@ -314,6 +360,22 @@ ALTER TABLE `itcp_appoiments`
   ADD KEY `user_id` (`user_id`);
 
 --
+-- Indices de la tabla `itcp_budgets`
+--
+ALTER TABLE `itcp_budgets`
+  ADD PRIMARY KEY (`id_budget`),
+  ADD KEY `company_id` (`company_id`),
+  ADD KEY `client_id` (`client_id`),
+  ADD KEY `number_budget` (`budgets_register_id`);
+
+--
+-- Indices de la tabla `itcp_budgets_register`
+--
+ALTER TABLE `itcp_budgets_register`
+  ADD KEY `id_register_budgets` (`id_register_budgets`),
+  ADD KEY `service_id` (`service_id`);
+
+--
 -- Indices de la tabla `itcp_citys`
 --
 ALTER TABLE `itcp_citys`
@@ -378,6 +440,11 @@ ALTER TABLE `itcl_rols`
 ALTER TABLE `itcp_appoiments`
   MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
+-- AUTO_INCREMENT de la tabla `itcp_budgets`
+--
+ALTER TABLE `itcp_budgets`
+  MODIFY `id_budget` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT de la tabla `itcp_citys`
 --
 ALTER TABLE `itcp_citys`
@@ -430,6 +497,19 @@ ALTER TABLE `itcp_appoiments`
   ADD CONSTRAINT `itcp_appoiments_ibfk_4` FOREIGN KEY (`client_id`) REFERENCES `itcp_clients` (`id_client`),
   ADD CONSTRAINT `itcp_appoiments_ibfk_5` FOREIGN KEY (`company_id`) REFERENCES `itcp_companys` (`id_company`),
   ADD CONSTRAINT `itcp_appoiments_ibfk_6` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Filtros para la tabla `itcp_budgets`
+--
+ALTER TABLE `itcp_budgets`
+  ADD CONSTRAINT `itcp_budgets_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `itcp_companys` (`id_company`),
+  ADD CONSTRAINT `itcp_budgets_ibfk_2` FOREIGN KEY (`client_id`) REFERENCES `itcp_clients` (`id_client`);
+
+--
+-- Filtros para la tabla `itcp_budgets_register`
+--
+ALTER TABLE `itcp_budgets_register`
+  ADD CONSTRAINT `itcp_budgets_register_ibfk_1` FOREIGN KEY (`service_id`) REFERENCES `itcp_service` (`id_service`);
 
 --
 -- Filtros para la tabla `itcp_users`

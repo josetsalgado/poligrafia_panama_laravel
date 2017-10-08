@@ -167,7 +167,7 @@ class QuotesController extends Controller
                 ->where('itcp_appoiments.id_appoiment', '=', $id)
                 ->select('*')
                 ->get();
-//        dd($getPatient);
+        
         $getUser = DB::table('itcp_appoiments')
                 ->join('users', 'itcp_appoiments.user_id', '=', 'users.id')
                 ->where('itcp_appoiments.id_appoiment', '=', $id)
