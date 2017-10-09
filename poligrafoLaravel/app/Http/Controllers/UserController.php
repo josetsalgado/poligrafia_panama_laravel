@@ -132,12 +132,20 @@ class UserController extends Controller
     public function update(Request $request)
     {
         $this->ValidateUpdate($request);
-        DB::table('users')->where('id', $request->id)->update([
-            'name' => $request->name,
-            'last_name' => $request->lastname,
-            'password' => $request->password,
-            'rol_id' => intval($request->rol),
-            'tel' => $request->tel,
+//        DB::table('users')->where('id', $request->id)->update([
+//            'name' => $request->name,
+//            'last_name' => $request->lastname,
+//            'password' => $request->password,
+//            'rol_id' => intval($request->rol),
+//            'tel' => $request->tel,
+//        ]);
+        User::where('id', $request->id)
+                ->update([
+                    'name' => $request->name,
+                    'last_name' => $request->lastname,
+                    'password' => bcrypt($request->password),
+                    'rol_id' => intval($request->rol),
+                    'tel' => $request->tel,
         ]);
     }
 
