@@ -4327,3 +4327,10 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 .sel-poligrafista{
     margin-left: -10px;
 }
+.timeRange{
+    background: #fff;
+    cursor: pointer;
+    padding: 7px 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
