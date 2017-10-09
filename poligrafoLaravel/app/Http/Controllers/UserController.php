@@ -97,10 +97,11 @@ class UserController extends Controller
      */
     public function show()
     {
-         $users = DB::table('itcp_users')
-                ->join('itcl_rols', 'itcp_users.rol_id', '=', 'itcl_rols.id_rol')
+         $users = DB::table('users')
+                ->join('itcl_rols', 'users.rol_id', '=', 'itcl_rols.id_rol')
                 ->select('*')
                 ->get();
+         
         return view('user.show', compact('users'));
     }
 
@@ -112,9 +113,9 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $user = DB::table('itcp_users')
-                ->join('itcl_rols', 'itcp_users.rol_id', '=', 'itcl_rols.id_rol')
-                ->where('itcp_users.id_user', '=', $id)
+        $user = DB::table('users')
+                ->join('itcl_rols', 'users.rol_id', '=', 'itcl_rols.id_rol')
+                ->where('users.id', '=', $id)
                 ->select('*')
                 ->get();
 
@@ -130,17 +131,46 @@ class UserController extends Controller
      */
     public function update(Request $request)
     {
-        $this->ValidateCreate($request);
-        DB::table('itcp_users')->where('id_user', $request->id)->update([
-            'name_user' => $request->name,
-            'last_name_user' => $request->lastname,
-            'password_user' => $request->password,
+        $this->ValidateUpdate($request);
+        DB::table('users')->where('id', $request->id)->update([
+            'name' => $request->name,
+            'last_name' => $request->lastname,
+            'password' => $request->password,
             'rol_id' => intval($request->rol),
-            'tel_user' => $request->tel,
-            'email_user' => $request->email,
+            'tel' => $request->tel,
         ]);
     }
 
+    /**
+     * .
+     *
+     * @param  Request  $request
+     * @return Response
+     */
+    public function ValidateUpdate($request)
+    {
+        $this->validate($request,[
+                'name' => 'required',
+                'lastname' => 'required',
+                'tel' => 'required|numeric',
+                'rol' => 'required',
+                'password' => 'required|confirmed',
+                'password_confirmation' => 'required',
+            ], 
+            [
+                'name.required' => trans("validations.input_required", ['input' => 'nombre']),
+                'lastname.required' => trans("validations.input_required", ['input' => 'apellido']),
+                'tel.required' => trans("validations.input_required", ['input' => 'telefono']),
+                'tel.numeric' => trans("validations.input_format", ['input' => 'telefono']),
+                'rol.required' => trans("validations.input_required", ['input' => 'tipo de usuario']),
+                'password.required' => trans("validations.input_required", ['input' => 'clave']),
+                'password.confirmed' => trans("validations.input_equal", ['input' => 'clave', 'other' => 'confirmar clave']),
+                'password_confirmation.required' => trans("validations.input_required", ['input' => 'confirmar clave']),
+                
+            ]
+        );
+    }
+    
     /**
      * Remove the specified resource from storage.
      *

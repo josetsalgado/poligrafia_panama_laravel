@@ -89,7 +89,10 @@ class ClientController extends Controller
      */
     public function show()
     {
-        $clients = Client::all();
+        $clients = DB::table('itcp_clients')
+                ->join('itcp_citys', 'itcp_clients.city_id', '=', 'itcp_citys.id_city')
+                ->select('*')
+                ->get();
         return view('client.show', compact('clients'));
     }
 

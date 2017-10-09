@@ -71,11 +71,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/butget_show', 'BudgetController@show');
     //modal de crear cotizacion
     Route::get('/modalBudget/{id}', 'BudgetController@modalBudget');
+    //pdf cotizaciones
+    Route::get('/pdf_butget/{id}', 'BudgetController@pdfBudget');
     
     //Crear registro de resultados
     Route::get('/create_result', 'ResultController@create');
-    //Ver estados de cuenta
-    Route::get('/show_accountstatus', 'AccountStatusController@show');
     //vista crear nuevo producto
     Route::get('/create_product', 'ServiceController@create');
     //crear nuevo producto en la bd
@@ -107,8 +107,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/show_company', 'CompanyController@show');
     
     //registro de pago
-    Route::get('/payment_record', 'AccountStatusController@register');
+    Route::get('/payment_record', 'AccountStatusController@show');
+    //Ver estados de cuenta
+    Route::get('/show_accountstatus', 'AccountStatusController@accountStatus');
 
-    //pdf cotizaciones
-    Route::get('/pdf_butget/{id}', 'BudgetController@pdfBudget');
 });

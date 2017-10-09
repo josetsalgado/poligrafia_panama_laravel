@@ -88,10 +88,7 @@ class BudgetController extends Controller
      * @return Response
      */
     public function show()
-    {
-//        $encrypted = 
-        
-        
+    {   
         $budgets = DB::table('itcp_budgets')
             ->select('*')
             ->get();

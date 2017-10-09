@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>IPTC</title>
-    <link rel="shortcut icon" href="{{ asset('public/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
 
     <!-- Datatables -->
@@ -262,9 +262,6 @@
 <script src="js/fullcalendar/dist/fullcalendar.js"></script>
 <script src='js/fullcalendar/lib/moment.min.js'></script>
 
-<!--
-el que explota
-<script src='../vendors/fullcalendar/lib/jquery.min.js'></script> -->
 <script src='js/fullcalendar/fullcalendar.min.js'></script>
 <script src='js/fullcalendar/locale-all.js'></script>
 

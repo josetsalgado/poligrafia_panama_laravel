@@ -28,9 +28,9 @@ class AuthController extends Controller
      * @return void
      */
 
-    protected $redirectTo = '/create_user';
+    protected $redirectTo = '/dashboard_home';
     protected $loginPath = '/';
-    protected $redirectPath = '/create_user';
+    protected $redirectPath = '/dashboard_home';
 
 
     public function __construct()

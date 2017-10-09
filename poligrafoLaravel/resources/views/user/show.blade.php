@@ -30,12 +30,12 @@
                                     <div class="well profile_view">
                                         <div class="col-sm-12">
                                             <div class="left col-xs-7">
-                                                <h2>{{ $user->name_user }}</h2>
-                                                <h2>{{ $user->last_name_user }}</h2>
+                                                <h2>{{ $user->name }}</h2>
+                                                <h2>{{ $user->last_name }}</h2>
                                                 <!--TODO: agregar cadena (JS)-->
-                                                <p><strong>{{ trans("poligrafo.email") }}: </strong> {{ $user->email_user }} </p>
+                                                <p><strong>{{ trans("poligrafo.email") }}: </strong> {{ $user->email }} </p>
                                                 <ul class="list-unstyled">
-                                                    <li><i class="fa fa-phone"></i> {{ trans("poligrafo.tel") }} #: {{ $user->tel_user }} </li>
+                                                    <li><i class="fa fa-phone"></i> {{ trans("poligrafo.tel") }} #: {{ $user->tel }} </li>
                                                 </ul>
                                             </div>
                                             <div class="right col-xs-5 text-center">
@@ -49,7 +49,7 @@
                                                 </p>
                                             </div>
                                             <div class="col-xs-12 col-sm-6 emphasis">
-                                                <a type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" href="show_user/{{ $user->id_user }}" ><i class="fa fa-edit"></i> Editar Usuario</a>
+                                                <a type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal" href="show_user/{{ $user->id }}" ><i class="fa fa-edit"></i> Editar Usuario</a>
                                             </div>
                                         </div>
                                     </div>

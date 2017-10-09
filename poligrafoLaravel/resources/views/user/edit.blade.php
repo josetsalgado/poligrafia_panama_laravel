@@ -7,24 +7,24 @@
 
     <form id="createUser" name="createUser" class="form-horizontal form-label-left input_mask">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
-        <input type="hidden" name="id" value="{{ $user[0]->id_user }}">
+        <input type="hidden" name="id" value="{{ $user[0]->id }}">
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-            <input type="text" class="form-control has-feedback-left" id="name" name="name" placeholder="Nombres" value="{{ $user[0]->name_user }}">
+            <input type="text" class="form-control has-feedback-left" id="name" name="name" placeholder="Nombres" value="{{ $user[0]->name }}">
             <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" value="{{ $user[0]->last_name_user }}">
+            <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Apellidos" value="{{ $user[0]->last_name }}">
             <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-            <input type="text" class="form-control has-feedback-left" id="email" name="email" placeholder="Correo" value="{{ $user[0]->email_user }}">
+            <input type="text" class="form-control has-feedback-left" id="email" name="email" placeholder="Correo" value="{{ $user[0]->email }}" Disabled>
             <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
         </div>
 
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-            <input type="number" class="form-control" id="tel" name="tel" placeholder="Número Telefonico" value="{{ $user[0]->tel_user }}">
+            <input type="number" class="form-control" id="tel" name="tel" placeholder="Número Telefonico" value="{{ $user[0]->tel }}">
             <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
         </div>
 
@@ -37,7 +37,7 @@
             <span class="fa fa-globe form-control-feedback left" aria-hidden="true"></span>
         </div> 
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-            <input type="password" class="form-control" id="password" name="password" placeholder="Clave" value="{{ $user[0]->password_user }}">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Clave" value="">
             <span class="fa fa-lock form-control-feedback right" aria-hidden="true"></span>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
