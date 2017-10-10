@@ -246,5 +246,19 @@
 
         </div>
     </div>
-
+    <script type="text/javascript">
+        $('#datatable-responsive').DataTable( {
+            language: {
+                search: "Buscar",
+                paginate: {
+                    first:      "Primero",
+                    previous:   "<",
+                    next:       ">",
+                    last:       "Último"
+                },
+                info:           "",
+                "lengthMenu":     "_MENU_"
+            }
+        } );
+    </script>
 @stop

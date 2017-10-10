@@ -53,6 +53,19 @@
     <link rel="stylesheet" href="js/alertify/themes/alertify.core.css" />
     <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" id="toggleCSS" />
 
+    <!-- Datatables -->
+    <script src="js/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="js/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="js/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="js/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="js/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="js/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="js/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="js/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="js/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="js/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="js/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
 
 </head>
 <body class="nav-md">
@@ -131,7 +144,7 @@
 
                 <!-- /menu footer buttons -->
                 <div class="sidebar-footer hidden-small">
-                    <a data-toggle="tooltip" data-placement="top" title="Settings">
+                    <a data-toggle="tooltip" data-placement="top" title="Settings" href="edit_user">
                         <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
                     </a>
                     <a data-toggle="tooltip" data-placement="top" title="FullScreen">
@@ -203,19 +216,7 @@
     </div>
 </div>
 
-<!-- Datatables -->
-<script src="js/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="js/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-<script src="js/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-<script src="js/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-<script src="js/datatables.net-buttons/js/buttons.flash.min.js"></script>
-<script src="js/datatables.net-buttons/js/buttons.html5.min.js"></script>
-<script src="js/datatables.net-buttons/js/buttons.print.min.js"></script>
-<script src="js/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-<script src="js/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-<script src="js/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-<script src="js/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-<script src="js/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+
 <script src="js/jszip/dist/jszip.min.js"></script>
 <script src="js/pdfmake/build/pdfmake.min.js"></script>
 <script src="js/pdfmake/build/vfs_fonts.js"></script>
