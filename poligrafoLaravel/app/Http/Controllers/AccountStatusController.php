@@ -141,7 +141,7 @@ class AccountStatusController extends Controller
         $pdf = PDF::Make();
         /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
         $pdf->loadView('AccountStatus.document', $data);
-        return $pdf->Stream('document.pdf');
+        return $pdf->Stream('Accountstatus.pdf');
         //return $pdf->download('Poligrafo.pdf');
     }
 }
