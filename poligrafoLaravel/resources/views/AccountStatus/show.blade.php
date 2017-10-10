@@ -70,14 +70,17 @@
                                             $ {{ $budget->total_budget }}
                                         </td>
                                         <td>  
-                                            <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-credit-card"></i> Pagar</button><br>
-                                            {{-- status --}}
+                                            <div>
+                                                <a href="getPayment/{{ $budget->id_budget }}" type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-credit-card"></i> Pagar</a></div>
+                                            </div>
                                             @if ($budget->date_init_budget[0]['dateRange'] > 30)
-                                                <div class="btn btn-danger btn-xs"><i class="fa fa-close"></i>  Vencido </div><br>
+                                                <div class="btn btn-danger btn-xs"><i class="fa fa-close"></i>  Vencido </div>
                                             @else
-                                                <div class="btn btn-success btn-xs"><i class="fa fa-check"></i>  Pagado </div><br>
+                                                <div class="btn btn-success btn-xs"><i class="fa fa-check"></i>  Pagado </div>
                                             @endif
-                                            <a href="show_accountstatus" class="btn btn-dark btn-xs"><i class="fa fa-bar-chart-o"></i>  Estado de Cuenta </a>
+                                            <div>
+                                                <a href="show_accountstatus" class="btn btn-dark btn-xs"><i class="fa fa-bar-chart-o"></i>  Estado de Cuenta </a>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach   

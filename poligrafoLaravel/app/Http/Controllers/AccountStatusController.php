@@ -33,7 +33,6 @@ class AccountStatusController extends Controller
             $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);    
         }
         
-//        dump($budgets);
         return view('AccountStatus.show', compact('budgets'));
     }
     
