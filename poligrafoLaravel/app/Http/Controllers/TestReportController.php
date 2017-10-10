@@ -38,11 +38,18 @@ class TestReportController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store()
+    function  pdfresult()
     {
-        
+            $data = [
+                'foo' => 'bar'
+            ];
+            $pdf = PDF::Make();
+            /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
+            $pdf->loadView('test.pdfinforme', $data);
+            return $pdf->Stream('Pdftest.pdf');
+            //return $pdf->download('Poligrafo.pdf');
     }
-    
+
     /**
      * .
      *

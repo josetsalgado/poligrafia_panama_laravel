@@ -1,13 +1,66 @@
-@extends('layouts.default')
-@section('content')
+<!DOCTYPE html>
+<html>
 
-    <div class="">
-        <div class="page-title">
+<head>
+
+    <title>PDF IPTC</title>
+
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="css/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="css/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="css/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="css/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="css/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link media="all" type="text/css" rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="css/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="css/iCheck/skins/flat/green.css" rel="stylesheet">
+
+    <!-- bootstrap-progressbar -->
+    <link href="css/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="css/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="css/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="css/build/css/custom.css" rel="stylesheet">
+    <link href="css/css.css" rel="stylesheet">
+    <!-- FullCalendar -->
+    <link href="css/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
+    <link href="css/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
+    <!-- Switchery -->
+    <link href="css/switchery/dist/switchery.min.css" rel="stylesheet">
+    <!-- custom poligrafo css -->
+    <link href="css/poligrafo/custom.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="js/jquery/dist/jquery.min.js"></script>
+    <!--validate jquery-->
+    <script src="js/validate/jquery.validate.js"></script>
+    <!--alertify-->
+    <link rel="stylesheet" href="js/alertify/themes/alertify.core.css" />
+    <link rel="stylesheet" href="js/alertify/themes/alertify.bootstrap.css" id="toggleCSS" />
+</head>
+
+<style type="text/css">
+
+#body_test {
+    background:#fff;
+}
+
+</style>
+
+<body id="body_test">
+<div class="">
+        <div class="">
             <div class="title_right">
                 <h2><i class="fa fa-file-text"></i> Informe de Pueba</h2>
-
-                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                </div>
             </div>
         </div>
 
@@ -216,12 +269,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <div class="row no-print">
-                                <div class="col-xs-12">
-                                    <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Imprimir</button>
-                                    <button type="button" class="btn btn-primary pull-right" style=""><a href="pdf_test" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
-                                </div>
-                            </div>
+
                         </ul>
                     </div>
 
@@ -230,5 +278,5 @@
         </div>
     </div>
 
-
-@stop
+</body>
+</html>
