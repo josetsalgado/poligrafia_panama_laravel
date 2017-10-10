@@ -10,6 +10,7 @@ use Illuminate\Http\Response;
 use DB;
 use function view;
 use App\Client;
+use Carbon\Carbon;
 
 class DashboardController extends Controller
 {
@@ -20,21 +21,25 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //ultimas 5 citas con etatus pendiente
+        //ultimas 5 citas con estatus pendiente
         $lastFivePendingAppointments = DB::table('itcp_appoiments')
                 ->join('itcp_patients', 'itcp_appoiments.patient_id', '=', 'itcp_patients.id_patient')
                 ->where("itcp_appoiments.status", "=", "Pendiente")
                 ->orderBy('id_appoiment', 'desc')
                 ->take(5)
                 ->get();
+        //insert date in object estatus pendiente
+        $this->insertDate($lastFivePendingAppointments);
         
-        //ultimas 5 citas con etatus aprobado
+        //ultimas 5 citas con estatus aprobado
         $lastFiveApprovedAppointments = DB::table('itcp_appoiments')
                 ->join('itcp_patients', 'itcp_appoiments.patient_id', '=', 'itcp_patients.id_patient')
                 ->where("status", "=", "Aprobado")
                 ->orderBy('id_appoiment', 'desc')
                 ->take(5)
                 ->get();
+        //insert date in object estatus aprobado
+        $this->insertDate($lastFiveApprovedAppointments);
         
         //ultimas 5 clientes
         $lastFiveClients = DB::table('itcp_clients')
@@ -57,6 +62,24 @@ class DashboardController extends Controller
                 ->count();
                                                     
         return view('dashboard.dashboard', compact("lastFiveApprovedAppointments", "lastFivePendingAppointments", "lastFiveClients", "totalUsers", "totalClients", "totalServices", "totalAppoimentPending"));
+    }
+    
+    public function insertDate($lastFiveApprovedAppointments){
+        foreach ($lastFiveApprovedAppointments as $lastFiveApprovedAppointment){
+            $lastFiveApprovedAppointment->date_appoiment = $this->getDates($lastFiveApprovedAppointment->date_appoiment);
+        }
+        return $lastFiveApprovedAppointments;
+    }
+
+    public function getDates($date) {
+        $array = array();
+        setlocale(LC_ALL,"es_ES");
+        $date = Carbon::parse(Carbon::parse($date));
+        $dateMonth = strftime("%b", $date->getTimestamp());
+        $getDate = $date->format("d/m/Y");
+        $getDay = $date->day;
+        array_push($array, compact('dateMonth', 'getDay', 'getDate'));
+        return $array;
     }
 
     /**

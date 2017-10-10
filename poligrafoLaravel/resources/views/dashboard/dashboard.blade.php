@@ -46,10 +46,8 @@
                     @foreach($lastFivePendingAppointments as $lastFivePendingAppointment)
                         <article class="media event">
                           <a class="pull-left date">
-                            <p class="month">
-                                
-                            </p>
-                            <p class="day">23</p>
+                            <p class="month">{{ $lastFivePendingAppointment->date_appoiment[0]['dateMonth'] }}</p>
+                            <p class="day">{{ $lastFivePendingAppointment->date_appoiment[0]['getDay'] }}</p>
                           </a>
                           <div class="media-body">
                             <a class="title" href="#">{{ $lastFivePendingAppointment->name_patient }} {{ $lastFivePendingAppointment->last_name_patient }}</a>
@@ -77,8 +75,8 @@
                     @foreach($lastFiveApprovedAppointments as $lastFiveApprovedAppointment)
                         <article class="media event">
                           <a class="pull-left date">
-                            <p class="month">April</p>
-                            <p class="day">23</p>
+                            <p class="month">{{ $lastFiveApprovedAppointment->date_appoiment[0]['dateMonth'] }}</p>
+                            <p class="day">{{ $lastFiveApprovedAppointment->date_appoiment[0]['getDay'] }}</p>
                           </a>
                           <div class="media-body">
                             <a class="title" href="#">{{ $lastFiveApprovedAppointment->name_patient }} {{ $lastFiveApprovedAppointment->last_name_patient }}</a>
