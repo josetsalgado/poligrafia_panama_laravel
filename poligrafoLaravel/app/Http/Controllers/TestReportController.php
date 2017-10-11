@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use DB;
 use function view;
+use PDF;
 
 class TestReportController extends Controller
 {
@@ -46,7 +47,11 @@ class TestReportController extends Controller
             $pdf = PDF::Make();
             /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
             $pdf->loadView('test.pdfinforme', $data);
-            return $pdf->Stream('Pdftest.pdf');
+            return $pdf->Stream('
+            
+            
+            
+            .pdf');
             //return $pdf->download('Poligrafo.pdf');
     }
 

@@ -58,7 +58,7 @@
                                 <br />
 
                                 <div>
-                                    <p>©2017 Desarrollado por iLernus todos los derechos reservados</p>
+                                    <p>Desarrollado por B&G Consulting and Technologies</p>
                                 </div>
                             </div>
                         </form>
