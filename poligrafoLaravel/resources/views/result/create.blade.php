@@ -89,6 +89,7 @@
                                 </div>
                                 <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
                                     <select id="secondary" class="form-control selc-empresa" required>
+                                        <option value="">Tipo de técnicas</option>
                                     </select>
                                     <span class="fa fa-clipboard form-control-feedback left" aria-hidden="true"></span>
                                 </div>
@@ -923,4 +924,54 @@
             </div>
         </div>
     </div>
+
+<script type="text/javascript">
+    var seleccione;
+    var options = new Object();
+    var options = {
+        unico : ["UTAH zona 3 (ZCT)","ZCT FEDERAL","BIZONA"],
+        multiple : ["AF MGQT V.1","AF MGQT V.2","MGQT UTAH"],
+        laborales : ["DLST (screening) TES"]
+    }
+
+   
+ $(function(){
+    $('.spinner .btn:first-of-type').on('click', function() {
+            $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
+        });
+        $('.spinner .btn:last-of-type').on('click', function() {
+            $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+        });
+        
+        
+    var fillSecondary = function(){
+        var selected = $('#primary').val();
+        
+        $('#secondary').empty();
+        seleccione = $("#secondary").val()
+        if(!seleccione){
+            $("#secondary").attr("disabled", true);
+        }
+        $.each(options[selected], function (element,index) {
+            $("#secondary").attr("disabled", false);
+            console.log(index);
+            $('#secondary').append('<option value="'+index+'">'+index+'</option>');
+          });
+          
+
+    }
+    $('#primary').change(fillSecondary);
+    fillSecondary();
+});
+
+$("#secondary").change(function(){
+    var typeExam = $('#primary').val();
+    var typeTest = $('#secondary').val();
+    
+    console.log(typeExam);
+    console.log(typeTest);
+    
+});
+</script>
+
 @stop
