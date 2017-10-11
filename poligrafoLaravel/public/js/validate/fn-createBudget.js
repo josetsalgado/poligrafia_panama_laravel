@@ -51,7 +51,7 @@ $($(this)).keyup(function (idKey) {
         $("#" + prince).val(princeOrigin);
     } else {
         $("#" + prince).attr("disabled", false);
-         $("#" + prince).val(value * princeOrigin);
+        $("#" + prince).val(value * princeOrigin);
         $("#" + prince).attr("value", value * princeOrigin);
     }
 });

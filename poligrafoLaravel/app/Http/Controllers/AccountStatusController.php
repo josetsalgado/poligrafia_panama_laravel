@@ -2,24 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use PDF;
-use App\Company;
 use App\Budget;
-use App\RegisterBudget;
+use App\Http\Controllers\Controller;
+use App\Payment;
 use Carbon\Carbon;
 use DB;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Crypt;
+use PDF;
+use function bcrypt;
+use function trans;
+use Log;
 
 class AccountStatusController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function show()
     {
@@ -73,29 +74,71 @@ class AccountStatusController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
-    public function create()
+    public function createPayment($id, $totalPay)
     {
-        //
+        $id = Crypt::decrypt($id);
+        return view('AccountStatus.modalCreatePayment', compact('id', 'totalPay'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param  Request  $request
+     * @return Response
      */
     public function store(Request $request)
     {
-        //
+        $this->ValidateCreate($request);
+        
+        $totalBudget = Budget::whereIn('id_budget', [$request->id_budget])->select('total_budget')->get();
+        
+        Payment::insert([
+          'budget_id' => $request->id_budget,
+          'facture_number_payment' => intval($request->facture_number),
+          'total_cost_payment' => $request->way_to_pay,
+          'payment_payment' => $request->payment,
+          'comentary_payment' => $request->observations,
+        ]);
+        if($request->discount){
+            Budget::where('id_budget', $request->id_budget)
+                    ->update([
+                        'total_budget' => intval($totalBudget[0]->total_budget - $request->payment - $request->discount),
+            ]);
+        }else{
+            Budget::where('id_budget', $request->id_budget)
+                    ->update([
+                        'total_budget' => intval($totalBudget[0]->total_budget - $request->payment),
+            ]);
+        }
+        
     }
-
+    
+    public function ValidateCreate($request)
+    {
+        $this->validate($request,[
+                'facture_number' => 'required',
+                'way_to_pay' => 'required',
+                'payment' => 'required|numeric',
+                'observations' => 'required',
+            ], 
+            [
+                'facture_number.required' => trans("validations.input_required", ['input' => 'numero de factura']),
+                'way_to_pay.required' => trans("validations.input_required", ['input' => 'forma de pago']),
+                'payment.required' => trans("validations.input_required", ['input' => 'monto a pagar']),
+                'payment.numeric' => trans("validations.input_format", ['input' => 'monto a pagar']),
+                'observations.required' => trans("validations.input_required", ['input' => 'observaciones']),
+                
+            ]
+        );
+    }
+    
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function accountStatus()
     {
@@ -106,16 +149,16 @@ class AccountStatusController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
 
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  Request  $request
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function update(Request $request, $id)
     {
@@ -126,7 +169,7 @@ class AccountStatusController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return Response
      */
     public function destroy($id)
     {
