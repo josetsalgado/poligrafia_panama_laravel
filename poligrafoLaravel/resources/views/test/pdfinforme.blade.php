@@ -50,7 +50,7 @@
 
 <style type="text/css">
 
-#body_test {
+ #body_test {
     background:#fff;
 }
 
@@ -60,47 +60,30 @@
 <div class="">
         <div class="">
             <div class="title_right">
-                <h2><i class="fa fa-file-text"></i> Informe de Pueba</h2>
+                <h2>Informe de Pueba</h2>
             </div>
         </div>
 
         <div class="clearfix"></div>
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
-                <div class="x_title">
-                    <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a>
-                                </li>
-                                <li><a href="#">Settings 2</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                </div>
+
                 <div class="x_content">
                     <div class="row tile_count">
                         <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                            <span class="count_top"><i class="fa fa-user"></i> Nombre del Evaluado</span>
+                            <span class="count_top"> Nombre del Evaluado</span>
                             <h3><b>Josthyn Smith</b></h3>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                            <span class="count_top"><i class="fa fa-user"></i> Cédula</span>
+                            <span class="count_top"> Cédula</span>
                             <h3><b>8-920-631</b></h3>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                            <span class="count_top"><i class="fa fa-suitcase"></i> Cliente</span>
+                            <span class="count_top">Cliente</span>
                             <h3><b>Felipe Mota</b></h3>
                         </div>
                         <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                            <span class="count_top"><i class="fa fa-calendar"></i> Fecha</span>
+                            <span class="count_top">Fecha</span>
                             <h3><b>27-07-2017</b></h3>
                         </div>
                     </div>
@@ -111,7 +94,7 @@
                                 <img src="images/img.jpg" class="avatar" alt="Avatar">
                                 <div class="message_wrapper">
                                     <h4 class="heading">Carol Jaramillo</h4>
-                                    <span class="fa fa-user-md" aria-hidden="true"><b><i> Poligrafista</i></b></span>
+                                    <span aria-hidden="true"><b> Poligrafista</b></span>
                                     <div class="ln_solid"></div>
                                     <blockquote class="message">
                                         <div class="row">
@@ -154,10 +137,10 @@
                                         </div>
                                     </blockquote>
                                     <br>
-                                    <div class="alert alert-dismissible fade in" role="alert">
-                                        <i><b><i class="fa fa-list-alt"></i> Observaciones:</b><br>
+                                    <div>
+                                        <p> Observaciones:</b><br>
                                             El eda marginal, cuando le daba instrucciones se reia, contramedida mental y tambíen hay mv de dedos del eda
-                                        </i>
+                                        </p>
                                     </div>
                                 </div>
                             </li>
@@ -165,7 +148,7 @@
                                 <img src="images/img.jpg" class="avatar" alt="Avatar">
                                 <div class="message_wrapper">
                                     <h4 class="heading">Raul Abrego</h4>
-                                    <span class="fa fa-user-md" aria-hidden="true"><b><i> Controlador</i></b></span>
+                                    <span aria-hidden="true"><b><i> Controlador</i></b></span>
                                     <div class="ln_solid"></div>
                                     <blockquote class="message">
                                         <div class="row">
@@ -208,10 +191,10 @@
                                         </div>
                                     </blockquote>
                                     <br>
-                                    <div class="alert  alert-dismissible fade in" role="alert">
-                                        <i><b><i class="fa fa-list-alt"></i> Observaciones:</b><br>
+                                    <div>
+                                        <p> Observaciones:</b><br>
                                             El eda marginal, cuando le daba instrucciones se reia, contramedida mental y tambíen hay mv de dedos del eda
-                                        </i>
+                                        </p>
                                     </div>
                                 </div>
                             </li>
@@ -219,7 +202,7 @@
                                 <img src="images/img.jpg" class="avatar" alt="Avatar">
                                 <div class="message_wrapper">
                                     <h4 class="heading">John Doe</h4>
-                                    <span class="fa fa-user-md" aria-hidden="true"><b><i> Controlador</i></b></span>
+                                    <span {{--class="fa fa-user-md"--}} aria-hidden="true"><b><i> Controlador</i></b></span>
                                     <div class="ln_solid"></div>
                                     <blockquote class="message">
                                         <div class="row">
@@ -262,10 +245,10 @@
                                         </div>
                                     </blockquote>
                                     <br>
-                                    <div class="alert  alert-dismissible fade in" role="alert">
-                                        <i><b><i class="fa fa-list-alt"></i> Observaciones:</b><br>
+                                    <div>
+                                        <p> Observaciones:</b><br>
                                             El eda marginal, cuando le daba instrucciones se reia, contramedida mental y tambíen hay mv de dedos del eda
-                                        </i>
+                                        </p>
                                     </div>
                                 </div>
                             </li>

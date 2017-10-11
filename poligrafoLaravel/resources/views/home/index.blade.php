@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>ITCP</title>
+        <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 
         <!-- Bootstrap -->
         <link href="{{ url('css/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">

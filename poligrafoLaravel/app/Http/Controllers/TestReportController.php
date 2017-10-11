@@ -39,21 +39,7 @@ class TestReportController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    function  pdfresult()
-    {
-            $data = [
-                'foo' => 'bar'
-            ];
-            $pdf = PDF::Make();
-            /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
-            $pdf->loadView('test.pdfinforme', $data);
-            return $pdf->Stream('
-            
-            
-            
-            .pdf');
-            //return $pdf->download('Poligrafo.pdf');
-    }
+
 
     /**
      * .
@@ -101,5 +87,16 @@ class TestReportController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    function pdfresult(){
+        $data = [
+            'foo' => 'bar'
+        ];
+        $pdf = PDF::Make();
+        /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
+        $pdf->loadView('test.pdfinforme', $data);
+        return $pdf->Stream('testdocument.pdf');
+        //return $pdf->download('Poligrafo.pdf');
     }
 }
