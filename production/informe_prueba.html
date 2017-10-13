@@ -23,6 +23,8 @@
     <link href="../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
     <link href="../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <!-- bootstrap-daterangepicker -->
+    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.css" rel="stylesheet">
@@ -40,7 +42,8 @@
                     <div class="clearfix"></div>
 
                     <br />
-                    <!-- sidebar menu -->
+
+                   <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
                             <h3>Bienvenido</h3>
@@ -100,6 +103,7 @@
                 </div>
             </div>
             <!-- /sidebar menu -->
+
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
                 <a href="editar_perfil.html" data-toggle="tooltip" data-placement="top" title="Editar Perfil">
@@ -149,8 +153,6 @@
         <div class="">
             <div class="page-title">
                 <div class="title_right">
-                    <h2><i class="fa fa-file-text"></i> Informe de Pueba</h2>
-
                     <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                     </div>
                 </div>
@@ -160,6 +162,7 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                     <div class="x_title">
+                        <h2><i class="fa fa-clipboard"></i> Informe de Prueba</h2>
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
@@ -178,202 +181,132 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
-                        <div class="row tile_count">
-                            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                                <span class="count_top"><i class="fa fa-user"></i> Nombre del Evaluado</span>
-                                <h3><b>Josthyn Smith</b></h3>
-                            </div>
-                            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                                <span class="count_top"><i class="fa fa-user"></i> Cédula</span>
-                                <h3><b>8-920-631</b></h3>
-                            </div>
-                            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                                <span class="count_top"><i class="fa fa-suitcase"></i> Cliente</span>
-                                <h3><b>Felipe Mota</b></h3>
-                            </div>
-                            <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                                <span class="count_top"><i class="fa fa-calendar"></i> Fecha</span>
-                                <h3><b>27-07-2017</b></h3>
-                            </div>
-                        </div>
-                        <div class="ln_solid"></div>
-                        <div>
-                            <ul class="messages">
-                                <li>
-                                    <img src="images/img.jpg" class="avatar" alt="Avatar">  
-                                    <div class="message_wrapper">
-                                        <h4 class="heading">Carol Jaramillo</h4>
-                                        <span class="fa fa-user-md" aria-hidden="true"><b><i> Poligrafista</i></b></span>
-                                        <div class="ln_solid"></div>
-                                        <blockquote class="message">                    
-                                            <div class="row">
-                                                <div class="col-md-6"><b>Calificaciones con 3 Gráficas</b></div>
-                                                <div class="col-md-6"><b>Calificaciones con 4 Gráficas</b></div>
-                                            </div> 
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="col-md-2 bordertab"><a class="">R4</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">R5</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">R7</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">D2</a></div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="col-md-2 bordertab"><a class="">R4</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">R5</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">R7</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">D2</a></div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="col-md-2 bordertab"><a class="">1</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">-3</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">-0</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">2</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">-5</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">-1</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">3</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                    <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                </div>
-                                            </div>
-                                        </blockquote>
-                                        <br>
-                                        <div class="alert alert-dismissible fade in" role="alert">
-                                            <i><b><i class="fa fa-list-alt"></i> Observaciones:</b><br>
-                                            El eda marginal, cuando le daba instrucciones se reia, contramedida mental y tambíen hay mv de dedos del eda 
-                                        </i>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <img src="images/img.jpg" class="avatar" alt="Avatar">  
-                                <div class="message_wrapper">
-                                    <h4 class="heading">Raul Abrego</h4>
-                                    <span class="fa fa-user-md" aria-hidden="true"><b><i> Controlador</i></b></span>
-                                    <div class="ln_solid"></div>
-                                    <blockquote class="message">                    
-                                        <div class="row">
-                                            <div class="col-md-6"><b>Calificaciones con 3 Gráficas</b></div>
-                                            <div class="col-md-6"><b>Calificaciones con 4 Gráficas</b></div>
-                                        </div> 
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="col-md-2 bordertab"><a class="">R4</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">R5</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">R7</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="col-md-2 bordertab"><a class="">R4</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">R5</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">R7</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="col-md-2 bordertab"><a class="">1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">-3</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">-0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">2</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">-5</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">-1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">3</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                            </div>
-                                        </div>
-                                    </blockquote>
-                                    <br>
-                                    <div class="alert  alert-dismissible fade in" role="alert">
-                                        <i><b><i class="fa fa-list-alt"></i> Observaciones:</b><br>
-                                        El eda marginal, cuando le daba instrucciones se reia, contramedida mental y tambíen hay mv de dedos del eda 
-                                    </i>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="images/img.jpg" class="avatar" alt="Avatar">  
-                            <div class="message_wrapper">
-                                <h4 class="heading">John Doe</h4>
-                                <span class="fa fa-user-md" aria-hidden="true"><b><i> Controlador</i></b></span>
-                                <div class="ln_solid"></div>
-                                <blockquote class="message">                    
-                                    <div class="row">
-                                        <div class="col-md-6"><b>Calificaciones con 3 Gráficas</b></div>
-                                        <div class="col-md-6"><b>Calificaciones con 4 Gráficas</b></div>
-                                    </div> 
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="col-md-2 bordertab"><a class="">R4</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">R5</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">R7</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">D2</a></div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="col-md-2 bordertab"><a class="">R4</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">R5</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">R7</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">D2</a></div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="col-md-2 bordertab"><a class="">1</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">-3</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">-0</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">2</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">-5</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">-1</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">3</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                            <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                        </div>
-                                    </div>
-                                </blockquote>
-                                <br>
-                                <div class="alert  alert-dismissible fade in" role="alert">
-                                    <i><b><i class="fa fa-list-alt"></i> Observaciones:</b><br>
-                                    El eda marginal, cuando le daba instrucciones se reia, contramedida mental y tambíen hay mv de dedos del eda 
-                                </i>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
+                                    <select id="pais" class="form-control selc-empresa" required>
+                                        <option value="">Empresa</option>
+                                        <option value="empresa1">Coca cola</option>
+                                        <option value="empresa2">B&G</option>
+                                        <option value="empresa3">Pepsi</option>
+                                    </select> 
+                                    <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
+                                </div> 
+                                <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
+                                    <select id="pais" class="form-control selc-empresa" required>
+                                        <option value="">Evaluado</option>
+                                        <option value="evaluado1">Evaluado 1</option>
+                                        <option value="evaluado2">Evaluado 2</option>
+                                        <option value="evaluado3">Evaluado 3</option>
+                                        <option value="evaluado4">Evaluado 4</option>
+                                        <option value="evaluado5">Evaluado 5</option>
+                                    </select> 
+                                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                </div>  
+                                <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
+                                    <select id="poligrafista" name="poligrafista" class="form-control selc-empresa" required>
+                                        <option value="">Poligrafista</option>
+                                        <option value="evaluado1">Poligrafista 1</option>
+                                        <option value="evaluado2">Poligrafista 2</option>
+                                        <option value="evaluado3">Poligrafista 3</option>
+                                        <option value="evaluado4">Poligrafista 4</option>
+                                        <option value="evaluado5">Poligrafista 5</option>
+                                    </select> 
+                                    <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
+                                </div> 
                             </div>
                         </div>
-                    </li>
-                    <div class="row no-print">
-                        <div class="col-xs-12">
-                            <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Imprimir</button>
-                            <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> PDF</button>
+                        <div class="">
+                            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>Fecha</th>
+                                        <th>Empresa</th>
+                                        <th>Candidato</th>
+                                        <th>Evaluacion Poligrafica</th>
+                                        <th>Poligrafista</th>
+                                        <th>Controladores</th>
+                                        <th>#Ver</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>23/09/2017</td>
+                                        <td>Coca Cola</td>
+                                        <td> Nicole Pearson</td>
+                                        <td>Pruebas Especificas</td>
+                                        <td>Poligrafista</td>
+                                        <td>Controlador 1 <br>
+                                            Controlador 2 <br>
+                                            Controlador 3
+                                        </td>
+                                        <td>  
+                                            <a href="ver_informe_prueba.html" class="btn btn-dark btn-xs"><i class="fa fa-file-text"></i>  Ver Informe </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>23/09/2017</td>
+                                        <td>Coca Cola</td>
+                                        <td>Nicole Pearson</td>
+                                        <td>Pruebas Especificas</td>
+                                        <td>Poligrafista</td>
+                                        <td>Controlador 1 <br>
+                                            Controlador 2 <br>
+                                            Controlador 3
+                                        </td>
+                                        <td>  
+                                            <a href="ver_informe_prueba.html" class="btn btn-dark btn-xs"><i class="fa fa-file-text"></i>  Ver Informe </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>23/09/2017</td>
+                                        <td>Coca Cola</td>
+                                        <td>Nicole Pearson</td>
+                                        <td>Pruebas Especificas</td>
+                                        <td>Poligrafista</td>
+                                        <td>Controlador 1 <br>
+                                            Controlador 2 <br>
+                                            Controlador 3
+                                        </td>
+                                        <td>  
+                                            <a href="ver_informe_prueba.html" class="btn btn-dark btn-xs"><i class="fa fa-file-text"></i>  Ver Informe </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>23/09/2017</td>
+                                        <td>Coca Cola</td>
+                                        <td>Nicole Pearson</td>
+                                        <td>Pruebas Especificas</td>
+                                        <td>Poligrafista</td>
+                                        <td>Controlador 1 <br>
+                                            Controlador 2 <br>
+                                            Controlador 3
+                                        </td>
+                                        <td>  
+                                            <a href="ver_informe_prueba.html" class="btn btn-dark btn-xs"><i class="fa fa-file-text"></i>  Ver Informe </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>23/09/2017</td>
+                                        <td>Coca Cola</td>
+                                        <td>Nicole Pearson</td>
+                                        <td>Pruebas Especificas</td>
+                                        <td>Poligrafista</td>
+                                        <td>Controlador 1 <br>
+                                            Controlador 2 <br>
+                                            Controlador 3
+                                        </td>
+                                        <td>  
+                                            <a href="ver_informe_prueba.html" class="btn btn-dark btn-xs"><i class="fa fa-file-text"></i>  Ver Informe </a>
+                                        </td>
+                                    </tr>   
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                </ul>
+                </div>
             </div>
-
         </div>
-    </div>
-    </div>
-    </div>
     </div>
 </div>
 <!-- /page content -->
@@ -385,33 +318,47 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title"><i class="fa fa-edit"></i>Editar Producto</h4>
+                <h4 class="modal-title"><i class="fa fa-money"></i> Agregar Pago </h4>
             </div>
             <div class="modal-body">
                 <form class="form-horizontal form-label-left input_mask">
-
-                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre del producto" value="Prueba Pre Empleo  ">
-                        <span class="fa fa-hospital-o form-control-feedback left" aria-hidden="true"></span>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12">N° Factura Fiscal:</label>
+                    <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="factura" name="factura" placeholder="TBSR110000623-00003021">
+                        <span class="fa fa-file-text-o form-control-feedback left" aria-hidden="true"></span>
                     </div>
-
-                    <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Precio" value="1000.00">
-                        <span class="fa fa-dollar form-control-feedback right" aria-hidden="true"></span>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Forma de Pago:</label>
+                    <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                        <select id="foma-pago" name="forma-pago" class="form-control selc-empresa" required>
+                            <option value="">Seleccione</option>
+                            <option value="cheque">Cheque</option>
+                            <option value="ach">ACH</option>
+                            <option value="tarjeta-de-credito">Tarjeta de crédito</option>
+                            <option value="transferencia-electronica">transferencia electrónica</option>
+                        </select> 
+                        <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
                     </div>
-
-
-                    <div class=" col-md-12 col-sm-6 col-xs-12 form-group">
-                        <textarea class="resizable_textarea form-control" placeholder="Descripción" value="Prueba Pre Empleo"></textarea>
-                        <span class="fa fa-sort-alpha-desc form-control-feedback right" aria-hidden="true"></span>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Monto a Pagar:</label>
+                    <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="monto-pagar" name="monto-pagar" placeholder="1500.00">
+                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
                     </div>
-
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Descuento:</label>
+                    <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="descuento" name="descuento" placeholder="1500.00">
+                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                    </div> 
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Observaciones:</label>
+                    <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                        <textarea id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.." data-parsley-validation-threshold="10"></textarea>
+                        <span class="fa fa-comment form-control-feedback left" aria-hidden="true"></span>
+                    </div>      
                 </div>
                 <div class="modal-footer">
 
                     <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-eye-slash "></i> Cerrar</button>
+                        <button type="submit" class="btn btn-primary"><i class="fa fa-credit-card"></i> Pagar</button>
                     </div>
                 </div>
             </form>
@@ -419,18 +366,17 @@
 
     </div>
 </div>
-
 <!-- footer content -->
 <footer>
-    <div class="pull-right">
+  <div class="pull-right">
 
-        <a href="http://www.monitorbg.com/web/">
-            <img class="center-block" src="images/logobg.png">
-            <b> Desarrollado por B&G Consulting and Technologies</b> <a/>
-        </div>
-        <div class="clearfix"></div>
-    </footer>
-    <!-- /footer content -->
+     <a href="http://www.monitorbg.com/web/">
+       <img class="center-block" src="images/logobg.png">
+       <b> Desarrollado por B&G Consulting and Technologies</b> <a/>
+   </div>
+   <div class="clearfix"></div>
+</footer>
+<!-- /footer content -->
 </div>
 </div>
 
@@ -461,6 +407,10 @@
 <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
 <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
 
+<!-- bootstrap-daterangepicker -->
+<script src="../vendors/moment/min/moment.min.js"></script>
+<script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
 
@@ -479,6 +429,7 @@
         }
     } );
 </script>
+
 
 </body>
 </html>
