@@ -69,6 +69,9 @@
 
 </head>
 <body class="nav-md">
+    
+<?php $rol = DB::table('users')->where('email','=',session()->all()['email'])->select('rol_id')->get()[0]; ?>
+
 <div class="container body">
     <div class="main_container">
         <div class="col-md-3 left_col">
@@ -88,55 +91,59 @@
                                 <a href="dashboard_home"><i class="fa fa-home"></i> Inicio</a>
 
                             </li>
-                            <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="create_user">Nuevo Usuario</a></li>
-                                    <li><a href="show_user">Ver Usuarios</a></li>
-                                </ul>
-                            </li>
-                            <li><a><i class="fa fa-building"></i> Empresas <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="create_company">Nueva Empresa</a></li>
-                                    <li><a href="show_company">Ver Empresas</a></li>
-                                </ul>
-                            </li>
-                            <li><a><i class="fa fa-suitcase"></i> Clientes <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="create_client">Nuevo Cliente</a></li>
-                                    <li><a href="show_client">Ver Clientes</a></li>
-                                </ul>
-                            </li>
-                            <li><a><i class="fa fa-hospital-o"></i> Productos <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="create_product">Nuevo Producto</a></li>
-                                    <li><a href="show_product">Ver Productos</a></li>
-                                </ul>
-                            </li>
+                            @if($rol->rol_id == 1)
+                                <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="create_user">Nuevo Usuario</a></li>
+                                        <li><a href="show_user">Ver Usuarios</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-building"></i> Empresas <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="create_company">Nueva Empresa</a></li>
+                                        <li><a href="show_company">Ver Empresas</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-suitcase"></i> Clientes <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="create_client">Nuevo Cliente</a></li>
+                                        <li><a href="show_client">Ver Clientes</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-hospital-o"></i> Productos <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="create_product">Nuevo Producto</a></li>
+                                        <li><a href="show_product">Ver Productos</a></li>
+                                    </ul>
+                                </li>
+                            @endif
                             <li><a href="quotes_client"><i class="fa fa-calendar"></i> Citas</a></li>
-                            <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="butget_client">Cotizar</a></li>
-                                    <li><a href="butget_show">Ver Cotizaciones</a></li>
-                                </ul>
-                            </li>
-                            <li><a><i class="fa fa-bar-chart-o"></i> Estados de Cuenta<span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="payment_record">Registrar Pago</a></li>
-                                </ul>
-                            </li>
-                            <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="record_result">Registro de Resultados</a></li>
-                                    <li><a href="quality_test">Registro de Calidad de Prueba</a></li>
-                                    <li><a href="test_report">Informe de Prueba</a></li>
-                                </ul>
-                            </li>
-                            <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>
-                                <ul class="nav child_menu">
-                                    <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
-                                    <li><a href="fixed_footer.html">Fixed Footer</a></li>
-                                </ul>
-                            </li>
+                            @if($rol->rol_id == 1)
+                                <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="butget_client">Cotizar</a></li>
+                                        <li><a href="butget_show">Ver Cotizaciones</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-bar-chart-o"></i> Estados de Cuenta<span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="payment_record">Registrar Pago</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="record_result">Registro de Resultados</a></li>
+                                        <li><a href="quality_test">Registro de Calidad de Prueba</a></li>
+                                        <li><a href="test_report">Informe de Prueba</a></li>
+                                    </ul>
+                                </li>
+                                <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>
+                                    <ul class="nav child_menu">
+                                        <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
+                                        <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                                    </ul>
+                                </li>
+                            @endif
                         </ul>
                     </div>
                 </div>
