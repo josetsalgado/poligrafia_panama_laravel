@@ -154,4 +154,10 @@ Route::group(['middleware' => 'auth'], function () {
     //Pdf de informe de prueba
     Route::get('/pdf_test', 'TestReportController@pdfresult');
 
+    //reporte estado de cuenta
+    Route::get('/account_report', 'ReportAccountController@accountstatus');
+
+    //reporte evaluaciones poligraficas
+    Route::get('/evaluations_report', 'ReportAccountController@evaluations');
+
 });

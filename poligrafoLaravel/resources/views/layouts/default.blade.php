@@ -67,6 +67,10 @@
     <script src="js/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
     <script src="js/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
 
+    <!-- bootstrap-daterangepicker -->
+    <script src="js/moment/min/moment.min.js"></script>
+    <script src="js/bootstrap-daterangepicker/daterangepicker.js"></script>
+
 </head>
 <body class="nav-md">
     
@@ -139,8 +143,8 @@
                                 </li>
                                 <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
-                                        <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
-                                        <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                                        <li><a href="account_report">Estados de cuenta</a></li>
+                                        <li><a href="evaluations_report">Evaluaciones poligraficas</a></li>
                                     </ul>
                                 </li>
                             @endif
