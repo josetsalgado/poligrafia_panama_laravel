@@ -24,3 +24,12 @@ input[type=number] {
     margin-top: 60px;
 }
 /*margin alert valid*/
+
+/*hidden and show divs*/
+.hidden-div{
+    display:none;
+}
+.show-div{
+    display:block;
+}
+/*hidden and show divs*/

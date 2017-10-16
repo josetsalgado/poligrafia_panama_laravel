@@ -12,6 +12,14 @@ use function view;
 
 class UserController extends Controller
 {
+    
+    public function showProfile(Request $request, $id)
+    {
+        $value = $request->session()->get('key');
+
+        //
+    }
+    
     /**
      * Display a listing of the resource.
      *

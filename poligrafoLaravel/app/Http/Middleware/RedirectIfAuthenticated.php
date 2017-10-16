@@ -38,6 +38,7 @@ class RedirectIfAuthenticated
             return redirect('/dashboard_home');
         }
         $request->session()->put('city', 'Ciudad de panama');
+        $request->session()->put('email', $request->all()['email']);
         return $next($request);
     }
 }

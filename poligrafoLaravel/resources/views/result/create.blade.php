@@ -1,6 +1,5 @@
 @extends('layouts.default')
 @section('content')
-
     <div class="">
         <div class="page-title">
             <div class="title_right">
@@ -98,635 +97,648 @@
 
 
                             <!--Asunto unico Técnica UTAH zona 3 (ZCT)  -->
-                            <div class="form-group">
-                                <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
-                                <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                            <div class="hidden-div" id="utha_zona_3">
+                                <div class="form-group">
+                                    <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
+                                    <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                                </div>
+                                <!-- Calificacion R1 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R2 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R3 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R3:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R3:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
                             </div>
-                            <!-- Calificacion R1 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R2 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R3 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R3:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R3:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ln_solid"></div>
                             <!-- /. Asunto unico Técnica UTAH zona 3 (ZCT)  -->
 
                             <!--Asunto unico Técnica ZCT FEDERAL  -->
-                            <div class="form-group">
-                                <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
-                                <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                            <div class="hidden-div" id="zct_federal">
+                                <div class="form-group">
+                                    <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
+                                    <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                                </div>
+                                <!-- Calificacion R5 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R7 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R10 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
                             </div>
-                            <!-- Calificacion R5 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R7 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R10 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ln_solid"></div>
-
                             <!-- /. Asunto unico Técnica ZCT FEDERAL  -->
 
                             <!--Asunto unico Técnica BIZONA  -->
-                            <div class="form-group">
-                                <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
-                                <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                            <div class="hidden-div" id="bizona">
+                                <div class="form-group">
+                                    <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
+                                    <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                                </div>
+                                <!-- Calificacion R5 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R7 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
                             </div>
-                            <!-- Calificacion R5 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R7 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ln_solid"></div>
                             <!-- /. Asunto unico Técnica BIZONA  -->
 
                             <!--FACETA MULTIPLE Ó ASUNTO MULTIPLE Técnica AF MGQT V.1  -->
-                            <div class="form-group">
-                                <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
-                                <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                            <div class="hidden-div" id="af_mgqt_v1">
+                                <div class="form-group">
+                                    <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
+                                    <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                                </div>
+                                <!-- Calificacion R4 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R6 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R8 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R10 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
                             </div>
-                            <!-- Calificacion R4 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R6 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R8 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R10 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ln_solid"></div>
                             <!-- /. FACETA MULTIPLE Ó ASUNTO MULTIPLE  Técnica AF MGQT V.1  -->
 
                             <!--FACETA MULTIPLE Ó ASUNTO MULTIPLE Técnica AF MGQT V.2  -->
-                            <div class="form-group">
-                                <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
-                                <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                            <div class="hidden-div" id="af_mgqt_v2">
+                                <div class="form-group">
+                                    <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
+                                    <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                                </div>
+                                <!-- Calificacion R4 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R5 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R7 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R8 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
                             </div>
-                            <!-- Calificacion R4 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R5 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R7 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R8 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ln_solid"></div>
                             <!-- /. FACETA MULTIPLE Ó ASUNTO MULTIPLE  Técnica AF MGQT V.2  -->
 
                             <!--FACETA MULTIPLE Ó ASUNTO MULTIPLE Técnica MGQT UTAH  -->
-                            <div class="form-group">
-                                <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
-                                <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                            <div class="hidden-div" id="utah">
+                                <div class="form-group">
+                                    <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
+                                    <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                                </div>
+                                <!-- Calificacion R1 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R2 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion R3 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R3:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R3:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
                             </div>
-                            <!-- Calificacion R1 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R2 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion R3 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R3:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R3:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ln_solid"></div>
                             <!-- /. FACETA MULTIPLE Ó ASUNTO MULTIPLE  Técnica MGQT UTAH  -->
 
                             <!--ASUNTO MULTIPLE  EN LABORALES Técnica DLST (screening) TES  -->
-                            <div class="form-group">
-                                <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
-                                <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                            <div class="hidden-div" id="dlst">
+                                <div class="form-group">
+                                    <div class="col-md-6"><h4>Calificaciones con 3 Gráficas </h4></div>
+                                    <div class="col-md-6"><h4>Calificaciones con 4 Gráficas </h4></div>
+                                </div>
+                                <!-- Calificacion 1R1 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 1R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 1R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion 1R2 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 1R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 1R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion 2R1 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 2R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 2R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion 2R2 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 2R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 2R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion 3R1 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 3R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 3R1:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Calificacion 3R2 -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 3R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 3R2:</label>
+                                        <div class="input-group spinner col-md-3">
+                                            <input type="text" class="form-control" value="0">
+                                            <div class="input-group-btn-vertical">
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ln_solid"></div>
                             </div>
-                            <!-- Calificacion 1R1 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 1R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 1R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion 1R2 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 1R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 1R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion 2R1 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 2R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 2R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion 2R2 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 2R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 2R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion 3R1 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 3R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 3R1:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Calificacion 3R2 -->
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 3R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación 3R2:</label>
-                                    <div class="input-group spinner col-md-3">
-                                        <input type="text" class="form-control" value="0">
-                                        <div class="input-group-btn-vertical">
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ln_solid"></div>
                             <!-- /. ASUNTO MULTIPLE  EN LABORALES  Técnica DLST (screening) TES  -->
 
                             <!-- DLST - 1 -->
@@ -925,53 +937,6 @@
         </div>
     </div>
 
-<script type="text/javascript">
-    var seleccione;
-    var options = new Object();
-    var options = {
-        unico : ["UTAH zona 3 (ZCT)","ZCT FEDERAL","BIZONA"],
-        multiple : ["AF MGQT V.1","AF MGQT V.2","MGQT UTAH"],
-        laborales : ["DLST (screening) TES"]
-    }
-
-   
- $(function(){
-    $('.spinner .btn:first-of-type').on('click', function() {
-            $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
-        });
-        $('.spinner .btn:last-of-type').on('click', function() {
-            $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-        });
-        
-        
-    var fillSecondary = function(){
-        var selected = $('#primary').val();
-        
-        $('#secondary').empty();
-        seleccione = $("#secondary").val()
-        if(!seleccione){
-            $("#secondary").attr("disabled", true);
-        }
-        $.each(options[selected], function (element,index) {
-            $("#secondary").attr("disabled", false);
-            console.log(index);
-            $('#secondary').append('<option value="'+index+'">'+index+'</option>');
-          });
-          
-
-    }
-    $('#primary').change(fillSecondary);
-    fillSecondary();
-});
-
-$("#secondary").change(function(){
-    var typeExam = $('#primary').val();
-    var typeTest = $('#secondary').val();
-    
-    console.log(typeExam);
-    console.log(typeTest);
-    
-});
-</script>
+<script src="js/validate/fn-createResult.js"></script>
 
 @stop
