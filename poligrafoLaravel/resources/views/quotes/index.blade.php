@@ -38,8 +38,6 @@
     </div>
 
 
-
-
     <!-- calendar modal -->
     <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -74,7 +72,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Horaio</label>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Horario</label>
                                 <div class="col-md-4 col-sm-4 col-xs-12">
                                     <select name="schedule" id="schedule" class="form-control col-xs-12">
                                         <option value="7:00">7:00</option>
@@ -171,15 +169,15 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Modal editar -->
     <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
-    
+
 
     <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
     <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
     <!-- /calendar modal -->
 
-    
+
     <script src="js/validate/fn-createAppoiment.js"></script>
 @stop

@@ -4455,3 +4455,63 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
 }
+article#fc_edit:hover {
+    background: #ededed;
+    cursor: pointer;
+}
+
+
+.wrap {
+    margin: auto;
+    max-width: 800px;
+    width: 90%;
+}
+
+.formulario {
+    color: #212121;
+    text-align: center;
+}
+
+.principal .formulario input[type=text] {
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.principal .formulario input[type=text].error {
+    border: 5px solid #D32F2F;
+    color: red;
+}
+
+.principal .formulario .boton {
+    background: none;
+    border: 1px solid #D32F2F;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    padding: 15px;
+}
+
+.principal .formulario .boton:hover {
+    border: 1px solid #fff;
+}
+
+/* - Tareas - */
+.tareas .lista {
+    list-style: none;
+}
+
+.tareas .lista li {
+    border-bottom: 1px solid #B6B6B6;
+}
+
+.tareas .lista li a {
+    color: #212121;
+    display: block;
+    padding: 20px 0;
+    text-decoration: none;
+}
+
+.tareas .lista li a:hover {
+    text-decoration: line-through;
+}

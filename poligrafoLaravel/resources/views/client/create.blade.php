@@ -44,6 +44,11 @@
                                     <span class="text-danger">{{ $errors->first('name') }}</span>
                                 </div>
 
+                                <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
+                                    <input type="text" class="form-control has-feedback-left" id="cargo" name="cargo" placeholder="Cargo">
+                                    <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
+                                </div>
+
                                 <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('tel') ? 'has-error' : '' }}">
                                     <input type="text" class="form-control has-feedback-left" id="tel" name="tel" placeholder="{{ trans("poligrafo.tel_client") }}">
                                     <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
