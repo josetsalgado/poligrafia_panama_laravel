@@ -72,6 +72,12 @@
                                     <div class="ln_solid"></div>
                                 </div>
                             @endforeach
+                            <div class="row">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Observaciones:</label>
+                                <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                    <textarea class="form-control" rows="3" placeholder=""></textarea>
+                                </div>
+                            </div>
                             
                             <div class="form-group">
                                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">

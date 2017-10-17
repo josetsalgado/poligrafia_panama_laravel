@@ -59,7 +59,7 @@ class BudgetController extends Controller
             $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
             $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
         }
-        
+
         $pdf = PDF::Make();
         $pdf->loadView('budget.pdfButget', compact('budgets'));
         return $pdf->Stream('document.pdf');

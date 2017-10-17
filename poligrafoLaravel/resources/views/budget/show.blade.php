@@ -3,213 +3,159 @@
 
     <!-- page content -->
 
-        <div class="">
-            <div class="page-title">
-                <div class="title_right">
-                    <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                    </div>
+    <div class="">
+        <div class="page-title">
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
                 </div>
             </div>
+        </div>
 
-            <div class="clearfix"></div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                    <div class="x_title">
-                        <h2>Cotizaciones por Clientes</h2>
-                        <ul class="nav navbar-right panel_toolbox">
-                            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Settings 1</a>
-                                    </li>
-                                    <li><a href="#">Settings 2</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><a class="close-link"><i class="fa fa-close"></i></a>
-                            </li>
-                        </ul>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                        <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
-                            <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Empresa</th>
-                                <th>Cliente</th>
-                                <th>Evaluacion Poligrafica</th>
-                                <th>Candidatos</th>
-                                <th>Precio Unitario</th>
-                                <th>Total</th>
-                                <th>Opciones</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>23/09/2017</td>
-                                <td>Coca Cola</td>
-                                <td>Jose María</td>
-                                <td>
-                                    8 pruebas Especificas <br>
-                                    8 pruebas Pre empleo
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Nicole Pearson</li>
-                                        <li>Jhon Doe</li>
-                                        <li>Jonas Brother</li>
-                                        <li>Michael Jackson</li>
-                                        <li>Shad friend</li>
-                                    </ul>
-                                </td>
-                                <td>
-
-                                    B/.150.00 <br>
-                                    B/.125.00
-
-                                </td>
-                                <td>1500.00</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                    <a href="pdf_butget" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
-                                    <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>23/09/2017</td>
-                                <td>B&G consultores</td>
-                                <td>Juana Carolina</td>
-                                <td>
-                                    8 pruebas Especificas <br>
-                                    8 pruebas Pre empleo
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Nicole Pearson</li>
-                                        <li>Jhon Doe</li>
-                                        <li>Jonas Brother</li>
-                                        <li>Michael Jackson</li>
-                                        <li>Shad friend</li>
-                                    </ul>
-                                </td>
-                                <td>
-
-                                    B/.150.00 <br>
-                                    B/.125.00
-
-                                </td>
-                                <td>B/.1500.00</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                    <a href="pdf_butget" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
-                                    <button type="button"  class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>23/09/2017</td>
-                                <td>B&G</td>
-                                <td>Brian Oconer</td>
-                                <td>
-                                    8 pruebas Especificas <br>
-                                    8 pruebas Pre empleo
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Nicole Pearson</li>
-                                        <li>Jhon Doe</li>
-                                        <li>Jonas Brother</li>
-                                        <li>Michael Jackson</li>
-                                        <li>Shad friend</li>
-                                    </ul>
-                                </td>
-                                <td>
-
-                                    B/.150.00 <br>
-                                    B/.125.00
-
-                                </td>
-                                <td>1500.00</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                    <a href="pdf_butget" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
-                                    <button type="button"  class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>23/09/2017</td>
-                                <td>iLernus</td>
-                                <td>jhon lenon</td>
-                                <td>
-                                    8 pruebas Especificas <br>
-                                    8 pruebas Pre empleo
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Nicole Pearson</li>
-                                        <li>Jhon Doe</li>
-                                        <li>Jonas Brother</li>
-                                        <li>Michael Jackson</li>
-                                        <li>Shad friend</li>
-                                    </ul>
-                                </td>
-                                <td>
-
-                                    B/.150.00 <br>
-                                    B/.125.00
-
-                                </td>
-                                <td>1500.00</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                    <a href="pdf_butget" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
-                                    <button type="button"  class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>23/09/2017</td>
-                                <td>Axionti</td>
-                                <td>Luis Paes</td>
-                                <td>
-
-                                    8 pruebas Especificas <br>
-                                    8 pruebas Pre empleo
-
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li>Nicole Pearson</li>
-                                        <li>Jhon Doe</li>
-                                        <li>Jonas Brother</li>
-                                        <li>Michael Jackson</li>
-                                        <li>Shad friend</li>
-                                    </ul>
-                                </td>
-                                <td>
-
-                                    B/.150.00 <br>
-                                    B/.125.00
-
-                                </td>
-                                <td>1500.00</td>
-                                <td>
-                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                    <a href="/pdf_butget" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
-                                    <button type="button"  class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
+        <div class="clearfix"></div>
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel">
+                <div class="x_title">
+                    <h2>Cotizaciones por Clientes</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Settings 1</a>
+                                </li>
+                                <li><a href="#">Settings 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                        <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Empresa</th>
+                            <th>Cliente</th>
+                            <th>N° Telefonico</th>
+                            <th>Correo</th>
+                            <th>Cargo</th>
+                            <th>Observaciones</th>
+                            <th>Opciones</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>23/09/2017</td>
+                            <td>Coca Cola</td>
+                            <td>Jose María</td>
+                            <td>
+                                +58 555 55 55
+                            </td>
+                            <td>
+                                correo@correo.com
+                            </td>
+                            <td>
+                                RRHH
+                            </td>
+                            <td>Observaciones</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
+                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
+                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23/09/2017</td>
+                            <td>Consultores</td>
+                            <td>Jhon derechos</td>
+                            <td>
+                                +58 555 55 55
+                            </td>
+                            <td>
+                                correo@correo.com
+                            </td>
+                            <td>
+                                SEGURIDAD
+                            </td>
+                            <td>Observaciones</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
+                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
+                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23/09/2017</td>
+                            <td>B&G</td>
+                            <td>Maria Brito</td>
+                            <td>
+                                +58 555 55 55
+                            </td>
+                            <td>
+                                correo@correo.com
+                            </td>
+                            <td>
+                                TALENDO HUMANO
+                            </td>
+                            <td>Observaciones</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
+                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
+                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23/09/2017</td>
+                            <td>Ilernus</td>
+                            <td>Candy Candy </td>
+                            <td>
+                                +58 555 55 55
+                            </td>
+                            <td>
+                                correo@correo.com
+                            </td>
+                            <td>
+                                RRHH
+                            </td>
+                            <td>Observaciones</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
+                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a><i class="fa fa-download"></i>PDF</a>
+                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>23/09/2017</td>
+                            <td>Pepsi</td>
+                            <td>Pedro Perez</td>
+                            <td>
+                                +58 555 55 55
+                            </td>
+                            <td>
+                                correo@correo.com
+                            </td>
+                            <td>
+                                INFORMATICA
+                            </td>
+                            <td>Observaciones</td>
+                            <td>
+                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
+                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
 
 
-                    </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- /page content -->
     <!-- Modal -->
@@ -469,7 +415,7 @@
     </div>
     <!-- /. modal -->
 
-    
+
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog"></div>
     <!-- /. modal -->
