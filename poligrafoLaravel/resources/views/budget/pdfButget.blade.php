@@ -27,9 +27,7 @@
         <!-- bootstrap-daterangepicker -->
         <link href="css/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
-        <!-- Custom Theme Style -->
-        <link href="css/build/css/custom.css" rel="stylesheet">
-        <link href="css/css.css" rel="stylesheet">
+
         <!-- FullCalendar -->
         <link href="css/fullcalendar/dist/fullcalendar.min.css" rel="stylesheet">
         <link href="css/fullcalendar/dist/fullcalendar.print.css" rel="stylesheet" media="print">
@@ -54,7 +52,7 @@
     </head>
 
 
-    <body style="background:#fff; ">
+    <body style="background:#fff; color: black !important;">
 
     <style>
 
@@ -91,24 +89,23 @@
             </a>
         </div>
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <span>Tecnología y Profesionalismo que trabajan por la verdad <br> <b> R.U.C. 1631480-1-671929 D.V. 62</b></span>
+            <span style="font-size: 14px; font-weight: bold;">Tecnología y Profesionalismo que trabajan por la verdad <br> <b style="font-size: 14px; font-weight: bold;"> R.U.C. 1631480-1-671929 D.V. 62</b></span>
         </div>
         <br>
     </div>
     <div class="">
         <section class="content invoice">
             <div class="row invoice-info">
-                <div class="col-xs-6 invoice-col">
-                    <address>
-                        <strong>ATENCION: </strong>Licdo. Luis Perez
-                        <br> COCA COLA
+                <div class="col-xs-5 invoice-col">
+                        <strong style="font-size: 14px; font-weight: bold;">ATENCION: </strong><b style="font-size: 14px; font-weight: bold;">Licdo. Luis Perez
+                        <br> COCA COLA</b>
                         <br>
                     </address>
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6 invoice-col pull-right" style="padding-left: 100px">
                     <address class="pull-right">
-                        <strong >Panamá a 14 de Septiembre del 2017</strong>
+                        <strong style="font-size: 14px; font-weight: bold;">Panamá a 14 de Septiembre del 2017</strong>
                         <br>
                         <br>
                     </address>
@@ -313,7 +310,7 @@
     </div>
 
     <htmlpagefooter name="page-footer" id="padding_space_footer" >
-        <p>/*Aca va el pie de pagina si lo solicitan*/</p>
+        <img src="images/footer.png">
     </htmlpagefooter>
     </body>
 </html>
