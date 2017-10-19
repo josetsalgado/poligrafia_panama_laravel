@@ -8,7 +8,7 @@
   <!-- top tiles -->
   <div class="row tile_count">
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-      <span class="count_top"><i class="fa fa-hospital-o"></i> Citas Pendientes</span>
+      <span class="count_top"><i class="fa fa-hospital-o"></i> Llegaron a cita</span>
       <div class="count">8</div>
     </div>
     <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -42,7 +42,8 @@
     <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="x_panel tile">
         <div class="x_title">
-          <h4 class="dash_titulo"> <i class="fa fa-calendar-o"></i> Citas del Día (05)</h4>
+          <h4 class="dash_titulo"> <i class="fa fa-calendar-o"></i> Viernes 13 Octubre 2017</span>
+          </h4>
           <ul class="nav navbar-right panel_toolbox">
             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
             </li>
@@ -63,62 +64,86 @@
         <div class="x_content">
           <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
             <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">13</p>
+              <p class="month">AM</p>
+              <p class="day">7:00</p>
             </a>
             <div class="media-body">
-              <span class="time pull-right"><b>7:30 AM</b></span>
-              <a class="title" href="#">01 - John Doe <br> Coca Cola</a>
-              <span class="time pull-right"><b>PROCESADA</b></span>
-              <p>Observacion</p>
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
+                Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
             </div>
           </article>
           <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
             <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">13</p>
+              <p class="month">AM</p>
+              <p class="day">7:00</p>
             </a>
             <div class="media-body">
-              <span class="time pull-right"><b>8:00 AM</b></span>
-              <a class="title" href="#">02 -  Josthyn Smith <br> Pepsi </a>
-              <span class="time pull-right"><b>PENDIENTE</b></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a class="title" href="#">Copa<br>
+                Daisy Aryelis Latorraca Cedeño</a>
+              <span class="time pull-right"><b>ASISTIÓ</b></span>
+              <p><b>8-863-1742    </b></p>
             </div>
           </article>
           <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
             <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">13</p>
+              <p class="month">AM</p>
+              <p class="day">7:30</p>
             </a>
             <div class="media-body">
-              <span class="time pull-right"><b>8:30 AM</b></span>
-              <a class="title" href="#">Jose Jose <br>La araña</a>
-              <span class="time pull-right"><b>NO ASISTIO</b></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </article>
-          <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-            <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">13</p>
-            </a>
-            <div class="media-body">
-              <span class="time pull-right"><b>9:30 AM</b></span>
-              <a class="title" href="#">Carol Jaramillo <br> B&G </a>
-              <span class="time pull-right"><b>PENDIENTE</b></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-          </article>
-          <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-            <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">13</p>
-            </a>
-            <div class="media-body">
-              <span class="time pull-right"><b>11:30 AM</b></span>
-              <a class="title" href="#">Raul Abrego <br> ilernus</a>
+              <a class="title" href="#">Proluxsa<br>
+                Edwards Arrocha </a>
               <span class="time pull-right"><b>RE-AGENDADO</b></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p><b>8-838-64</b></p>
+            </div>
+          </article>
+          <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
+            <a class="pull-left date">
+              <p class="month">AM</p>
+              <p class="day">9:30</p>
+            </a>
+            <div class="media-body">
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
+                Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
+            </div>
+          </article>
+          <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
+            <a class="pull-left date">
+              <p class="month">AM</p>
+              <p class="day">10:30</p>
+            </a>
+            <div class="media-body">
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
+                Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>NO ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
+            </div>
+          </article>
+          <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
+            <a class="pull-left date">
+              <p class="month">AM</p>
+              <p class="day">11:30</p>
+            </a>
+            <div class="media-body">
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
+                Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>NO ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
+            </div>
+          </article>
+          <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
+            <a class="pull-left date">
+              <p class="month">AM</p>
+              <p class="day">11:30</p>
+            </a>
+            <div class="media-body">
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
+                Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>NO ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
             </div>
           </article>
         </div>
@@ -128,7 +153,7 @@
     <div class="col-md-6 col-sm-6 col-xs-12">
       <div class="x_panel tile overflow_hidden">
         <div class="x_title">
-          <h4 class="dash_titulo"><i class="fa fa-calendar"></i> Agenda (05)</h4>
+          <h4 class="dash_titulo"><i class="fa fa-calendar"></i> Sabado 14 Octubre 2017</h4>
           <ul class="nav navbar-right panel_toolbox">
             <li>
               <div class="btn-group">
@@ -142,62 +167,82 @@
         <div class="x_content">
           <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
             <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">14</p>
+              <p class="month">AM</p>
+              <p class="day">7:00</p>
             </a>
             <div class="media-body">
-              <span class="time pull-right"><b>7:30 AM</b></span>
-              <a class="title" href="#">Carol Jaramillo <br> B&G </a>
-              <span class="time pull-right"><b>PROCESADA</b></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br> Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
             </div>
           </article>
           <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
             <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">14</p>
+              <p class="month">AM</p>
+              <p class="day">7:00</p>
             </a>
             <div class="media-body">
-              <span class="time pull-right"><b>8:30 AM</b></span>
-              <a class="title" href="#">John Doe <br> Coca Cola</a>
-              <span class="time pull-right"><b>PENDIENTE</b></span>
-              <p>Observacion</p>
+              <a class="title" href="#">Copa<br>  Daisy Aryelis Latorraca Cedeño</a>
+              <span class="time pull-right"><b>ASISTIÓ</b></span>
+              <p><b>8-863-1742</b></p>
             </div>
           </article>
           <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
             <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">14</p>
+              <p class="month">AM</p>
+              <p class="day">7:30</p>
             </a>
             <div class="media-body">
-              <span class="time pull-right"><b>8:30 AM</b></span>
-              <a class="title" href="#">Raul Abrego <br> ilernus</a>
-              <span class="time pull-right"><b>RE-AGENDADA</b></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a class="title" href="#">Proluxsa<br>
+                Edwards Arrocha </a>
+              <span class="time pull-right"><b>RE-AGENDADO</b></span>
+              <p><b>8-838-64</b></p>
             </div>
           </article>
           <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
             <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">14</p>
+              <p class="month">AM</p>
+              <p class="day">9:30</p>
             </a>
             <div class="media-body">
-              <span class="time pull-right"><b>9:30 AM</b></span>
-              <a class="title" href="#">Josthyn Smith <br> Pepsi </a>
-              <span class="time pull-right"><b>PROCESADA</b></span>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
+                Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
             </div>
           </article>
           <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
             <a class="pull-left date">
-              <p class="month">Oct</p>
-              <p class="day">14</p>
+              <p class="month">Am</p>
+              <p class="day">7:30</p>
             </a>
             <div class="media-body">
-              <span class="time pull-right"><b>10:30 AM</b></span>
-              <a class="title" href="#">John Doe <br> Coca Cola</a>
-              <span class="time pull-right"><b>NO ASISTIO</b></span>
-              <p>Observacion</p>
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
+                Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>NO ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
+            </div>
+          </article>
+          <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
+            <a class="pull-left date">
+              <p class="month">AM</p>
+              <p class="day">11:30</p>
+            </a>
+            <div class="media-body">
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br> Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>NO ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
+            </div>
+          </article>
+          <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
+            <a class="pull-left date">
+              <p class="month">AM</p>
+              <p class="day">11:30</p>
+            </a>
+            <div class="media-body">
+              <a class="title" href="#">Bienes Raíces Ágora, S.A<br> Lisbet Del Carmen Garcia Vivas </a>
+              <span class="time pull-right"><b>NO ASISTIÓ</b></span>
+              <p><b>8-884-505</b></p>
             </div>
           </article>
         </div>
@@ -222,7 +267,7 @@
     </div>
   </div>
   </div>
-
+  </div>
   <!-- /page content -->
   <!-- calendar modal -->
   <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
