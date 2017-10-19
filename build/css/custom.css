@@ -4515,3 +4515,9 @@ article#fc_edit:hover {
 .tareas .lista li a:hover {
     text-decoration: line-through;
 }
+.fact-border{
+    border-left: 1px solid;
+}
+.table_estado_cuenta{
+   margin:0px -32px 0px 0px;
+}
