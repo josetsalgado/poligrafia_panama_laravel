@@ -1,13 +1,5 @@
 @extends('layouts.default')
 @section('content')
-    <style>
-        .pagination{
-
-            visibility: hidden;
-        }
-
-    </style>
-
     <div class="">
         <div class="page-title">
             <div class="title_right">
@@ -63,12 +55,12 @@
                         <!-- /.col -->
                         <div class="col-sm-4 col-xs-12 invoice-col">
                             <address>
-                                <strong>COCA COLA</strong>
-                                <br>1631480-1-671929 D.V. 62
-                                <br>795 Freedom Ave, Suite 600
-                                <br>New York, CA 94107
-                                <br>Phone: 1 (804) 123-9876
-                                <br>Email: jon@ironadmin.com
+                                <strong>ADOC DE PANAMA S.A.</strong>
+                                <br>2236582-1-778933 D.V 92
+                                <br>Multiplaza
+                                <br>Panamá
+                                <br>Telefono: 366-5100 / 366-5112/13
+                                <br>Correo: jon@ironadmin.com
                             </address>
                         </div>
                         <!-- /.col -->
@@ -96,49 +88,46 @@
                         </thead>
                         <tbody>
                         <tr>
-                            <td>8</td>
+                            <td>3</td>
                             <td>Pruebas Pre empleo</td>
                             <td>B/.125.00</td>
-                            <td>B/.1,000.00</td>
+                            <td>B/.375.00</td>
                         </tr>
                         <tr>
-                            <td>8</td>
+                            <td>2</td>
                             <td>Pruebas Especificas</td>
-                            <td>B/.150.00</td>
-                            <td>B/.1,200.00</td>
+                            <td>B/.31.25</td>
+                            <td>B/.62.50</td>
                         </tr>
                         </tbody>
                     </table>
                     <div class="row">
                         <div class="col-sm-6 col-xs-12">
                             <span><i>Observaciones:</i></span>
-                            <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
-                                Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                            <p class="text-muted well well-sm no-shadow">
+                                Pagaron 50% el 28 julio 2017 con cheque 1182 <br>
+                                Pagaron el otro 50% el 14 septimbre 2017
                             </p>
                         </div>
 
                         <div class="col-sm-5 col-xs-12 pull-right">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total"><a class=""><b>DESCUENTO</b></a></div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total"><a class="">-B/.760.00</a></div>
-                                </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12">
                                     <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total"><a class=""><b>SUBTOTAL</b></a></div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total"><a class="">B/.760.00</a></div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total"><a class="">B/.437.50</a></div>
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total back_table"><a class=""><b>ITBM (7 %)</b></a></div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total back_table"><a class="">EXCENTO</a></div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total back_table"><a class=""><b>ITBM</b></a></div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total back_table"><a class="">B/. 30.63</a></div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total back_table"><a class=""><b>RETENCIÓN</b></a></div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total back_table"><a class="">EXCENTO</a></div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total"><a class=""><b>RETENCIÓN</b></a></div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total"><a class="">B/. 0,00</a></div>
                                 </div>
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total"><a class=""><b>TOTAL</b></a></div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total"><a class="">B/.760.00</a></div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total back_table"><a class=""><b>TOTAL</b></a></div>
+                                    <div class="col-md-6 col-sm-6 col-xs-6 bordertab_total back_table"><a class="">B/.468.13</a></div>
                                 </div>
                             </div>
                         </div>
@@ -155,7 +144,6 @@
             </div>
         </div>
     </div>
-    </div>
 
     <!-- /page content -->
     <!-- Modal -->
@@ -166,20 +154,23 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <div class="row">
-                        <div class="col-sm-6 col-md-3">
-                            <div class="col-xs-12 invoice-header">
-                                <h1>
-                                    <i class="fa fa-globe"></i> IPTC
-                                </h1>
+
+                        <div class="col-md-8 col-sm-12 col-xs-12 text-center">
+                            <br>
+                            <h4><strong>INTERNATIONAL POLYGRAPH TRAINING CENTER, S.A.</strong></h4><br>
+                            <h5><strong>ESTADO DE CUENTA</strong></h5>
+                        </div>
+                        <div class="col-sm-4 col-md-3">
+                            <div class="col-xs-12 invoice-header fact-border">
+                                <p>
+                                    Edificio Edison Corporate Center
+                                    <br>Piso 8 oficina 8A de la Torre A
+                                    <br>TEl. 279 08 06 / 279 08 04
+                                    <br>PANAMA REP. DE PANAMA
+                                </p>
+                                <h5 class="text-danger"><strong>DOCUMENTO NO FISCAL</strong></h5>
                             </div>
                             <!-- /.col -->
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                        <span><strong>INTERNATIONAL POLYGRAPH TRAINING CENTER, S.A.</strong>
-                            <br> <b> R.U.C. 1631480-1-671929 D.V. 62</b></span>
-                            <br>Edificio Edison Corporate Center, Piso 8 oficina 8A de la Torre A.
-                            <br>Tel. 279 08 06 y 279 08 04
-                            <br>PANAMA, REP. DE PANAMA
                         </div>
                     </div>
                 </div>
@@ -190,101 +181,109 @@
                         <section class="content invoice">
                             <!-- info row -->
                             <div class="row invoice-info">
-                                <div class="col-sm-6 invoice-col">
-                                    <address>
-                                        <strong>COCA COLA</strong>
-                                        <br>1631480-1-671929 D.V. 62
-                                        <br>795 Freedom Ave, Suite 600, New York, CA 94107
-                                        <br>Phone: 1 (804) 123-9876
-                                        <br>Email: jon@ironadmin.com
-                                    </address>
+                                <div class="col-sm-2 invoice-col table_estado_cuenta">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Nombre:</li>
+                                        <li class="list-group-item">Dirección:</li>
+                                        <li class="list-group-item">País:</li>
+                                        <li class="list-group-item">Teléfono</li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-7 invoice-col table_estado_cuenta">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">Gaming & Services de Panamá  </li>
+                                        <li class="list-group-item">Calle 50 y 73 este San Francisco</li>
+                                        <li class="list-group-item">Panamá</li>
+                                        <li class="list-group-item">270-8766</li>
+                                    </ul>
                                 </div>
                                 <!-- /.col -->
-                                <div class="col-sm-6 invoice-col pull-right">
-                                    <address class="pull-right">
-                                        <strong >Panamá a 14 de Septiembre del 2017</strong>
-                                        <br>
-                                        <br>
-                                    </address>
+                                <div class="col-sm-3 invoice-col">
+                                    <ul class="list-group pull-right">
+                                        <li class="list-group-item"> <strong>14 de Noviembre del 2017</strong></li>
+                                    </ul>
                                 </div>
                                 <!-- /.col -->
                             </div>
                             <!-- /.row -->
                             <!-- row -->
                             <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <h5 class="text-center"><b>ESTADO DE CUENTA</b></h5>
+                                <!-- Table row -->
+                                <div class="row">
+                                    <div class="col-xs-12 table">
+                                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                                            <thead>
+                                            <tr>
+                                                <th>N°</th>
+                                                <th>EVALUACION POLIGRÁFICA </th>
+                                                <th>COSTO UNITARIO</th>
+                                                <th>VALOR TOTAL</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Pruebas Pre empleo
+                                                    <br>
+                                                    <ul>
+                                                        <li>Angel Mario Ruiz Saenz</li>
+                                                        <li>Alexis Antonio Cruz</li>
+                                                        <li>Alexander Gonzales Rodriguez</li>
+                                                    </ul>
+                                                </td>
+                                                <td>B/.125.00</td>
+                                                <td>B/.375.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Pruebas Especificas
+                                                    <br>
+                                                    <ul>
+                                                        <li>Sara Peña</li>
+                                                        <li>Oscar Solano</li>
+                                                    </ul>
+                                                </td>
+                                                <td>B/.150.00</td>
+                                                <td>B/.62.50</td>
+                                            </tr>
+                                            <tr>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.col -->
                                 </div>
-                            </div>
-                            <!-- /.row -->
+                                <!-- /.row -->
 
-                            <!-- Table row -->
-                            <div class="row">
-                                <div class="col-xs-12 table">
-                                    <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
-                                        <thead>
-                                        <tr>
-                                            <th>N°</th>
-                                            <th>EVALUACION POLIGRÁFICA </th>
-                                            <th>COSTO UNITARIO</th>
-                                            <th>VALOR TOTAL</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>Pruebas Pre empleo</td>
-                                            <td>B/.125.00</td>
-                                            <td>B/.1,200.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>Pruebas Especificas</td>
-                                            <td>B/.150.00</td>
-                                            <td>B/.1,200.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td><b>DESCUENTO</b></td>
-                                            <td><b>-B/.55.00</b></td>
-                                            <td><b>-B/.440.00</b></td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
+                                <div class="row">
+                                    <!-- accepted payments column -->
+                                    <div class="col-sm-3 col-xs-12">
+                                        <strong>Recibido por:</strong>
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-sm-6 col-xs-9 pull-right">
+                                        <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                                            <thead>
+                                            <tr>
+                                                <th>SUBTOTAL </th>
+                                                <td>B/.437.50</td>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <th>ITBM (7%)</th>
+                                                <td>30.63</td>
+                                            </tr>
+                                            <tr>
+                                                <th>TOTAL</th>
+                                                <td>B/.468.13</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.col -->
                                 </div>
-                                <!-- /.col -->
-                            </div>
-                            <!-- /.row -->
-
-                            <div class="row">
-                                <!-- accepted payments column -->
-                                <div class="col-sm-3 col-xs-12">
-                                    <strong>Recibido por:</strong>
-                                </div>
-                                <!-- /.col -->
-                                <div class="col-sm-6 col-xs-9 pull-right">
-                                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
-                                        <thead>
-                                        <tr>
-                                            <th>SUBTOTAL </th>
-                                            <td>B/.760.00</td>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <th>ITBM (7%)</th>
-                                            <td>EXCENTO</td>
-                                        </tr>
-                                        <tr>
-                                            <th>TOTAL</th>
-                                            <td>B/.760.00</td>
-                                        </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <!-- /.col -->
-                            </div>
-                            <!-- /.row -->
+                                <!-- /.row -->
                         </section>
                     </div>
                     <!-- /content modal -->
@@ -296,8 +295,6 @@
         </div>
     </div>
     <!-- /. modal -->
-
-    <!-- /page content -->
 
     <script src="../build/js/custom.min.js"></script>
 
