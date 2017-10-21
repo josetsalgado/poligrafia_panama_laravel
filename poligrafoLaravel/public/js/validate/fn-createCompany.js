@@ -5,33 +5,42 @@ $(document).ready(function(){
         errorClass: "text-danger",
         
 	rules: {
-            name_company: { required:true },
-            ruc_company: { required:true },
-            tel_company: { required:true, number:true },
-            email_compamy: { required:true, email: true  },
-            address_company: { required:true },
+            tel_company: {  number:true },
+            email_compamy: { email: true  },
+            cost_test_pre_employment: { number: true  },
+            cost_specific_test: { number: true  },
+            cost_routine_test: { number: true  },
+            reevaluation_test_cost: { number: true  },
 	},
 	messages: {
-            name_company: { required: "El campo nombre de la compañia es obligatorio." },
-            ruc_company: { required: "El campo ruc es obligatorio." },
+            
             tel_company: {
-                required: "El campo telefono es obligatorio.",
                 number: "Debe ingresar un campo con formato correo",
             },
             email_compamy: { 
-                    required: "El campo email es obligatorio.",
                     email: "Debe ingresar un campo con formato correo",
-                },
-            address_company: { required: "El campo direccion es obligatorio." },
+            },
+            cost_test_pre_employment: {
+                number: "Debe ingresar un campo con formato correo",
+            },
+            cost_specific_test: {
+                number: "Debe ingresar un campo con formato correo",
+            },
+            cost_routine_test: {
+                number: "Debe ingresar un campo con formato correo",
+            },
+            reevaluation_test_cost: {
+                number: "Debe ingresar un campo con formato correo",
+            },
 	},
 	submitHandler: function(form){
             var dataString = $('#createCompany').serialize();
+            console.log(dataString);
             $.ajax({
 	        type: "POST",
 	        url: "create_company",
 	        data: dataString,
                 success: function (data) {
-                    alert("bien");
                     $('#createCompany')[0].reset();
                 }, error: function (err) {
                     if (err.status === 422) {
@@ -53,6 +62,8 @@ $(document).ready(function(){
                                 $(this).remove();
                             });
                         }, 4000);
+                        $('body,html').animate({scrollTop : 0}, 500);
+                        return false;
                     } else {
                         /// do some thing else
                     }

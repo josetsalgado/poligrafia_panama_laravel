@@ -49,6 +49,10 @@ class CompanyController extends Controller
             'tel_company' => $request->tel_company,
             'email_compamy' => $request->email_compamy,
             'address_company' => $request->address_company,
+            'cost_test_pre_employment' => $request->cost_test_pre_employment,
+            'cost_specific_test' => $request->cost_specific_test,
+            'cost_routine_test' => $request->cost_routine_test,
+            'reevaluation_test_cost' => $request->reevaluation_test_cost,
         ]);
 
         return view('company.create');
@@ -63,21 +67,22 @@ class CompanyController extends Controller
     public function ValidateCreate($request)
     {
         $this->validate($request,[
-                'name_company' => 'required',
-                'ruc_company' => 'required',
-                'tel_company' => 'required|numeric',
-                'email_compamy' => 'required|email|unique:itcp_companys,email_compamy',
-                'address_company' => 'required',
+                
+                'tel_company' => 'numeric',
+                'email_compamy' => 'email|unique:itcp_companys,email_compamy',
+                'cost_test_pre_employment' => 'numeric',
+                'costo_prueba_especifica' => 'numeric',
+                'cost_routine_test' => 'numeric',
+                'reevaluation_test_cost' => 'numeric',
             ], 
             [
-                'name_company.required' => trans("validations.input_required", ['input' => 'nombre']),
-                'ruc_company.required' => trans("validations.input_required", ['input' => 'ruc']),
-                'tel_company.required' => trans("validations.input_required", ['input' => 'telefono']),
                 'tel_company.numeric' => trans("validations.input_format", ['input' => 'telefono']),
-                'email_compamy.required' => trans("validations.input_required", ['input' => 'correo']),
                 'email_compamy.email' => trans("validations.input_format", ['input' => 'correo']),
                 'email_compamy.unique' => trans("validations.input_unique", ['input' => 'correo', 'other' => 'correo']),
-                'address_company.required' => trans("validations.input_required", ['input' => 'direccion']),
+                'cost_test_pre_employment.numeric' => trans("validations.input_format", ['input' => 'prueba pre empleo']),
+                'costo_prueba_especifica.numeric' => trans("validations.input_format", ['input' => 'prueba  especifica']),
+                'cost_routine_test.numeric' => trans("validations.input_format", ['input' => 'prueba  de rutina']),
+                'reevaluation_test_cost.numeric' => trans("validations.input_format", ['input' => 'prueba de reevaluación']),
             ]
         );
     }
@@ -89,7 +94,8 @@ class CompanyController extends Controller
      */
     public function show()
     {
-        return view("company.show");
+        $company = Company::all();
+        return view("company.show", compact("company"));
     }
 
     /**
