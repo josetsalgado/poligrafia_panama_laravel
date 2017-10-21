@@ -47,7 +47,7 @@ class BudgetController extends Controller
      * @return Response
      */
     function pdfBudget($id) {
-        
+
         $budgets = DB::table('itcp_budgets')
             ->select('*')
             ->where('itcp_budgets.id_budget', '=', Crypt::decrypt($id))
@@ -89,18 +89,16 @@ class BudgetController extends Controller
      */
     public function show()
     {   
-        $budgets = DB::table('itcp_budgets')
-            ->select('*')
-            ->get();
-        
+        $budgets = Budget::all();
+
         foreach ($budgets as $budget){
             $budget->id_budget = Crypt::encrypt($budget->id_budget);
             $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
             $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
             $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
-            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);    
+            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
         }
-        
+
         return view('budget.show', compact('budgets'));
     }
     

@@ -70,30 +70,17 @@
 
             margin-top: 30px !important;
         }
-
+        #vineta_listas{
+            font-weight: bold;
+        }
     </style>
 
-    <htmlpageheader name="page-header">
-
-        <div id="div_header">
-
-
-        </div>
-
+    {{--header--}}
+    <htmlpageheader name="page-header" class="thumbnail thumbnail_logo">
+        <img src="images/header_poligrafo.png" style="padding-bottom: 10px">
     </htmlpageheader>
 
-    <div class="row">
-        <div class="col-sm-6 col-md-3" id="padding_space">
-            <a  class="thumbnail thumbnail_logo">
-                <img src="images/logo.png">
-            </a>
-        </div>
-        <div class="col-md-12 col-sm-12 col-xs-12">
-            <span style="font-size: 14px; font-weight: bold;">Tecnología y Profesionalismo que trabajan por la verdad <br> <b style="font-size: 14px; font-weight: bold;"> R.U.C. 1631480-1-671929 D.V. 62</b></span>
-        </div>
-        <br>
-    </div>
-    <div class="">
+    <div class="" style="padding-top: 15%">
         <section class="content invoice">
             <div class="row invoice-info">
                 <div class="col-xs-5 invoice-col">
@@ -115,83 +102,86 @@
 
             <div class="row" style="text-align: justify">
                 <div class="col-md-12 col-sm-12 col-xs-12" >
-                    <h5 style="font-size: 14px; font-weight: bold;"><b>¿Quiénes Somos?</b></h5>
+                    <h5 style="font-size: 14px; font-weight: bold; padding-left: 15px"><b>¿Quiénes Somos?</b></h5>
                     <div style="padding-left: 30px;">
-
                         <div>
-                            * Somos una empresa con más de  20 años de experiencia en todo el ámbito de la poligrafía, tenemos oficinas en la <b>Ciudad de Panamá, Provincias Centrales y Chiriquí.</b>
+                            <strong id="vineta_listas">*</strong> Somos una empresa con más de  20 años de experiencia en todo el ámbito de la poligrafía, tenemos oficinas en la <b>Ciudad de Panamá, Provincias Centrales y Chiriquí.</b>
                         </div>
                         <div>
-                            * Realizamos evaluaciones poligráficas con la más alta calidad y profesionalismo, <b>todos nuestros poligrafista son Psicólogos. </b>
+                            <strong id="vineta_listas">*</strong> Realizamos evaluaciones poligráficas con la más alta calidad y profesionalismo, <b>todos nuestros poligrafista son Psicólogos. </b>
                         </div>
                         <div>
-                            * Somos la única empresa privada en Panamá,  que realiza proceso de control de calidad en todos sus procesos.
+                            <strong id="vineta_listas">*</strong> Somos la única empresa privada en Panamá,  que realiza proceso de control de calidad en todos sus procesos.
                         </div>
                     </div>
                     <br>
                     <p>Contamos con una escuela de poligrafistas la cual está acreditada internacionalmente por la APA (AMERICAN POLYGRAPH ASSOCIATION), nuestro director es ex presidente de la APA y nuestra escuela a entrenado a la unidad de poligrafía de diversas instituciones gubernamentales en diferentes pises de Latinoamérica, desde México, hasta Argentina y en nuestro país, participó en el entrenamiento de las unidades de poligrafía de: La Policía Nacional, el Senan, Senafrond, Dirección de Migración entre otros. <br>
                         Somos distribuidores exclusivos de equipos poligráficos computarizados Lafayette en Panamá.
-                    </p> <br>
-                    <h5 style="font-size: 14px;font-weight: bold;"><b>¿Por qué utilizar el polígrafo?</b></h5>
-                    <p>El Polígrafo es utilizado mundialmente por gobiernos federales y sus diversas instituciones, servicios de inteligencia, instituciones militares, policía, agencias de investigación, así como seguimiento para procesos de libertad condicional. Los gobiernos ponen su confianza en esta herramienta científica, por su gran utilidad en la toma de decisiones. </p>
-                    <p>En el sector privado, es una herramienta que permite conocer elementos de lealtad, honestidad y confiabilidad, en  áreas de investigación criminal, selección y reclutamiento de personal, así como también en las evaluaciones periódicas al personal activo, sobretodo en áreas sensibles.  </p>
-                    <p>Estamos convencidos de que la correcta y puntual evaluación de estos factores tiene un impacto directo en la obtención de las metas de su organización y en el consecuente desarrollo exitoso.</p>
-                    <p>A continuación le presentamos un resumen de nuestros servicios, y nos reiteramos nuevamente a sus órdenes en materia de evaluaciones poligráficas.</p> <br>
-
+                    </p>
+                    <div style="line-height: normal; text-align:justify; text-indent: 3em">
+                        <h5 style="font-size: 14px;font-weight: bold;padding-left: 10px;"><b>¿Por qué utilizar el polígrafo?</b></h5>
+                        <p>El Polígrafo es utilizado mundialmente por gobiernos federales y sus diversas instituciones, servicios de inteligencia, instituciones militares, policía, agencias de investigación, así como seguimiento para procesos de libertad condicional. Los gobiernos ponen su confianza en esta herramienta científica, por su gran utilidad en la toma de decisiones.</p>
+                        <p>En el sector privado, es una herramienta que permite conocer elementos de lealtad, honestidad y confiabilidad, en  áreas de investigación criminal, selección y reclutamiento de personal, así como también en las evaluaciones periódicas al personal activo, sobretodo en áreas sensibles.  </p>
+                        <p>Estamos convencidos de que la correcta y puntual evaluación de estos factores tiene un impacto directo en la obtención de las metas de su organización y en el consecuente desarrollo exitoso.</p>
+                        <p>A continuación le presentamos un resumen de nuestros servicios, y nos reiteramos nuevamente a sus órdenes en materia de evaluaciones poligráficas.</p> <br>
+                    </div>
                     <h5 style="font-size: 14px; font-weight: bold;"><b>Tipos de Evaluaciones</b></h5>
-                    <h5 style="font-size: 14px; padding-left: 30px;font-weight: bold;"><b>* Pre-empleo</b></h5>
-                    <p style="padding-left: 50px;">En este tipo de evaluaciones se busca prevenir situaciones delicadas al conocer con anticipación elementos de honestidad y confiabilidad del candidato. El objetivo es  prevenir la entrada a su empresa de un delincuente ocupacional potencial. Se revisa y entrega en el reporte:
-                    <div style="padding-left:80px;">* Honestidad:
-                        <div style="padding-left:50px;">* En su vida diaria</div>
-                        <div style="padding-left:50px;">* En su solicitud</div>
+                    <h5 style="font-size: 14px; padding-left: 50px;font-weight: bold;"><b>* Pre-empleo</b></h5>
+                    <p>En este tipo de evaluaciones se busca prevenir situaciones delicadas al conocer con anticipación elementos de honestidad y confiabilidad del candidato. El objetivo es  prevenir la entrada a su empresa de un delincuente ocupacional potencial. Se revisa y entrega en el reporte:
+                    <br> <br> <br> <br>  <br> <br> <br> <br> <br><br> <br> <br> <br><br> <br>
+                    <div style="padding-left:80px; padding-top: 10%"><strong id="vineta_listas">*</strong> Honestidad:
+                        <div style="padding-left:50px;"><strong id="vineta_listas">-</strong> En su vida diaria</div>
+                        <div style="padding-left:50px;"><strong id="vineta_listas">-</strong> En su solicitud</div>
                     </div>
                     <div style="padding-left:80px;">
-                        <div>* Perfil básico de personalidad</div>
-                        <div>* Antecedentes Personales</div>
-                        <div>* Antecedentes laborales</div><br><br><br>
-                        <div>* Actividades Delictivas</div>
-                        <div>* Hábitos Personales (Consumo de alcohol y/o drogas)</div>
-                        <div>* Antecedentes Penales, asociacion delictiva</div>
-                        <div>* Motivos reales de salida de cada empleo y motivos reales por lo que desea ingresar a la empresa solicitante.</div>
+                        <div><strong id="vineta_listas">*</strong> Perfil básico de personalidad</div>
+                        <div><strong id="vineta_listas">*</strong> Antecedentes Personales</div>
+                        <div><strong id="vineta_listas">*</strong> Antecedentes laborales</div>
+                        <div><strong id="vineta_listas">*</strong> Actividades Delictivas</div>
+                        <div><strong id="vineta_listas">*</strong> Hábitos Personales (Consumo de alcohol y/o drogas)</div>
+                        <div><strong id="vineta_listas">*</strong> Antecedentes Penales, asociacion delictiva</div>
+                        <div><strong id="vineta_listas">*</strong> Motivos reales de salida de cada empleo y motivos reales por lo que desea ingresar a la empresa solicitante.</div>
                     </div>
-                    <h5 style="font-size: 14px; font-weight: bold; padding-left: 30px;"><b>* Evaluaciones Periódicas</b></h5>
+                    <h5 style="font-size: 14px; font-weight: bold; padding-left: 50px;"><b><strong id="vineta_listas">* </strong>Evaluaciones Periodicas</b></h5>
+                    <p style="padding-left: 50px;">En este tipo de evaluaciones se busca confirmar la confiabilidad y honestidad de los empleados que ya están laborando.</p>
+                    <h5 style="font-size: 14px; font-weight: bold; padding-left: 50px;"><b><strong id="vineta_listas">* </strong>Evaluaciones para Casos Específicos</b></h5>
                     <p style="padding-left: 50px;">Es la llamada evaluación especial o específica, en donde se evalúa al individuo de quien se sospecha participación en cualquier actividad ilícita y consta de los siguientes puntos:</p>
                     <div style="padding-left:80px;">
-                        <div>* Autorización escrita del evaluado</div>
-                        <div>* Análisis médico-psicológico del individuo para determinar la conveniencia de aplicar la evaluación</div>
-                        <div>* Revisión del caso</div>
-                        <div>* Aplicación y análisis de gráficas</div>
-                        <div>* Emisión de un diagnóstico</div>
+                        <div><strong id="vineta_listas">*</strong> Autorización escrita del evaluado</div>
+                        <div><strong id="vineta_listas">*</strong>Análisis médico-psicológico del individuo para determinar la conveniencia de aplicar la evaluación</div>
+                        <div><strong id="vineta_listas">*</strong>Revisión del caso</div>
+                        <div><strong id="vineta_listas">*</strong> Aplicación y análisis de gráficas</div>
+                        <div><strong id="vineta_listas">*</strong> Emisión de un diagnóstico</div>
                     </div>
                     <br>
                     <h5 style="font-size: 14px; font-weight: bold;"><b>Casos susceptibles de evaluación</b></h5>
                     <p>Todos aquellos donde la veracidad en la declaración de una persona sea el factor determinante.</p><br>
-                    <h5 style="font-size: 14px; font-weight: bold;"><b>Confiabilidad y Validez del uso del polígrafo</b></h5>
+                    <h5 style="font-size: 14px; font-weight: bold; padding-left: 20px"><b><strong id="vineta_listas">* </strong>Confiabilidad y Validez del uso del polígrafo</b></h5>
                     <p>Para probar la confiabilidad y validez del uso del polígrafo se han realizado más de 250  investigaciones a nivel mundial, en los cuales se han encontrado los siguientes porcentajes de validez:
                         <div style="padding-left: 30px;" >
-                    <p>* 90%  al 95%</p>
+                    <p style="font-weight: bold"><strong id="vineta_listas">*</strong> 90%  al 95%</p>
                 </div>
                 <br>
                 <h5 style="font-size: 14px; font-weight: bold;"><b>Calidad y Profesionalismo</b></h5>
                 <div style="padding-left: 30px;">
-                    <div>* Una evaluación poligráfica tiene una duración aproximada de hora y media a 2 horas </div>
-                    <div>* Se lleva a cabo en apego estricto a las garantías individuales y a los derechos humanos. </div>
-                    <div>* Se garantiza el manejo de la confidencialidad de la información y respeto a la intimidad de los evaluados. </div>
-                    <div>* Nuestros poligrafistas cuentan con doble acreditación; nacional e internacional</div>
-                    <div>* Seguimiento estricto de los  estándares internacionales en el procedimiento</div>
-                    <div>* Nos acoplamos siempre a las necesidades del cliente, en cuanto al tipo de preguntas que ustedes quieran hacer.</div>
+                    <div><strong id="vineta_listas">*</strong> Una evaluación poligráfica tiene una duración aproximada de hora y media a 2 horas </div>
+                    <div><strong id="vineta_listas">*</strong> Se lleva a cabo en apego estricto a las garantías individuales y a los derechos humanos. </div>
+                    <div><strong id="vineta_listas">*</strong> Se garantiza el manejo de la confidencialidad de la información y respeto a la intimidad de los evaluados. </div>
+                    <div><strong id="vineta_listas">*</strong> Nuestros poligrafistas cuentan con doble acreditación; nacional e internacional</div>
+                    <div><strong id="vineta_listas">*</strong> Seguimiento estricto de los  estándares internacionales en el procedimiento</div>
+                    <br><br><br>
+                    <div style="padding-top: 12%">* Nos acoplamos siempre a las necesidades del cliente, en cuanto al tipo de preguntas que ustedes quieran hacer.</div>
                 </div>
-                <br>
-                <h5 style="font-size: 14px; font-weight: bold;"><b>Requisitos para el Evaluado</b></h5>
+                <h5 style="font-size: 14px; font-weight: bold;" ><b>Requisitos para el Evaluado</b></h5>
                 <div style="padding-left: 30px;">
-                    <div>* Que tenga conocimiento que viene a una prueba de polígrafo</div>
-                    <div>* Que sepa que va a estar al menos dos horas con nosotros en esta prueba</div>
-                    <div>* Que no esté visiblemente enfermo (con un resfriado y tos que no pueda ni hablar)</div>
+                    <div><strong id="vineta_listas">-</strong>Que tenga conocimiento que viene a una prueba de polígrafo</div>
+                    <div><strong id="vineta_listas">-</strong> Que sepa que va a estar al menos dos horas con nosotros en esta prueba</div>
+                    <div><strong id="vineta_listas">-</strong> Que no esté visiblemente enfermo (con un resfriado y tos que no pueda ni hablar)</div>
                 </div>
                 <br>
                 <h5 style="font-size: 14px; font-weight: bold;"><b>Forma de Pago</b></h5>
                 <p>Cheque, ACH, Tarjeta de crédito  o transferencia electrónica. Otorgamos crédito a 15 o 30 días.</p>
-                <br><br><br><br><br><br><br><br><br><br><br><br>
+
                 <div id="padding_space_header">
                     <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>PRUEBAS POLIGRAFICAS EN PANAMA, PROVINCIAS CENTRALES DAVID</b></h5>
                     <div class="col-md-12" style="position: relative; min-height: 1px; float: left; padding-right: 10px; padding-left: 10px">
@@ -220,7 +210,6 @@
                             </table>
                         </div>
                     </div>
-                    <br>
 
                     <h5 class="text-center" style="font-size: 14px; font-weight: bold; "><b>PRUEBAS POLIGRAFICAS EN PANAMA, PROVINCIAS CENTRALES DAVID</b></h5>
                     <div class="col-md-12">
@@ -310,7 +299,7 @@
     </div>
 
     <htmlpagefooter name="page-footer" id="padding_space_footer" >
-        <img src="images/footer.png">
+        <img src="images/footerpdf_poligrafo.png" style="padding-bottom: 10px">
     </htmlpagefooter>
     </body>
 </html>

@@ -34,6 +34,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
+
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                         <thead>
                         <tr>
@@ -48,105 +49,29 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>23/09/2017</td>
-                            <td>Coca Cola</td>
-                            <td>Jose María</td>
-                            <td>
-                                +58 555 55 55
-                            </td>
-                            <td>
-                                correo@correo.com
-                            </td>
-                            <td>
-                                RRHH
-                            </td>
-                            <td>Observaciones</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
-                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23/09/2017</td>
-                            <td>Consultores</td>
-                            <td>Jhon derechos</td>
-                            <td>
-                                +58 555 55 55
-                            </td>
-                            <td>
-                                correo@correo.com
-                            </td>
-                            <td>
-                                SEGURIDAD
-                            </td>
-                            <td>Observaciones</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
-                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23/09/2017</td>
-                            <td>B&G</td>
-                            <td>Maria Brito</td>
-                            <td>
-                                +58 555 55 55
-                            </td>
-                            <td>
-                                correo@correo.com
-                            </td>
-                            <td>
-                                TALENDO HUMANO
-                            </td>
-                            <td>Observaciones</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
-                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23/09/2017</td>
-                            <td>Ilernus</td>
-                            <td>Candy Candy </td>
-                            <td>
-                                +58 555 55 55
-                            </td>
-                            <td>
-                                correo@correo.com
-                            </td>
-                            <td>
-                                RRHH
-                            </td>
-                            <td>Observaciones</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a><i class="fa fa-download"></i>PDF</a>
-                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>23/09/2017</td>
-                            <td>Pepsi</td>
-                            <td>Pedro Perez</td>
-                            <td>
-                                +58 555 55 55
-                            </td>
-                            <td>
-                                correo@correo.com
-                            </td>
-                            <td>
-                                INFORMATICA
-                            </td>
-                            <td>Observaciones</td>
-                            <td>
-                                <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
-                                <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>                                <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
-                            </td>
-                        </tr>
+                        @foreach($budgets as $budget)
+                            <tr>
+                                <td>{{ $budget->date_init_budget }}</td>
+                                <td>{{ $budget->company_id[0]->name_company }}</td>
+                                <td>{{ $budget->client_id[0]->name_client }}</td>
+                                <td>
+                                    {{ $budget->company_id[0]->tel_company }}
+                                </td>
+                                <td>
+                                    {{ $budget->client_id[0]->email_client }}
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>Observaciones</td>
+                                <td>
+                                    <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
+                                    <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>
+                                    <button type="button" class="btn btn-dark btn-xs"><i class="fa fa-envelope"></i> Enviar </button>
+                                </td>
+                            </tr>
+                        @endforeach
+
                         </tbody>
                     </table>
 
