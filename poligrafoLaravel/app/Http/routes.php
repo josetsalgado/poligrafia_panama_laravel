@@ -61,7 +61,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     //borrar clientes
     Route::get('/delete_client/{id}', 'ClientController@destroy');
-    
+
     //solicitudes de citas
     Route::get('/quotes_client', 'QuotesController@index');
 
@@ -79,7 +79,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     //actualizar datos de la cita
     Route::post('/update_quote', 'QuotesController@update');
-    
+
     //solicitudes de cotizaciones
     Route::get('/butget_client', 'BudgetController@create');
 
@@ -94,7 +94,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     //pdf cotizaciones
     Route::get('/pdf_butget/{id}', 'BudgetController@pdfBudget');
-    
+
     //Crear registro de resultados
     Route::get('/create_result', 'ResultController@create');
 
@@ -130,7 +130,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     //pdf estado de cuenta
     Route::get('/pdf_account', 'AccountStatusController@pdfE');
-    
+
     //crear empresa
     Route::get('/create_company', 'CompanyController@create');
 
@@ -139,7 +139,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     //ver empresas
     Route::get('/show_company', 'CompanyController@show');
-    
+
     //registro de pago
     Route::get('/payment_record', 'AccountStatusController@show');
 
@@ -147,9 +147,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/show_accountstatus', 'AccountStatusController@accountStatus');
     //modal para crear pago de estado de cuentas
     Route::get('/create_payment/{id}/{totalPay}', 'AccountStatusController@createPayment');
-    
+
     Route::post('/create_payment', 'AccountStatusController@store');
-    
+
 
     //Pdf de informe de prueba
     Route::get('/pdf_test', 'TestReportController@pdfresult');

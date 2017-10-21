@@ -47,7 +47,7 @@ class TestReportController extends Controller
      * @param  Request  $request
      * @return Response
      */
- 
+
     public function show()
     {
 
@@ -63,7 +63,7 @@ class TestReportController extends Controller
      */
     public function edit()
     {
-        
+
     }
 
     /**
@@ -75,7 +75,7 @@ class TestReportController extends Controller
      */
     public function update()
     {
-    
+
     }
 
     /**
@@ -90,6 +90,7 @@ class TestReportController extends Controller
     }
 
     function pdfresult(){
+
         $data = [
             'foo' => 'bar'
         ];
