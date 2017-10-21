@@ -14,7 +14,7 @@
     <link href="css/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link media="all" type="text/css" rel="stylesheet" href="public/css/bootstrap/dist/css/bootstrap.min.css">
+    <link media="all" type="text/css" rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
@@ -48,40 +48,48 @@
 
 <style type="text/css">
 
-    #body_test {
-        background:#fff;
-    }
+    .color_body{color: #73879C !important;}
+    @page {header: page-header;footer: page-footer;}
+    #padding_logo_top{padding-top: 10%;}
+    #title_principal{font-size: 35px;}
+    h3{ color: #73879C !important; font-weight: bold;  }
+    .border_info{  border-bottom: 2px solid #E6E9ED;padding: 1px 5px 6px 5px; margin-bottom: 10px;border-top:2px solid #E6E9ED;padding-top: 15px; }
+    .border_left{  position: absolute;  height: 65px;  border-right: 2px solid #ADB2B5;  margin-top: 5px; }
+    .border_left_2{  position: absolute;  height: 50px;  border-right: 2px solid #ADB2B5;  margin-top: 4px;}
 
 </style>
 
 <body id="body_test">
-<div class="">
+{{--header--}}
+<htmlpageheader name="page-header" class="thumbnail thumbnail_logo">
+    <img src="images/header_poligrafo.png">
+</htmlpageheader>
+<div class="color_body" >
     <div class="">
-        <div class="title_right">
-            <h2>Informe de Pueba</h2>
+        <div id="padding_logo_top" class="title_right">
+            <h2 id="title_principal" class="color_body"><img src="images/title_ico.png"> Informe de Pueba</h2>
         </div>
     </div>
 
     <div class="clearfix"></div>
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="x_panel">
-
+        <div class="x_panel x_title">
             <div class="x_content">
-                <div class="row tile_count">
-                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                        <span class="count_top"> Nombre del Evaluado</span>
+                <div class="row tile_count border_info">
+                    <div class="col-xs-3 invoice-col tile_stats_count border_left">
+                        <span class="count_top"><img src="images/user_ico.png"> Nombre del Evaluado</span>
                         <h3><b>Josthyn Smith</b></h3>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                        <span class="count_top"> Cédula</span>
+                    <div class="col-xs-2 tile_stats_count border_left">
+                        <span class="count_top"><img src="images/user_ico.png"> Cédula</span>
                         <h3><b>8-920-631</b></h3>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                        <span class="count_top">Cliente</span>
+                    <div class="col-xs-2  tile_stats_count border_left_2">
+                        <span class="count_top"><img src="images/maletin_ico.png"> Cliente</span>
                         <h3><b>Felipe Mota</b></h3>
                     </div>
-                    <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
-                        <span class="count_top">Fecha</span>
+                    <div class="col-sm-3 tile_stats_count ">
+                        <span class="count_top"><img src="images/calendario_ico.png"> Fecha</span>
                         <h3><b>27-07-2017</b></h3>
                     </div>
                 </div>
@@ -257,6 +265,9 @@
         </div>
     </div>
 </div>
+<htmlpagefooter name="page-footer" id="padding_space_footer" >
+    <img src="images/footerpdf_poligrafo.png" style="padding-bottom: 10px">
+</htmlpagefooter>
 
 </body>
 </html>
