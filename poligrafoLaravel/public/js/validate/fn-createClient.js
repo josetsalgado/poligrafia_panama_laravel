@@ -5,24 +5,10 @@ $(document).ready(function(){
         errorClass: "text-danger",
         
 	rules: {
-            name: { required:true },
-            email: { required:true, email: true  },
-            tel: { required:true, number:true },
-            country: { required:true },
-            city: { required:true },
+            empresa: { required:true },
 	},
 	messages: {
-            name: { required: "El campo nombre es obligatorio." },
-            email: { 
-                    required: "El campo email es obligatorio.",
-                    email: "Debe ingresar un campo con formato correo",
-                },
-            tel: { 
-                    required: "El campo telefono es obligatorio.",
-                    number: "Debe ingresar un campo con formato correo",
-                },
-            country: { required: "El campo rol es obligatorio." },
-            city: { required: "El campo clave es obligatorio." },
+            empresa: { required: "El campo empresa es obligatorio." },
 	},
 	submitHandler: function(form){
             var dataString = $('#createClient').serialize();
@@ -31,10 +17,10 @@ $(document).ready(function(){
 	        type: "POST",
 	        url: "create_client",
 	        data: dataString,
-	        success: function(data) {
-                   	alert("bien");
-                        $('#createClient')[0].reset();
-	       	},error: function (err) {
+	        success: function (data) {
+                    alertify.success('El nuevo cliente se a agregado de forma correcta');
+                    $('#createClient')[0].reset();
+                },error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.
                         //show them somewhere in the markup
@@ -54,6 +40,7 @@ $(document).ready(function(){
                                 $(this).remove();
                             });
                         }, 4000);
+                        $('body,html').animate({scrollTop : 0}, 500);
                     } else {
                         /// do some thing else
                     }

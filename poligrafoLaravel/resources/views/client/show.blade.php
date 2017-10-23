@@ -21,6 +21,7 @@
                     </ul>
                     <div class="clearfix"></div>
                 </div>
+               
                 <div class="x_content">
                     <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                         <thead>
@@ -30,6 +31,7 @@
                                 <th>{{ trans("poligrafo.email") }}</th>
                                 <th>{{ trans("poligrafo.city") }}</th>
                                 <th>{{ trans("poligrafo.edit") }}</th>
+                                <th>{{ trans("poligrafo.position") }}</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -38,7 +40,8 @@
                                     <td>{{ $client->name_client }}</td>
                                     <td>{{ $client->tel_client }}</td>
                                     <td>{{ $client->email_client }}</td>
-                                    <td>{{ $client->name_city }}</td>
+                                    <td>{{ $client->city }}</td>
+                                    <td>{{ $client->position }}</td>
                                     <td>
                                         <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal" href="show_client/{{ $client->id_client }}"><i class="fa fa-pencil"></i> {{ trans("poligrafo.edit") }}</a>
                                         <button class="btn btn-danger btn-xs" id="delete" name="delete" value="{{ $client->id_client }}" onclick="fnDelete('{{ $client->id_client }}')" data-toggle="tooltip" data-placement="right" title="Eliminar cliente {{ $client->name_client }}">

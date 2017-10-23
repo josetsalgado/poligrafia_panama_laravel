@@ -33,8 +33,9 @@
                                 <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
                                     <select id="empresa" name="empresa" class="form-control selc-empresa" required>
                                         <option value="">Empresa </option>
-                                        <option value="press">Coca cola</option>
-                                        <option value="net">B&G</option>
+                                        @foreach($companys as $company)
+                                            <option value="{{ $company->id_company }}">{{ $company->name_company }}</option>
+                                        @endforeach
                                     </select>
                                     <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
                                 </div>
@@ -45,12 +46,12 @@
                                 </div>
 
                                 <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="cargo" name="cargo" placeholder="Cargo">
+                                    <input type="text" class="form-control has-feedback-left" id="position" name="position" placeholder="Cargo">
                                     <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
                                 </div>
 
                                 <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('tel') ? 'has-error' : '' }}">
-                                    <input type="text" class="form-control has-feedback-left" id="tel" name="tel" placeholder="{{ trans("poligrafo.tel_client") }}">
+                                    <input type="number" class="form-control has-feedback-left" id="tel" name="tel" placeholder="{{ trans("poligrafo.tel_client") }}">
                                     <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                                     <span class="text-danger">{{ $errors->first('tel') }}</span>
                                 </div>

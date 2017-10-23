@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Appoiment;
 use App\Client;
+use App\Company;
 use App\Http\Controllers\Controller;
 use DB;
 use Illuminate\Http\Request;
@@ -28,7 +29,8 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('client.create');
+        $companys = Company::all();
+        return view('client.create', compact("companys"));
     }
 
     /**
@@ -45,9 +47,9 @@ class ClientController extends Controller
           'name_client' => $request->name,
           'tel_client' => $request->tel,
           'email_client' => $request->email,
-          'rif_client' => '',
-          'city_id' => $request->country, 
-          'country_id' => $request->city,
+          'city' => $request->city,
+          'company_id' => $request->empresa,
+          'position' => $request->position,
         ]);
         
         return view('user.create');
@@ -61,22 +63,12 @@ class ClientController extends Controller
     public function ValidateCreate($request)
     {
         $this->validate($request,[
-                'name' => 'required',
-                'tel' => 'required|numeric',
-                'email' => 'required|email|unique:itcp_clients,email_client',
-                'country' => 'required',
-                'city' => 'required',
+                'tel' => 'numeric',
+                'email' => 'email|unique:itcp_clients,email_client',
             ], 
             [
-                'name.required' => trans("validations.input_required", ['input' => 'nombre']),
-                'lastname.required' => trans("validations.input_required", ['input' => 'apellido']),
-                'email.required' => trans("validations.input_required", ['input' => 'correo']),
                 'email.email' => trans("validations.input_format", ['input' => 'correo']),
-                'email.unique' => trans("validations.input_unique", ['input' => 'usuario', 'other' => 'correo']),
-                'tel.required' => trans("validations.input_required", ['input' => 'telefono']),
-                'tel.numeric' => trans("validations.input_format", ['input' => 'telefono']),
-                'country.required' => trans("validations.input_required", ['input' => 'pais']),
-                'city.required' => trans("validations.input_required", ['input' => 'ciudad']),
+                'tel.numeric' => trans("validations.input_format", ['input' => 'telefono']),    
             ]
         );
     }
@@ -89,10 +81,7 @@ class ClientController extends Controller
      */
     public function show()
     {
-        $clients = DB::table('itcp_clients')
-                ->join('itcp_citys', 'itcp_clients.city_id', '=', 'itcp_citys.id_city')
-                ->select('*')
-                ->get();
+        $clients = Client::all();
         return view('client.show', compact('clients'));
     }
 
@@ -103,12 +92,8 @@ class ClientController extends Controller
      * @return Response
      */
     public function edit($id)
-    {
-        $client = DB::table('itcp_clients')
-                ->join('itcp_citys', 'itcp_clients.city_id', '=', 'itcp_citys.id_city')
-                ->where('itcp_clients.id_client', '=', $id)
-                ->select('*')
-                ->get();
+    {   
+        $client = Client::whereIn('id_client', [$id])->get();
         return view('client.edit', compact('client'));
     }
 
@@ -119,16 +104,15 @@ class ClientController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request)
-    {
-//        $this->ValidateCreate($request);
-        DB::table('itcp_clients')->where('id_client', $request->id)->update([
-            'name_client' => $request->name,
-            'tel_client' => $request->tel,
-            'email_client' => $request->email,
-            'rif_client' => '',
-            'city_id' => $request->city,
-            'country_id' => $request->country,
+    public function update(Request $request) {
+        Client::where('id_client', $request->id)
+                ->update([
+                    'name_client' => $request->name,
+                    'tel_client' => $request->tel,
+                    'email_client' => $request->email,
+                    'company_id' => intval($request->rol),
+                    'city' => $request->city,
+                    'position' => $request->position,
         ]);
     }
 

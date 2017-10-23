@@ -5,24 +5,16 @@ $(document).ready(function(){
         errorClass: "text-danger",
         
 	rules: {
-            name: { required:true },
             email: { required:true, email: true  },
-            tel: { required:true, number:true },
-            city: { required:true },
-            country: { required:true },
+            tel: { number:true },
 	},
 	messages: {
-            name: { required: "El campo nombre es obligatorio." },
             email: { 
-                    required: "El campo email es obligatorio.",
                     email: "Debe ingresar un campo con formato correo",
                 },
             tel: { 
-                    required: "El campo telefono es obligatorio.",
                     number: "Debe ingresar un campo con formato correo",
                 },
-            city: { required: "El campo rol es obligatorio." },
-            country: { required: "El campo clave es obligatorio." },
 	},
 	submitHandler: function(form){
             var dataString = $('#updateClient').serialize();
@@ -32,6 +24,8 @@ $(document).ready(function(){
 	        data: dataString,
 	        success: function(data) {
                     $(".close").click();
+                    alertify.success('Datos actualizados');
+                            $("#datatable-responsive").load("show_client #datatable-responsive");
 	       	},error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.
@@ -52,6 +46,7 @@ $(document).ready(function(){
                                 $(this).remove();
                             });
                         }, 4000);
+                        $('body,html').animate({scrollTop : 0}, 500);
                     } else {
                         /// do some thing else
                     }

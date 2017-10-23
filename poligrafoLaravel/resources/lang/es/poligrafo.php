@@ -7,6 +7,7 @@ return [
     'email' => 'Correo',
     'city' => 'Ciudad',
     'edit' => 'Editar',
+    'position' => 'Cargo',
     'lastname' => 'Apellido',
     'price' => 'Precio',
     'delete' => 'Borrar',

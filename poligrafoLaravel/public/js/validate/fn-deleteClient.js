@@ -2,10 +2,16 @@ function fnDelete(id) {
     alertify.confirm("¿Esta seguro que desea eliminar este cliente?",
             function (e) {
                 if (e) {
-                    var success = alertify.success('Encuestdo eliminado');
                     $.ajax({
-                        url: 'delete_client/'+id,
-                        type: 'get'
+                        url: 'delete_client/' + id,
+                        type: 'get',
+                        success: function (data) {
+                            console.log(data);
+                            alertify.success('Cliente eliminado');
+                            $("#datatable-responsive").load("show_client #datatable-responsive");
+                        },error: function (err) {
+                            console.log(err);
+                        }
                     });
                     return false;
                 } else {
