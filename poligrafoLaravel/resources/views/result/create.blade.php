@@ -816,7 +816,7 @@
         </div>
     </div>
     </div>
-    
+
     <!-- /page content -->
     <!-- Modal DLST -->
     <div class="modal fade" id="newdlst" role="dialog">
@@ -841,41 +841,10 @@
     </div>
     <!-- /. Modal DLST -->
 
-
-
-
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
 
-    <script type="text/javascript">
-        (function ($) {
-            $('.spinner .btn:first-of-type').on('click', function() {
-                $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
-            });
-            $('.spinner .btn:last-of-type').on('click', function() {
-                $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-            });
-        })(jQuery);
-    </script>
-    <script type="text/javascript">
-        var options = {
-            unico : ["UTAH zona 3 (ZCT)","ZCT FEDERAL","BIZONA"],
-            multiple : ["AF MGQT V.1","AF MGQT V.2","MGQT UTAH"],
-            laborales : ["DLST (screening) TES"]
-        }
-
-        $(function(){
-            var fillSecondary = function(){
-                var selected = $('#primary').val();
-                $('#secondary').empty();
-                options[selected].forEach(function(element,index){
-                    $('#secondary').append('<option value="'+element+'">'+element+'</option>');
-                });
-            }
-            $('#primary').change(fillSecondary);
-            fillSecondary();
-        });
-    </script>
+    <script src="js/validate/fn-createResult.js"></script>
 
     <script type="text/javascript">
         function myFunction(iddlst) {

@@ -174,7 +174,7 @@ html , body{
     padding: 0 0 4px 0
 }
 .left_col {
-    background: #2A3F54
+    background: #2E64FE
 }
 .nav-sm .container.body .col-md-3.left_col {
     min-height: 100%;
@@ -386,7 +386,7 @@ body .container.body .right_col {
 .nav_title {
     width: 230px;
     float: left;
-    background: #2A3F54;
+    background: #2E64FE;
     border-radius: 0;
     height: 57px
 }
@@ -518,7 +518,7 @@ body .container.body .right_col {
 }
 body {
     color: #73879C;
-    background: #2A3F54;
+    background: #2E64FE;
     font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -677,7 +677,7 @@ h3,
     margin-bottom: 10px
 }
 a {
-    color: #5A738E;
+    color: #73879C;
     text-decoration: none
 }
 a,
@@ -772,7 +772,7 @@ a:focus {
     padding-left: 36px
 }
 .nav-md ul.nav.child_menu li:before {
-    background: #425668;
+    background: #fff;
     bottom: auto;
     content: "";
     height: 8px;
@@ -785,7 +785,7 @@ a:focus {
     border-radius: 50%
 }
 .nav-md ul.nav.child_menu li:after {
-    border-left: 1px solid #425668;
+    border-left: 1px solid #fff;
     bottom: 0;
     content: "";
     left: 27px;
@@ -797,7 +797,7 @@ a:focus {
 }
 .nav.side-menu>li>a,
 .nav.child_menu>li>a {
-    color: #E7E7E7;
+    color: #fff;
     font-weight: 500
 }
 .nav.child_menu li li:hover,
@@ -828,7 +828,7 @@ a:focus {
 }
 .nav.side-menu>li.active>a {
     text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 0;
-    background: linear-gradient(#334556, #2C4257), #2A3F54;
+    background: linear-gradient(#2e64fe, #2e64fe), #2E64FE;
     box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0
 }
 .navbar-brand,
@@ -900,7 +900,8 @@ a:focus {
 .toggle a {
     padding: 15px 15px 0;
     margin: 0;
-    cursor: pointer
+    cursor: pointer;
+    color:#2e64fe;
 }
 .toggle a i {
     font-size: 26px
@@ -1698,7 +1699,7 @@ span.right {
     padding: 5px 0 0 0;
     position: fixed;
     width: 230px;
-    background: #2A3F54;
+    background: #2E64FE;
     z-index:999;
 }
 .sidebar-footer a {
@@ -1708,8 +1709,10 @@ span.right {
     font-size: 17px;
     display: block;
     float: left;
-    background: #172D44;
+    background: rgb(2, 67, 253);
     cursor: pointer;
+    text-shadow: 1px 1px #000;
+    color: #fff;
 }
 .sidebar-footer a:hover {
     background: #425567
@@ -1817,27 +1820,29 @@ ul.top_profiles li:nth-child(odd) {
     font-size: 30px
 }
 .media .date {
-    background: #395d81;
+    background: #f7f7f7;
     width: 77px;
     margin-right: 10px;
     border-radius: 10px;
-    padding: 5px
+    padding: 5px;
+    border: 1px solid #73879C;
 }
 .media .date .month {
     margin: 0;
     text-align: center;
-    color: #fff
+    color: #73879C;
 }
 .media .date .day {
     text-align: center;
-    color: #fff;
+    color: #73879C;
     font-size: 27px;
     margin: 0;
     line-height: 27px;
     font-weight: bold
 }
 .event .media-body a.title {
-    font-weight: bold
+    font-weight: bold;
+    color: #73879C;
 }
 .event .media-body p {
     margin-bottom: 0
@@ -4412,7 +4417,7 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     height: 56px;
     top: 88%;
     cursor: pointer;
-    background-color: #2a3f54;
+    background-color: #2e64fe;
     border-radius: 53%;
     box-shadow: 0 4px 8px rgba(0,0,0,.25);
 }
@@ -4426,7 +4431,7 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     padding: 4px 8px;
     font-size: 14px;
     color: #fff;
-    background-color: #2a3f54;
+    background-color: #2e64fe;
     border-radius: 2px;
     opacity: 0;
     pointer-events: none;
@@ -4520,4 +4525,10 @@ article#fc_edit:hover {
 }
 .table_estado_cuenta{
     margin:0px -32px 0px 0px;
+}
+.tile_count .tile_stats_count a {
+    color: #73879C;
+}
+.btn-color{
+    background-color:#2e64fe ;
 }
