@@ -39,8 +39,8 @@
                             <th>Cliente</th>
                             <th>Número Telefonico</th>
                             <th>Correo</th>
-                            <th>Dirección</th>
-                            <th>#edit</th>
+                            <th>Precios <br>de Evaluaciones</th>
+                            <th>#editar</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -55,7 +55,13 @@
                             </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
-                            <td>Edinburgh</td>
+                            <td>
+                                <ul>
+                                    <li>Pre-empleo B/.125.00</li>
+                                    <li>Especifica B/.150.00</li>
+                                    <li>Rutina B/.125.00</li>
+                                </ul>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
@@ -72,7 +78,13 @@
                             </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
-                            <td>New York</td>
+                            <td>
+                                <ul>
+                                    <li>Pre-empleo B/.125.00</li>
+                                    <li>Especifica B/.150.00</li>
+                                    <li>Rutina B/.125.00</li>
+                                </ul>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
@@ -90,7 +102,13 @@
                             </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
-                            <td>London</td>
+                            <td>
+                                <ul>
+                                    <li>Pre-empleo B/.125.00</li>
+                                    <li>Especifica B/.150.00</li>
+                                    <li>Rutina B/.125.00</li>
+                                </ul>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
@@ -108,7 +126,13 @@
                             </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
-                            <td>London</td>
+                            <td>
+                                <ul>
+                                    <li>Pre-empleo B/.125.00</li>
+                                    <li>Especifica B/.150.00</li>
+                                    <li>Rutina B/.125.00</li>
+                                </ul>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
@@ -125,7 +149,13 @@
                             </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
-                            <td>San Francisco</td>
+                            <td>
+                                <ul>
+                                    <li>Pre-empleo B/.125.00</li>
+                                    <li>Especifica B/.150.00</li>
+                                    <li>Rutina B/.125.00</li>
+                                </ul>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
@@ -143,7 +173,13 @@
                             </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
-                            <td>Edinburgh</td>
+                            <td>
+                                <ul>
+                                    <li>Pre-empleo B/.125.00</li>
+                                    <li>Especifica B/.150.00</li>
+                                    <li>Rutina B/.125.00</li>
+                                </ul>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
@@ -161,7 +197,13 @@
                             </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
-                            <td>Singapore</td>
+                            <td>
+                                <ul>
+                                    <li>Pre-empleo B/.125.00</li>
+                                    <li>Especifica B/.150.00</li>
+                                    <li>Rutina B/.125.00</li>
+                                </ul>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
@@ -179,7 +221,13 @@
                             </td>
                             <td>+58 555 55 55</td>
                             <td>correo@correo.com</td>
-                            <td>New York</td>
+                            <td>
+                                <ul>
+                                    <li>Pre-empleo B/.125.00</li>
+                                    <li>Especifica B/.150.00</li>
+                                    <li>Rutina B/.125.00</li>
+                                </ul>
+                            </td>
                             <td>
                                 <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
                                 <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
@@ -195,6 +243,8 @@
         </div>
     </div>
     </div>
+    
+    <!-- /page content -->
     <!-- Modal -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
@@ -232,6 +282,35 @@
                             <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Dirección">
                             <span class="fa fa-map-marker form-control-feedback right" aria-hidden="true"></span>
                         </div>
+                        <div class="col-md-12"><h4><b> Costo de Evaluaciones</b></h4></div>
+                        <div class="row">
+                            <label class="control-label col-md-4 col-sm-3 col-xs-12"> Pre-empleo:</label>
+                            <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Precio">
+                                <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="control-label col-md-4 col-sm-3 col-xs-12"> Especifica:</label>
+                            <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Precio">
+                                <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="control-label col-md-4 col-sm-3 col-xs-12"> Rutina:</label>
+                            <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Precio">
+                                <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="control-label col-md-4 col-sm-3 col-xs-12"> Reevaluación:</label>
+                            <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
+                                <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Precio">
+                                <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                            </div>
+                        </div>
 
                 </div>
                 <div class="modal-footer">
@@ -246,6 +325,11 @@
 
         </div>
     </div>
+
+
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+
     <script type="text/javascript">
         $('#datatable-responsive').DataTable( {
             language: {

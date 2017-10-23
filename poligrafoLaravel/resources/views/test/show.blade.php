@@ -219,7 +219,8 @@
                             <div class="row no-print">
                                 <div class="col-xs-12">
                                     <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Imprimir</button>
-                                    <button type="button" class="btn btn-primary pull-right" style=""><a href="pdf_test" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
+                                   {{-- <button type="button" class="btn btn-primary pull-right" style=""><a href="pdf_test" target="_blank" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>--}}
+                                    <button type="button" class="btn btn-primary pull-right" style="color: white;"><i class="fa fa-download"></i>PDF</button></a>
                                 </div>
                             </div>
                         </ul>
