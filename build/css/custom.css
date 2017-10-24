@@ -174,7 +174,7 @@ html , body{
     padding: 0 0 4px 0
 }
 .left_col {
-    background: #2E64FE
+    background: #2d7482;
 }
 .nav-sm .container.body .col-md-3.left_col {
     min-height: 100%;
@@ -386,7 +386,7 @@ body .container.body .right_col {
 .nav_title {
     width: 230px;
     float: left;
-    background: #2E64FE;
+    background: #2d7482;
     border-radius: 0;
     height: 57px
 }
@@ -518,7 +518,7 @@ body .container.body .right_col {
 }
 body {
     color: #73879C;
-    background: #2E64FE;
+    background: #2d7482;
     font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
     font-size: 13px;
     font-weight: 400;
@@ -828,7 +828,7 @@ a:focus {
 }
 .nav.side-menu>li.active>a {
     text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 0;
-    background: linear-gradient(#2e64fe, #2e64fe), #2E64FE;
+    background: linear-gradient(#2d7482, #2d7482), #2d7482;
     box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0
 }
 .navbar-brand,
@@ -901,7 +901,7 @@ a:focus {
     padding: 15px 15px 0;
     margin: 0;
     cursor: pointer;
-    color:#2e64fe;
+    color:#2d7482;
 }
 .toggle a i {
     font-size: 26px
@@ -1699,7 +1699,7 @@ span.right {
     padding: 5px 0 0 0;
     position: fixed;
     width: 230px;
-    background: #2E64FE;
+    background: #2d7482;
 	z-index:999;
 }
 .sidebar-footer a {
@@ -1709,7 +1709,7 @@ span.right {
     font-size: 17px;
     display: block;
     float: left;
-    background: rgb(2, 67, 253);
+    background: linear-gradient(#1b5563, #1b5563), #1b5563;
     cursor: pointer;
     text-shadow: 1px 1px #000;
     color: #fff;
@@ -4417,7 +4417,7 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     height: 56px;
     top: 88%;
     cursor: pointer;
-    background-color: #2e64fe;
+    background-color: #2d7482;
     border-radius: 53%;
     box-shadow: 0 4px 8px rgba(0,0,0,.25);
 }
@@ -4530,5 +4530,5 @@ article#fc_edit:hover {
     color: #73879C;
 }
 .btn-color{
-    background-color:#2e64fe ;
+    background-color:#2d7482 ;
 }
