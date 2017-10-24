@@ -2,7 +2,7 @@
 @section('content')
 
 
-    <div class="">
+<div id="reload" class="">
 
         <div class="clearfix"></div>
         <div class="row">

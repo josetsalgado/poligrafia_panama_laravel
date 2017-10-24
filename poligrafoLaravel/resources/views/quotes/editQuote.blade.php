@@ -79,7 +79,8 @@
                         </div>
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Llegada</label>
                         <div class="col-md-3 col-sm-2 col-xs-12">
-                            <select id="heard" class="form-control col-xs-12" required="">
+                            <select id="time_arrival" name="time_arrival" class="form-control col-xs-12">
+                                <option value="{{ $getQuote[0]->time_arrival or '' }}">{{ $getQuote[0]->time_arrival or '' }}</option>
                                 <option value="7:00">7:00</option>
                                 <option value="7:30">7:30</option>
                                 <option value="8:00">8:00</option>
