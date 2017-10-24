@@ -78,7 +78,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>TBSR110000623-00000001</td>
+                            <td>TBSR110000623-00000001
+                                <br>
+                                <button type="button" class="btn-click btn btn-success btn-xs"><i class="fa fa-envelope"></i> Solicitar Comprobante</button>
+                            </td>
                             <td>Amarilo</td>
                             <td>25/11/2011</td>
                             <td>B/.117,70</td>
@@ -88,10 +91,9 @@
                             <td>
                                 <button type="button" class="btn btn btn-warning btn-xs" data-toggle="modal" data-target="#observaciones"><i class="fa fa-comments"></i> Observaciones</button> <br>
                                 <a href="" class="btn btn-success btn-xs"><i class="fa fa-check"></i>  Pagada </a><br>
-                                <a href="show_accountstatus" class="btn btn-dark btn-xs"><i class="fa fa-bar-chart-o"></i>  Estado de Cuenta </a>
+                                <a href="estados_de_cuenta.html" class="btn btn-dark btn-xs"><i class="fa fa-bar-chart-o"></i>  Estado de Cuenta </a>
                             </td>
                         </tr>
-                        <tr>
                             <td>
                                 <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle"></i> Facturar</button>
                             </td>
