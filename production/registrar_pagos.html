@@ -228,7 +228,10 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>TBSR110000623-00000001</td>
+                                    <td>TBSR110000623-00000001
+                                        <br>
+                                        <button type="button" class="btn-click btn btn-success btn-xs"><i class="fa fa-envelope"></i> Solicitar Comprobante</button>
+                                    </td>
                                     <td>Amarilo</td>
                                     <td>25/11/2011</td>
                                     <td>B/.117,70</td>
@@ -324,6 +327,18 @@
                         <input type="text" class="form-control has-feedback-left" id="factura" name="factura" placeholder=" Ejemplo: TBSR110000623-00003021">
                         <span class="fa fa-file-text-o form-control-feedback left" aria-hidden="true"></span>
                     </div>
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Cliente:</label>
+                    <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                        <select id="cliente" name="cliente" class="form-control selc-empresa" required>
+                            <option value="">Seleccione</option>
+                            <option value="cliente1">Cliente 1</option>
+                            <option value="cliente2">Cliente 2</option>
+                            <option value="cliente3">Cliente 3</option>
+                            <option value="cliente4">Cliente 4</option>
+                            <option value="cliente5">Cliente 5</option>
+                        </select> 
+                        <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
+                    </div>
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Forma de Pago:</label>
                     <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
                         <select id="foma-pago" name="forma-pago" class="form-control selc-empresa" required>
@@ -362,7 +377,7 @@
                     </div>
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Observaciones:</label>
                     <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
-                        <textarea id="message" required="required" class="form-control" name="message" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.." data-parsley-validation-threshold="10"></textarea>
+                        <textarea id="observaciones" required="required" class="form-control" name="observaciones" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.." data-parsley-validation-threshold="10"></textarea>
                         <span class="fa fa-comment form-control-feedback left" aria-hidden="true"></span>
                     </div>      
                 </div>
@@ -440,8 +455,7 @@
             "lengthMenu":     "_MENU_"
         }
     } );
-</script>
-<script type="text/javascript">
+
 $(function() {
     $('input[name="birthdate"]').daterangepicker({
         singleDatePicker: true,
@@ -487,6 +501,13 @@ $(function() {
         var years = moment().diff(start, 'years');
     });
 });
+
+
+$(".btn-click").click(function( event ) {
+  event.preventDefault();
+  $( this ).hide();
+});
+
 </script>
 
 </body>
