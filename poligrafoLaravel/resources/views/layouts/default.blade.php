@@ -192,13 +192,12 @@
                             </ul>
                         </li>
                         <li role="presentation" class="dropdown">
-                            <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
-                                PANAMA <i class="fa fa-caret-down"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="login.html"><b> CHIRIQUI </b> </a></li>
-                                <li><a href="login.html"><b> DAVID </b> </a></li>
-                                <li><a href="editar_perfil.html"><b>OTROS </b></a></li>
+                            <a class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">{{ Session::get('city') }} <i class="fa fa-caret-down"></i></a>
+                            <ul class="dropdown-menu dropdown-usermenu pull-right" role="menu" aria-labelledby="menu1">
+                                <li role="presentation"><a class="cityO" value="panama" role="menuitem" tabindex="-1" ><b> PANAMA </b></a></li>
+                                <li role="presentation"><a class="cityO" value="chiriqi" role="menuitem" tabindex="-1" ><b> CHIRIQUI </b></a></li>
+                                <li role="presentation"><a class="cityO" value="david" role="menuitem" tabindex="-1" ><b> DAVID </b></a></li>
+                                <li role="presentation"><a class="cityO" value="otros" role="menuitem" tabindex="-1" ><b> OTROS </b></a></li>
                             </ul>
                         </li>
                         <li role="presentation" class="dropdown">
@@ -348,6 +347,18 @@
 <!--alertify-->
 <script src="js/alertify/lib/alertify.min.js"></script>
 
-
+<script>
+    $(".cityO").click(function(data){
+        $.ajax({
+	        type: "GET",
+	        url: "city/"+data.target.innerText,
+                success: function (data) {
+                    location.reload();
+                }, error: function (err) {
+                    console.log("error");
+                }
+        });
+    });
+</script>
 </body>
 </html>

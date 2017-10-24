@@ -150,7 +150,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::post('/create_payment', 'AccountStatusController@store');
 
-
     //Pdf de informe de prueba
     Route::get('/pdf_test', 'TestReportController@pdfresult');
 
@@ -159,5 +158,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     //reporte evaluaciones poligraficas
     Route::get('/evaluations_report', 'ReportAccountController@evaluations');
+    
+    //enviar ciuades por variables de session
+    Route::get('/city/{name}', function($name){
+//        $request->session()->put('city', $name);
+        session(['city' => $name]);
+        return "bien";
+    });
 
 });
