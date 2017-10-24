@@ -42,11 +42,12 @@ class QuotesController extends Controller
      */
    
     
-        public function getQuotes()
+        public function getQuotes(Request $request)
     {
         $appoiments = DB::table('itcp_appoiments')
                 ->join('itcp_patients', 'itcp_patients.id_patient', '=', 'itcp_appoiments.patient_id')
                 ->select('id_appoiment AS id', 'name_patient AS title', 'date_appoiment AS start')
+                ->where('itcp_appoiments.city_appoiment', '=', $request->session()->get('city'))
                 ->get();
         return view("quotes.getQuotes", compact("appoiments"));
     }
