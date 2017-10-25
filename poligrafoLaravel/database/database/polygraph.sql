@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 11-10-2017 a las 19:20:09
+-- Tiempo de generación: 25-10-2017 a las 14:22:55
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -51,31 +51,26 @@ CREATE TABLE `itcp_appoiments` (
   `user_id` int(25) UNSIGNED DEFAULT NULL,
   `service_id` int(25) UNSIGNED NOT NULL,
   `company_id` int(25) UNSIGNED NOT NULL,
-  `client_id` int(25) UNSIGNED NOT NULL,
+  `client_id` int(25) UNSIGNED DEFAULT NULL,
   `patient_id` int(25) UNSIGNED NOT NULL,
   `city_appoiment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `date_appoiment` date NOT NULL,
-  `time_appoiment` time NOT NULL,
+  `date_appoiment` date DEFAULT NULL,
+  `time_appoiment` time DEFAULT NULL,
   `comentary_appoiment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `status` varchar(45) COLLATE utf8_spanish_ci NOT NULL
+  `status` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `time_arrival` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `itcp_appoiments`
 --
 
-INSERT INTO `itcp_appoiments` (`id_appoiment`, `user_id`, `service_id`, `company_id`, `client_id`, `patient_id`, `city_appoiment`, `date_appoiment`, `time_appoiment`, `comentary_appoiment`, `status`) VALUES
-(8, NULL, 5, 1, 4, 15, 'Ciudad de panama', '2017-09-07', '10:00:00', 'asd', 'Pendiente'),
-(9, 2, 5, 2, 4, 2, '2 ', '2017-09-07', '11:00:00', '22 s', 'Procesada'),
-(10, NULL, 5, 1, 4, 17, 'Ciudad de panama', '0000-00-00', '01:30:00', 'candidato 1', 'Pendiente'),
-(11, NULL, 5, 1, 3, 18, 'Ciudad de panama', '2017-09-02', '10:00:00', 'candidato2', 'Aprobado'),
-(12, NULL, 5, 1, 2, 19, 'Ciudad de panama', '2017-09-09', '07:30:00', 'candidato3', 'Pendiente'),
-(13, NULL, 5, 1, 2, 20, 'Ciudad de panama', '2017-09-11', '10:00:00', 'empleado5', 'Pendiente'),
-(14, NULL, 5, 1, 4, 21, 'Ciudad de panama', '2017-09-14', '10:00:00', 'empleado6', 'Aprobado'),
-(15, NULL, 5, 1, 2, 22, 'Ciudad de panama', '2017-09-17', '08:00:00', '312', 'Pendiente'),
-(19, NULL, 5, 2, 5, 26, 'Ciudad de panama', '2017-10-03', '11:30:00', '444', 'Pendiente'),
-(20, 3, 5, 2, 5, 27, 'Ciudad de panama', '2017-10-04', '11:00:00', '7', 'Re agendada<'),
-(21, 2, 5, 1, 3, 28, 'Ciudad de panama', '2017-08-15', '08:30:00', '123 1', 'Aprobado');
+INSERT INTO `itcp_appoiments` (`id_appoiment`, `user_id`, `service_id`, `company_id`, `client_id`, `patient_id`, `city_appoiment`, `date_appoiment`, `time_appoiment`, `comentary_appoiment`, `status`, `time_arrival`) VALUES
+(1, 1, 5, 1, 1, 29, 'PANAMA', '2017-10-12', '08:30:00', 'comentario', 'Re agendada', '9:00'),
+(2, NULL, 5, 1, 1, 33, 'PANAMA', '2017-10-13', '08:30:00', 'sad', 'Pendiente', ''),
+(3, NULL, 5, 1, 1, 34, 'PANAMA', '2017-11-09', '08:30:00', 'asd', 'Pendiente', ''),
+(4, 5, 5, 1, 1, 35, 'PANAMA', '2017-10-26', '09:00:00', 'cas', 'Pendiente', '1:00'),
+(5, NULL, 5, 1, 1, 36, 'DAVID', '2017-10-21', '09:00:00', 'dsa', 'Pendiente', '');
 
 -- --------------------------------------------------------
 
@@ -86,20 +81,24 @@ INSERT INTO `itcp_appoiments` (`id_appoiment`, `user_id`, `service_id`, `company
 CREATE TABLE `itcp_budgets` (
   `id_budget` int(25) UNSIGNED NOT NULL,
   `company_id` int(45) UNSIGNED NOT NULL,
-  `client_id` int(45) UNSIGNED NOT NULL,
+  `client_id` int(45) UNSIGNED DEFAULT NULL,
   `date_init_budget` date DEFAULT NULL,
   `budgets_register_id` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `total_budget` varchar(45) COLLATE utf8_spanish_ci NOT NULL
+  `total_budget` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `observations` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `itcp_budgets`
 --
 
-INSERT INTO `itcp_budgets` (`id_budget`, `company_id`, `client_id`, `date_init_budget`, `budgets_register_id`, `total_budget`) VALUES
-(1, 1, 3, '2017-08-08', 'SbIN9NVJ', '275'),
-(2, 2, 4, '2017-10-08', 'iuEEukQ7', '210'),
-(3, 1, 2, '2017-10-09', '447oYruu', '45');
+INSERT INTO `itcp_budgets` (`id_budget`, `company_id`, `client_id`, `date_init_budget`, `budgets_register_id`, `total_budget`, `observations`) VALUES
+(1, 1, 3, '2017-08-08', 'SbIN9NVJ', '240', ''),
+(2, 2, 4, '2017-10-08', 'iuEEukQ7', '210', ''),
+(3, 1, 2, '2017-10-09', '447oYruu', '45', ''),
+(4, 1, 3, '2017-10-20', 'ZbMyUSSK', '360', ''),
+(5, 2, 5, '2017-10-20', 'g3Nm41lQ', '60', ''),
+(6, 1, 1, '2017-10-24', 'lg1Q8G3a', '500', 'primer comentario');
 
 -- --------------------------------------------------------
 
@@ -124,7 +123,13 @@ INSERT INTO `itcp_budgets_register` (`id_register_budgets`, `quantity_budget`, `
 ('iuEEukQ7', '2', '20', 5),
 ('iuEEukQ7', '10', '200', 6),
 ('447oYruu', '1', '10', 5),
-('447oYruu', '2', '40', 6);
+('447oYruu', '2', '40', 6),
+('ZbMyUSSK', '12', '120', 5),
+('ZbMyUSSK', '12', '240', 6),
+('g3Nm41lQ', '2', '20', 5),
+('g3Nm41lQ', '2', '40', 6),
+('lg1Q8G3a', '10', '100', 5),
+('lg1Q8G3a', '20', '400', 6);
 
 -- --------------------------------------------------------
 
@@ -157,22 +162,17 @@ CREATE TABLE `itcp_clients` (
   `name_client` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `tel_client` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `email_client` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `rif_client` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `city_id` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `country_id` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `company_id` int(25) UNSIGNED NOT NULL
+  `company_id` int(25) UNSIGNED NOT NULL,
+  `city` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `position` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `itcp_clients`
 --
 
-INSERT INTO `itcp_clients` (`id_client`, `name_client`, `tel_client`, `email_client`, `rif_client`, `city_id`, `country_id`, `company_id`) VALUES
-(2, 'a', '3', 'ezebarazarte@gmail.com', '', '1', 'a', 1),
-(3, 'cleinte 1', '1', 'josetomassalgado91@gmail.com', '', '2', 'a', 1),
-(4, 'BG Consultores', '123123', 'jsalgado@gmail.com', '', '2', 'caracas', 2),
-(5, 'Axion ti', '123', 'dsa@hotmail.com', '', '2', 'da', 2),
-(6, 'alterity solutions', '876', 'iii@g.com', '', '2', 'dsa', 1);
+INSERT INTO `itcp_clients` (`id_client`, `name_client`, `tel_client`, `email_client`, `company_id`, `city`, `position`) VALUES
+(1, 'Jose', '123213', 'jose@cocacola.com', 1, 'caracas', 'Gerente RRHH');
 
 -- --------------------------------------------------------
 
@@ -186,17 +186,24 @@ CREATE TABLE `itcp_companys` (
   `ruc_company` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `tel_company` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `email_compamy` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `address_company` varchar(45) COLLATE utf8_spanish_ci NOT NULL
+  `address_company` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `cost_test_pre_employment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `cost_specific_test` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `cost_routine_test` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `reevaluation_test_cost` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci ROW_FORMAT=COMPACT;
 
 --
 -- Volcado de datos para la tabla `itcp_companys`
 --
 
-INSERT INTO `itcp_companys` (`id_company`, `name_company`, `ruc_company`, `tel_company`, `email_compamy`, `address_company`) VALUES
-(1, 'coca coola', '234d', '324', 'cocacola@cocacola.com', 'co'),
-(2, 'pepsi', '213f', '23324', 'pepsi@pepsi.com', 'sadsa a'),
-(3, 'Zomm', '213asd', '123321', 'zoom@zoom.com', 'zona zoom');
+INSERT INTO `itcp_companys` (`id_company`, `name_company`, `ruc_company`, `tel_company`, `email_compamy`, `address_company`, `cost_test_pre_employment`, `cost_specific_test`, `cost_routine_test`, `reevaluation_test_cost`) VALUES
+(1, 'coca coola', '234d', '324', 'cocacola@cocacola.com', 'co', '', '', '', ''),
+(2, 'pepsi', '213f', '23324', 'pepsi@pepsi.com', 'sadsa a', '', '', '', ''),
+(3, 'Zomm', '213asd', '123321', 'zoom@zoom.com', 'zona zoom', '', '', '', ''),
+(7, 'company 1', '11a11 a', '5555', 'aabb@aabb.com', 'caracas', '221', '', '', ''),
+(11, 'company 2', 'company 2 22', '555666', 'company@2.company', 'caracas company 2', '34', '45', '56', '23'),
+(12, '', '', '', '', 'company@2.company', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -218,34 +225,17 @@ CREATE TABLE `itcp_patients` (
 --
 
 INSERT INTO `itcp_patients` (`id_patient`, `name_patient`, `last_name_patient`, `ci_patient`, `job_patient`, `phone`) VALUES
-(1, 'sal', 'salgado 11', ' 1231231 1', 'cargo a1', '123123 1'),
-(2, '22 s', 'salgado s', '1231231 s', 'dasdas|24234| s', '4213 s'),
-(3, 'oscar', 'rojas', '31231', '234', '12'),
-(4, 'dasd', 'asd', '123', 'asd', '123'),
-(5, 'asd', 'asd', '123', 'asd', '123'),
-(6, '11', '11', '11', '11', '11'),
-(7, '222', '22', '22', '22', '22'),
-(8, '111', '11', '111', '11', '11'),
-(9, '111', '111', '1', '111', '1'),
-(10, '3123', '1231', '123', '123', '123'),
-(11, 'Emilyn ', 'Garcia', '312312', 'Especialista', '776'),
-(12, '22', '22', '2', '234', '2'),
-(13, 'loco4', 'salgado', '3', '234', '2'),
-(14, 'loco4', 'asd', '12312', '234', '123'),
-(15, 'Ysrrael', 'Sanchez', '23424', 'Programador', '1234'),
-(16, '22', '22', '33', '11', '33'),
-(17, 'candidato 1', 'candidato 1', '123', 'candidato1@hotmail.com', '123'),
-(18, 'candidato2', 'candidato2', '123', 'candidato2', '234'),
-(19, 'candidato3', 'candidato3', '34', 'candidato3', '3'),
-(20, 'empleado5', 'empleado5', '123', 'empleado5', '324'),
-(21, 'empleado6', 'empleado6', '213', 'empleado5', '56'),
-(22, '321', '321', '321', '321', '312'),
-(23, 'Jose1 1', 'Salgado 22', '43', '123', '123'),
-(24, 'Jose 11', 'Salgado 22', '123', '321', '231'),
-(25, 'Jose 11', 'Salgado 22', '111', '222', '333'),
 (26, 'Jose 11', 'Salgado 22', '111', '222', '333'),
 (27, '2', '3', '4', '5', '6'),
-(28, 'jose 1', 'salgado 1', '12311123', '123 1', '123123');
+(28, 'jose 1', 'salgado 1', '12311123', '123 1', '123123'),
+(29, 'Jose', 'Salgado', '3123', 'Trabajador 1', '132123'),
+(30, 'Empleado 2', 'empleado 2', '123', 'empleo 2', '123'),
+(31, 'Empleado 2', 'empleado 2', '123', 'empleo 2', '123'),
+(32, 'Empleado 2', 'empleado 2', '123', 'empleo 2', '123'),
+(33, 'emple', 'ado', '132', 'Trabajador 1', '123'),
+(34, 'Empleado 3', 'asd', '123', 'sdadc', '123'),
+(35, 'dsa', 'd', '23', 'c', '123'),
+(36, 'dasd', 'das', '123', 'ads', '123');
 
 -- --------------------------------------------------------
 
@@ -281,7 +271,8 @@ INSERT INTO `itcp_payments` (`id_payment`, `budget_id`, `facture_number_payment`
 (12, 3, '0', 'Transferencia electronica', '5', 'ads'),
 (13, 1, '0', 'Transferencia electronica', '2', '2'),
 (14, 2, '0', 'Tarjeta-de-credito', '10', 'dsa'),
-(15, 1, '0', 'Tarjeta-de-credito', '3', 'asd');
+(15, 1, '0', 'Tarjeta-de-credito', '3', 'asd'),
+(16, 1, '123213', 'Cheque', '29', '123');
 
 -- --------------------------------------------------------
 
@@ -327,29 +318,14 @@ INSERT INTO `itcp_status` (`id_status`, `name_status`, `description_status`) VAL
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `itcp_users`
+-- Estructura de tabla para la tabla `sessions`
 --
 
-CREATE TABLE `itcp_users` (
-  `id_user` int(25) UNSIGNED NOT NULL,
-  `name` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `last_name_user` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `rol_id` int(25) UNSIGNED NOT NULL,
-  `tel_user` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `email` varchar(45) COLLATE utf8_spanish_ci NOT NULL
+CREATE TABLE `sessions` (
+  `id` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `payload` text COLLATE utf8_spanish_ci NOT NULL,
+  `last_activity` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Volcado de datos para la tabla `itcp_users`
---
-
-INSERT INTO `itcp_users` (`id_user`, `name`, `last_name_user`, `password`, `remember_token`, `rol_id`, `tel_user`, `email`) VALUES
-(1, 'juan', 'hca', '333', NULL, 1, '333', '333@333.com'),
-(2, 'pedro', 'picapiedra', 'jose', NULL, 1, 'jose', 'jose'),
-(3, 'jesus', 'jose', '222', NULL, 1, '123', 'josepp@h.com'),
-(4, 'jose', 'antonia', '$2y$10$ChssUbg80qaHuHkTTGX0HusFHPGxQe3YfDH.mV', NULL, 1, '333', 'jose@jose.com');
 
 -- --------------------------------------------------------
 
@@ -373,10 +349,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `last_name`, `password`, `remember_token`, `rol_id`, `tel`, `email`) VALUES
-(1, 'Poligrafista2', 'Poligrafista2', '$2y$10$H0iX9rZ0Pj823fc2Ci5Ddufx4R8oh.5WtWZJUCuTocPLcYcWt5oB6', 'QC68gSZbafm4iQLiW0pryOjzxxAenpn41RqmcYYeG3dq7TnTRk6rreCGyxbq', 2, '', 'a'),
-(2, 'Administrador', 'Administrador', '$2y$10$7pG.q39RWhpYEmZ/Y3gF..1CRYApXz8RPx7QrZf1aDQrOEUhQCqAK', '3CSNlexazUj2uhqkhVuwsmx5qLCIPXC6xNtwwGbhTgSNlaYop9hY7AQ4Veg1', 1, '', 'admin@admin.com'),
-(3, 'poligrafista1', 'poligrafista1 apellido', '$2y$10$g.VpFj8K/CZSE27XWh7jp.on5EO4IdAOUn57oDIlUCI2gG/Jsp1Cq', 'IntsDke8GEZcD9VatH9fVaUmiZFjPxcEIx66KfmOqngxBT9fg3lSICnMLJTV', 2, '123', 'poli1@poli1.com'),
-(4, 'Jose', 'Salgado', '123', 'Nx9nj6fUF7r5aqkGMfaYh8WMZM90tVTFawzUg6rGdeSJDPfjU8JrMkzRu6CM', 1, '123', 'salgado@salgado.com');
+(1, 'Poligrafista27', 'Poligrafista2', '$2y$10$0gDy9g8Kfra3nnerx/UWV.BF3xO5.PCMDxtONm5K8g8RZ42n0F1OG', 'QC68gSZbafm4iQLiW0pryOjzxxAenpn41RqmcYYeG3dq7TnTRk6rreCGyxbq', 2, '23', 'a'),
+(2, 'Administrador', 'Administrador', '$2y$10$7pG.q39RWhpYEmZ/Y3gF..1CRYApXz8RPx7QrZf1aDQrOEUhQCqAK', '2P9AD5lwuARvBXiI5W6E2UeBJZNik0aIMxEf3MtOr54zO39KJxqICWxXdX7H', 1, '', 'admin@admin.com'),
+(3, 'poligrafista1', 'poligrafista1 apellido', '$2y$10$pe2SXFONUaa2VXy7nR32CuQ43UdHm1agcUW6xI3AvwA1eH./.pdN.', 'rv8bU2hPEvVu0AH67HGJtgEMxq9EclDMadw1LPm8oHFDVXwWhFYEWqa5GBDi', 2, '123', 'poli1@poli1.com'),
+(4, 'Jose', 'Salgado', '123', 'Nx9nj6fUF7r5aqkGMfaYh8WMZM90tVTFawzUg6rGdeSJDPfjU8JrMkzRu6CM', 1, '123', 'salgado@salgado.com'),
+(5, 'emilyn ', 'Garcia', '$2y$10$IsuuvMh3PXuPjJaLHy.s0eUcgimdwKrcLtTyiBI8e9ffYarVqu/ru', 'bYaDCy4bQg3tiWFfA8uoopAJo2CdDF5Po2RH2j6DXcQogTjyIjwySq56Es0F', 2, '123', 'egarcia@ilernus.com');
 
 --
 -- Índices para tablas volcadas
@@ -425,8 +402,7 @@ ALTER TABLE `itcp_citys`
 -- Indices de la tabla `itcp_clients`
 --
 ALTER TABLE `itcp_clients`
-  ADD PRIMARY KEY (`id_client`),
-  ADD KEY `city_id` (`city_id`);
+  ADD PRIMARY KEY (`id_client`);
 
 --
 -- Indices de la tabla `itcp_companys`
@@ -460,11 +436,10 @@ ALTER TABLE `itcp_status`
   ADD PRIMARY KEY (`id_status`);
 
 --
--- Indices de la tabla `itcp_users`
+-- Indices de la tabla `sessions`
 --
-ALTER TABLE `itcp_users`
-  ADD PRIMARY KEY (`id_user`),
-  ADD KEY `rol_id` (`rol_id`);
+ALTER TABLE `sessions`
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- Indices de la tabla `users`
@@ -485,12 +460,12 @@ ALTER TABLE `itcl_rols`
 -- AUTO_INCREMENT de la tabla `itcp_appoiments`
 --
 ALTER TABLE `itcp_appoiments`
-  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `itcp_budgets`
 --
 ALTER TABLE `itcp_budgets`
-  MODIFY `id_budget` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_budget` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `itcp_citys`
 --
@@ -500,22 +475,22 @@ ALTER TABLE `itcp_citys`
 -- AUTO_INCREMENT de la tabla `itcp_clients`
 --
 ALTER TABLE `itcp_clients`
-  MODIFY `id_client` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_client` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `itcp_companys`
 --
 ALTER TABLE `itcp_companys`
-  MODIFY `id_company` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_company` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT de la tabla `itcp_patients`
 --
 ALTER TABLE `itcp_patients`
-  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 --
 -- AUTO_INCREMENT de la tabla `itcp_payments`
 --
 ALTER TABLE `itcp_payments`
-  MODIFY `id_payment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_payment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT de la tabla `itcp_service`
 --
@@ -527,15 +502,10 @@ ALTER TABLE `itcp_service`
 ALTER TABLE `itcp_status`
   MODIFY `id_status` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT de la tabla `itcp_users`
---
-ALTER TABLE `itcp_users`
-  MODIFY `id_user` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- Restricciones para tablas volcadas
 --
@@ -546,7 +516,6 @@ ALTER TABLE `users`
 ALTER TABLE `itcp_appoiments`
   ADD CONSTRAINT `itcp_appoiments_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `itcp_patients` (`id_patient`),
   ADD CONSTRAINT `itcp_appoiments_ibfk_2` FOREIGN KEY (`service_id`) REFERENCES `itcp_service` (`id_service`),
-  ADD CONSTRAINT `itcp_appoiments_ibfk_4` FOREIGN KEY (`client_id`) REFERENCES `itcp_clients` (`id_client`),
   ADD CONSTRAINT `itcp_appoiments_ibfk_5` FOREIGN KEY (`company_id`) REFERENCES `itcp_companys` (`id_company`),
   ADD CONSTRAINT `itcp_appoiments_ibfk_6` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
@@ -554,8 +523,7 @@ ALTER TABLE `itcp_appoiments`
 -- Filtros para la tabla `itcp_budgets`
 --
 ALTER TABLE `itcp_budgets`
-  ADD CONSTRAINT `itcp_budgets_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `itcp_companys` (`id_company`),
-  ADD CONSTRAINT `itcp_budgets_ibfk_2` FOREIGN KEY (`client_id`) REFERENCES `itcp_clients` (`id_client`);
+  ADD CONSTRAINT `itcp_budgets_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `itcp_companys` (`id_company`);
 
 --
 -- Filtros para la tabla `itcp_budgets_register`
@@ -568,12 +536,6 @@ ALTER TABLE `itcp_budgets_register`
 --
 ALTER TABLE `itcp_payments`
   ADD CONSTRAINT `itcp_payments_ibfk_1` FOREIGN KEY (`budget_id`) REFERENCES `itcp_budgets` (`id_budget`);
-
---
--- Filtros para la tabla `itcp_users`
---
-ALTER TABLE `itcp_users`
-  ADD CONSTRAINT `itcp_users_ibfk_1` FOREIGN KEY (`rol_id`) REFERENCES `itcl_rols` (`id_rol`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
