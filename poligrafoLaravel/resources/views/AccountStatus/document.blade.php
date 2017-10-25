@@ -50,68 +50,99 @@
 
 <style type="text/css">
 
- td, th {
-
-     height: 30px !important; padding-left: 5px;
- }
+ td, th {height: 30px !important; padding-left: 5px;  }
+ #space_top{padding-top: 8px;padding-bottom: 15px; }
+ #bold{  font-weight: bold  }
 
 </style>
 
 <body style="background:#fff; ">
 <div class="">
-    <div class="">
+    <div class="modal-header">
+
         <div class="row">
-            <div class="col-sm-6 col-md-3">
-                <div class="col-xs-12 invoice-header">
-                    <h1>
-                        <i class="fa fa-globe"></i> IPTC
-                    </h1>
+
+            <div class="col-xs-6  text-center">
+                <br>
+                <h4 id="bold">INTERNATIONAL POLYGRAPH TRAINING CENTER, S.A.</h4><br>
+                <h5 id="bold">ESTADO DE CUENTA</h5>
+            </div>
+            <div class="col-md-6 col-md-3">
+                <div class="col-xs-12 invoice-header fact-border">
+                    <p>
+                        Edificio Edison Corporate Center
+                        <br>Piso 8 oficina 8A de la Torre A
+                        <br>TEl. 279 08 06 / 279 08 04
+                        <br>PANAMA REP. DE PANAMA
+                    </p>
+                    <h5 class="text-danger" id="bold">DOCUMENTO NO FISCAL</h5>
                 </div>
                 <!-- /.col -->
-            </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
-                        <span style="font-weight: bold;"><strong>INTERNATIONAL POLYGRAPH TRAINING CENTER, S.A.</strong>
-                            <br> <b> R.U.C. 1631480-1-671929 D.V. 62</b></span>
-                <br>Edificio Edison Corporate Center, Piso 8 oficina 8A de la Torre A.
-                <br>Tel. 279 08 06 y 279 08 04
-                <br>PANAMA, REP. DE PANAMA<br><br>
             </div>
         </div>
     </div>
     <div class="">
-
         <div class="">
 
             <section class="content invoice">
-                <!-- info row -->
-                <div class="row invoice-info">
-                    <div class="col-xs-6 invoice-col">
-                        <address>
-                            <strong style="font-weight: bold;">COCA COLA</strong>
-                            <br>1631480-1-671929 D.V. 62
-                            <br>795 Freedom Ave, Suite 600, New York, CA 94107
-                            <br>Phone: 1 (804) 123-9876
-                            <br>Email: jon@ironadmin.com
-                        </address>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-md-6 invoice-col pull-right">
-                        <address class="pull-right" style="margin-left: 80px;">
-                            <strong style="font-weight: bold;">Panamá a 14 de Septiembre del 2017</strong>
-                            <br>
-                            <br>
-                        </address>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->
-                <!-- row -->
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <h5 class="text-center"><b>ESTADO DE CUENTA</b></h5>
+                    <div class="col-xs-12 table">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                            <tbody>
+                            <tr>
+                                <td>Nombre:</td>
+                                <td ><p>Gaming & Services de Panamá  </p>
+                                    <br>
+                                </td>
+                                <td id="bold" style="border-bottom: none; border-top: none !important;">14 de Noviembre del 2017</td>
+                            </tr>
+                            <tr>
+                                <td>Dirección:</td>
+                                <td ><p>Calle 50 y 73 este San Francisco</p></td>
+                            </tr>
+                            <tr>
+                                <td>País:</td>
+                                <td ><p>Panamá</p></td>
+                            </tr>
+                            <tr>
+                                <td>Teléfono</td>
+                                <td ><p>270-8766</p></td>
+                            </tr>
+
+                            </tbody>
+                        </table>
                     </div>
+                    <!-- /.col -->
                 </div>
                 <!-- /.row -->
+                {{--<!-- info row -->
+                <div class="row invoice-info">
+                    <div class="col-sm-2 invoice-col table_estado_cuenta">
+                        <ul>
+                            <li>Nombre:</li>
+                            <li>Dirección:</li>
+                            <li>País:</li>
+                            <li>Teléfono</li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-7 invoice-col table_estado_cuenta">
+                        <ul>
+                            <li>Gaming & Services de Panamá  </li>
+                            <li>Calle 50 y 73 este San Francisco</li>
+                            <li>Panamá</li>
+                            <li>270-8766</li>
+                        </ul>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-sm-3 invoice-col">
+                        <ul>
+                            <li> <strong>14 de Noviembre del 2017</strong></li>
+                        </ul>
+                    </div>
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->--}}
+
 
                 <!-- Table row -->
                 <div class="row">
@@ -127,22 +158,31 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <td>8</td>
-                                <td>Pruebas Pre empleo</td>
+                                <td>3</td>
+                                <td id="space_top"><p id="bold">Pruebas Pre empleo</p>
+                                    <br>
+                                    <ul>
+                                        <li>Angel Mario Ruiz Saenz</li>
+                                        <li>Alexis Antonio Cruz</li>
+                                        <li>Alexander Gonzales Rodriguez</li>
+                                    </ul>
+                                </td>
                                 <td>B/.125.00</td>
-                                <td>B/.1,200.00</td>
+                                <td>B/.375.00</td>
                             </tr>
                             <tr>
-                                <td>8</td>
-                                <td>Pruebas Especificas</td>
+                                <td>2</td>
+                                <td id="space_top"><p id="bold">Pruebas Especificas</p>
+                                    <br>
+                                    <ul>
+                                        <li>Sara Peña</li>
+                                        <li>Oscar Solano</li>
+                                    </ul>
+                                </td>
                                 <td>B/.150.00</td>
-                                <td>B/.1,200.00</td>
+                                <td>B/.62.50</td>
                             </tr>
                             <tr>
-                                <td></td>
-                                <td ><b>DESCUENTO</b></td>
-                                <td ><b>-B/.55.00</b></td>
-                                <td><b>-B/.440.00</b></td>
                             </tr>
                             </tbody>
                         </table>
@@ -154,10 +194,10 @@
                 <div class="row">
                     <!-- accepted payments column -->
                     <div class="col-sm-3 col-xs-12">
-                        <strong>Recibido por:</strong>
+                        <p id="bold">Recibido por:</p>
                     </div>
                     <!-- /.col -->
-                    <div class="col-sm-6 col-xs-9 pull-right">
+                    <div class="col-sm-3 col-xs-6 pull-right">
                         <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                             <thead>
                             <tr>
