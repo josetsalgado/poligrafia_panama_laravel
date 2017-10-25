@@ -47,10 +47,13 @@ class BudgetController extends Controller
      * @return Response
      */
     
+    public function modalCrateBudget(Request $request) {
+        
+        return view('budget.modalBudget', compact('request'));
+    }
+    
     function pdfCrateBudget() {
 
-        
-                
         $budgets = DB::table('itcp_budgets')
             ->select('*')
             ->where('itcp_budgets.id_budget', '=', Budget::all()->last()->id_budget)

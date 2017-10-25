@@ -1,3 +1,16 @@
+$("#createModal").click(function(){
+    var dataString = $('#createBudget').serialize();
+            $.ajax({
+	        type: "POST",
+	        url: "create_butget",
+	        data: dataString,
+	        success: function(data) {
+                    $("#createModal").html(data);
+                }
+            });
+});
+
+
 $("#empresa").change(function () {
     getClient();
 });

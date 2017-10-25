@@ -93,6 +93,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/modalBudget/{id}', 'BudgetController@modalBudget');
 
     //pdf de crear cotizaciones
+    Route::post('/modalCrateBudget', 'BudgetController@modalCrateBudget');
+    
+    //pdf de crear cotizaciones
     Route::get('/pdfCrateBudget', 'BudgetController@pdfCrateBudget');
     
     //pdf cotizaciones
