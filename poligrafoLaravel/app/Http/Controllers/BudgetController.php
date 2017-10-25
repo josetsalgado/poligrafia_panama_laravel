@@ -48,7 +48,20 @@ class BudgetController extends Controller
      */
     
     public function modalCrateBudget(Request $request) {
-        return view('budget.modalCreateBudget', compact("request"));
+        $getDate = Carbon::now()->format('Y-m-d');
+        $date = $this->getDates($getDate);
+      
+        return view('budget.modalCreateBudget', compact("request", "date"));
+    }
+    public function getDates($date) {
+        $array = array();
+        setlocale(LC_ALL,"es_ES");
+        $date = Carbon::parse(Carbon::parse($date));
+        $dateMonth = strftime("%B", $date->getTimestamp());
+        $getDate = $date->day. " de ".$dateMonth." del ".$date->year;
+        $getDay = $date->day;
+        array_push($array, compact('dateMonth', 'getDay', 'getDate'));
+        return $array;
     }
     
     function pdfCrateBudget() {

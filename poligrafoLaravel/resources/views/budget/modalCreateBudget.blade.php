@@ -32,7 +32,7 @@
                         <!-- /.col -->
                         <div class="col-sm-6 invoice-col pull-right">
                             <address class="pull-right">
-                                <strong >Panamá a 14 de Septiembre del 2017</strong>
+                                <strong >Panamá a {{ $date[0]["getDate"] }}</strong>
                                 <br>
                                 <br>
                             </address>
