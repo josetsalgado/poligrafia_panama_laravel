@@ -63,6 +63,7 @@
                             </div>
                             @foreach($services as $service)
                                 <div class="row">
+                                    <input id="serviceName_{{ $service->id_service }}" name="serviceName_{{ $service->id_service }}" type="hidden" value="{{ $service->name_service }}">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">{{ $service->name_service }}:</label>
                                     <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
                                         <input type="number"  class="form-control has-feedback-left quantity" id="quantity_{{ $service->id_service }}" name="quantity_{{ $service->id_service }}" placeholder="00" min="0" required>
@@ -100,9 +101,7 @@
         </div>
     </div>
     <!-- Modal Agregar Nueva Empresa & cliente-->
-    <div class="modal fade" id="newEmpresa" role="dialog">
-    
-    </div>
+    <div class="modal fade" id="myModal" role="dialog"></div>
     <!-- /. modal -->
     
     

@@ -2,12 +2,15 @@ $("#createModal").click(function(){
     var dataString = $('#createBudget').serialize();
             $.ajax({
 	        type: "POST",
-	        url: "create_butget",
+	        url: "modalCrateBudget",
 	        data: dataString,
 	        success: function(data) {
-                    $("#createModal").html(data);
+//                    $("#myModal").html(data);
+$("#myModal").html(data);
                 }
             });
+            
+//            $("#myModal").load('modalCrateBudget');
 });
 
 

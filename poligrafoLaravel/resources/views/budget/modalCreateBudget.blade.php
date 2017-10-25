@@ -1,4 +1,5 @@
 <div class="modal-dialog modal-lg">
+
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -13,6 +14,7 @@
                 </div>
             </div>
         </div>
+
         <div class="modal-body">
             <!-- content modal -->
             <div class="">
@@ -191,12 +193,52 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
-                                    <tr>
-                                        <td>_________________________________</td>
-                                        <td>_________________________________</td>
-                                        <td>_________________________________</td>
-                                    </tr>
+                                    <?php
+                                    $serviceName = "";
+                                    $company = "";
+                                    $client = "";
+                                    $serviceId = "";
+                                    $price = "";
+                                    $quantity = "";
+                                    $total = 0;
+                                    foreach ($request->all() as $key => $arrayRequest) {
+                                        if ($key == "empresa") {
+                                            $company = $arrayRequest;
+                                        }
+
+                                        if ($key == "client") {
+                                            $client = $arrayRequest;
+                                        }
+                                        if (strstr($key, 'service_id')) {
+                                            $serviceId = $arrayRequest;
+                                        }
+                                        if (strstr($key, 'price_')) {
+                                            $price = $arrayRequest;
+                                        }
+                                        if (strstr($key, 'observations')) {
+                                            $observations = $arrayRequest;
+                                        }
+                                        if (strstr($key, 'quantity_')) {
+                                            $quantity = $arrayRequest;
+                                        }
+                                        if (strstr($key, 'serviceName_')) {
+                                            $serviceName = $arrayRequest;
+                                        }
+                                        if ($price && $quantity) {
+                                            ?>
+                                            <tr>
+                                                <td>{{ $quantity }} {{ $serviceName }}</td>
+                                                <td>{{ $price/$quantity }}</td>
+                                                <td>{{ $price }}</td>
+                                            </tr>
+
+                                            <?php
+                                            $total = $total + $price;
+                                            $price = '';
+                                            $quantity = '';
+                                        }
+                                    }
+                                    ?>
                                 </tbody>
                             </table>
                         </div>
@@ -224,7 +266,7 @@
                                     </tr>
                                     <tr>
                                         <th>TOTAL</th>
-                                        <td>aca_________________</td>
+                                        <td>{{ $total }}</td>
                                     </tr>
                                 </tbody>
                             </table>

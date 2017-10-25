@@ -48,8 +48,7 @@ class BudgetController extends Controller
      */
     
     public function modalCrateBudget(Request $request) {
-        
-        return view('budget.modalBudget', compact('request'));
+        return view('budget.modalCreateBudget', compact("request"));
     }
     
     function pdfCrateBudget() {
