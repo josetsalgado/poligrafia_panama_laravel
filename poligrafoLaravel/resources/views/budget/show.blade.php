@@ -19,15 +19,6 @@
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Settings 1</a>
-                                </li>
-                                <li><a href="#">Settings 2</a>
-                                </li>
-                            </ul>
-                        </li>
                         <li><a class="close-link"><i class="fa fa-close"></i></a>
                         </li>
                     </ul>
@@ -54,16 +45,10 @@
                                 <td>{{ $budget->date_init_budget or '' }}</td>
                                 <td>{{ $budget->company_id[0]->name_company or '' }}</td>
                                 <td>{{ $budget->client_id[0]->name_client  or '' }}</td>
-                                <td>
-                                    {{ $budget->company_id[0]->tel_company  or '' }}
-                                </td>
-                                <td>
-                                    {{ $budget->client_id[0]->email_client  or '' }}
-                                </td>
-                                <td>
-
-                                </td>
-                                <td>Observaciones</td>
+                                <td>{{ $budget->company_id[0]->tel_company  or '' }}</td>
+                                <td>{{ $budget->client_id[0]->email_client  or '' }}</td>
+                                <td>{{ $budget->client_id[0]->position  or '' }}</td>
+                                <td>{{ $budget->observations  or '' }}</td>
                                 <td>
                                     <button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-money"></i> Ver</button>
                                     <a href="pdf_butget/{{ $budget->id_budget }}" target="_blank"type="button" class="btn btn-success btn-xs" style=""><i class="fa fa-download"></i>PDF</a>

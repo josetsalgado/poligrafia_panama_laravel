@@ -1,16 +1,13 @@
-$("#createModal").click(function(){
+$("#createModal").click(function () {
     var dataString = $('#createBudget').serialize();
-            $.ajax({
-	        type: "POST",
-	        url: "modalCrateBudget",
-	        data: dataString,
-	        success: function(data) {
-//                    $("#myModal").html(data);
-$("#myModal").html(data);
-                }
-            });
-            
-//            $("#myModal").load('modalCrateBudget');
+    $.ajax({
+        type: "POST",
+        url: "modalCrateBudget",
+        data: dataString,
+        success: function (data) {
+            $("#myModal").html(data);
+        }
+    });
 });
 
 
