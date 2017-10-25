@@ -98,7 +98,6 @@ class BudgetController extends Controller
             $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
             $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
         }
-
         return view('budget.show', compact('budgets'));
     }
     
@@ -166,7 +165,6 @@ class BudgetController extends Controller
     
     public function storm(Request $request) {
         $carbon = new Carbon();
-        $this->ValidateCreate($request);
         $company = "";
         $client = "";
         $serviceId = "";
@@ -187,9 +185,11 @@ class BudgetController extends Controller
             if(strstr($key, 'service_id') ){
                 $serviceId = $arrayRequest;
             }
-            
             if(strstr($key, 'price_') ){
                 $price = $arrayRequest;
+            }
+            if(strstr($key, 'observations') ){
+                $observations = $arrayRequest;
             }
             if(strstr($key, 'quantity_') ){
                 $quantity = $arrayRequest;
@@ -212,20 +212,8 @@ class BudgetController extends Controller
             'client_id' => $client,
             'date_init_budget' => Carbon::now(),
             'budgets_register_id' => $numberBudget,
-            'total_budget' => $total
+            'total_budget' => $total,
+            'observations' => $observations
         ]);
-    }
-    
-    public function ValidateCreate($request)
-    {
-        $this->validate($request,[
-                'empresa' => 'required',
-                'client' => 'required',
-            ], 
-            [
-                'empresa.required' => trans("validations.input_required", ['input' => 'empresa']),
-                'client.required' => trans("validations.input_required", ['input' => 'cliente']),
-            ]
-        );
     }
 }

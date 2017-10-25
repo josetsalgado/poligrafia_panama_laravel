@@ -51,14 +51,14 @@
                         <tbody>
                         @foreach($budgets as $budget)
                             <tr>
-                                <td>{{ $budget->date_init_budget }}</td>
-                                <td>{{ $budget->company_id[0]->name_company }}</td>
-                                <td>{{ $budget->client_id[0]->name_client }}</td>
+                                <td>{{ $budget->date_init_budget or '' }}</td>
+                                <td>{{ $budget->company_id[0]->name_company or '' }}</td>
+                                <td>{{ $budget->client_id[0]->name_client  or '' }}</td>
                                 <td>
-                                    {{ $budget->company_id[0]->tel_company }}
+                                    {{ $budget->company_id[0]->tel_company  or '' }}
                                 </td>
                                 <td>
-                                    {{ $budget->client_id[0]->email_client }}
+                                    {{ $budget->client_id[0]->email_client  or '' }}
                                 </td>
                                 <td>
 

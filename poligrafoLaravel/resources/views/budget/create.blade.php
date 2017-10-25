@@ -82,7 +82,7 @@
                             <div class="row">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Observaciones:</label>
                                 <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <textarea class="form-control" rows="3" placeholder=""></textarea>
+                                    <textarea class="form-control" id="observations" name="observations" rows="3" placeholder=""></textarea>
                                 </div>
                             </div>
                             
