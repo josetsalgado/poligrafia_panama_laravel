@@ -105,9 +105,9 @@ jQuery.extend(jQuery.validator.messages, {
 	        url: "create_butget",
 	        data: dataString,
 	        success: function(data) {
-                   	alert("bien");
-                        console.log(dataString);
-                        $('#createBudget')[0].reset();
+                   	$('#createBudget')[0].reset();
+                        alertify.success('Cotización creada de forma correcta');
+                        window.location.href = "pdfCrateBudget";
 	       	},error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.

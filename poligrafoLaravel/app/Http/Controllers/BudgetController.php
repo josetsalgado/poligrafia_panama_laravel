@@ -46,6 +46,29 @@ class BudgetController extends Controller
      * @param  Request  $request
      * @return Response
      */
+    
+    function pdfCrateBudget() {
+
+        
+                
+        $budgets = DB::table('itcp_budgets')
+            ->select('*')
+            ->where('itcp_budgets.id_budget', '=', Budget::all()->last()->id_budget)
+            ->get();
+        
+        foreach ($budgets as $budget){
+            $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
+            $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
+            $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
+            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
+        }
+
+        $pdf = PDF::Make();
+        $pdf->loadView('budget.pdfButget', compact('budgets'));
+        return $pdf->Stream('document.pdf');
+    }
+    
+    
     function pdfBudget($id) {
 
         $budgets = DB::table('itcp_budgets')
@@ -215,5 +238,7 @@ class BudgetController extends Controller
             'total_budget' => $total,
             'observations' => $observations
         ]);
+        
+        
     }
 }
