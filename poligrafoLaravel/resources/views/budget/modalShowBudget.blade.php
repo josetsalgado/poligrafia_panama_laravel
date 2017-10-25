@@ -1,4 +1,5 @@
 <div class="modal-dialog modal-lg">
+
     <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -30,7 +31,7 @@
                         <!-- /.col -->
                         <div class="col-sm-6 invoice-col pull-right">
                             <address class="pull-right">
-                                <strong >Panamá a 14 de Septiembre del 2017</strong>
+                                <strong >Panamá a {{ $budgets[0]->date_init_budget[0]["getDate"] }}</strong>
                                 <br>
                                 <br>
                             </address>
@@ -194,8 +195,8 @@
                                     @foreach($budgets[0]->budgets_register_id as $budget)
                                     <tr>
                                         <td>{{ $budget->quantity_budget }} {{ $budget->service_id[0]->name_service }}</td>
-                                        <td>$ {{ $budget->price_service }}</td>
-                                        <td>$ {{ $budget->total_budget }}</td>
+                                        <td>B/. {{ $budget->price_service }}</td>
+                                        <td>B/. {{ $budget->total_budget }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -225,7 +226,7 @@
                                     </tr>
                                     <tr>
                                         <th>TOTAL</th>
-                                        <td>$ {{ $budgets[0]->total_budget }}</td>
+                                        <td>B/.760.00</td>
                                     </tr>
                                 </tbody>
                             </table>

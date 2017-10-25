@@ -139,8 +139,8 @@ class BudgetController extends Controller
         return view('budget.show', compact('budgets'));
     }
     
-    public function modalBudget($id) {
-        
+    public function modalShowBudget($id) {
+
         $budgets = DB::table('itcp_budgets')
             ->select('*')
             ->where('itcp_budgets.id_budget', '=', Crypt::decrypt($id))
@@ -149,11 +149,10 @@ class BudgetController extends Controller
         foreach ($budgets as $budget){
             $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
             $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
-            $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
+            $budget->date_init_budget = $this->getDates($budget->date_init_budget);
             $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
         }
-        
-        return view('budget.modalBudget', compact('budgets'));
+        return view('budget.modalShowBudget', compact('budgets'));
     }
     /**
      * get array of register comanies of budgets
