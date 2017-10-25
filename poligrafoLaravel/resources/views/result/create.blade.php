@@ -964,7 +964,7 @@
     </div>
     <!-- /. Modal DLST -->
 
-
+    <script src="js/validate/fn-createResult.js"></script>
     <script type="text/javascript">
         function myFunction(iddlst) {
             document.getElementById(iddlst.id).innerHTML = '';
@@ -980,6 +980,6 @@
             $(".close").click();
         });
     </script>
-    <script src="js/validate/fn-createResult.js"></script>
+
 
 @stop
