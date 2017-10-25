@@ -8,9 +8,9 @@
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
         "laravelcollective/html": "5.1.*",
-        "nesbot/carbon": "^1.22",
+        "nesbot/carbon": "1.22",
         "zanysoft/laravel-pdf": "1.0.2",
-        "guzzlehttp/guzzle": "~4.0"
+        "guzzlehttp/guzzle": "4.0"
 
 
 
