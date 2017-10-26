@@ -13,15 +13,6 @@
                         <ul class="nav navbar-right panel_toolbox">
                             <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                             </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="#">Settings 1</a>
-                                    </li>
-                                    <li><a href="#">Settings 2</a>
-                                    </li>
-                                </ul>
-                            </li>
                             <li><a class="close-link"><i class="fa fa-close"></i></a>
                             </li>
                         </ul>
@@ -136,7 +127,7 @@
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Cedula</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="ciCandidate" name="ciCandidate">
+                                    <input type="number" class="form-control" id="ciCandidate" name="ciCandidate">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -150,7 +141,7 @@
 
                                 <label class="col-sm-3 control-label col-xs-12">Celular</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <input type="text" class="form-control" id="telCandidate" name="telCandidate">
+                                    <input type="number" class="form-control" id="telCandidate" name="telCandidate">
                                 </div>
                             </div>
                             <div class="form-group">

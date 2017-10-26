@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Appoiment;
 use App\Budget;
+use App\Company;
+use App\Service;
 use App\Http\Controllers\Controller;
 use App\Payment;
 use Carbon\Carbon;
@@ -11,9 +14,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Crypt;
 use PDF;
-use function bcrypt;
 use function trans;
-use Log;
+use function view;
 
 class AccountStatusController extends Controller
 {
@@ -24,16 +26,45 @@ class AccountStatusController extends Controller
      */
     public function show()
     {
-        $budgets = $this->getBudget();
-        
-        foreach ($budgets as $budget){
-            $budget->id_budget = Crypt::encrypt($budget->id_budget);
-            $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
-            $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
-            $budget->date_init_budget = $this->getDateAndStatus($budget->date_init_budget);
-            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);    
+//        $appoiment = Appoiment::all();
+//        $budgets = $this->getBudget();
+//        
+//        foreach ($budgets as $budget){
+//            $budget->id_budget = Crypt::encrypt($budget->id_budget);
+//            $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
+//            $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
+//            $budget->date_init_budget = $this->getDateAndStatus($budget->date_init_budget);
+//            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);    
+//        }
+        $services = Service::all();
+        $companys = Company::all();
+        $appoiments = Appoiment::all();
+        $accountStatus = array();
+        foreach ($companys as $company){
+            foreach ($appoiments as $appoiment){
+                if(($company->id_company == $appoiment->company_id) && ($appoiment->status == "Asistió")){
+                    //saber si la prueba pre empleo tiene un costo especial para la empresa
+                    if($company->cost_test_pre_employment){
+                        dump("tiene pre empleo");
+                    }
+                    //saber si la prueba especifica tiene un costo especial para la empresa
+                    if($company->cost_specific_test){
+                        dump("tiene espeficica");
+                    }
+                    //saber si la prueba de rutina tiene un costo especial para la empresa
+                    if($company->cost_routine_test){
+                        dump("tiene rutina");
+                    }
+                    //saber si la prueba reevaluacion tiene un costo especial para la empresa
+                    if($company->reevaluation_test_cost){
+                        dump("tiene reevaluacion");
+                    }
+                    dump($appoiment->company_id);
+                }
+            }
         }
         
+        dd($accountStatus);
         return view('AccountStatus.show', compact('budgets'));
     }
     

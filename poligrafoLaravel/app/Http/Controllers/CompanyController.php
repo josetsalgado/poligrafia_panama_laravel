@@ -53,6 +53,7 @@ class CompanyController extends Controller
             'cost_specific_test' => $request->cost_specific_test,
             'cost_routine_test' => $request->cost_routine_test,
             'reevaluation_test_cost' => $request->reevaluation_test_cost,
+            'retention_type' => $request->retention_type
         ]);
 
         return view('company.create');

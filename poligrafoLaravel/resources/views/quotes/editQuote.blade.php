@@ -123,10 +123,9 @@
                         <div class="col-sm-9 col-xs-12">
                             <select id="statusEdit" name="statusEdit" class="form-control col-xs-12" required="">
                                 <option value="{{ $getQuote[0]->status }}">{{ $getQuote[0]->status }}</option>
-                                <option value="No asistio">No asistio</option>
-                                <option value="Re agendada">Re-agendada</option>
-                                <option value="Procesada">Procesada</option>
-                                <option value="Aprobada">Aprobada</option>
+                                <option value="No asistió">No asistió</option>
+                                <option value="Asistió">Asistió</option>
+                                <option value="Re-agendada">Re-agendada</option>
                             </select>
                         </div>
                     </div>
