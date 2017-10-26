@@ -8,7 +8,7 @@
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="hidden" id="id" name="id" value="{{ $models[0]->id_service }}">
         <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-            <input type="text" class="form-control has-feedback-left" id="name" name="name" placeholder="Nombre del producto" value="{{ $models[0]->name_service }}">
+            <input type="text" class="form-control has-feedback-left" id="name" name="name" placeholder="Nombre del producto" value="{{ $models[0]->name_service }}" disabled>
             <span class="fa fa-hospital-o form-control-feedback left" aria-hidden="true"></span>
         </div>
 

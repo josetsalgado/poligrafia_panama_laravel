@@ -26,48 +26,55 @@ class AccountStatusController extends Controller
      */
     public function show()
     {
-//        $appoiment = Appoiment::all();
-//        $budgets = $this->getBudget();
-//        
-//        foreach ($budgets as $budget){
-//            $budget->id_budget = Crypt::encrypt($budget->id_budget);
-//            $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
-//            $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
-//            $budget->date_init_budget = $this->getDateAndStatus($budget->date_init_budget);
-//            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);    
-//        }
+
         $services = Service::all();
         $companys = Company::all();
         $appoiments = Appoiment::all();
+        $total =  0;
         $accountStatus = array();
+        $itbms = 7;
+        $retentionType = 0;
+        //insertar un objeto sobre un valor devuelto
+        foreach ($appoiments as $appoiment){
+            $appoiment->service_id = $this->getRelationship($appoiment->service_id, 'itcp_service', 'id_service');
+        }
+        //insertar un objeto sobre un valor devuelto
+        
+        //buscar citas por compañia
         foreach ($companys as $company){
             foreach ($appoiments as $appoiment){
                 if(($company->id_company == $appoiment->company_id) && ($appoiment->status == "Asistió")){
-                    //saber si la prueba pre empleo tiene un costo especial para la empresa
-                    if($company->cost_test_pre_employment){
-                        dump("tiene pre empleo");
+                    if($appoiment->service_id[0]->name_service == "Pre-empleo"){
+                        ($company->cost_test_pre_employment) ? $total = $total + $company->cost_test_pre_employment : $total = $total + $appoiment->service_id[0]->price_service;
                     }
-                    //saber si la prueba especifica tiene un costo especial para la empresa
-                    if($company->cost_specific_test){
-                        dump("tiene espeficica");
+                    if($appoiment->service_id[0]->name_service == "Especifica"){
+                        ($company->cost_specific_test) ? $total = $total + $company->cost_specific_test : $total = $total + $appoiment->service_id[0]->price_service;
                     }
-                    //saber si la prueba de rutina tiene un costo especial para la empresa
-                    if($company->cost_routine_test){
-                        dump("tiene rutina");
+                    if($appoiment->service_id[0]->name_service == "Rutina"){
+                        ($company->cost_routine_test) ? $total = $total + $company->cost_routine_test : $total = $total + $appoiment->service_id[0]->price_service;
                     }
-                    //saber si la prueba reevaluacion tiene un costo especial para la empresa
-                    if($company->reevaluation_test_cost){
-                        dump("tiene reevaluacion");
+                    if($appoiment->service_id[0]->name_service == "Reevaluación"){
+                        ($company->reevaluation_test_cost) ? $total = $total + $company->reevaluation_test_cost : $total = $total + $appoiment->service_id[0]->price_service;
                     }
-                    dump($appoiment->company_id);
+                    if($company->retention_type == "3.4"){
+                        $itbms = ($total*3.4)/100;
+                        $retentionType = ($total*$company->retention_type)/100;
+                    }
                 }
             }
+            $companyName = $company->name_company;
+            $accountStatus = array_add($accountStatus, $company->id_company, compact("total","companyName", "itbms", "retentionType"));
+            $total =  0; 
+            $itbms = 7;
+            $retentionType = 0;
         }
-        
         dd($accountStatus);
-        return view('AccountStatus.show', compact('budgets'));
+        return view('AccountStatus.show');
     }
     
+ 
+
+
     public function getDateAndStatus($date) {
         $array = array();
         $dateInit = Carbon::parse($date)->format('d/m/Y');

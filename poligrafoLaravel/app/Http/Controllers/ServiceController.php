@@ -41,7 +41,6 @@ class ServiceController extends Controller
     {
         $this->ValidateCreate($request);
         Service::insert([
-          'id_service' => '',
           'name_service' => $request->name,
           'price_service' => $request->price,
           'description_service' => $request->description,
@@ -60,15 +59,11 @@ class ServiceController extends Controller
     public function ValidateCreate($request)
     {
         $this->validate($request,[
-                'name' => 'required',
-                'price' => 'required|numeric',
-                'description' => 'required',
+                
+                'price' => 'numeric',
             ], 
             [
-                'name.required' => trans("validations.input_required", ['input' => 'nombre']),
-                'price.required' => trans("validations.input_required", ['input' => 'precio']),
                 'price.numeric' => trans("validations.input_format", ['input' => 'telefono']),
-                'description.required' => trans("validations.input_required", ['input' => 'descripción']),
                 
             ]
         );
@@ -112,7 +107,6 @@ class ServiceController extends Controller
         $this->ValidateCreate($request);
         Service::where('id_service', $request->id)
                 ->update([
-                    'name_service' => $request->name,
                     'price_service' => $request->price,
                     'description_service' => $request->description
         ]);
