@@ -68,7 +68,7 @@ class AccountStatusController extends Controller
             $itbms = 7;
             $retentionType = 0;
         }
-        dd($accountStatus);
+//        dd($accountStatus);
         return view('AccountStatus.show');
     }
     
