@@ -167,9 +167,12 @@ Route::group(['middleware' => 'auth'], function () {
     
     //enviar ciuades por variables de session
     Route::get('/city/{name}', function($name){
-//        $request->session()->put('city', $name);
+    //$request->session()->put('city', $name);
         session(['city' => $name]);
         return "bien";
     });
+
+    //prueba envio de correo
+    Route::get('sendhtmlemail_cotizacion','MailController@html_email_budget') ;
 
 });

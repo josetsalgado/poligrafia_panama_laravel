@@ -91,7 +91,7 @@
                                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="createModal"> Ver </button>
                                     <button type="submit" class="btn btn-primary" target="_blank" style="color: white"><i class="fa fa-download"></i> PDF</button>
-                                    <button type="button" class="btn btn-dark"><i class="fa fa-envelope"></i> Enviar </button>
+                                    <a href="sendhtmlemail_cotizacion" target="_blank"><button type="button" class="btn btn-dark"><i class="fa fa-envelope"></i> Enviar </button></a>
                                 </div>
                             </div>
                         </div>

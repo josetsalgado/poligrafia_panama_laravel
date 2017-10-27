@@ -166,6 +166,18 @@
                             <input type="text" class="form-control has-feedback-left" id="factura" name="factura" placeholder=" Ejemplo: TBSR110000623-00003021">
                             <span class="fa fa-file-text-o form-control-feedback left" aria-hidden="true"></span>
                         </div>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Cliente:</label>
+                        <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                            <select id="cliente" name="cliente" class="form-control selc-empresa" required>
+                                <option value="">Seleccione</option>
+                                <option value="cliente1">Cliente 1</option>
+                                <option value="cliente2">Cliente 2</option>
+                                <option value="cliente3">Cliente 3</option>
+                                <option value="cliente4">Cliente 4</option>
+                                <option value="cliente5">Cliente 5</option>
+                            </select>
+                            <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
+                        </div>
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Forma de Pago:</label>
                         <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
                             <select id="foma-pago" name="forma-pago" class="form-control selc-empresa" required>

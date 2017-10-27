@@ -23,16 +23,16 @@
                     <option value="ACH">ACH</option>
                     <option value="Tarjeta-de-credito">Tarjeta de crédito</option>
                     <option value="Transferencia electronica">transferencia electrónica</option>
-                </select> 
+                </select>
                 <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
             </div>
-            
+
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Total a Pagar:</label>
             <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
                 <input type="number" class="form-control has-feedback-left" id="total_pay" name="total_pay" value="{{ $totalPay }}" disabled="true">
                 <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
             </div>
-             
+
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Monto a Pagar:</label>
             <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
                 <input type="number" class="form-control has-feedback-left keyUp" id="payment" name="payment" placeholder="1500.00">
@@ -43,13 +43,13 @@
             <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
                 <input type="number" class="form-control has-feedback-left keyUp" id="discount" name="discount" placeholder="1500.00">
                 <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
-            </div> 
+            </div>
 
             <label class="control-label col-md-3 col-sm-3 col-xs-12">Observaciones:</label>
             <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
                 <textarea id="observations" class="form-control" name="observations" data-parsley-trigger="keyup" data-parsley-minlength="20" data-parsley-maxlength="100" data-parsley-minlength-message="Come on! You need to enter at least a 20 caracters long comment.." data-parsley-validation-threshold="10"></textarea>
                 <span class="fa fa-comment form-control-feedback left" aria-hidden="true"></span>
-            </div>  
+            </div>
 
             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                 <button type="reset" class="btn btn-default" data-dismiss="modal"><i class="fa fa-eye-slash "></i> Cerrar</button>

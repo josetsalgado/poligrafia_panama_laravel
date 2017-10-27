@@ -250,18 +250,7 @@
                         </span>
                                     </a>
                                 </li>
-                                <li>
-                                    <div class="text-center">
-                                        <a>
-                                            <strong>
-                                                <form class="formulario" action="">
-                                                    <input type="text" id="tareaInput" placeholder="Agrega tarea">
-                                                    <button class="boton" id="btn-agregar"><i class="fa fa-plus"></i></button>
-                                                </form>
-                                            </strong>
-                                        </a>
-                                    </div>
-                                </li>
+
                             </ul>
                         </li>
                     </ul>

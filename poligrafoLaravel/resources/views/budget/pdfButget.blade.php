@@ -62,6 +62,7 @@
         }
         #padding_space_footer{
 
+            margin-top: 10px;
             padding-top: 25px;
             text-align: center
         }
@@ -240,7 +241,6 @@
                     </div>
                     <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>COTIZACIÓN</b></h5>
 
-
                     <!-- Table row -->
                     <div class="row">
                         <div class="col-xs-12 table">
@@ -298,7 +298,7 @@
         </section>
     </div>
 
-    <htmlpagefooter name="page-footer" id="padding_space_footer" >
+    <htmlpagefooter name="page-footer" id="padding_space_footer">
         <img src="images/footerpdf_poligrafo.png" style="padding-bottom: 10px">
     </htmlpagefooter>
     </body>
