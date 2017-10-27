@@ -210,6 +210,15 @@ class QuotesController extends Controller
                     "status" => $request->statusEdit,
                     "time_arrival" => $request->time_arrival
         ));
+        
+//        Payment::insert([
+//          'id_patient' => '',
+//          'name_patient' => $request->candidateName,
+//          'last_name_patient' => $request->candidateLastname,
+//          'ci_patient' => $request->ciCandidate,
+//          'job_patient' => $request->jobCandidate,
+//          'phone' => $request->telCandidate,
+//        ]);
     }
 
     /**
