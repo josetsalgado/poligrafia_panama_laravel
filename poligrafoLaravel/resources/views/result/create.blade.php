@@ -1647,25 +1647,6 @@
             });
         })(jQuery);
     </script>
-    <script type="text/javascript">
-        var options = {
-            unico : ["UTAH zona 3 (ZCT)","ZCT FEDERAL","BIZONA"],
-            multiple : ["AF MGQT V.1","AF MGQT V.2","MGQT UTAH"],
-            laborales : ["DLST (screening) TES"]
-        }
-
-        $(function(){
-            var fillSecondary = function(){
-                var selected = $('#primary').val();
-                $('#secondary').empty();
-                options[selected].forEach(function(element,index){
-                    $('#secondary').append('<option value="'+element+'">'+element+'</option>');
-                });
-            }
-            $('#primary').change(fillSecondary);
-            fillSecondary();
-        });
-    </script>
 
     <script type="text/javascript">
         function myFunction(iddlst) {

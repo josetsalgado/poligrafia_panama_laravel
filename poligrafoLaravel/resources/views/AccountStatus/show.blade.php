@@ -82,7 +82,7 @@
                             <td>
                                 <button type="button" class="btn btn btn-warning btn-xs" data-toggle="modal" data-target="#observaciones"><i class="fa fa-comments"></i> Observaciones</button> <br>
                                 <a href="" class="btn btn-success btn-xs"><i class="fa fa-check"></i>  Pagada </a><br>
-                                <a href="estados_de_cuenta.html" class="btn btn-dark btn-xs"><i class="fa fa-bar-chart-o"></i>  Estado de Cuenta </a>
+                                <a href="show_accountstatus" class="btn btn-dark btn-xs"><i class="fa fa-bar-chart-o"></i>  Estado de Cuenta </a>
                             </td>
                         </tr>
                             <td>
