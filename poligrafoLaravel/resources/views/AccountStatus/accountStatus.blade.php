@@ -135,8 +135,8 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <br>
-                            <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i> Imprimir</button>
-                            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal"><i class="fa fa-download"></i> Generar PDF</button>
+                            <a href="pdf_account" target="_blank"type="button" class="btn btn-primary pull-right" style=""><i class="fa fa-download"></i>Generar PDF</a>
+                            <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#myModal"><i ></i> Ver</button>
                         </div>
                     </div>
 

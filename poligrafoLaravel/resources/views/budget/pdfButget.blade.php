@@ -256,8 +256,8 @@
                                 @foreach($budgets[0]->budgets_register_id as $budget)
                                     <tr>
                                         <td style="background-color: #d8d8d8; padding-left: 5px; height: 30px !important;">{{ $budget->quantity_budget }} {{ $budget->service_id[0]->name_service }}</td>
-                                        <td style="background-color: #d8d8d8; padding-left: 5px ; height: 30px !important;">$ {{ $budget->price_service }}</td>
-                                        <td style="background-color: #d8d8d8; padding-left: 5px ; height: 30px !important;">$ {{ $budget->total_budget }}</td>
+                                        <td style="background-color: #d8d8d8; padding-left: 5px ; height: 30px !important;">B/. {{ $budget->price_service }}</td>
+                                        <td style="background-color: #d8d8d8; padding-left: 5px ; height: 30px !important;">B/. {{ $budget->total_budget }}</td>
                                     </tr>
                                 @endforeach
                                 </tbody>

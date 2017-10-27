@@ -3,19 +3,7 @@ $(document).ready(function(){
         wrapper: "div",
         errorClass: "text-danger",
         
-	rules: {
-            name: { required:true },
-            price: { required:true, number:true },
-            description: { required:true },
-	},
-	messages: {
-            name: { required: "El campo nombre es obligatorio." },
-            price: { 
-                    required: "El campo precio es obligatorio.",
-                    number: "Debe ingresar un campo con formato correo",
-                },
-            description: { required: "El campo descripción es obligatorio." },
-	},
+	
 	submitHandler: function(form){
             var dataString = $('#updateService').serialize();
             console.log(dataString);

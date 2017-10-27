@@ -1,11 +1,13 @@
 $(document).ready(function () {
     //funcion para mostrar lista de clientes asociados a la empresa
-    $("#empresa").change(function(){getClient();});
-    $("#client").attr("disabled",true);
-    function getClient(){
+    $("#empresa").change(function () {
+        getClient();
+    });
+    $("#client").attr("disabled", true);
+    function getClient() {
         var code = $("#empresa").val();
 
-        $.get("appoiment_company/"+code, function (resultado) {
+        $.get("appoiment_company/" + code, function (resultado) {
             if (resultado == false)
             {
                 alert("Usted debe crear un cliente asociado a esta compañia");
@@ -18,7 +20,7 @@ $(document).ready(function () {
             }
         });
     }
-    
+
     //calendario
     $('#calendar').fullCalendar({
         header: {
@@ -47,57 +49,54 @@ $(document).ready(function () {
             $("#CalenderModalEdit").modal("show");
         },
         editable: true,
-        eventLimit: true, 
+        eventLimit: true,
         events: {
             //data que se carga en el modal mediante json
             url: 'getQuotes',
         },
-       
     });
-    
+
     //validar solicitud de cita
     $("#createQuote").validate({
-        
         wrapper: "div",
         errorClass: "text-danger",
-        
-	rules: {
-            empresa: { required:true },
-            client: { required:true },
-            schedule: { required:true },
-            service: { required:true },
-            status: { required:true }, 
-            candidateName: { required:true }, 
-            candidateLastname: { required:true }, 
-            ciCandidate: { required:true }, 
-            jobCandidate: { required:true }, 
-            telCandidate: { required:true }, 
-            descriptionCandidate: { required:true }, 
+        rules: {
+            empresa: {required: true},
+            client: {required: true},
+            schedule: {required: true},
+            service: {required: true},
+            status: {required: true},
+            candidateName: {required: true},
+            candidateLastname: {required: true},
+            ciCandidate: {required: true},
+            jobCandidate: {required: true},
+            telCandidate: {required: true},
+            descriptionCandidate: {required: true},
         },
-	messages: {
-            empresa: { required: "El campo empresa es obligatorio." },
-            client: { required: "El campo cliente es obligatorio." },
-            schedule: { required: "El campo horario es obligatorio." },
-            service: { required: "El campo tipo de prueba es obligatorio." },
-            status: { required: "El campo estatus es obligatorio." }, 
-            candidateName: { required: "El campo nombre del candidato es obligatorio." }, 
-            candidateLastname: { required: "El campo apellido del candidato es obligatorio." }, 
-            ciCandidate: { required: "El campo cedula es obligatorio." }, 
-            jobCandidate: { required: "El puesto es obligatorio." }, 
-            telCandidate: { required: "El telefono es obligatorio." }, 
-            descriptionCandidate: { required: "El descripción es obligatorio." }, 
-	},
-	submitHandler: function(form){
+        messages: {
+            empresa: {required: "El campo empresa es obligatorio."},
+            client: {required: "El campo cliente es obligatorio."},
+            schedule: {required: "El campo horario es obligatorio."},
+            service: {required: "El campo tipo de prueba es obligatorio."},
+            status: {required: "El campo estatus es obligatorio."},
+            candidateName: {required: "El campo nombre del candidato es obligatorio."},
+            candidateLastname: {required: "El campo apellido del candidato es obligatorio."},
+            ciCandidate: {required: "El campo cedula es obligatorio."},
+            jobCandidate: {required: "El puesto es obligatorio."},
+            telCandidate: {required: "El telefono es obligatorio."},
+            descriptionCandidate: {required: "El descripción es obligatorio."},
+        },
+        submitHandler: function (form) {
             var dataString = $('#createQuote').serialize();
             $.ajax({
-	        type: "POST",
-	        url: "create_quote",
-	        data: dataString,
-	        success: function(data) {
-                   	alert("bien");
-                        $('#createQuote')[0].reset();
-                        $('.close').click();
-	       	},error: function (err) {
+                type: "POST",
+                url: "create_quote",
+                data: dataString,
+                success: function (data) {
+                    $('#createQuote')[0].reset();
+                    $('.close').click();
+                    location.reload();
+                }, error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.
                         //show them somewhere in the markup
@@ -123,6 +122,6 @@ $(document).ready(function () {
                 }
             });
             //$('#createUser')[0].reset();
-	}//cerrado de la accion del submiting  
+        }//cerrado de la accion del submiting  
     });//cerrada validating jquery 
 });

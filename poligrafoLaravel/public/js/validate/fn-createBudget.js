@@ -1,3 +1,16 @@
+$("#createModal").click(function () {
+    var dataString = $('#createBudget').serialize();
+    $.ajax({
+        type: "POST",
+        url: "modalCrateBudget",
+        data: dataString,
+        success: function (data) {
+            $("#myModal").html(data);
+        }
+    });
+});
+
+
 $("#empresa").change(function () {
     getClient();
 });
@@ -105,9 +118,9 @@ jQuery.extend(jQuery.validator.messages, {
 	        url: "create_butget",
 	        data: dataString,
 	        success: function(data) {
-                   	alert("bien");
-                        console.log(dataString);
-                        $('#createBudget')[0].reset();
+                   	$('#createBudget')[0].reset();
+                        alertify.success('Cotización creada de forma correcta');
+                        window.location.href = "pdfCrateBudget";
 	       	},error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.

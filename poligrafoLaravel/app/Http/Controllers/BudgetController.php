@@ -46,6 +46,44 @@ class BudgetController extends Controller
      * @param  Request  $request
      * @return Response
      */
+    
+    public function modalCrateBudget(Request $request) {
+        $getDate = Carbon::now()->format('Y-m-d');
+        $date = $this->getDates($getDate);
+      
+        return view('budget.modalCreateBudget', compact("request", "date"));
+    }
+    public function getDates($date) {
+        $array = array();
+        setlocale(LC_ALL,"es_ES");
+        $date = Carbon::parse(Carbon::parse($date));
+        $dateMonth = strftime("%B", $date->getTimestamp());
+        $getDate = $date->day. " de ".$dateMonth." del ".$date->year;
+        $getDay = $date->day;
+        array_push($array, compact('dateMonth', 'getDay', 'getDate'));
+        return $array;
+    }
+    
+    function pdfCrateBudget() {
+
+        $budgets = DB::table('itcp_budgets')
+            ->select('*')
+            ->where('itcp_budgets.id_budget', '=', Budget::all()->last()->id_budget)
+            ->get();
+        
+        foreach ($budgets as $budget){
+            $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
+            $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
+            $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
+            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
+        }
+
+        $pdf = PDF::Make();
+        $pdf->loadView('budget.pdfButget', compact('budgets'));
+        return $pdf->Stream('document.pdf');
+    }
+    
+    
     function pdfBudget($id) {
 
         $budgets = DB::table('itcp_budgets')
@@ -98,12 +136,11 @@ class BudgetController extends Controller
             $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
             $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
         }
-
         return view('budget.show', compact('budgets'));
     }
     
-    public function modalBudget($id) {
-        
+    public function modalShowBudget($id) {
+
         $budgets = DB::table('itcp_budgets')
             ->select('*')
             ->where('itcp_budgets.id_budget', '=', Crypt::decrypt($id))
@@ -112,11 +149,10 @@ class BudgetController extends Controller
         foreach ($budgets as $budget){
             $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
             $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
-            $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
+            $budget->date_init_budget = $this->getDates($budget->date_init_budget);
             $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
         }
-        
-        return view('budget.modalBudget', compact('budgets'));
+        return view('budget.modalShowBudget', compact('budgets'));
     }
     /**
      * get array of register comanies of budgets
@@ -166,7 +202,6 @@ class BudgetController extends Controller
     
     public function storm(Request $request) {
         $carbon = new Carbon();
-        $this->ValidateCreate($request);
         $company = "";
         $client = "";
         $serviceId = "";
@@ -187,9 +222,11 @@ class BudgetController extends Controller
             if(strstr($key, 'service_id') ){
                 $serviceId = $arrayRequest;
             }
-            
             if(strstr($key, 'price_') ){
                 $price = $arrayRequest;
+            }
+            if(strstr($key, 'observations') ){
+                $observations = $arrayRequest;
             }
             if(strstr($key, 'quantity_') ){
                 $quantity = $arrayRequest;
@@ -212,20 +249,10 @@ class BudgetController extends Controller
             'client_id' => $client,
             'date_init_budget' => Carbon::now(),
             'budgets_register_id' => $numberBudget,
-            'total_budget' => $total
+            'total_budget' => $total,
+            'observations' => $observations
         ]);
-    }
-    
-    public function ValidateCreate($request)
-    {
-        $this->validate($request,[
-                'empresa' => 'required',
-                'client' => 'required',
-            ], 
-            [
-                'empresa.required' => trans("validations.input_required", ['input' => 'empresa']),
-                'client.required' => trans("validations.input_required", ['input' => 'cliente']),
-            ]
-        );
+        
+        
     }
 }

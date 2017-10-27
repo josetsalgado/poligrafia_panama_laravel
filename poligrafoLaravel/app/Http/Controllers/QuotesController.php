@@ -42,11 +42,12 @@ class QuotesController extends Controller
      */
    
     
-        public function getQuotes()
+        public function getQuotes(Request $request)
     {
         $appoiments = DB::table('itcp_appoiments')
                 ->join('itcp_patients', 'itcp_patients.id_patient', '=', 'itcp_appoiments.patient_id')
                 ->select('id_appoiment AS id', 'name_patient AS title', 'date_appoiment AS start')
+                ->where('itcp_appoiments.city_appoiment', '=', $request->session()->get('city'))
                 ->get();
         return view("quotes.getQuotes", compact("appoiments"));
     }
@@ -124,7 +125,7 @@ class QuotesController extends Controller
           'company_id' => intval($request->empresa),
           'client_id' => intval($request->client),
           'patient_id' => intval(Patient::all()->last()->id_patient),
-          'city_appoiment' => 'Ciudad de panama',
+          'city_appoiment' => $request->session()->get('city'),
           'date_appoiment' => $request->dateEpoch,
           'time_appoiment' => $request->schedule,
           'comentary_appoiment' => $request->descriptionCandidate,
@@ -203,10 +204,11 @@ class QuotesController extends Controller
                     "company_id" => $request->empresaEdit,
                     "client_id" => $request->clientEdit,
                     "patient_id" => Patient::where("id_patient", $request->id_patient)->get()[0]->id_patient,
-                    "city_appoiment" => "Ciudad de panama",
+                    "city_appoiment" => $request->session()->get('city'),
                     "time_appoiment" => $request->scheduleEdit,
                     "comentary_appoiment" => $request->descriptionCandidateEdit,
-                    "status" => $request->statusEdit
+                    "status" => $request->statusEdit,
+                    "time_arrival" => $request->time_arrival
         ));
     }
 

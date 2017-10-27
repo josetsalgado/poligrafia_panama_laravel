@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Appoiment;
 use App\Budget;
+use App\Company;
+use App\Service;
 use App\Http\Controllers\Controller;
 use App\Payment;
 use Carbon\Carbon;
@@ -11,9 +14,8 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Crypt;
 use PDF;
-use function bcrypt;
 use function trans;
-use Log;
+use function view;
 
 class AccountStatusController extends Controller
 {
@@ -24,19 +26,55 @@ class AccountStatusController extends Controller
      */
     public function show()
     {
-        $budgets = $this->getBudget();
-        
-        foreach ($budgets as $budget){
-            $budget->id_budget = Crypt::encrypt($budget->id_budget);
-            $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
-            $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
-            $budget->date_init_budget = $this->getDateAndStatus($budget->date_init_budget);
-            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);    
+
+        $services = Service::all();
+        $companys = Company::all();
+        $appoiments = Appoiment::all();
+        $total =  0;
+        $accountStatus = array();
+        $itbms = 7;
+        $retentionType = 0;
+        //insertar un objeto sobre un valor devuelto
+        foreach ($appoiments as $appoiment){
+            $appoiment->service_id = $this->getRelationship($appoiment->service_id, 'itcp_service', 'id_service');
         }
+        //insertar un objeto sobre un valor devuelto
         
-        return view('AccountStatus.show', compact('budgets'));
+        //buscar citas por compañia
+        foreach ($companys as $company){
+            foreach ($appoiments as $appoiment){
+                if(($company->id_company == $appoiment->company_id) && ($appoiment->status == "Asistió")){
+                    if($appoiment->service_id[0]->name_service == "Pre-empleo"){
+                        ($company->cost_test_pre_employment) ? $total = $total + $company->cost_test_pre_employment : $total = $total + $appoiment->service_id[0]->price_service;
+                    }
+                    if($appoiment->service_id[0]->name_service == "Especifica"){
+                        ($company->cost_specific_test) ? $total = $total + $company->cost_specific_test : $total = $total + $appoiment->service_id[0]->price_service;
+                    }
+                    if($appoiment->service_id[0]->name_service == "Rutina"){
+                        ($company->cost_routine_test) ? $total = $total + $company->cost_routine_test : $total = $total + $appoiment->service_id[0]->price_service;
+                    }
+                    if($appoiment->service_id[0]->name_service == "Reevaluación"){
+                        ($company->reevaluation_test_cost) ? $total = $total + $company->reevaluation_test_cost : $total = $total + $appoiment->service_id[0]->price_service;
+                    }
+                    if($company->retention_type == "3.4"){
+                        $itbms = ($total*3.4)/100;
+                        $retentionType = ($total*$company->retention_type)/100;
+                    }
+                }
+            }
+            $companyName = $company->name_company;
+            $accountStatus = array_add($accountStatus, $company->id_company, compact("total","companyName", "itbms", "retentionType"));
+            $total =  0; 
+            $itbms = 7;
+            $retentionType = 0;
+        }
+        dd($accountStatus);
+        return view('AccountStatus.show');
     }
     
+ 
+
+
     public function getDateAndStatus($date) {
         $array = array();
         $dateInit = Carbon::parse($date)->format('d/m/Y');

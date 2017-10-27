@@ -79,7 +79,8 @@
                         </div>
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Llegada</label>
                         <div class="col-md-3 col-sm-2 col-xs-12">
-                            <select id="heard" class="form-control col-xs-12" required="">
+                            <select id="time_arrival" name="time_arrival" class="form-control col-xs-12">
+                                <option value="{{ $getQuote[0]->time_arrival or '' }}">{{ $getQuote[0]->time_arrival or '' }}</option>
                                 <option value="7:00">7:00</option>
                                 <option value="7:30">7:30</option>
                                 <option value="8:00">8:00</option>
@@ -122,10 +123,9 @@
                         <div class="col-sm-9 col-xs-12">
                             <select id="statusEdit" name="statusEdit" class="form-control col-xs-12" required="">
                                 <option value="{{ $getQuote[0]->status }}">{{ $getQuote[0]->status }}</option>
-                                <option value="No asistio">No asistio</option>
-                                <option value="Re agendada">Re-agendada</option>
-                                <option value="Procesada">Procesada</option>
-                                <option value="Aprobada">Aprobada</option>
+                                <option value="No asistió">No asistió</option>
+                                <option value="Asistió">Asistió</option>
+                                <option value="Re-agendada">Re-agendada</option>
                             </select>
                         </div>
                     </div>

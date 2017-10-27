@@ -21,6 +21,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
+       
         //ultimas 5 citas con estatus pendiente
         $lastFivePendingAppointments = DB::table('itcp_appoiments')
                 ->join('itcp_patients', 'itcp_appoiments.patient_id', '=', 'itcp_patients.id_patient')
@@ -47,8 +48,6 @@ class DashboardController extends Controller
                 ->take(5)
                 ->get();
         
-        //numero total de usuario
-        $totalUsers = DB::table('itcp_users')->count();
         
         //numero total de clientes
         $totalClients = DB::table('itcp_clients')->count();
