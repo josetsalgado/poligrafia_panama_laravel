@@ -84,8 +84,8 @@
                             <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="registro_resultados.html">Registro de Resultados</a></li>
-                                    <li><a href="calidad_prueba.html">Registro de Calidad de Prueba</a></li>
-                                    <li><a href="informe_prueba.html">Informe de Prueba</a></li>
+                                    <li><a href="calidad_prueba.html">Control de Calidad</a></li>
+                                    <li><a href="informe_prueba.html">Verificación</a></li>
                                 </li>
                             </ul>
                         </li>
@@ -155,7 +155,7 @@
                   </a>
                   <ul id="menu1 " class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
-                      <a>
+                      <a href="tareas.html">
                         <span>
                           <span>Tarea 1...</span>
                           <span class="time">3 mins ago</span>
@@ -166,7 +166,7 @@
                       </a>
                     </li>
                     <li>
-                      <a>
+                      <a href="tareas.html">
                         <span>
                           <span>Tarea 2...</span>
                           <span class="time">3 mins ago</span>
@@ -177,7 +177,7 @@
                       </a>
                     </li>
                     <li>
-                      <a>
+                      <a href="tareas.html">
                         <span>
                           <span>Tarea 3...</span>
                           <span class="time">3 mins ago</span>
@@ -188,7 +188,7 @@
                       </a>
                     </li>
                     <li>
-                      <a>
+                      <a href="tareas.html">
                         <span>
                           <span>Tarea 4..</span>
                           <span class="time">3 mins ago</span>
@@ -200,13 +200,9 @@
                     </li>
                     <li>
                       <div class="text-center">
-                        <a>
-                          <strong>
-                              <form class="formulario" action="">
-                                <input type="text" id="tareaInput" placeholder="Agrega tarea">
-                                <button class="boton" id="btn-agregar"><i class="fa fa-plus"></i></button>
-                            </form>
-                        </strong>
+                        <a href="tareas.html">
+                          <strong>Ver todas las tareas</strong>
+                          <i class="fa fa-angle-right"></i>
                         </a>
                       </div>
                     </li>
@@ -722,14 +718,13 @@
                         <div class="form-group">
                             <label class="col-sm-3 control-label">Tipo de Prueba</label>
                             <div class="col-sm-9 col-xs-12">
-                                <select id="prueba" class="form-control col-xs-12" required="">
+                                <select id="pais" class="form-control selc-empresa" required>
                                     <option value="">Seleccione</option>
                                     <option value="prueba-pre-empleo">Prueba Pre Empleo</option>
-                                    <option value="prueba-permanencia">Prueba Permanencia</option>
-                                    <option value="prueba-especifica">Prueba Especifica</option>
-                                    <option value="pruebas-psicologicas">Pruebas Psicologícas</option>
-                                    <option value="pruebas-socioeconomicas">Pruebas Socioeconómicas</option>
-                                </select>
+                                    <option value="prueba-permanencia">Prueba Especifica</option>
+                                    <option value="prueba-especifica">Prueba Rutina</option>
+                                    <option value="pruebas-psicologicas">Reevaluación   </option>
+                                </select> 
                             </div>
                         </div>
                         <div class="form-group">
