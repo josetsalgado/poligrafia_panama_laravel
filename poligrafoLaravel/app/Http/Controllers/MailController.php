@@ -13,22 +13,13 @@ use App\Http\Controllers\Controller;
 
 class MailController extends Controller {
 
-    public function html_email_budget() {
+    public function html_email_budget(REQUEST $request) {
 
-        $budgets = DB::table('itcp_budgets')
-            ->select('*')
-            ->where('itcp_budgets.id_budget', '=', 15)
-            ->get();
+       $request=$request::all();
 
-        foreach ($budgets as $budget){
-            $budget->company_id = $this->getRelationship($budget->company_id, 'itcp_companys', 'id_company');
-            $budget->client_id = $this->getRelationship($budget->client_id, 'itcp_clients', 'id_client');
-            $budget->date_init_budget = Carbon::parse($budget->date_init_budget)->format('d/m/Y');
-            $budget->budgets_register_id = $this->getBudgetRegisterCompanies($budget->budgets_register_id);
-        }
 
         $pdf = PDF::Make();
-        $pdf->loadView('budget.pdfButget', compact('budgets'));
+        $pdf->loadView('budget.mailbudget', compact('budgets'));
         $pdf->Save('../../poligrafoLaravel/public/pdf/cotizacion.pdf');
 
         $mensajeconf = 'Correo enviado exitosamente';

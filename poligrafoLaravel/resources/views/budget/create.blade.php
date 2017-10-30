@@ -91,7 +91,7 @@
                                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="createModal"> Ver </button>
                                     <button type="submit" class="btn btn-primary" target="_blank" style="color: white"><i class="fa fa-download"></i> PDF</button>
-                                    <a href="sendhtmlemail_cotizacion"><button type="button" class="btn btn-dark"><i class="fa fa-envelope"></i> Enviar </button></a>
+                                    <a id="send"><button type="button" class="btn btn-dark"><i class="fa fa-envelope"></i> Enviar </button></a>
                                 </div>
                             </div>
                         </div>
@@ -184,7 +184,30 @@
     </div>
     <!-- /. modal New Empresa & cliente-->
 
+    <script>
 
+        /*$("#client").change(function(){
+            var id_client = $("#client").val();
+            $("#send").attr("href", "sendhtmlemail_cotizacion/"+id_client);
+
+        });*/
+$("#send").click(function (){
+var serielize=$(createBudget).serialize();
+console.log(serielize);
+
+
+    $.ajax({
+        type: "POST",
+        url: "sendhtmlemail_cotizacion",
+        data: serielize,
+        success: function(data) {
+            alert("asdasd");
+        }
+    });
+});
+
+
+    </script>
 
     <script src="js/validate/fn-createBudget.js"></script>
 @stop

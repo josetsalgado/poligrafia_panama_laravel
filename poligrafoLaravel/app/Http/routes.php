@@ -173,7 +173,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     //prueba envio de correo
-    Route::get('sendhtmlemail_cotizacion','MailController@html_email_budget') ;
+    Route::post('sendhtmlemail_cotizacion','MailController@html_email_budget') ;
 
     //VIsta interna de tareas
     Route::get('homework','HomeworkController@show') ;
