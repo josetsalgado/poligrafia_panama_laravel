@@ -178,4 +178,7 @@ Route::group(['middleware' => 'auth'], function () {
     //VIsta interna de tareas
     Route::get('homework','HomeworkController@show') ;
 
+    //pdf de reporte estado de cuenta
+    Route::get('pdf_account_report','ReportAccountController@pdf') ;
+
 });

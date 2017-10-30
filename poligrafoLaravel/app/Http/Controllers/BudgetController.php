@@ -80,7 +80,7 @@ class BudgetController extends Controller
 
         $pdf = PDF::Make();
         $pdf->loadView('budget.pdfButget', compact('budgets'));
-        return $pdf->Stream('document.pdf');
+        return $pdf->download('cotizacion.pdf');
     }
     
     
@@ -100,7 +100,7 @@ class BudgetController extends Controller
 
         $pdf = PDF::Make();
         $pdf->loadView('budget.pdfButget', compact('budgets'));
-        return $pdf->Stream('document.pdf');
+        return $pdf->download('cotizacion.pdf');
     }
 
     public function store(Request $request)

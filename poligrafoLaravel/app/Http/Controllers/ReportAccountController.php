@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use DB;
 use function view;
+use PDF;
 
 class ReportAccountController extends Controller
 {
@@ -54,9 +55,16 @@ class ReportAccountController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show()
+    public function pdf()
     {
-        //
+        $data = [
+            'foo' => 'bar'
+        ];
+        $pdf = PDF::Make();
+        /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
+        $pdf->loadView('report.reportpdf', $data);
+        return $pdf->Stream('reportaccount.pdf');
+        //return $pdf->download('Poligrafo.pdf');
     }
 
     /**

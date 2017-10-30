@@ -86,12 +86,12 @@
                                     <textarea class="form-control" id="observations" name="observations" rows="3" placeholder=""></textarea>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal" id="createModal"> Ver </button>
                                     <button type="submit" class="btn btn-primary" target="_blank" style="color: white"><i class="fa fa-download"></i> PDF</button>
-                                    <a href="sendhtmlemail_cotizacion" target="_blank"><button type="button" class="btn btn-dark"><i class="fa fa-envelope"></i> Enviar </button></a>
+                                    <a href="sendhtmlemail_cotizacion"><button type="button" class="btn btn-dark"><i class="fa fa-envelope"></i> Enviar </button></a>
                                 </div>
                             </div>
                         </div>
@@ -103,8 +103,8 @@
     <!-- Modal Agregar Nueva Empresa & cliente-->
     <div class="modal fade" id="myModal" role="dialog"></div>
     <!-- /. modal -->
-    
-    
-    
+
+
+
     <script src="js/validate/fn-createBudget.js"></script>
 @stop

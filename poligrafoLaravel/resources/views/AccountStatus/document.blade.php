@@ -115,35 +115,6 @@
                     <!-- /.col -->
                 </div>
                 <!-- /.row -->
-                {{--<!-- info row -->
-                <div class="row invoice-info">
-                    <div class="col-sm-2 invoice-col table_estado_cuenta">
-                        <ul>
-                            <li>Nombre:</li>
-                            <li>Dirección:</li>
-                            <li>País:</li>
-                            <li>Teléfono</li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-7 invoice-col table_estado_cuenta">
-                        <ul>
-                            <li>Gaming & Services de Panamá  </li>
-                            <li>Calle 50 y 73 este San Francisco</li>
-                            <li>Panamá</li>
-                            <li>270-8766</li>
-                        </ul>
-                    </div>
-                    <!-- /.col -->
-                    <div class="col-sm-3 invoice-col">
-                        <ul>
-                            <li> <strong>14 de Noviembre del 2017</strong></li>
-                        </ul>
-                    </div>
-                    <!-- /.col -->
-                </div>
-                <!-- /.row -->--}}
-
-
                 <!-- Table row -->
                 <div class="row">
                     <div class="col-xs-12 table">

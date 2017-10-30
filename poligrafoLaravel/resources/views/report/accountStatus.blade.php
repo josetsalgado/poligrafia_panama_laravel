@@ -162,8 +162,7 @@
                         <div class="row">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <br>
-                                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#pdf"><i class="fa fa-download"></i> Generar PDF</button>
-                            </div>
+                                <a href="pdf_account_report" target="_blank"type="button" class="btn btn-primary pull-right" style=""><i class="fa fa-download"></i>Generar PDF</a>                            </div>
                         </div>
                     </div>
                 </div>
@@ -345,20 +344,20 @@
     </div>
     <!-- /. modal -->
 
-<script type="text/javascript">
-    $('#datatable-responsive').DataTable( {
-        language: {
-            search: "Buscar",
-            paginate: {
-                first:      "Primero",
-                previous:   "<",
-                next:       ">",
-                last:       "Último"
-            },
-            info:           "",
-            "lengthMenu":     "_MENU_"
-        }
-    } );
-</script>
+    <script type="text/javascript">
+        $('#datatable-responsive').DataTable( {
+            language: {
+                search: "Buscar",
+                paginate: {
+                    first:      "Primero",
+                    previous:   "<",
+                    next:       ">",
+                    last:       "Último"
+                },
+                info:           "",
+                "lengthMenu":     "_MENU_"
+            }
+        } );
+    </script>
 
 @stop
