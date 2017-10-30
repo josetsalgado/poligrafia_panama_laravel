@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Service;
 
 class ResultController extends Controller
 {
@@ -26,7 +27,9 @@ class ResultController extends Controller
      */
     public function create()
     {
-        return view('result.create');
+        $services = Service::all();
+        
+        return view('result.create',compact("services"));
     }
 
     /**

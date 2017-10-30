@@ -1,98 +1,153 @@
-var seleccione;
-    var options = {
-        unico : {
-          "": "",
-          unico_utah: "UTAH zona 3 (ZCT)",
-          unico_zct: "ZCT FEDERAL",
-          unico_bizona: "BIZONA"
-          },
-        multiple: {
-            "": "",
-            multiple_af_v1: "AF MGQT V.1",
-            multiple_af_v2: "AF MGQT V.2",
-            multiple_mgqt: "MGQT UTAH"
-        },
-        laborales : {
-            "": "",
-            laborales: "DLST (screening) TES"
-        }
-    }
+var options = {
+    pre_empleo: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "AFMGQT-V1-4R", "AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
+    especifica: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "UTAH", "ZCT FEDERAL", "DLST", "RASKIN", "BIZONA"],
+    rutina: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "AFMGQT-V1-4R", "AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
+    reevaluacion: [""]
+}
 
- $(function(){
-    $('.spinner .btn:first-of-type').on('click', function() {
-            $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
-        });
-        $('.spinner .btn:last-of-type').on('click', function() {
-            $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-        });
-        options
-        
-    var fillSecondary = function(){
-        var selected = $('#primary').val();
-        
-        $('#secondary').empty();
-        seleccione = $("#secondary").val()
-        if(!seleccione){
-            $("#secondary").attr("disabled", true);
-        }
-        $.each(options[selected], function (element,index) {
-            $("#secondary").attr("disabled", false);
-            $('#secondary').append('<option value="'+element+'">'+index+'</option>');
-          });
-    }
-    $('#primary').change(fillSecondary);
-        fillSecondary();
+$(function () {
+    $("#tecnicals").attr("disabled", true);
+    $("#services").change(function () {
+        $("#tecnicals").attr("disabled", false);
+        var services = $('#services').val();
+        $('#tecnicals').empty();
+        appendTecnicals(services);
     });
+});
 
-$("#secondary").change(function(){
-    var typeExam = $('#primary').val();
-    var typeTest = $('#secondary').val();
+function appendTecnicals(services){
+    $("#tecnicals").attr("disabled", false);
+    switch (services) {
+        case "Pre-empleo":
+            $.each(options["pre_empleo"], function (element, index) {  
+                $('#tecnicals').append('<option value="' + index + '">' + index + '</option>');
+            });
+            break;
+        case "Especifica":
+            $.each(options["especifica"], function (element, index) {
+                $('#tecnicals').append('<option value="' + index + '">' + index + '</option>');
+            });
+            break;
+        case "Rutina":
+            $.each(options["rutina"], function (element, index) {
+                $('#tecnicals').append('<option value="' + index + '">' + index + '</option>');
+            });
+            break;
+        default:
+            $('#tecnicals').attr('disabled', true);
+            break;
+    }
+}
+
+$("#tecnicals").change(function () {
+    var services = $('#services').val();
+    var tecnicals = $('#tecnicals').val();
+    console.log(services);
+    console.log(tecnicals);
     
-    switch(typeExam) {
-        case "unico":
-            //tipo de test
-            switch(typeTest) {
-                case "unico_utah":
+    switch (services) {
+        case "Pre-empleo":
+            //servicio pre empleo
+            switch (tecnicals) {
+                //tecnicas
+                case "AFMGQT-V1-2R":
                     $(".hidden-div").attr("class","hidden-div");
-                    $("#utha_zona_3").addClass("show-div");
+                    $("#AFMGQT_V1_2R").addClass("show-div");
                     break;
-                case "unico_zct":
+                case "AFMGQT-V1-3R":
                     $(".hidden-div").attr("class","hidden-div");
-                    $("#zct_federal").addClass("show-div");
+                    $("#AFMGQT_V1_3R").addClass("show-div");
                     break;
-                case "unico_bizona":
+                case "AFMGQT-V1-4R":
                     $(".hidden-div").attr("class","hidden-div");
-                    $("#bizona").addClass("show-div");
+                    $("#AFMGQT_V1_4R").addClass("show-div");
+                    break;
+                case "AFMGQT-V2-2R":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#AFMGQT_V2_2R").addClass("show-div");
+                    break;
+                case "AFMGQT-V2-3R":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#AFMGQT_V2_3R").addClass("show-div");
+                    break;
+                case "AFMGQT-V2-4R":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#AFMGQT_V2_4R").addClass("show-div");
+                    break;
+                case "DLST":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#DLST").addClass("show-div");
                     break;
                 default:
                     break;
             }
             break;
-        case "multiple":
-            //tipo de test
-            switch(typeTest) {
-                case "multiple_af_v1":
+        case "Especifica":
+            switch (tecnicals) {
+                //tecnicas
+                case "AFMGQT-V1-2R":
                     $(".hidden-div").attr("class","hidden-div");
-                    $("#af_mgqt_v1").addClass("show-div");
+                    $("#AFMGQT_V1_2R").addClass("show-div");
                     break;
-                case "multiple_af_v2":
+                case "AFMGQT-V1-3R":
                     $(".hidden-div").attr("class","hidden-div");
-                    $("#af_mgqt_v2").addClass("show-div");
+                    $("#AFMGQT_V1_3R").addClass("show-div");
                     break;
-                case "multiple_mgqt":
+                case "UTAH":
                     $(".hidden-div").attr("class","hidden-div");
-                    $("#utah").addClass("show-div");
+                    $("#UTAH").addClass("show-div");
+                    break;
+                case "ZCT FEDERAL":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#ZCT_FEDERAL").addClass("show-div");
+                    break;
+                case "DLST":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#DLST").addClass("show-div");
+                    break;
+                case "RASKIN":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#RASKIN").addClass("show-div");
+                    break;
+                case "BIZONA":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#BIZONA").addClass("show-div");
                     break;
                 default:
                     break;
             }
             break;
-        case "laborales":
-            //tipo de test
-            switch(typeTest) {
-                case "laborales":
+        case "Rutina":
+            //servicio
+            switch (tecnicals) {
+                //tecnicas
+                case "AFMGQT-V1-2R":
                     $(".hidden-div").attr("class","hidden-div");
-                    $("#dlst").addClass("show-div");
+                    $("#AFMGQT_V1_2R").addClass("show-div");
+                    break;
+                case "AFMGQT-V1-3R":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#AFMGQT_V1_3R").addClass("show-div");
+                    break;
+                case "AFMGQT-V1-4R":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#AFMGQT_V1_4R").addClass("show-div");
+                    break;
+                case "AFMGQT-V2-2R":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#AFMGQT_V2_2R").addClass("show-div");
+                    break;
+                case "AFMGQT-V2-3R":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#AFMGQT_V2_3R").addClass("show-div");
+                    break;
+                case "AFMGQT-V2-4R":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#AFMGQT_V2_4R").addClass("show-div");
+                    break;
+                case "DLST":
+                    $(".hidden-div").attr("class","hidden-div");
+                    $("#DLST").addClass("show-div");
                     break;
                 default:
                     break;
@@ -100,5 +155,5 @@ $("#secondary").change(function(){
             break;
         default:
             break;
-    }  
+    }
 });
