@@ -54,11 +54,12 @@
     #space_top{padding-top: 8px;padding-bottom: 15px; }
     #bold{  font-weight: bold  }
 
+
 </style>
 
 <body style="background:#fff; ">
 <div class="">
-    <div class="modal-header">
+
 
         <div class="row">
 
@@ -68,18 +69,80 @@
                 <h5 id="bold">INFORME ESTADO DE CUENTA</h5>
             </div>
 
-        </div>
-    </div>
-</div>
+            <p class="modal-header"></p>
+            <br>
 
+            <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                <thead>
+                <tr>
+                    <th>Factura Fiscal</th>
+                    <th>Empresa</th>
+                    <th>Fecha</th>
+                    <th>Factura</th>
+                    <th>ITBMS</th>
+                    <th>Retención</th>
+                    <th>Monto Neto <br> a Pagar</th>
+                    <th>Estatus</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="height: 30px !important; padding-left: 5px">TBSR110000623-00003231 </td>
+                    <td style=" height: 30px !important; padding-left: 5px">Coca Cola</td>
+                    <td style=" height: 30px !important; padding-left: 5px">23/09/2017</td>
+                    <td style=" height: 30px !important; padding-left: 5px">1,125.00</td>
+                    <td style=" height: 30px !important; padding-left: 5px">78.75</td>
+                    <td style=" height: 30px !important; padding-left: 5px">39.38</td>
+                    <td style=" height: 30px !important; padding-left: 5px">1.164.37</td>
+                    <td style=" height: 30px !important; padding-left: 5px; font-weight: bold"> Factura Vencida</td>
+                </tr>
+                <tr>
+                    <td>TBSR110000623-00002683</td>
+                    <td>AC DEPOT</td>
+                    <td>02/02/2017</td>
+                    <td>B/.256,80</td>
+                    <td>B/.0,00</td>
+                    <td>B/.0,00</td>
+                    <td>B/.256,80</td>
+                    <td style=" height: 30px !important; padding-left: 5px; font-weight: bold"> Factura Vencida</td>
+                </tr>
+                <tr>
+                    <td>TBSR110000623-00000001 </td>
+                    <td>Amarilo</td>
+                    <td>25/11/2011</td>
+                    <td>B/.117,70</td>
+                    <td>B/.0,00</td>
+                    <td>B/.0,00</td>
+                    <td>B/.117,70</td>
+                    <td style=" height: 30px !important; padding-left: 5px; font-weight: bold"> Pagada</td>
+                </tr>
+                <tr>
+                    <td>Sin facturar</td>
+                    <td>AutoStar</td>
+                    <td>29/11/2017</td>
+                    <td>B/.85,6</td>
+                    <td>B/.0,00</td>
+                    <td>B/.0,00</td>
+                    <td>B/.85,6</td>
+                    <td style=" height: 30px !important; padding-left: 5px; font-weight: bold"> Pendiente por facturar</td>
+                </tr>
+                <tr>
+                    <td>TBSR110000623-00000017 </td>
+                    <td>AutoStar</td>
+                    <td>29/11/2017</td>
+                    <td>B/.85,6</td>
+                    <td>B/.0,00</td>
+                    <td>B/.0,00</td>
+                    <td>B/.85,6</td>
+                    <td style=" height: 30px !important; padding-left: 5px; font-weight: bold"> Pendiente por pago</td>
+                </tr>
+            </table>
+
+        </div>
 
 </div>
 
 
 </body>
-
-
-
-
 
 </html>
