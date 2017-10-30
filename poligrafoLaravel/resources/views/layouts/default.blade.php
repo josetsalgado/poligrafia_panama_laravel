@@ -207,8 +207,8 @@
                             </a>
                             <ul id="menu1 " class="dropdown-menu list-unstyled msg_list" role="menu">
                                 <li>
-                                    <a>
-                        <span>
+                                    <a href="homework">
+                        <span href="homework">
                           <span>Tarea 1...</span>
                           <span class="time">3 mins ago</span>
                         </span>
@@ -218,18 +218,19 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
-                        <span>
+                                    <a href="homework">
+
+                        <div href="homework">
                           <span>Tarea 2...</span>
                           <span class="time">3 mins ago</span>
-                        </span>
                                         <span class="message">
                           Film festivals used to be do-or-die moments for movie makers. They were where...
                         </span>
+                        </div>
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="homework">
                         <span>
                           <span>Tarea 3...</span>
                           <span class="time">3 mins ago</span>
@@ -240,7 +241,7 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a>
+                                    <a href="homework">
                         <span>
                           <span>Tarea 4..</span>
                           <span class="time">3 mins ago</span>

@@ -1652,7 +1652,7 @@
     <!-- /. Modal DLST -->
 
     <script src="js/validate/fn-createResult.js"></script>
-    
+
 
     <script type="text/javascript">
         function myFunction(iddlst) {
