@@ -71,7 +71,7 @@
                         <tr>
                             <td>TBSR110000623-00000001
                                 <br>
-                                <button type="button" class="btn-click btn btn-success btn-xs"><i class="fa fa-envelope"></i> Solicitar Comprobante</button>
+                                <a href="sendhtmlemail_retencion"><button type="button" class="btn-click btn btn-success btn-xs"><i class="fa fa-envelope"></i> Solicitar Comprobante</button></a>
                             </td>
                             <td>Amarilo</td>
                             <td>25/11/2011</td>

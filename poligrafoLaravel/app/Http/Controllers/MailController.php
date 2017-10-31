@@ -7,7 +7,6 @@ use Log;
 use Carbon\Carbon;
 use DB;
 use Illuminate\Support\Facades\Crypt;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -22,7 +21,7 @@ class MailController extends Controller {
         $pdf->loadView('budget.mailbudget', compact('budgets'));
         $pdf->Save('../../poligrafoLaravel/public/pdf/cotizacion.pdf');
 
-        $mensajeconf = 'Correo enviado exitosamente';
+        $mensajeconf = 'Correo con cotizacion enviado exitosamente';
         $data = array('name'=>"Jose Velasquez") ;
         Mail::send('mail', $data, function($message) {
   //correo cliente
@@ -58,4 +57,28 @@ class MailController extends Controller {
         }
         return $budgetsRegisters;
     }
+
+
+//Correo de solicitud de retencion.
+
+    public function html_email_retencion() {
+
+        $mensajeconf = 'Correo solicitando retencion enviado exitosamente';
+        $data = array('name'=>"Jose Velasquez") ;
+        Mail::send('mailretencion', $data, function($message) {
+            //sustituir por correo cliente
+            $message->to('velasquezjrvo@gmail.com', 'Jose Velasquez') ->subject
+            ('SOLICITUD DE RETENCION') ;
+            //copia a info y angie comentad para que no envie ya se probo
+            /* $message->cc('angie@poligrafia.com.pa');
+             $message->cc('info@poligrafia.com.pa');*/
+            $message->from('poligrafia@poligrafia.com.pa','IPTC') ;
+
+
+        });
+        echo ($mensajeconf);
+    }
+
+
+
 }
