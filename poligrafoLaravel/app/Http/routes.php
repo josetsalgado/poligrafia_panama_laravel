@@ -172,8 +172,11 @@ Route::group(['middleware' => 'auth'], function () {
         return "bien";
     });
 
-    //prueba envio de correo
+    //cotizaciones envio de correo
     Route::post('sendhtmlemail_cotizacion','MailController@html_email_budget') ;
+
+    //retenciones envio de correo
+    Route::get('sendhtmlemail_retencion','MailController@html_email_retencion') ;
 
     //VIsta interna de tareas
     Route::get('homework','HomeworkController@show') ;
