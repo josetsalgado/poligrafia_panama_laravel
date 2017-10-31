@@ -54,7 +54,7 @@
           <div class="x_content">
                 @foreach($lastAppointments as $lastAppointment)
                     <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-                        <a class="pull-left date" onclick="editQuote({{ $lastAppointment->id_appoiment }})">
+                        <a class="pull-left date" onclick="editQuote('{{ $lastAppointment->id_appoiment }}')">
                         <p class="day">
                             <?php 
                                 $date = new DateTime($lastAppointment->time_appoiment);
@@ -96,7 +96,7 @@
           <div class="x_content">
                 @foreach($tomorrowAppointments as $tomorrowAppointment)
                     <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-                        <a class="pull-left date" onclick="editQuote({{ $tomorrowAppointment->id_appoiment }})">
+                        <a class="pull-left date" onclick="editQuote('{{ $tomorrowAppointment->id_appoiment }}')">
                           <p class="day">
                               <?php
                                 $date = new DateTime($tomorrowAppointment->time_appoiment);
@@ -138,7 +138,7 @@
 
   <!-- /page content -->
   <!-- calendar modal -->
-  <div id="CalenderModalNew" class="modal fade">
+  <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
           <div class="modal-content">
 
@@ -282,9 +282,11 @@
   </div>
   
     <!-- Modal edit-->
-    <div id="CalenderModalEdit" class="modal fade" ></div>
+    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
     <!-- /. modal -->
     
+  <!-- Custom Theme Scripts -->
+  <script src="../build/js/custom.min.js"></script>
 <script>
         $('#myModal').on('shown.bs.modal', function () {
             $(this).removeData('bs.modal');
