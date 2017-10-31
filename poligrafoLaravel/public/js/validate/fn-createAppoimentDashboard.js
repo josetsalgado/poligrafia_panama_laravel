@@ -68,7 +68,8 @@ $(document).ready(function () {
 });
 
 function editQuote(id){
-    $("#CalenderModalEdit").load('edit_quote_dasboard/'+id);  
+    $("#CalenderModalEdit").load('edit_quote_dasboard/'+id);
+    $("#CalenderModalEdit").show();
 }
 function editQuoteTomorrow(id){
     $("#CalenderModalEditTomorrow").load('edit_quote_dasboard/'+id);  
