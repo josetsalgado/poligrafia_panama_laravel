@@ -169,10 +169,15 @@
                     <div class="x_content">
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <form class="form-horizontal form-label-left">
-                                <div class="" role="tabpanel" data-example-id="togglable-tabs">         
+                                <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                     <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
-                                        <li id="li1" class="active"><a href="#tab_content1" role="tab" data-toggle="tab">Prueba 1</a></li>
-                                        <li id="last"><a href="#addTab"  onclick="removetab()"><span class="glyphicon glyphicon-plus"></span></a></li>
+                                        <li id="prueba1" role="presentation" class="active">
+                                            <a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="false">
+                                                Prueba 1 
+                                            </a>
+                                        </li>
+                                        <li role="presentation" class=""><a href="" role="tab" id="profiletab2" data-toggle="tab" aria-expanded="true"><i class="fa fa-plus"></i></a>
+                                        </li>
                                     </ul>
                                     <div id="myTabContent" class="tab-content">
                                         <!-- Info Evaluado -->
@@ -1730,13 +1735,13 @@
 
                                         <!-- 2 Prueba -->
                                         <div role="tabpanel" class="tab-pane fade" id="tab_content2" aria-labelledby="profile-tab">
-                                            <p>Prueba 2</p>
+                                            <p>Food truck </p>
                                         </div>
                                         <!-- /.2 Prueba -->
 
                                         <!-- 3 Prueba -->
                                         <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="profile-tab">
-                                            <p>Prueba 3</p>
+                                            <p>xxFo </p>
                                         </div>
                                         <!-- /.3 Prueba -->
 
@@ -1799,7 +1804,7 @@
 <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- jquery.inputmask -->
 <script src="../vendors/jquery.inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
-<script src="../vendors/tab/tab_system.js"></script>
+
 <!-- Custom Theme Scripts -->
 <script src="../build/js/custom.min.js"></script>
 
@@ -1849,14 +1854,60 @@ $(function(){
 
 
     });
-   
+    var contador = 0;
+    var count_tab = 2;
+    $("#profiletab2").click(function(){    
+      var cont = contador+1;
+        tabPrueba(cont);      
+        $(this).remove();
+    });
+
     function removetab(){
         $("#tab_content1").removeClass( "active in" );
     }
-    
+    function removetest(contador){
+        var tabremove = "#"+testid;
+        //$(tabremove).remove();
+        returncontador--;
+    }
+    function tabPrueba(contador, op) {
+        var cont = contador++;
+        var btn = "#" + cont;
+        
+        var tab = "#prueba"+cont;
+        var conttab = count_tab++;
+        var tab_content = "#tab_content"+conttab;
+        var tab_content_remove = "#tab_content"+cont;
+        $(tab).removeClass("active");
+        removetab();
+        $(tab_content_remove).removeClass( "active in" );
+        $(tab_content).addClass("active in");
+        $(btn).remove();
+        if(op == "res"){
+            conttab = conttab--;
+            $("li#prueba"+(contador+1)).remove();
+        }else{
+            $("#myTab").append('\
+                <li id="prueba'+contador+'"  onclick="removetab()" role="presentation" class="active">\
+                    <a href="#tab_content'+contador+'" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false">\
+                        Prueba '+contador+'\
+                        <button type="button"  onclick="tabPrueba('+(contador-2)+', \'res\')" class="close btn-closet-test" data-dismiss="alert" aria-label="Close">\
+                            <span aria-hidden="true">×</span>\
+                        </button>\
+                    </a>\
+                </li>\
+                <li role="presentation" class="">\
+                    <a href="" id="'+contador+'"  onclick="tabPrueba('+(contador)+', \'add\')"  role="tab" data-toggle="tab" aria-expanded="true"><i class="fa fa-plus"></i>\
+                    </a>\
+                </li>');
+            if (contador == 3) {
+                $("#3").remove();       
+            }
+        }
+        
 
+    }
 
- 
 </script>
 </body>
 </html>
