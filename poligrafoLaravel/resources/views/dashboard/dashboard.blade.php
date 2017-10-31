@@ -138,7 +138,7 @@
 
   <!-- /page content -->
   <!-- calendar modal -->
-  <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div id="CalenderModalNew" class="modal fade">
       <div class="modal-dialog">
           <div class="modal-content">
 
