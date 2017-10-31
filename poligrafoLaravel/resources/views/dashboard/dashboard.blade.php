@@ -92,6 +92,7 @@
               </li>
             </ul>
             <div class="clearfix"></div>
+            </h4>
           </div>
           <div class="x_content">
                 @foreach($tomorrowAppointments as $tomorrowAppointment)
