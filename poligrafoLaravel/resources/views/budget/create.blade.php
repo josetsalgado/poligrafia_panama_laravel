@@ -183,6 +183,9 @@
         </div>
     </div>
     <!-- /. modal New Empresa & cliente-->
+    <script src="js/validate/fn-createBudget.js"></script>
+
+
 
     <script>
 
@@ -206,8 +209,8 @@ console.log(serielize);
     });
 });
 
-
     </script>
 
-    <script src="js/validate/fn-createBudget.js"></script>
+
+
 @stop
