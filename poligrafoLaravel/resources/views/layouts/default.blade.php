@@ -71,6 +71,7 @@
     <script src="js/moment/min/moment.min.js"></script>
     <script src="js/bootstrap-daterangepicker/daterangepicker.js"></script>
 
+
 </head>
 <body class="nav-md">
     
@@ -137,8 +138,8 @@
                                 <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="record_result">Registro de Resultados</a></li>
-                                        <li><a href="quality_test">Registro de Calidad de Prueba</a></li>
-                                        <li><a href="test_report">Informe de Prueba</a></li>
+                                        <li><a href="quality_test">Control de Calidad</a></li>
+                                        <li><a href="test_report">Verificacion</a></li>
                                     </ul>
                                 </li>
                                 <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>

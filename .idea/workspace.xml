@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f08d111e-a587-4056-9ac7-f93d3a00cdbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/mailretencion.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/detalleinforme.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/MailController.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/MailController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/TestReportController.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/TestReportController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/show.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/layouts/default.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/result/create.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/result/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/result/show.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/result/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/show.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/show.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,90 +21,63 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="178" column="14" lean-forward="false" selection-start-line="178" selection-start-column="14" selection-end-line="178" selection-end-column="14" />
+            <state relative-caret-position="-92">
+              <caret line="159" column="25" lean-forward="false" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/MailController.php">
+      <file leaf-file-name="pdfinforme.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/test/pdfinforme.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-486">
-              <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
-              <folding>
-                <element signature="e#38#66#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mailretencion.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/mailretencion.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            <state relative-caret-position="126">
+              <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/show.blade.php">
+      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/result/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="71" column="54" lean-forward="true" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+            <state relative-caret-position="-29577">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <marker date="1509456012238" expanded="true" signature="9:26" ph="..." />
-                <marker date="1509456012238" expanded="true" signature="37:46" ph="..." />
+                <element signature="e#140625#140632#1#HTML" expanded="true" />
+                <marker date="1509464377379" expanded="true" signature="9:26" ph="..." />
+                <marker date="1509464377379" expanded="true" signature="37:46" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/show.blade.php">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/test/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="65" column="14" lean-forward="true" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
+            <state relative-caret-position="-2718">
+              <caret line="56" column="52" lean-forward="false" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
               <folding>
-                <marker date="1508962190000" expanded="true" signature="9:26" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="37:46" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="1762:1795" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="1841:1885" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="1931:1974" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2020:2064" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2110:2154" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2200:2240" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2286:2316" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2517:2537" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2643:2663" ph="..." />
+                <element signature="e#9117#9124#1#HTML" expanded="true" />
+                <marker date="1509465467263" expanded="true" signature="9:26" ph="..." />
+                <marker date="1509465467263" expanded="true" signature="37:46" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BudgetController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/BudgetController.php">
+      <file leaf-file-name="detalleinforme.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/test/detalleinforme.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2703">
-              <caret line="82" column="48" lean-forward="false" selection-start-line="82" selection-start-column="48" selection-end-line="82" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mail.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/mail.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="602">
-              <caret line="78" column="41" lean-forward="false" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
+            <state relative-caret-position="4158">
+              <caret line="270" column="173" lean-forward="false" selection-start-line="270" selection-start-column="173" selection-end-line="270" selection-end-column="173" />
               <folding>
-                <element signature="n#style#0;n#b#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#21316#21342#0#HTML" expanded="true" />
+                <marker date="1509466573307" expanded="true" signature="9:26" ph="..." />
+                <marker date="1509466573307" expanded="true" signature="37:46" ph="..." />
               </folding>
             </state>
           </provider>
@@ -155,9 +131,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/payment/create.blade.php" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/client/show.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/service/show.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/AccountStatusController.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/home/index.blade.php" />
@@ -171,10 +144,8 @@
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/client/create.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/company/create.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/show.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/TestReportController.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/pdfinforme.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/company/show.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/show.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/dashboard/dashboard.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/composer.json" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-createBudget.js" />
@@ -185,11 +156,9 @@
         <option value="$PROJECT_DIR$/poligrafoLaravel/public/build/css/custom.css" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/public/css/build/css/custom.css" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/modalCreatePayment.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/result/create.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/HomeworkController.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/ClientController.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/homework/homework.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/layouts/default.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/mail.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/BudgetController.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/document.blade.php" />
@@ -201,11 +170,18 @@
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/mailbudget/mailbudget.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/mailbudget.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/mailretencion.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/show.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/MailController.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/MailRetencionController.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/mailretencion.blade.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/show.blade.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/result/show.blade.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/result/create.blade.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/layouts/default.blade.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/result/result.blade.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/show.blade.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/TestReportController.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/detalleinforme.blade.php" />
       </list>
     </option>
   </component>
@@ -284,6 +260,58 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafoLaravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafoLaravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="result" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -507,18 +535,18 @@
       <workItem from="1509372657157" duration="7671000" />
       <workItem from="1509384963859" duration="961000" />
       <workItem from="1509386216150" duration="2352000" />
-      <workItem from="1509389328442" duration="11901000" />
+      <workItem from="1509389328442" duration="22216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203842000" />
+    <option name="totallyTimeSpent" value="214157000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1360" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25808823" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21470588" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -548,27 +576,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-createAppoiment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="107" column="16" lean-forward="false" selection-start-line="107" selection-start-column="16" selection-end-line="107" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/quotes/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="173" column="30" lean-forward="false" selection-start-line="173" selection-start-column="13" selection-end-line="173" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/company/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -601,20 +608,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/test/pdfinforme.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/test/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="217" column="33" lean-forward="false" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -716,20 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/result/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="1649" column="0" lean-forward="false" selection-start-line="1649" selection-start-column="0" selection-end-line="1649" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/layouts/default.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="243" column="54" lean-forward="false" selection-start-line="243" selection-start-column="54" selection-end-line="243" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/HomeworkController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -756,14 +735,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/TestReportController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="100" column="49" lean-forward="true" selection-start-line="93" selection-start-column="7" selection-end-line="100" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -927,38 +898,7 @@
         <state relative-caret-position="602">
           <caret line="78" column="41" lean-forward="false" selection-start-line="78" selection-start-column="41" selection-end-line="78" selection-end-column="41" />
           <folding>
-            <element signature="n#style#0;n#b#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="71" column="54" lean-forward="true" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
-          <folding>
-            <marker date="1509456012238" expanded="true" signature="9:26" ph="..." />
-            <marker date="1509456012238" expanded="true" signature="37:46" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="65" column="14" lean-forward="true" selection-start-line="65" selection-start-column="14" selection-end-line="65" selection-end-column="14" />
-          <folding>
-            <marker date="1508962190000" expanded="true" signature="9:26" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="37:46" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="1762:1795" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="1841:1885" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="1931:1974" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2020:2064" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2110:2154" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2200:2240" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2286:2316" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2517:2537" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2643:2663" ph="..." />
+            <element signature="n#style#0;n#b#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -979,21 +919,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/MailController.php">
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/result/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-486">
-          <caret line="25" column="54" lean-forward="true" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+        <state relative-caret-position="247">
+          <caret line="851" column="57" lean-forward="false" selection-start-line="851" selection-start-column="57" selection-end-line="851" selection-end-column="57" />
           <folding>
-            <element signature="e#38#66#0#PHP" expanded="true" />
+            <marker date="1509463613243" expanded="true" signature="9:26" ph="..." />
+            <marker date="1509463613243" expanded="true" signature="37:46" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php">
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/result/result.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="178" column="14" lean-forward="false" selection-start-line="178" selection-start-column="14" selection-end-line="178" selection-end-column="14" />
-          <folding />
+        <state relative-caret-position="234">
+          <caret line="13" column="31" lean-forward="true" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <marker date="1509465008127" expanded="true" signature="9:26" ph="..." />
+            <marker date="1509465008127" expanded="true" signature="37:46" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1001,6 +945,119 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="10" column="11" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/MailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+          <folding>
+            <element signature="e#38#66#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/test/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2718">
+          <caret line="56" column="52" lean-forward="false" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+          <folding>
+            <element signature="e#9117#9124#1#HTML" expanded="true" />
+            <marker date="1509465467263" expanded="true" signature="9:26" ph="..." />
+            <marker date="1509465467263" expanded="true" signature="37:46" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1265">
+          <caret line="73" column="64" lean-forward="false" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="64" />
+          <folding>
+            <marker date="1509457601086" expanded="true" signature="9:26" ph="..." />
+            <marker date="1509457601086" expanded="true" signature="37:46" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/test/pdfinforme.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/result/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-29577">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#140625#140632#1#HTML" expanded="true" />
+            <marker date="1509464377379" expanded="true" signature="9:26" ph="..." />
+            <marker date="1509464377379" expanded="true" signature="37:46" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/layouts/default.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="141" column="78" lean-forward="false" selection-start-line="141" selection-start-column="78" selection-end-line="141" selection-end-column="78" />
+          <folding>
+            <marker date="1509464588615" expanded="true" signature="369:391" ph="..." />
+            <marker date="1509464588615" expanded="true" signature="11048:11070" ph="..." />
+            <marker date="1509464588615" expanded="true" signature="14881:14890" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="19" />
+          <folding>
+            <marker date="1508962190000" expanded="true" signature="9:26" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="37:46" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="1762:1795" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="1841:1885" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="1931:1974" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="2020:2064" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="2110:2154" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="2200:2240" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="2286:2316" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="2517:2537" ph="..." />
+            <marker date="1508962190000" expanded="true" signature="2643:2663" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/test/detalleinforme.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4158">
+          <caret line="270" column="173" lean-forward="false" selection-start-line="270" selection-start-column="173" selection-end-line="270" selection-end-column="173" />
+          <folding>
+            <element signature="e#21316#21342#0#HTML" expanded="true" />
+            <marker date="1509466573307" expanded="true" signature="9:26" ph="..." />
+            <marker date="1509466573307" expanded="true" signature="37:46" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/TestReportController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-493">
+          <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-92">
+          <caret line="159" column="25" lean-forward="false" selection-start-line="159" selection-start-column="17" selection-end-line="159" selection-end-column="25" />
           <folding />
         </state>
       </provider>

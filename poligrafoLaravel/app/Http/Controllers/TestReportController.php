@@ -55,6 +55,13 @@ class TestReportController extends Controller
 
     }
 
+    public function detail()
+    {
+
+        return view("test.detalleinforme");
+
+    }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -77,6 +84,7 @@ class TestReportController extends Controller
     {
 
     }
+
 
     /**
      * Remove the specified resource from storage.

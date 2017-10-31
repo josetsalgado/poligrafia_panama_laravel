@@ -173,7 +173,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     //cotizaciones envio de correo
-    Route::post('sendhtmlemail_cotizacion','MailController@html_email_budget') ;
+    Route::get('sendhtmlemail_cotizacion','MailController@html_email_budget') ;
 
     //retenciones envio de correo
     Route::get('sendhtmlemail_retencion','MailController@html_email_retencion') ;
@@ -183,5 +183,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     //pdf de reporte estado de cuenta
     Route::get('pdf_account_report','ReportAccountController@pdf') ;
+
+    //detalle de informe de prueba
+    Route::get('detail_informe_prueba','TestReportController@detail') ;
 
 });
