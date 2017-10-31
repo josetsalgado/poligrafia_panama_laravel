@@ -96,8 +96,8 @@
           <div class="x_content">
                 @foreach($tomorrowAppointments as $tomorrowAppointment)
                     <!--<article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">-->
-                    <article>
-                        <a class="pull-left date" onclick="editQuote({{ $tomorrowAppointment->id_appoiment }})">
+                    <article class="media event" id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit" onclick="editQuote({{ $tomorrowAppointment->id_appoiment }})">
+                        <a class="pull-left date" >
                           <p class="day">
                               <?php
                                 $date = new DateTime($tomorrowAppointment->time_appoiment);
