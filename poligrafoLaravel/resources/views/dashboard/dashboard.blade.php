@@ -282,11 +282,9 @@
   </div>
   
     <!-- Modal edit-->
-    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    <div id="CalenderModalEdit" class="modal fade" ></div>
     <!-- /. modal -->
     
-  <!-- Custom Theme Scripts -->
-  <script src="../build/js/custom.min.js"></script>
 <script>
         $('#myModal').on('shown.bs.modal', function () {
             $(this).removeData('bs.modal');
