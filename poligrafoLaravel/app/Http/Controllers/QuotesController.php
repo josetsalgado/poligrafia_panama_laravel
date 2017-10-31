@@ -9,11 +9,13 @@ use App\Http\Controllers\Controller;
 use App\Patient;
 use App\Service;
 use App\User;
+use App\Payment;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use function trans;
 use function view;
+use Log;
 
 class QuotesController extends Controller
 {
@@ -130,7 +132,12 @@ class QuotesController extends Controller
           'time_appoiment' => $request->schedule,
           'comentary_appoiment' => $request->descriptionCandidate,
           'status' => 'Pendiente',
-            
+        ]);
+        
+        $models = Payment::where('company_id', '=',$request->empresa)->orderBy('id_payment', 'desc')->first();
+        Log::error(print_r($models, true));
+        Payment::insert([
+          'company_id' => intval($request->empresa),
         ]);
         
     }

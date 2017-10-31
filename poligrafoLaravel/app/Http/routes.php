@@ -26,6 +26,12 @@ Route::group(['middleware' => 'auth'], function () {
     //index del dashboard
     Route::get('/dashboard_home', 'DashboardController@index');
 
+    //create appoiment dashboard
+    Route::post('/create_quote_dasboard', 'DashboardController@CreateAppoiment');
+    
+    //create appoiment dashboard
+    Route::get('/edit_quote_dasboard/{id}', 'DashboardController@EditAppoiment');
+
     //no se sabe para que es
     Route::get('/quotes', 'QuotesController@index');
 

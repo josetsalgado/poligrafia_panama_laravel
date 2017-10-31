@@ -9,11 +9,11 @@
     <div class="row tile_count">
       <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
         <span class="count_top"><i class="fa fa-calendar"></i> Total Citados</span>
-        <div class="count">8</div>
+        <div class="count">{{ $totalCitedToday }}</div>
       </div>
       <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
         <span class="count_top"><i class="fa fa-users"></i> Llegaron a cita</span>
-        <div class="count">3</div>
+        <div class="count">{{ $totalCitedTodayArrived }}</div>
       </div>
 
       <div class="col-md-3 col-sm-3 col-xs-6 tile_stats_count">
@@ -37,19 +37,14 @@
       <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="x_panel tile">
           <div class="x_title">
-            <h4 class="dash_titulo"> <i class="fa fa-calendar-o"></i> Viernes 13 Octubre 2017</span>
+            <h4 class="dash_titulo"> <i class="fa fa-calendar-o"></i> 
+                <?php
+                    setlocale(LC_ALL,"es_ES");
+                    echo strftime("%A") ." ".date("j") ." ". strftime("%B")." ".date("Y");
+                ?>
             </h4>
             <ul class="nav navbar-right panel_toolbox">
               <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Settings 1</a>
-                  </li>
-                  <li><a href="#">Settings 2</a>
-                  </li>
-                </ul>
               </li>
               <li><a class="close-link"><i class="fa fa-close"></i></a>
               </li>
@@ -57,90 +52,24 @@
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">7:00</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
-                  Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>ASISTIÓ</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">7:00</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Copa<br>
-                  Daisy Aryelis Latorraca Cedeño</a>
-                <span class="time pull-right"><b>ASISTIÓ</b></span>
-                <p><b>8-863-1742    </b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">7:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Proluxsa<br>
-                  Edwards Arrocha </a>
-                <span class="time pull-right"><b>RE-AGENDADO</b></span>
-                <p><b>8-838-64</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">9:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
-                  Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>ASISTIÓ</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">10:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
-                  Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>NO ASISTIÓ</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">11:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
-                  Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>NO ASISTIÓ</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">11:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
-                  Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>NO ASISTIÓ</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
+                @foreach($lastAppointments as $lastAppointment)
+                    <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
+                        <a class="pull-left date" onclick="editQuote({{ $lastAppointment->id_appoiment }})">
+                        <p class="day">
+                            <?php 
+                                $date = new DateTime($lastAppointment->time_appoiment);
+                                echo $date->format('H:i');
+                            ?>
+                        </p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">{{ $lastAppointment->name_company or '' }}<br>
+                          {{ $lastAppointment->name_patient or '' }} {{ $lastAppointment->last_name_patient or '' }} </a>
+                        <span class="time pull-right"><b>{{ $lastAppointment->status or '' }}</b></span>
+                        <p><b>{{ $lastAppointment->phone or '' }}</b></p>
+                      </div>
+                    </article>
+                @endforeach
           </div>
         </div>
       </div>
@@ -148,98 +77,42 @@
       <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="x_panel tile overflow_hidden">
           <div class="x_title">
-            <h4 class="dash_titulo"><i class="fa fa-calendar"></i> Sabado 14 Octubre 2017</h4>
+            <h4 class="dash_titulo"><i class="fa fa-calendar"></i> 
+                <?php
+                    setlocale(LC_ALL,"es_ES");
+                     echo strftime("%A",strtotime("+1 day")) ." ".date("d",strtotime("+1 day"))." ". strftime("%B",strtotime("+1 day"))." ".date("Y",strtotime("+1 day"));
+                ?>
             <ul class="nav navbar-right panel_toolbox">
               <li>
-                <div class="btn-group">
+                  {!! $tomorrowAppointments->render() !!}
+                <!-- div class="btn-group">
                   <button class="btn btn-info btn-color" type="button"><i class="fa fa-chevron-left"></i></button>
                   <button class="btn btn-info btn-color" type="button"><i class="fa fa-chevron-right"></i></button>
-                </div>
+                </div -->
               </li>
             </ul>
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">7:00</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br> Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>PENDIENTE</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">7:00</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Copa<br>  Daisy Aryelis Latorraca Cedeño</a>
-                <span class="time pull-right"><b>PENDIENTE</b></span>
-                <p><b>8-863-1742</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">7:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Proluxsa<br>
-                  Edwards Arrocha </a>
-                <span class="time pull-right"><b>PENDIENTE</b></span>
-                <p><b>8-838-64</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">9:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
-                  Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>PENDIENTE</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">Am</p>
-                <p class="day">7:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br>
-                  Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>PENDIENTE</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">11:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br> Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>PENDIENTE</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
-            <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
-              <a class="pull-left date">
-                <p class="month">AM</p>
-                <p class="day">11:30</p>
-              </a>
-              <div class="media-body">
-                <a class="title" href="#">Bienes Raíces Ágora, S.A<br> Lisbet Del Carmen Garcia Vivas </a>
-                <span class="time pull-right"><b>PENDIENTE</b></span>
-                <p><b>8-884-505</b></p>
-              </div>
-            </article>
+                @foreach($tomorrowAppointments as $tomorrowAppointment)
+                    <article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">
+                        <a class="pull-left date" onclick="editQuote({{ $tomorrowAppointment->id_appoiment }})">
+                          <p class="day">
+                              <?php
+                                $date = new DateTime($tomorrowAppointment->time_appoiment);
+                                echo $date->format('H:i');
+                              ?>
+                          </p>
+                      </a>
+                      <div class="media-body">
+                        <a class="title" href="#">{{ $tomorrowAppointment->name_company or '' }}<br>
+                          {{ $tomorrowAppointment->name_patient or '' }} {{ $tomorrowAppointment->last_name_patient or '' }} </a>
+                        <span class="time pull-right"><b>{{ $tomorrowAppointment->status or '' }}</b></span>
+                        <p><b>{{ $tomorrowAppointment->phone or '' }}</b></p>
+                      </div>
+                    </article>
+                @endforeach
+            
           </div>
         </div>
       </div>
@@ -266,322 +139,159 @@
   <!-- /page content -->
   <!-- calendar modal -->
   <div id="CalenderModalNew" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
+      <div class="modal-dialog">
+          <div class="modal-content">
 
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title" id="myModalLabel"><i class="fa fa-calendar"></i> Nueva Citas</h4>
-        </div>
-        <div class="modal-body">
-          <div id="testmodal" style="padding: 5px 20px;">
-            <form id="antoform" class="form-horizontal calender" role="form">
-              <div class="form-group">
-                <label class="col-sm-3 control-label">Empresa</label>
-                <div class="col-sm-9 col-xs-12">
-                  <select id="empresa" class="form-control col-xs-12" required="">
-                    <option value="">Seleccione</option>
-                    <option value="empresa">Empresa 1</option>
-                    <option value="empresa">Empresa 2</option>
-                    <option value="empresa">Empresa 3</option>
-                  </select>
-                </div>
+              <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title" id="myModalLabel"><i class="fa fa-calendar"></i> Nueva Citas</h4>
               </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label">Cliente</label>
-                <div class="col-sm-9 col-xs-12">
-                  <select id="heard" class="form-control col-xs-12" required="">
-                    <option value="">Seleccione</option>
-                    <option value="cliente">Cliente 1</option>
-                    <option value="cliente">Cliente 2</option>
-                    <option value="cliente">Cliente 3</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Horaio</label>
-                <div class="col-md-4 col-sm-4 col-xs-12">
-                  <select id="heard" class="form-control col-xs-12" required="">
-                    <option>7:00</option>
-                    <option>7:30</option>
-                    <option>8:00</option>
-                    <option>8:30</option>
-                    <option>9:00</option>
-                    <option>9:30</option>
-                    <option>10:00</option>
-                    <option>11:00</option>
-                    <option>11:30</option>
-                    <option>12:00</option>
-                    <option>12:30</option>
-                    <option>1:00</option>
-                    <option>1:30</option>
-                    <option>2:00</option>
-                    <option>2:30</option>
-                    <option>3:00</option>
-                    <option>3:30</option>
-                    <option>4:00</option>
-                    <option>4:30</option>
-                    <option>5:00</option>
-                    <option>5:30</option>
-                    <option>6:00</option>
-                    <option>6:30</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label">Tipo de Prueba</label>
-                <div class="col-sm-9 col-xs-12">
-                  <select id="prueba" class="form-control col-xs-12" required="">
-                    <option value="">Seleccione</option>
-                    <option value="prueba-pre-empleo">Prueba Pre Empleo</option>
-                    <option value="prueba-permanencia">Prueba Permanencia</option>
-                    <option value="prueba-especifica">Prueba Especifica</option>
-                    <option value="pruebas-psicologicas">Pruebas Psicologícas</option>
-                    <option value="pruebas-socioeconomicas">Pruebas Socioeconómicas</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label">Estatus</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="inputSuccess4" placeholder="Pendiente"  disabled="disabled">
-                </div>
-              </div>
-              <div class="form-group">
-                <h4><i class="fa fa-user"></i> Candidato</h4>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label col-xs-12">Nombre</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="candidato" name="candidato">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label col-xs-12">Apellido</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="apellido" name="apellido">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label col-xs-12">Cedula</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="cedula" name="cedula">
-                </div>
-              </div>
-              <div class="form-group">
+              <div class="modal-body">
+                  <div id="testmodal" style="padding: 5px 20px;">
+                      <form id="createQuote" name="createQuote" class="form-horizontal calender" role="form">
+                          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Empresa</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <select id="empresa" name="empresa" class="form-control col-xs-12">
+                                      <option value="">Seleccione</option>
+                                      @foreach($companys as $company)
+                                      <option value="{{ $company->id_company }}">{{ $company->name_company }}</option>
+                                      @endforeach
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Cliente</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <select id="client" name="client" class="form-control col-xs-12">
+                                      <option value="">Seleccione</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12">Horario</label>
+                              <div class="col-md-4 col-sm-4 col-xs-12">
+                                  <select name="schedule" id="schedule" class="form-control col-xs-12">
+                                      <option value="7:00">7:00</option>
+                                      <option value="7:30">7:30</option>
+                                      <option value="8:00">8:00</option>
+                                      <option value="8:30">8:30</option>
+                                      <option value="9:00">9:00</option>
+                                      <option value="9:30">9:30</option>
+                                      <option value="10:00">10:00</option>
+                                      <option value="11:00">11:00</option>
+                                      <option value="11:30">11:30</option>
+                                      <option value="12:00">12:00</option>
+                                      <option value="12:30">12:30</option>
+                                      <option value="1:00">1:00</option>
+                                      <option value="1:30">1:30</option>
+                                      <option value="2:00">2:00</option>
+                                      <option value="2:30">2:30</option>
+                                      <option value="3:00">3:00</option>
+                                      <option value="3:30">3:30</option>
+                                      <option value="4:00">4:00</option>
+                                      <option value="4:30">4:30</option>
+                                      <option value="5:00">5:00</option>
+                                      <option value="5:30">5:30</option>
+                                      <option value="6:00">6:00</option>
+                                      <option value="6:30">6:30</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Tipo de Prueba</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <select id="service" name="service" class="form-control col-xs-12">
+                                      <option value="">Seleccione</option>
+                                      @foreach($services as $service)
+                                      <option value="{{ $service->id_service }}">{{ $service->name_service }}</option>
+                                      @endforeach
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Estatus</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" name="status" id="status" placeholder="Pendiente"  disabled="disabled">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label">Ciudad</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <select id="city"  name="city" class="form-control col-xs-12" >
+                                      <option value="">Seleccione</option>
+                                      <option value="PANAMA">PANAMA</option>
+                                      <option value="CHIRIQUI">CHIRIQUI</option>
+                                      <option value="DAVID">DAVID</option>
+                                      <option value="OTROS">OTROS</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <h4><i class="fa fa-user"></i> Candidato</h4>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label col-xs-12">Nombre</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" id="candidateName" name="candidateName">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label col-xs-12">Apellido</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" id="candidateLastname" name="candidateLastname">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label col-xs-12">Cedula</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <input type="number" class="form-control" id="ciCandidate" name="ciCandidate">
+                              </div>
+                          </div>
+                          <div class="form-group">
 
-                <label class="col-sm-3 control-label col-xs-12">Puesto</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="puesto" name="puesto">
-                </div>
-              </div>
-              <div class="form-group">
+                              <label class="col-sm-3 control-label col-xs-12">Puesto</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <input type="text" class="form-control" id="jobCandidate" name="jobCandidate">
+                              </div>
+                          </div>
+                          <div class="form-group">
 
-                <label class="col-sm-3 control-label col-xs-12">Celular</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="celular" name="celular">
-                </div>
+                              <label class="col-sm-3 control-label col-xs-12">Celular</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <input type="number" class="form-control" id="telCandidate" name="telCandidate">
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="col-sm-3 control-label col-xs-12">Comentarios</label>
+                              <div class="col-sm-9 col-xs-12">
+                                  <textarea class="form-control" style="height:55px;" id="descriptionCandidate" name="descriptionCandidate"></textarea>
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Cancelar</button>
+                              <button type="submit" class="btn btn-primary antosubmit">Guardar Cita</button>
+                          </div>
+                      </form>
+                  </div>
               </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label col-xs-12">Comentarios</label>
-                <div class="col-sm-9 col-xs-12">
-                  <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
-                </div>
-              </div>
-            </form>
+
           </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary antosubmit">Guardar Cita</button>
-        </div>
       </div>
-    </div>
   </div>
-  <!-- Modal editar -->
-  <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title" id="myModalLabel2"> <i class="fa fa-edit"></i> Editar cita</h4>
-        </div>
-        <div class="modal-body">
-
-          <div id="testmodal2" style="padding: 5px 20px;">
-            <form id="antoform2" class="form-horizontal calender" role="form">
-              <div class="form-group">
-                <label class="col-sm-3 control-label col-xs-12">Poligrafista</label>
-                <div class="col-sm-9 col-xs-12">
-                  <select id="heard" class="form-control" required="">
-                    <option value="">Seleccione</option>
-                    <option value="poligrafista">Poligrafista 1</option>
-                    <option value="poligrafista">Poligrafista 2</option>
-                    <option value="poligrafista">Poligrafista 3</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label">Empresa</label>
-                <div class="col-sm-9 col-xs-12">
-                  <select id="empresa" class="form-control col-xs-12" required="">
-                    <option value="">Seleccione</option>
-                    <option value="empresa">Empresa 1</option>
-                    <option value="empresa">Empresa 2</option>
-                    <option value="empresa">Empresa 3</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label">Cliente</label>
-                <div class="col-sm-9 col-xs-12">
-                  <select id="heard" class="form-control col-xs-12" required="">
-                    <option value="">Seleccione</option>
-                    <option value="empresa">Cliente 1</option>
-                    <option value="cliente">Cliente 2</option>
-                    <option value="cliente">Cliente 3</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Horaio</label>
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                  <select id="heard" class="form-control col-xs-12" required="">
-                    <option>7:00</option>
-                    <option>7:30</option>
-                    <option>8:00</option>
-                    <option>8:30</option>
-                    <option>9:00</option>
-                    <option>9:30</option>
-                    <option>10:00</option>
-                    <option>11:00</option>
-                    <option>11:30</option>
-                    <option>12:00</option>
-                    <option>12:30</option>
-                    <option>1:00</option>
-                    <option>1:30</option>
-                    <option>2:00</option>
-                    <option>2:30</option>
-                    <option>3:00</option>
-                    <option>3:30</option>
-                    <option>4:00</option>
-                    <option>4:30</option>
-                    <option>5:00</option>
-                    <option>5:30</option>
-                    <option>6:00</option>
-                    <option>6:30</option>
-                  </select>
-                </div>
-                <label class="control-label col-md-3 col-sm-3 col-xs-12">Llegada</label>
-                <div class="col-md-3 col-sm-4 col-xs-12">
-                  <select id="heard" class="form-control col-xs-12" required="">
-                    <option>7:00</option>
-                    <option>7:30</option>
-                    <option>8:00</option>
-                    <option>8:30</option>
-                    <option>9:00</option>
-                    <option>9:30</option>
-                    <option>10:00</option>
-                    <option>11:00</option>
-                    <option>11:30</option>
-                    <option>12:00</option>
-                    <option>12:30</option>
-                    <option>1:00</option>
-                    <option>1:30</option>
-                    <option>2:00</option>
-                    <option>2:30</option>
-                    <option>3:00</option>
-                    <option>3:30</option>
-                    <option>4:00</option>
-                    <option>4:30</option>
-                    <option>5:00</option>
-                    <option>5:30</option>
-                    <option>6:00</option>
-                    <option>6:30</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label">Tipo de Prueba</label>
-                <div class="col-sm-9 col-xs-12">
-                  <select id="prueba" class="form-control col-xs-12" required="">
-                    <option value="">Seleccione</option>
-                    <option value="prueba-pre-empleo">Prueba Pre Empleo</option>
-                    <option value="prueba-permanencia">Prueba Permanencia</option>
-                    <option value="prueba-especifica">Prueba Especifica</option>
-                    <option value="pruebas-psicologicas">Pruebas Psicologícas</option>
-                    <option value="pruebas-socioeconomicas">Pruebas Socioeconómicas</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label">Estatus</label>
-                <div class="col-sm-9 col-xs-12">
-                  <select id="prueba" class="form-control col-xs-12" required="">
-                    <option value="">Seleccione</option>
-                    <option value="asistio">Asistió</option>}
-                    option
-                    <option value="no-asistio">No asistió</option>
-                    <option value="re-agendada">Re-agendada</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
-                <h4><i class="fa fa-user"></i> Candidato</h4>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label col-xs-12">Nombre</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="candidato" name="candidato">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label col-xs-12">Apellido</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="apellido" name="apellido">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label col-xs-12">Cedula</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="cedula" name="cedula">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <label class="col-sm-3 control-label col-xs-12">Puesto</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="puesto" name="puesto">
-                </div>
-              </div>
-              <div class="form-group">
-
-                <label class="col-sm-3 control-label col-xs-12">Celular</label>
-                <div class="col-sm-9 col-xs-12">
-                  <input type="text" class="form-control" id="celular" name="celular">
-                </div>
-              </div>
-              <div class="form-group">
-                <label class="col-sm-3 control-label col-xs-12">Comentarios</label>
-                <div class="col-sm-9 col-xs-12">
-                  <textarea class="form-control" style="height:55px;" id="descr" name="descr"></textarea>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default antoclose2" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary antosubmit2">Guardar Cita</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
+  
+    <!-- Modal edit-->
+    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+    <!-- /. modal -->
+    
   <!-- Custom Theme Scripts -->
   <script src="../build/js/custom.min.js"></script>
-
+<script>
+        $('#myModal').on('shown.bs.modal', function () {
+            $(this).removeData('bs.modal');
+        });
+    </script>
   <script type="text/javascript">
       var $floaty = $('.floaty');
 
@@ -655,4 +365,6 @@
           }
       }());
   </script>
+  
+  <script src="js/validate/fn-createAppoimentDashboard.js"></script>
 @stop

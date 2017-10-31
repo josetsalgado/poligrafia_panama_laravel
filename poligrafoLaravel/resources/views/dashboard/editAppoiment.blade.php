@@ -5,12 +5,15 @@
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             <h4 class="modal-title" id="myModalLabel2"> <i class="fa fa-edit"></i> Editar cita</h4>
         </div>
+        
         <div class="modal-body">
             <div id="testmodal2" style="padding: 5px 20px;">
                 <form id="editQuotePatien" name="editQuotePatien" class="form-horizontal calender" role="form">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="hidden" name="dateEpoch" id="dateEpochEdit" value="{{ $getQuote[0]->time_appoiment }}">
                     <input type="hidden" name="id" id="id" value="{{ $getQuote[0]->id_appoiment }}">
                     <input type="hidden" name="id_patient" id="id_patient" value="{{ $getQuote[0]->id_patient }}">
+                    
                     <div class="form-group">
                         <label class="col-sm-3 control-label col-xs-12">Poligrafista</label>
                         <div class="col-sm-9 col-xs-12">
@@ -46,6 +49,7 @@
                             </select>
                         </div>
                     </div>
+                    
                     <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Horario</label>
                         <div class="col-md-4 col-sm-3 col-xs-12">
