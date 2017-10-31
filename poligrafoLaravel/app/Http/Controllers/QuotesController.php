@@ -109,7 +109,6 @@ class QuotesController extends Controller
      */
     public function store(Request  $request)
     {
-        $this->validateCreate($request);
         //insertar data paciente
         Patient::insert([
           'id_patient' => '',
@@ -134,8 +133,12 @@ class QuotesController extends Controller
           'status' => 'Pendiente',
         ]);
         
-        $models = Payment::where('company_id', '=',$request->empresa)->orderBy('id_payment', 'desc')->first();
-        Log::error(print_r($models, true));
+        $models = Payment::where('company_id', '=',$request->empresa)->orderBy('id_payment', 'desc')->take(1)->get();
+        if($models->full_payment){
+            $models
+        }else{
+            
+        }
         Payment::insert([
           'company_id' => intval($request->empresa),
         ]);

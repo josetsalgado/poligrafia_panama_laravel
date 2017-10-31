@@ -60,32 +60,6 @@ $(document).ready(function () {
     $("#createQuote").validate({
         wrapper: "div",
         errorClass: "text-danger",
-        rules: {
-            empresa: {required: true},
-            client: {required: true},
-            schedule: {required: true},
-            service: {required: true},
-            status: {required: true},
-            candidateName: {required: true},
-            candidateLastname: {required: true},
-            ciCandidate: {required: true},
-            jobCandidate: {required: true},
-            telCandidate: {required: true},
-            descriptionCandidate: {required: true},
-        },
-        messages: {
-            empresa: {required: "El campo empresa es obligatorio."},
-            client: {required: "El campo cliente es obligatorio."},
-            schedule: {required: "El campo horario es obligatorio."},
-            service: {required: "El campo tipo de prueba es obligatorio."},
-            status: {required: "El campo estatus es obligatorio."},
-            candidateName: {required: "El campo nombre del candidato es obligatorio."},
-            candidateLastname: {required: "El campo apellido del candidato es obligatorio."},
-            ciCandidate: {required: "El campo cedula es obligatorio."},
-            jobCandidate: {required: "El puesto es obligatorio."},
-            telCandidate: {required: "El telefono es obligatorio."},
-            descriptionCandidate: {required: "El descripción es obligatorio."},
-        },
         submitHandler: function (form) {
             var dataString = $('#createQuote').serialize();
             $.ajax({
