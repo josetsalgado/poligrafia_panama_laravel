@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 30-10-2017 a las 15:18:50
+-- Tiempo de generación: 31-10-2017 a las 17:53:17
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -60,6 +60,30 @@ CREATE TABLE `itcp_appoiments` (
   `status` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `time_arrival` varchar(45) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `itcp_appoiments`
+--
+
+INSERT INTO `itcp_appoiments` (`id_appoiment`, `user_id`, `service_id`, `company_id`, `client_id`, `patient_id`, `city_appoiment`, `date_appoiment`, `time_appoiment`, `comentary_appoiment`, `status`, `time_arrival`) VALUES
+(1, 2, 5, 1, 1, 42, 'PANAMA', '2017-10-08', '08:00:00', '12', 'Asistió', ''),
+(2, NULL, 5, 1, 1, 43, 'PANAMA', '2017-10-06', '08:00:00', '12', 'Pendiente', ''),
+(3, NULL, 5, 1, 1, 44, 'PANAMA', '2017-10-06', '08:00:00', '12', 'Pendiente', ''),
+(4, NULL, 5, 1, 1, 45, 'PANAMA', '2017-10-05', '07:00:00', '21', 'Pendiente', ''),
+(5, NULL, 6, 1, 1, 46, 'PANAMA', '2017-10-04', '08:00:00', '12', 'Pendiente', ''),
+(6, NULL, 6, 1, 1, 47, 'PANAMA', '2017-10-03', '07:30:00', '12', 'Pendiente', ''),
+(7, NULL, 5, 1, 1, 48, 'PANAMA', '2017-10-07', '07:00:00', '12', 'Pendiente', ''),
+(8, NULL, 5, 1, 1, 49, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
+(9, NULL, 5, 2, 2, 50, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
+(10, NULL, 5, 2, 2, 51, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
+(11, NULL, 5, 2, 2, 52, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
+(12, NULL, 6, 2, 2, 53, 'PANAMA', '0000-00-00', '07:00:00', '12', 'Pendiente', ''),
+(13, NULL, 7, 1, 1, 54, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
+(14, NULL, 6, 1, 1, 55, 'PANAMA', '2017-11-01', '09:30:00', 'xas asd ', 'Pendiente', ''),
+(15, 2, 7, 1, 1, 56, 'PANAMA', '2017-10-31', '09:00:00', 'asdasd', 'Asistió', ''),
+(16, NULL, 5, 1, 1, 57, 'PANAMA', '2017-11-01', '07:00:00', '123', 'Pendiente', ''),
+(17, 1, 6, 1, 1, 58, 'PANAMA', '2017-11-01', '10:00:00', '123', 'Pendiente', ''),
+(18, NULL, 5, 1, 1, 59, 'PANAMA', '2017-11-01', '10:00:00', '12', 'Pendiente', '');
 
 -- --------------------------------------------------------
 
@@ -258,7 +282,29 @@ INSERT INTO `itcp_patients` (`id_patient`, `name_patient`, `last_name_patient`, 
 (34, 'Empleado 3', 'asd', '123', 'sdadc', '123'),
 (35, 'dsa', 'd', '23', 'c', '123'),
 (36, 'dasd', 'das', '123', 'ads', '123'),
-(37, 'qwe', 'qwe', '123', 'qwe', '123');
+(37, 'qwe', 'qwe', '123', 'qwe', '123'),
+(38, '12', '12', '123', '12', '12'),
+(39, '12', '12', '123', '12', '12'),
+(40, '12', '12', '12', '12', '12'),
+(41, '12', '12', '12', '12', '12'),
+(42, '12', '12', '12', '12', '12'),
+(43, '12', '12', '12', '12', '12'),
+(44, '12', '12', '12', '12', '12'),
+(45, '12', '21', '12', '21', '123'),
+(46, '12', '12', '2', '12', '12'),
+(47, '12', '12', '12', '12', '12'),
+(48, '12', '12', '12', '12', '12'),
+(49, '12', '12', '12', '12', '12'),
+(50, '12', '12', '12', '12', '12'),
+(51, '12', '12', '12', '12', '12'),
+(52, '12', '12', '12', '12', '12'),
+(53, '12', '12', '12', '12', '12'),
+(54, '12', '12', '12', '12', '12'),
+(55, 'jose', 'salgado', '312312', 'dassa', '2123'),
+(56, '333', 'sss', '123123', '123', '12321'),
+(57, 'jose', 'salgado', '213', '123', '123'),
+(58, 'cenen 2', 'salgado', '123', '123', '123'),
+(59, 'bernardo', 'salgado', '12', '12', '12');
 
 -- --------------------------------------------------------
 
@@ -267,15 +313,31 @@ INSERT INTO `itcp_patients` (`id_patient`, `name_patient`, `last_name_patient`, 
 --
 
 CREATE TABLE `itcp_payments` (
-  `id_s` int(25) UNSIGNED NOT NULL,
+  `id_payment` int(25) UNSIGNED NOT NULL,
   `tax_invoice_number` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `method_of_payment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `check_number` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `date_ach` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `full_payment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `amount_payable` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `observations_payment` int(11) NOT NULL
+  `observations_payment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `company_id` int(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `itcp_payments`
+--
+
+INSERT INTO `itcp_payments` (`id_payment`, `tax_invoice_number`, `method_of_payment`, `check_number`, `date_ach`, `full_payment`, `amount_payable`, `observations_payment`, `company_id`) VALUES
+(1, '', '', '', '', '', '', '0', 1),
+(2, '', '', '', '', '', '', '', 1),
+(3, '', '', '', '', '', '', '', 1),
+(4, '', '', '', '', '', '', '', 1),
+(5, '', '', '', '', '', '', '', 2),
+(6, '', '', '', '', '', '', '', 2),
+(7, '', '', '', '', '', '', '', 1),
+(8, '', '', '', '', '', '', '', 1),
+(9, '', '', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -355,7 +417,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `last_name`, `password`, `remember_token`, `rol_id`, `tel`, `email`) VALUES
 (1, 'Poligrafista27', 'Poligrafista2', '$2y$10$0gDy9g8Kfra3nnerx/UWV.BF3xO5.PCMDxtONm5K8g8RZ42n0F1OG', 'QC68gSZbafm4iQLiW0pryOjzxxAenpn41RqmcYYeG3dq7TnTRk6rreCGyxbq', 2, '23', 'a'),
-(2, 'Administrador', 'Administrador', '$2y$10$7pG.q39RWhpYEmZ/Y3gF..1CRYApXz8RPx7QrZf1aDQrOEUhQCqAK', 'vf2xPZ1Ys4peryVM723Y7SwDk4aNNxaFGWFJHyDCeCyCUGhhLv7mQ7UdVtlF', 1, '', 'admin@admin.com'),
+(2, 'Administrador', 'Administrador', '$2y$10$7pG.q39RWhpYEmZ/Y3gF..1CRYApXz8RPx7QrZf1aDQrOEUhQCqAK', '5kCox3j16X04MxC1R6HqOmbEpVNx524oV0cwFULI8vhRbNxrzG7dOKsggqd1', 1, '', 'admin@admin.com'),
 (3, 'poligrafista1', 'poligrafista1 apellido', '$2y$10$pe2SXFONUaa2VXy7nR32CuQ43UdHm1agcUW6xI3AvwA1eH./.pdN.', 'rv8bU2hPEvVu0AH67HGJtgEMxq9EclDMadw1LPm8oHFDVXwWhFYEWqa5GBDi', 2, '123', 'poli1@poli1.com'),
 (4, 'Jose', 'Salgado', '123', 'Nx9nj6fUF7r5aqkGMfaYh8WMZM90tVTFawzUg6rGdeSJDPfjU8JrMkzRu6CM', 1, '123', 'salgado@salgado.com'),
 (5, 'emilyn ', 'Garcia', '$2y$10$IsuuvMh3PXuPjJaLHy.s0eUcgimdwKrcLtTyiBI8e9ffYarVqu/ru', 'bYaDCy4bQg3tiWFfA8uoopAJo2CdDF5Po2RH2j6DXcQogTjyIjwySq56Es0F', 2, '123', 'egarcia@ilernus.com');
@@ -422,6 +484,12 @@ ALTER TABLE `itcp_patients`
   ADD PRIMARY KEY (`id_patient`);
 
 --
+-- Indices de la tabla `itcp_payments`
+--
+ALTER TABLE `itcp_payments`
+  ADD PRIMARY KEY (`id_payment`);
+
+--
 -- Indices de la tabla `itcp_service`
 --
 ALTER TABLE `itcp_service`
@@ -458,7 +526,7 @@ ALTER TABLE `itcl_rols`
 -- AUTO_INCREMENT de la tabla `itcp_appoiments`
 --
 ALTER TABLE `itcp_appoiments`
-  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT de la tabla `itcp_budgets`
 --
@@ -483,7 +551,12 @@ ALTER TABLE `itcp_companys`
 -- AUTO_INCREMENT de la tabla `itcp_patients`
 --
 ALTER TABLE `itcp_patients`
-  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+--
+-- AUTO_INCREMENT de la tabla `itcp_payments`
+--
+ALTER TABLE `itcp_payments`
+  MODIFY `id_payment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT de la tabla `itcp_service`
 --
