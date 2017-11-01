@@ -241,40 +241,52 @@ class QuotesController extends Controller
      */
     public function update(Request $request)
     {
-//        Patient::where("id_patient", "=", $request->id_patient)
-//                ->update(array(
-//                    "name_patient" => $request->candidateNameEdit,
-//                    "last_name_patient" => $request->candidateLastnameEdit,
-//                    "ci_patient" => $request->ciCandidateEdit,
-//                    "job_patient" => $request->jobCandidateEdit,
-//                    "phone" => $request->telCandidateEdit,
-//        ));
-//
-//        
-//        Appoiment::where("id_appoiment", "=", $request->id)
-//                ->update(array(
-//                    "user_id" => $request->polygraphist,
-//                    "service_id" => $request->serviceEdit,
-//                    "company_id" => $request->empresaEdit,
-//                    "client_id" => $request->clientEdit,
-//                    "patient_id" => Patient::where("id_patient", $request->id_patient)->get()[0]->id_patient,
-//                    "city_appoiment" => $request->session()->get('city'),
-//                    "time_appoiment" => $request->scheduleEdit,
-//                    "comentary_appoiment" => $request->descriptionCandidateEdit,
-//                    "status" => $request->statusEdit,
-//                    "time_arrival" => $request->time_arrival
-//        ));
+        
+        $getStatusIni = Appoiment::where('id_appoiment', '=',$request->id)->get();
+        
+        Patient::where("id_patient", "=", $request->id_patient)
+                ->update(array(
+                    "name_patient" => $request->candidateNameEdit,
+                    "last_name_patient" => $request->candidateLastnameEdit,
+                    "ci_patient" => $request->ciCandidateEdit,
+                    "job_patient" => $request->jobCandidateEdit,
+                    "phone" => $request->telCandidateEdit,
+        ));
+
+        
+        Appoiment::where("id_appoiment", "=", $request->id)
+                ->update(array(
+                    "user_id" => $request->polygraphist,
+                    "service_id" => $request->serviceEdit,
+                    "company_id" => $request->empresaEdit,
+                    "client_id" => $request->clientEdit,
+                    "patient_id" => Patient::where("id_patient", $request->id_patient)->get()[0]->id_patient,
+                    "city_appoiment" => $request->session()->get('city'),
+                    "time_appoiment" => $request->scheduleEdit,
+                    "comentary_appoiment" => $request->descriptionCandidateEdit,
+                    "status" => $request->statusEdit,
+                    "time_arrival" => $request->time_arrival
+        ));
         //traer consulta tabla pagos relacionado con el ultimo de esa compañia
         $payForCompany = Payment::where('company_id', '=',$request->empresaEdit)->orderBy('id_payment', 'desc')->take(1)->get();
-        Log::error(print_r($payForCompany, true));
-        if ($request->statusEdit == "Asistió") {
-//            Payment::where('company_id', $request->id)->orderBy('id_payment', 'desc')->take(1)-get()
+        
+        //traer consulta tabla pagos relacionado con el ultimo de esa compañia
+        $getStatusFinish = Appoiment::where('id_appoiment', '=',$request->id)->get();
+        
+        
+//        if ($getApoiment[0]->status == "Asistió") {
+        if ((($getStatusIni[0]->status == "Pendiente") || ($getStatusIni[0]->status == "No Asistió") || ($getStatusIni[0]->status == "Re-agendada")) && ($getStatusFinish[0]->status == "Asistió")) {
             Payment::where('id_payment', $payForCompany[0]->id_payment)
                     ->update([
                         'full_payment' => $payForCompany[0]->full_payment + $this->getTotalPay($request->empresaEdit),
-//                        'full_payment' => "30",
+            ]);
+        }if(($getStatusIni[0]->status == "Asistió") && (($getStatusFinish[0]->status == "No asistió") || ($getStatusFinish[0]->status == "Re-agendada") || ($getStatusFinish[0]->status == "Pendiente"))){
+            Payment::where('id_payment', $payForCompany[0]->id_payment)
+                    ->update([
+                        'full_payment' => $payForCompany[0]->full_payment - $this->getTotalPay($request->empresaEdit),
             ]);
         }
+        
     }
 
     /**
