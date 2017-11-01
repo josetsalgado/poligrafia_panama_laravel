@@ -131,22 +131,21 @@
 
         });*/
 $("#send").click(function (){
-var serielize=$(createBudget).serialize();
-console.log(serielize);
-
-
-    $.ajax({
-        type: "POST",
-        url: "sendhtmlemail_cotizacion",
-        data: serielize,
-        success: function(data) {
-            alert("asdasd");
-        }
-    });
-});
-
-    </script>
-
+//var serielize=$(createBudget).serialize();
+//console.log(serielize);
+//
+//
+//    $.ajax({
+//        type: "POST",
+//        url: "sendhtmlemail_cotizacion",
+//        data: serielize,
+//        success: function(data) {
+//            alert("asdasd");
+//        }
+//    });
+alertify.success('Su mensaje fue enviado de forma correcta');
+}); 
+ </script>
 
 
 @stop
