@@ -44,196 +44,53 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>Coca Cola</td>
-                            <td>1631480-1-671929 D.V. 62</td>
-                            <td>
-                                <ul>
-                                    <li>Michael Jonas</li>
-                                    <li>jackson salga</li>
-                                </ul>
-                            </td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>
-                                <ul>
-                                    <li>Pre-empleo B/.125.00</li>
-                                    <li>Especifica B/.150.00</li>
-                                    <li>Rutina B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Chevrolet</td>
-                            <td>1631480-1-671929 D.V. 62</td>
-                            <td>
-                                <ul>
-                                    <li>Michael Jonas</li>
-                                    <li>jackson salga</li>
-                                </ul>
-                            </td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>
-                                <ul>
-                                    <li>Pre-empleo B/.125.00</li>
-                                    <li>Especifica B/.150.00</li>
-                                    <li>Rutina B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
+                        @foreach($companys as $company)
+                            <tr>
 
-                        </tr>
-                        <tr>
-                            <td>Pepsi</td>
-                            <td>1631480-1-671929 D.V. 62</td>
-                            <td>
-                                <ul>
-                                    <li>Michael Jonas</li>
-                                    <li>jackson salga</li>
-                                </ul>
-                            </td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>
-                                <ul>
-                                    <li>Pre-empleo B/.125.00</li>
-                                    <li>Especifica B/.150.00</li>
-                                    <li>Rutina B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
+                                <td>{{ $company->name_company or '' }}</td>
+                                <td>{{ $company->ruc_company or '' }}</td>
+                                <td>
+                                    <ul>
+                                        <li>Michael Jonas</li>
+                                        <li>jackson salga</li>
+                                    </ul>
+                                </td>
+                                <td>{{ $company->tel_company or '' }}</td>
+                                <td>{{ $company->email_compamy or '' }}</td>
+                                <td>
+                                    <ul>
+                                        <li>
+                                            <?php
+                                                if($company->cost_test_pre_employment){
+                                                    echo "Pre-empleo B/. ".$company->cost_test_pre_employment;
+                                                }
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <?php
+                                            if($company->cost_specific_test){
+                                                echo "Especifica B/. ".$company->cost_specific_test;
+                                            }
+                                            ?>
+                                        </li>
+                                        <li>
+                                            <?php
+                                            if($company->cost_routine_test){
+                                                echo "Rutina B/. ".$company->cost_routine_test;
+                                            }
+                                            ?>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
+                                    <button class="btn btn-danger btn-xs" id="delete" name="delete" value="{{ $company->id_company }}" onclick="fnDelete('{{ $company->id_company }}')" data-toggle="tooltip" data-placement="right">
+                                        <i class="fa fa-trash-o"></i> {{ trans('poligrafo.delete') }} </a>
+                                    </button>
 
-                        </tr>
-                        <tr>
-                            <td>Lael</td>
-                            <td>1631480-1-671929 D.V. 62</td>
-                            <td>
-                                <ul>
-                                    <li>Michael Jonas</li>
-                                    <li>jackson salga</li>
-                                </ul>
-                            </td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>
-                                <ul>
-                                    <li>Pre-empleo B/.125.00</li>
-                                    <li>Especifica B/.150.00</li>
-                                    <li>Rutina B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Jonas</td>
-                            <td>1631480-1-671929 D.V. 62</td>
-                            <td>
-                                <ul>
-                                    <li>Michael Jonas</li>
-                                    <li>jackson salga</li>
-                                </ul>
-                            </td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>
-                                <ul>
-                                    <li>Pre-empleo B/.125.00</li>
-                                    <li>Especifica B/.150.00</li>
-                                    <li>Rutina B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Shad</td>
-                            <td>1631480-1-671929 D.V. 62</td>
-                            <td>
-                                <ul>
-                                    <li>Michael Jonas</li>
-                                    <li>jackson salga</li>
-                                </ul>
-                            </td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>
-                                <ul>
-                                    <li>Pre-empleo B/.125.00</li>
-                                    <li>Especifica B/.150.00</li>
-                                    <li>Rutina B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Michael</td>
-                            <td>1631480-1-671929 D.V. 62</td>
-                            <td>
-                                <ul>
-                                    <li>Michael Jonas</li>
-                                    <li>jackson salga</li>
-                                </ul>
-                            </td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>
-                                <ul>
-                                    <li>Pre-empleo B/.125.00</li>
-                                    <li>Especifica B/.150.00</li>
-                                    <li>Rutina B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Donna</td>
-                            <td>1631480-1-671929 D.V. 62</td>
-                            <td>
-                                <ul>
-                                    <li>Michael Jonas</li>
-                                    <li>jackson salga</li>
-                                </ul>
-                            </td>
-                            <td>+58 555 55 55</td>
-                            <td>correo@correo.com</td>
-                            <td>
-                                <ul>
-                                    <li>Pre-empleo B/.125.00</li>
-                                    <li>Especifica B/.150.00</li>
-                                    <li>Rutina B/.125.00</li>
-                                </ul>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i> Edit</button>
-                                <a href="#" class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Delete </a>
-                            </td>
-
-                        </tr>
+                                </td>
+                            </tr>
+                        @endforeach
                         </tbody>
                     </table>
 
@@ -326,7 +183,7 @@
         </div>
     </div>
 
-
+    <script src="js/validate/fn-deleteCompany.js"></script>
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
 

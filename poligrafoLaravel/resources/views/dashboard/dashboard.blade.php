@@ -43,12 +43,7 @@
                     echo strftime("%A") ." ".date("j") ." ". strftime("%B")." ".date("Y");
                 ?>
             </h4>
-            <ul class="nav navbar-right panel_toolbox">
-              <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-              </li>
-              <li><a class="close-link"><i class="fa fa-close"></i></a>
-              </li>
-            </ul>
+
             <div class="clearfix"></div>
           </div>
           <div class="x_content">
@@ -77,7 +72,7 @@
       <div class="col-md-6 col-sm-6 col-xs-12">
         <div class="x_panel tile overflow_hidden">
           <div class="x_title">
-            <h4 class="dash_titulo"><i class="fa fa-calendar"></i> 
+            <h4 class="dash_titulo"><i class="fa fa-calendar"></i>
                 <?php
                     setlocale(LC_ALL,"es_ES");
                      echo strftime("%A",strtotime("+1 day")) ." ".date("d",strtotime("+1 day"))." ". strftime("%B",strtotime("+1 day"))." ".date("Y",strtotime("+1 day"));
@@ -90,9 +85,9 @@
                   <button class="btn btn-info btn-color" type="button"><i class="fa fa-chevron-right"></i></button>
                 </div -->
               </li>
-            </ul>
+            </ul></h4>
             <div class="clearfix"></div>
-            </h4>
+
           </div>
           <div class="x_content">
                 @foreach($tomorrowAppointments as $tomorrowAppointment)

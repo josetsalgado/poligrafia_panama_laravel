@@ -95,8 +95,9 @@ class CompanyController extends Controller
      */
     public function show()
     {
-        $company = Company::all();
-        return view("company.show", compact("company"));
+        $companys = Company::all();
+
+        return view("company.show", compact("companys"));
     }
 
     /**
@@ -128,8 +129,9 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+
+        Company::where('id_company', '=', $id)->delete();
     }
 }
