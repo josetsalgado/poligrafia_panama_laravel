@@ -18,7 +18,7 @@ $("#client").attr("disabled", true);
 
 function getClient() {
     var code = $("#empresa").val();
-   
+
 
     $.get("appoiment_company/" + code, function (resultado) {
         if (resultado == false)

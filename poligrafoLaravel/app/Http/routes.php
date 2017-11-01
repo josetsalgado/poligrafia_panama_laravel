@@ -152,6 +152,9 @@ Route::group(['middleware' => 'auth'], function () {
     //ver empresas
     Route::get('/show_company', 'CompanyController@show');
 
+    //eliminar compañias
+    Route::get('/delete_company/{id}', 'CompanyController@delete');
+
     //registro de pago
     Route::get('/payment_record', 'AccountStatusController@show');
 
