@@ -7,15 +7,15 @@ use App\Client;
 use App\Company;
 use App\Http\Controllers\Controller;
 use App\Patient;
+use App\Payment;
 use App\Service;
 use App\User;
-use App\Payment;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Log;
 use function trans;
 use function view;
-use Log;
 
 class QuotesController extends Controller
 {
@@ -133,19 +133,62 @@ class QuotesController extends Controller
           'status' => 'Pendiente',
         ]);
         
-//        $models = Payment::where('company_id', '=',$request->empresa)->orderBy('id_payment', 'desc')->take(1)->get();
-//        if ($models->amount_payable >= $models->full_payment) {
-//            Payment::insert([
-//                'company_id' => intval($request->empresa),
-//            ]);
-//        } else {
-//            Payment::where('company_id', $request->id)
-//                    ->update([
-//                        'full_payment' => $request->name,
-//            ]);
-//        }
+        
+        //primero valido que la empresa exista si existe creo su primer cobro si no proceso la actualzacion del precio a cobrar
+        $paymentCompanyCount = Appoiment::where('company_id', '=',$request->empresa)->count();
+        //traer consulta tabla pagos relacionado con el ultimo de esa compañia
+        $payForCompany = Payment::where('company_id', '=',$request->empresa)->orderBy('id_payment', 'desc')->take(1)->get();
+        
+        //crear 
+        if($paymentCompanyCount == 1){
+            Payment::insert([
+                'company_id' => intval($request->empresa),
+                'full_payment' => "0",
+            ]); 
+        } else{
+            if ($payForCompany[0]->amount_payable >= $payForCompany[0]->full_payment) {
+                Payment::insert([
+                    'company_id' => intval($request->empresa),
+                    'full_payment' => "0",
+                ]);
+            }
+        }
+        
     }
 
+    public function getTotalPay($empresa){
+        $total = 0;
+        
+        //traer informacion de la tabla citas con la asociados a la compañia seleccionada
+        $appoimentPay = Appoiment::where('company_id', '=',$empresa)->orderBy('id_appoiment', 'desc')->take(1)->get();
+        
+        foreach ($appoimentPay as $appoimentP){
+            $appoimentP->service_id = $this->getRelationship($appoimentP->service_id, 'itcp_service', 'id_service');
+            $appoimentP->company_id = $this->getRelationship($appoimentP->company_id, 'itcp_companys', 'id_company');
+        }
+        
+        if ($appoimentPay[0]->service_id[0]->name_service == "Pre-empleo") {
+            ($appoimentPay[0]->company_id[0]->cost_test_pre_employment) ? $total = $total + $appoimentPay[0]->company_id[0]->cost_test_pre_employment : $total = $total + $appoimentPay[0]->service_id[0]->price_service;
+        }
+        if ($appoimentPay[0]->service_id[0]->name_service == "Especifica") {
+            ($appoimentPay[0]->company_id[0]->cost_specific_test) ? $total = $total + $appoimentPay[0]->company_id[0]->cost_specific_test : $total = $total + $appoimentPay[0]->service_id[0]->price_service;
+        }
+        if ($appoimentPay[0]->service_id[0]->name_service == "Rutina") {
+            ($appoimentPay[0]->company_id[0]->cost_routine_test) ? $total = $total + $appoimentPay[0]->company_id[0]->cost_routine_test : $total = $total + $appoimentPay[0]->service_id[0]->price_service;
+        }
+        if ($appoimentPay[0]->service_id[0]->name_service == "Reevaluación") {
+            ($appoimentPay[0]->company_id[0]->reevaluation_test_cost) ? $total = $total + $appoimentPay[0]->company_id[0]->reevaluation_test_cost : $total = $total + $appoimentPay[0]->service_id[0]->price_service;
+        }
+        return $total;
+    }
+
+
+    public function getRelationship($id_client, $tb,$tbgRelationship){
+        return DB::table($tb)
+            ->select('*')
+            ->where($tb.'.'.$tbgRelationship, '=', $id_client)
+            ->get();
+    }
     /**
      * Display the specified resource.
      *
@@ -198,38 +241,40 @@ class QuotesController extends Controller
      */
     public function update(Request $request)
     {
-        Patient::where("id_patient", "=", $request->id_patient)
-                ->update(array(
-                    "name_patient" => $request->candidateNameEdit,
-                    "last_name_patient" => $request->candidateLastnameEdit,
-                    "ci_patient" => $request->ciCandidateEdit,
-                    "job_patient" => $request->jobCandidateEdit,
-                    "phone" => $request->telCandidateEdit,
-        ));
-
-        
-        Appoiment::where("id_appoiment", "=", $request->id)
-                ->update(array(
-                    "user_id" => $request->polygraphist,
-                    "service_id" => $request->serviceEdit,
-                    "company_id" => $request->empresaEdit,
-                    "client_id" => $request->clientEdit,
-                    "patient_id" => Patient::where("id_patient", $request->id_patient)->get()[0]->id_patient,
-                    "city_appoiment" => $request->session()->get('city'),
-                    "time_appoiment" => $request->scheduleEdit,
-                    "comentary_appoiment" => $request->descriptionCandidateEdit,
-                    "status" => $request->statusEdit,
-                    "time_arrival" => $request->time_arrival
-        ));
-        
-//        Payment::insert([
-//          'id_patient' => '',
-//          'name_patient' => $request->candidateName,
-//          'last_name_patient' => $request->candidateLastname,
-//          'ci_patient' => $request->ciCandidate,
-//          'job_patient' => $request->jobCandidate,
-//          'phone' => $request->telCandidate,
-//        ]);
+//        Patient::where("id_patient", "=", $request->id_patient)
+//                ->update(array(
+//                    "name_patient" => $request->candidateNameEdit,
+//                    "last_name_patient" => $request->candidateLastnameEdit,
+//                    "ci_patient" => $request->ciCandidateEdit,
+//                    "job_patient" => $request->jobCandidateEdit,
+//                    "phone" => $request->telCandidateEdit,
+//        ));
+//
+//        
+//        Appoiment::where("id_appoiment", "=", $request->id)
+//                ->update(array(
+//                    "user_id" => $request->polygraphist,
+//                    "service_id" => $request->serviceEdit,
+//                    "company_id" => $request->empresaEdit,
+//                    "client_id" => $request->clientEdit,
+//                    "patient_id" => Patient::where("id_patient", $request->id_patient)->get()[0]->id_patient,
+//                    "city_appoiment" => $request->session()->get('city'),
+//                    "time_appoiment" => $request->scheduleEdit,
+//                    "comentary_appoiment" => $request->descriptionCandidateEdit,
+//                    "status" => $request->statusEdit,
+//                    "time_arrival" => $request->time_arrival
+//        ));
+        //traer consulta tabla pagos relacionado con el ultimo de esa compañia
+        $payForCompany = Payment::where('company_id', '=',$request->empresaEdit)->orderBy('id_payment', 'desc')->take(1)->get();
+        Log::error(print_r($payForCompany, true));
+        if ($request->statusEdit == "Asistió") {
+//            Payment::where('company_id', $request->id)->orderBy('id_payment', 'desc')->take(1)-get()
+            Payment::where('id_payment', $payForCompany[0]->id_payment)
+                    ->update([
+                        'full_payment' => $payForCompany[0]->full_payment + $this->getTotalPay($request->empresaEdit),
+//                        'full_payment' => "30",
+            ]);
+        }
     }
 
     /**
