@@ -101,88 +101,10 @@
         </div>
     </div>
     <!-- Modal Agregar Nueva Empresa & cliente-->
-    <div class="modal fade" id="newEmpresa" role="dialog">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <div class="row">
-                        <div class="col-md-5 col-sm-6 col-xs-12">
-                            <span><b>Agregar Nueva Empresa</b></span>
-                        </div>
-                        <div class="col-md-offset-1 col-md-4 col-sm-6 col-xs-12">
-                            <span><b>Agregar Nuevo Cliente</b></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-body">
-                    <!-- content modal -->
-                    <!-- row -->
-                    <div class="row">
-                        <form class="form-horizontal form-label-left input_mask">
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="razon_social" name="razon_social" placeholder="Razón Social">
-                                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="ruc" name="ruc" placeholder="R.U.C">
-                                    <span class="fa fa-barcode form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="numero_telefonico" name="numero_telefonico" placeholder="Número Telefonico">
-                                    <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Correo">
-                                    <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="direccon" name="direccon" placeholder="Direccón">
-                                    <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="nombre_cliente" name="nombre_cliente" placeholder="Nombre del Cliente">
-                                    <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="cargo" name="cargo" placeholder="Cargo">
-                                    <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="numero_telefonico" name="numero_telefonico" placeholder="Número Telefonico">
-                                    <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="correo" name="correo" placeholder="Correo">
-                                    <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-
-                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                    <input type="text" class="form-control has-feedback-left" id="ciudad" name="ciudad" placeholder="Ciudad">
-                                    <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
-                                </div>
-                            </div>
-                    </div>
-                    <!-- /content modal -->
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-    <!-- /. modal New Empresa & cliente-->
+       <div class="modal fade" id="myModal" role="dialog"></div>
+    <!-- /. modal -->
+    
+    
     <script src="js/validate/fn-createBudget.js"></script>
 
     <script type="text/javascript">
