@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 31-10-2017 a las 17:53:17
+-- Tiempo de generación: 02-11-2017 a las 15:29:02
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -49,10 +49,10 @@ INSERT INTO `itcl_rols` (`id_rol`, `name_rol`, `description_rol`) VALUES
 CREATE TABLE `itcp_appoiments` (
   `id_appoiment` int(25) UNSIGNED NOT NULL,
   `user_id` int(25) UNSIGNED DEFAULT NULL,
-  `service_id` int(25) UNSIGNED NOT NULL,
-  `company_id` int(25) UNSIGNED NOT NULL,
+  `service_id` int(25) UNSIGNED DEFAULT NULL,
+  `company_id` int(25) UNSIGNED DEFAULT NULL,
   `client_id` int(25) UNSIGNED DEFAULT NULL,
-  `patient_id` int(25) UNSIGNED NOT NULL,
+  `patient_id` int(25) UNSIGNED DEFAULT NULL,
   `city_appoiment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `date_appoiment` date DEFAULT NULL,
   `time_appoiment` time DEFAULT NULL,
@@ -66,24 +66,9 @@ CREATE TABLE `itcp_appoiments` (
 --
 
 INSERT INTO `itcp_appoiments` (`id_appoiment`, `user_id`, `service_id`, `company_id`, `client_id`, `patient_id`, `city_appoiment`, `date_appoiment`, `time_appoiment`, `comentary_appoiment`, `status`, `time_arrival`) VALUES
-(1, 2, 5, 1, 1, 42, 'PANAMA', '2017-10-08', '08:00:00', '12', 'Asistió', ''),
-(2, NULL, 5, 1, 1, 43, 'PANAMA', '2017-10-06', '08:00:00', '12', 'Pendiente', ''),
-(3, NULL, 5, 1, 1, 44, 'PANAMA', '2017-10-06', '08:00:00', '12', 'Pendiente', ''),
-(4, NULL, 5, 1, 1, 45, 'PANAMA', '2017-10-05', '07:00:00', '21', 'Pendiente', ''),
-(5, NULL, 6, 1, 1, 46, 'PANAMA', '2017-10-04', '08:00:00', '12', 'Pendiente', ''),
-(6, NULL, 6, 1, 1, 47, 'PANAMA', '2017-10-03', '07:30:00', '12', 'Pendiente', ''),
-(7, NULL, 5, 1, 1, 48, 'PANAMA', '2017-10-07', '07:00:00', '12', 'Pendiente', ''),
-(8, NULL, 5, 1, 1, 49, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
-(9, NULL, 5, 2, 2, 50, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
-(10, NULL, 5, 2, 2, 51, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
-(11, NULL, 5, 2, 2, 52, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
-(12, NULL, 6, 2, 2, 53, 'PANAMA', '0000-00-00', '07:00:00', '12', 'Pendiente', ''),
-(13, NULL, 7, 1, 1, 54, 'PANAMA', '2017-11-01', '07:00:00', '12', 'Pendiente', ''),
-(14, NULL, 6, 1, 1, 55, 'PANAMA', '2017-11-01', '09:30:00', 'xas asd ', 'Pendiente', ''),
-(15, 2, 7, 1, 1, 56, 'PANAMA', '2017-10-31', '09:00:00', 'asdasd', 'Asistió', ''),
-(16, NULL, 5, 1, 1, 57, 'PANAMA', '2017-11-01', '07:00:00', '123', 'Pendiente', ''),
-(17, 1, 6, 1, 1, 58, 'PANAMA', '2017-11-01', '10:00:00', '123', 'Pendiente', ''),
-(18, NULL, 5, 1, 1, 59, 'PANAMA', '2017-11-01', '10:00:00', '12', 'Pendiente', '');
+(49, 1, 5, 1, 2, 182, 'PANAMA', '2017-11-02', '07:00:00', 'asd', 'Asistió', ''),
+(50, NULL, 5, 1, 2, 183, 'PANAMA', '2017-11-09', '07:00:00', '', 'Pendiente', ''),
+(51, NULL, 5, 2, 3, 184, 'PANAMA', '0000-00-00', '07:00:00', '', 'Pendiente', '');
 
 -- --------------------------------------------------------
 
@@ -121,7 +106,9 @@ INSERT INTO `itcp_budgets` (`id_budget`, `company_id`, `client_id`, `date_init_b
 (13, 1, 1, '2017-10-25', 'FARBiml7', '1870', '12'),
 (14, 1, 1, '2017-10-25', '1QkHoU9Z', '360', '12'),
 (15, 1, 1, '2017-10-25', 'mbxLryJn', '390', '13'),
-(18, 1, 1, '2017-10-25', 'uXlRt3hR', '580', '123');
+(18, 1, 1, '2017-10-25', 'uXlRt3hR', '580', '123'),
+(19, 1, 2, '2017-11-01', 'ZhBp7B3w', '3122', ''),
+(20, 1, 2, '2017-11-01', 'O9nMWHAw', '1359', '');
 
 -- --------------------------------------------------------
 
@@ -172,7 +159,15 @@ INSERT INTO `itcp_budgets_register` (`id_register_budgets`, `quantity_budget`, `
 ('mbxLryJn', '13', '130', 5),
 ('mbxLryJn', '13', '260', 6),
 ('uXlRt3hR', '12', '120', 5),
-('uXlRt3hR', '23', '460', 6);
+('uXlRt3hR', '23', '460', 6),
+('ZhBp7B3w', '123', '1230', 5),
+('ZhBp7B3w', '32', '640', 6),
+('ZhBp7B3w', '12', '516', 7),
+('ZhBp7B3w', '32', '736', 8),
+('O9nMWHAw', '12', '120', 5),
+('O9nMWHAw', '12', '240', 6),
+('O9nMWHAw', '12', '516', 7),
+('O9nMWHAw', '21', '483', 8);
 
 -- --------------------------------------------------------
 
@@ -215,8 +210,10 @@ CREATE TABLE `itcp_clients` (
 --
 
 INSERT INTO `itcp_clients` (`id_client`, `name_client`, `tel_client`, `email_client`, `company_id`, `city`, `position`) VALUES
-(1, 'Jose', '123213', 'jose@cocacola.com', 1, 'caracas', 'Gerente RRHH'),
-(2, 'Ysrrael', '123', 'ysanchez@pepsi.com', 2, 'caracas', 'Gerente de desarrollo');
+(1, 'Jose', '123213', 'jose@cocacola.com', 0, 'caracascas', 'Gerente RRHH'),
+(2, 'jose', '231', 'das@asd.com', 1, 'caracas', 'Gerente rrhh'),
+(3, 'cliente prueba 1', '21', 'sad@gmail.com', 2, 'caracas', 'd'),
+(4, 'rafa', '123', 'qd@dasda.com', 1, '123', 'sada');
 
 -- --------------------------------------------------------
 
@@ -243,7 +240,7 @@ CREATE TABLE `itcp_companys` (
 --
 
 INSERT INTO `itcp_companys` (`id_company`, `name_company`, `ruc_company`, `tel_company`, `email_compamy`, `address_company`, `cost_test_pre_employment`, `cost_specific_test`, `cost_routine_test`, `reevaluation_test_cost`, `retention_type`) VALUES
-(1, 'coca coola', '234d', '324', 'cocacola@cocacola.com', 'co', '50', '', '', '3', '3.4'),
+(1, 'coca coola', '234d', '324', 'cocacola@cocacola.com', 'co', '', '', '', '3', '3.4'),
 (2, 'pepsi', '213f', '23324', 'pepsi@pepsi.com', 'sadsa a', '', '', '', '', ''),
 (3, 'Zomm', '213asd', '123321', 'zoom@zoom.com', 'zona zoom', '', '', '', '', ''),
 (7, 'company 1', '11a11 a', '5555', 'aabb@aabb.com', 'caracas', '221', '', '', '', ''),
@@ -271,40 +268,57 @@ CREATE TABLE `itcp_patients` (
 --
 
 INSERT INTO `itcp_patients` (`id_patient`, `name_patient`, `last_name_patient`, `ci_patient`, `job_patient`, `phone`) VALUES
-(26, 'Jose 11', 'Salgado 22', '111', '222', '333'),
-(27, '2', '3', '4', '5', '6'),
-(28, 'jose 1', 'salgado 1', '12311123', '123 1', '123123'),
-(29, 'Jose', 'Salgado', '3123', 'Trabajador 1', '132123'),
-(30, 'Empleado 2', 'empleado 2', '123', 'empleo 2', '123'),
-(31, 'Empleado 2', 'empleado 2', '123', 'empleo 2', '123'),
-(32, 'Empleado 2', 'empleado 2', '123', 'empleo 2', '123'),
-(33, 'emple', 'ado', '132', 'Trabajador 1', '123'),
-(34, 'Empleado 3', 'asd', '123', 'sdadc', '123'),
-(35, 'dsa', 'd', '23', 'c', '123'),
-(36, 'dasd', 'das', '123', 'ads', '123'),
-(37, 'qwe', 'qwe', '123', 'qwe', '123'),
-(38, '12', '12', '123', '12', '12'),
-(39, '12', '12', '123', '12', '12'),
-(40, '12', '12', '12', '12', '12'),
-(41, '12', '12', '12', '12', '12'),
-(42, '12', '12', '12', '12', '12'),
-(43, '12', '12', '12', '12', '12'),
-(44, '12', '12', '12', '12', '12'),
-(45, '12', '21', '12', '21', '123'),
-(46, '12', '12', '2', '12', '12'),
-(47, '12', '12', '12', '12', '12'),
-(48, '12', '12', '12', '12', '12'),
-(49, '12', '12', '12', '12', '12'),
-(50, '12', '12', '12', '12', '12'),
-(51, '12', '12', '12', '12', '12'),
-(52, '12', '12', '12', '12', '12'),
-(53, '12', '12', '12', '12', '12'),
-(54, '12', '12', '12', '12', '12'),
-(55, 'jose', 'salgado', '312312', 'dassa', '2123'),
-(56, '333', 'sss', '123123', '123', '12321'),
-(57, 'jose', 'salgado', '213', '123', '123'),
-(58, 'cenen 2', 'salgado', '123', '123', '123'),
-(59, 'bernardo', 'salgado', '12', '12', '12');
+(134, '', '', '', '', ''),
+(135, '', '', '', '', ''),
+(136, '', '', '', '', ''),
+(137, 'ds', 'ds', '', 'ds', ''),
+(138, '321', '12', '', '', ''),
+(139, 'ew', '', '', '', ''),
+(140, '21', '', '', '', ''),
+(141, '', '', '', '', ''),
+(142, '', '', '', '', ''),
+(143, '', '', '', '', ''),
+(144, '', '', '', '', ''),
+(145, '', '', '', '', ''),
+(146, '', '', '', '', ''),
+(147, '', '', '', '', ''),
+(148, '', '', '', '', ''),
+(149, '', '', '', '', ''),
+(150, '12', '', '', '', ''),
+(151, '12', '', '', '', ''),
+(152, '', '', '', '', ''),
+(153, 'ds', '', '', '', ''),
+(154, 'ds', '', '', '', ''),
+(155, '', '', '', '', ''),
+(156, '', '', '', '', ''),
+(157, 'da', '', '', '', ''),
+(158, 'da', '', '', '', ''),
+(159, 'da', '', '', '', ''),
+(160, 'da', '', '', '', ''),
+(161, 'da', '', '', '', ''),
+(162, 'sa', '', '', '', ''),
+(163, 'dsa', '', '', '', ''),
+(164, '', '', '', '', ''),
+(165, '2', '', '', '', ''),
+(166, '21', '', '', '', ''),
+(167, 'sds', '', '', '', ''),
+(168, '', '', '', '', ''),
+(169, 'ds', '', '', '', ''),
+(170, '123', '', '', '', ''),
+(171, 'd', '', '', '', ''),
+(172, 's', '', '', '', ''),
+(173, '', '', '', '', ''),
+(174, '', '', '', '', ''),
+(175, '', '', '', '', ''),
+(176, 'dsa', '', '', '', ''),
+(177, 'dsa', '', '', '', ''),
+(178, 'dsa', '', '', '', ''),
+(179, 'dsa', '', '', '', ''),
+(180, 's', '', '', '', ''),
+(181, '123', '', '', '', ''),
+(182, '123', 'a', '2', 'a', '1'),
+(183, 'asaaa', '', '', '', ''),
+(184, 's', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -321,23 +335,18 @@ CREATE TABLE `itcp_payments` (
   `full_payment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `amount_payable` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
   `observations_payment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
-  `company_id` int(35) NOT NULL
+  `company_id` int(35) NOT NULL,
+  `status_payment` varchar(45) COLLATE utf8_spanish_ci NOT NULL,
+  `date_first_appoiment` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `itcp_payments`
 --
 
-INSERT INTO `itcp_payments` (`id_payment`, `tax_invoice_number`, `method_of_payment`, `check_number`, `date_ach`, `full_payment`, `amount_payable`, `observations_payment`, `company_id`) VALUES
-(1, '', '', '', '', '', '', '0', 1),
-(2, '', '', '', '', '', '', '', 1),
-(3, '', '', '', '', '', '', '', 1),
-(4, '', '', '', '', '', '', '', 1),
-(5, '', '', '', '', '', '', '', 2),
-(6, '', '', '', '', '', '', '', 2),
-(7, '', '', '', '', '', '', '', 1),
-(8, '', '', '', '', '', '', '', 1),
-(9, '', '', '', '', '', '', '', 1);
+INSERT INTO `itcp_payments` (`id_payment`, `tax_invoice_number`, `method_of_payment`, `check_number`, `date_ach`, `full_payment`, `amount_payable`, `observations_payment`, `company_id`, `status_payment`, `date_first_appoiment`) VALUES
+(24, '', '', '', '', '10', '', '', 1, 'Pendiente por Facturar', NULL),
+(25, '', '', '', '', '0', '', '', 2, 'Pendiente por Facturar', NULL);
 
 -- --------------------------------------------------------
 
@@ -417,7 +426,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `last_name`, `password`, `remember_token`, `rol_id`, `tel`, `email`) VALUES
 (1, 'Poligrafista27', 'Poligrafista2', '$2y$10$0gDy9g8Kfra3nnerx/UWV.BF3xO5.PCMDxtONm5K8g8RZ42n0F1OG', 'QC68gSZbafm4iQLiW0pryOjzxxAenpn41RqmcYYeG3dq7TnTRk6rreCGyxbq', 2, '23', 'a'),
-(2, 'Administrador', 'Administrador', '$2y$10$7pG.q39RWhpYEmZ/Y3gF..1CRYApXz8RPx7QrZf1aDQrOEUhQCqAK', '5kCox3j16X04MxC1R6HqOmbEpVNx524oV0cwFULI8vhRbNxrzG7dOKsggqd1', 1, '', 'admin@admin.com'),
+(2, 'Administrador', 'Administrador', '$2y$10$7pG.q39RWhpYEmZ/Y3gF..1CRYApXz8RPx7QrZf1aDQrOEUhQCqAK', 'NZbSeCcq5tfsC3ywcnPDO0jbcohJDDIVsw0of3Urb7Z6Y0ltI7Sj0Lc6p09l', 1, '', 'admin@admin.com'),
 (3, 'poligrafista1', 'poligrafista1 apellido', '$2y$10$pe2SXFONUaa2VXy7nR32CuQ43UdHm1agcUW6xI3AvwA1eH./.pdN.', 'rv8bU2hPEvVu0AH67HGJtgEMxq9EclDMadw1LPm8oHFDVXwWhFYEWqa5GBDi', 2, '123', 'poli1@poli1.com'),
 (4, 'Jose', 'Salgado', '123', 'Nx9nj6fUF7r5aqkGMfaYh8WMZM90tVTFawzUg6rGdeSJDPfjU8JrMkzRu6CM', 1, '123', 'salgado@salgado.com'),
 (5, 'emilyn ', 'Garcia', '$2y$10$IsuuvMh3PXuPjJaLHy.s0eUcgimdwKrcLtTyiBI8e9ffYarVqu/ru', 'bYaDCy4bQg3tiWFfA8uoopAJo2CdDF5Po2RH2j6DXcQogTjyIjwySq56Es0F', 2, '123', 'egarcia@ilernus.com');
@@ -526,12 +535,12 @@ ALTER TABLE `itcl_rols`
 -- AUTO_INCREMENT de la tabla `itcp_appoiments`
 --
 ALTER TABLE `itcp_appoiments`
-  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 --
 -- AUTO_INCREMENT de la tabla `itcp_budgets`
 --
 ALTER TABLE `itcp_budgets`
-  MODIFY `id_budget` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_budget` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT de la tabla `itcp_citys`
 --
@@ -541,7 +550,7 @@ ALTER TABLE `itcp_citys`
 -- AUTO_INCREMENT de la tabla `itcp_clients`
 --
 ALTER TABLE `itcp_clients`
-  MODIFY `id_client` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_client` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT de la tabla `itcp_companys`
 --
@@ -551,12 +560,12 @@ ALTER TABLE `itcp_companys`
 -- AUTO_INCREMENT de la tabla `itcp_patients`
 --
 ALTER TABLE `itcp_patients`
-  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
 --
 -- AUTO_INCREMENT de la tabla `itcp_payments`
 --
 ALTER TABLE `itcp_payments`
-  MODIFY `id_payment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_payment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT de la tabla `itcp_service`
 --
