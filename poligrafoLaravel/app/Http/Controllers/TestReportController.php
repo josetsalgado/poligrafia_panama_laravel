@@ -105,7 +105,7 @@ class TestReportController extends Controller
         $pdf = PDF::Make();
         /*$pdf->SetProtection(['copy', 'print'], '1234', 'owner_pass');*/
         $pdf->loadView('test.pdfinforme', $data);
-        return $pdf->Stream('testdocument.pdf');
+        return $pdf->Download('testdocument.pdf');
         //return $pdf->download('Poligrafo.pdf');
     }
 }

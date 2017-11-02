@@ -28,34 +28,7 @@ $(document).ready(function () {
     $("#editQuotePatien").validate({
         wrapper: "div",
         errorClass: "text-danger",
-        rules: {
-            polygraphist: {required: true},
-            empresaEdit: {required: true},
-            clientEdit: {required: true},
-            scheduleEdit: {required: true},
-            serviceEdit: {required: true},
-            statusEdit: {required: true},
-            candidateNameEdit: {required: true},
-            candidateLastnameEdit: {required: true},
-            ciCandidateEdit: {required: true},
-            jobCandidateEdit: {required: true},
-            telCandidateEdit: {required: true},
-            descriptionCandidateEdit: {required: true},
-        },
-        messages: {
-            polygraphist: {required: "El campo poligrafista es obligatorio."},
-            empresaEdit: {required: "El campo empresa es obligatorio."},
-            clientEdit: {required: "El campo cliente es obligatorio."},
-            scheduleEdit: {required: "El campo horario es obligatorio."},
-            serviceEdit: {required: "El campo tipo de prueba es obligatorio."},
-            statusEdit: {required: "El campo estatus es obligatorio."},
-            candidateNameEdit: {required: "El campo nombre del candidato es obligatorio."},
-            candidateLastnameEdit: {required: "El campo apellido del candidato es obligatorio."},
-            ciCandidateEdit: {required: "El campo cedula es obligatorio."},
-            jobCandidateEdit: {required: "El puesto es obligatorio."},
-            telCandidateEdit: {required: "El telefono es obligatorio."},
-            descriptionCandidateEdit: {required: "El descripción es obligatorio."},
-        },
+
         submitHandler: function (form) {
             var dataString = $('#editQuotePatien').serialize();
             $.ajax({

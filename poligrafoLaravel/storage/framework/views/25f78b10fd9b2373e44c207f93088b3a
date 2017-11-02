@@ -1,5 +1,4 @@
-@extends('layouts.default')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div id="form-errors"></div>
     <div class="">
         <div class="page-title">
@@ -33,17 +32,17 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($services as $service)
+                            <?php foreach($services as $service): ?>
                                 <tr>
-                                    <td>{{ $service->name_service }}</td>
-                                    <td>{{ $service->price_service }}</td>
-                                    <td>{{ $service->description_service }}</td>
+                                    <td><?php echo e($service->name_service); ?></td>
+                                    <td><?php echo e($service->price_service); ?></td>
+                                    <td><?php echo e($service->description_service); ?></td>
                                     <td>  
-                                        <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal" href="show_product/{{ $service->id_service }}"><i class="fa fa-pencil"></i> {{ trans("poligrafo.edit") }}</a>
+                                        <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal" href="show_product/<?php echo e($service->id_service); ?>"><i class="fa fa-pencil"></i> <?php echo e(trans("poligrafo.edit")); ?></a>
                                         </button>
                                     </td>
                                 </tr>
-                            @endforeach
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
@@ -83,4 +82,5 @@
             }
         } );
     </script>
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

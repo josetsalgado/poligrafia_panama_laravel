@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 02-11-2017 a las 15:29:02
+-- Tiempo de generación: 02-11-2017 a las 20:05:26
 -- Versión del servidor: 10.1.21-MariaDB
 -- Versión de PHP: 7.1.1
 
@@ -68,7 +68,8 @@ CREATE TABLE `itcp_appoiments` (
 INSERT INTO `itcp_appoiments` (`id_appoiment`, `user_id`, `service_id`, `company_id`, `client_id`, `patient_id`, `city_appoiment`, `date_appoiment`, `time_appoiment`, `comentary_appoiment`, `status`, `time_arrival`) VALUES
 (49, 1, 5, 1, 2, 182, 'PANAMA', '2017-11-02', '07:00:00', 'asd', 'Asistió', ''),
 (50, NULL, 5, 1, 2, 183, 'PANAMA', '2017-11-09', '07:00:00', '', 'Pendiente', ''),
-(51, NULL, 5, 2, 3, 184, 'PANAMA', '0000-00-00', '07:00:00', '', 'Pendiente', '');
+(51, NULL, 5, 2, 3, 184, 'PANAMA', '0000-00-00', '07:00:00', '', 'Pendiente', ''),
+(52, 1, 5, 1, 2, 185, 'PANAMA', '2017-11-03', '07:00:00', '', 'Pendiente', '');
 
 -- --------------------------------------------------------
 
@@ -213,7 +214,11 @@ INSERT INTO `itcp_clients` (`id_client`, `name_client`, `tel_client`, `email_cli
 (1, 'Jose', '123213', 'jose@cocacola.com', 0, 'caracascas', 'Gerente RRHH'),
 (2, 'jose', '231', 'das@asd.com', 1, 'caracas', 'Gerente rrhh'),
 (3, 'cliente prueba 1', '21', 'sad@gmail.com', 2, 'caracas', 'd'),
-(4, 'rafa', '123', 'qd@dasda.com', 1, '123', 'sada');
+(4, 'rafa', '123', 'qd@dasda.com', 1, '123', 'sada'),
+(5, 'prueba success', '4564', 'asdasd@asdas.com', 1, 'caracas', 'dasd'),
+(6, 'asdas', '', '', 1, '', ''),
+(7, 'as', '', '', 1, '', ''),
+(8, 'asd', '12', 'das@asda.com', 1, 'sfdsd', 'asd');
 
 -- --------------------------------------------------------
 
@@ -245,8 +250,9 @@ INSERT INTO `itcp_companys` (`id_company`, `name_company`, `ruc_company`, `tel_c
 (3, 'Zomm', '213asd', '123321', 'zoom@zoom.com', 'zona zoom', '', '', '', '', ''),
 (7, 'company 1', '11a11 a', '5555', 'aabb@aabb.com', 'caracas', '221', '', '', '', ''),
 (11, 'company 2', 'company 2 22', '555666', 'company@2.company', 'caracas company 2', '34', '45', '56', '23', ''),
-(12, '', '', '', '', 'company@2.company', '', '', '', '', ''),
-(13, 'nueva empresa', 'qwe', '123', 'sda@sad.com', '123', '21', '21', '32', '12', '3.4');
+(13, 'nueva empresa', 'qwe', '123', 'sda@sad.com', '123', '21', '21', '32', '12', '3.4'),
+(14, 'asdas', '1231', '12', 'asdasd@gasda.com', 'asdasd', '', '', '', '', 'ninguno'),
+(20, 'sfd', '1424', '343423', 'sdfs@assafs.com', 'asdas', '', '', '', '', 'ninguno');
 
 -- --------------------------------------------------------
 
@@ -318,7 +324,8 @@ INSERT INTO `itcp_patients` (`id_patient`, `name_patient`, `last_name_patient`, 
 (181, '123', '', '', '', ''),
 (182, '123', 'a', '2', 'a', '1'),
 (183, 'asaaa', '', '', '', ''),
-(184, 's', '', '', '', '');
+(184, 's', '', '', '', ''),
+(185, 'rafa', 'aaaa', '1222', '', '');
 
 -- --------------------------------------------------------
 
@@ -535,7 +542,7 @@ ALTER TABLE `itcl_rols`
 -- AUTO_INCREMENT de la tabla `itcp_appoiments`
 --
 ALTER TABLE `itcp_appoiments`
-  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `id_appoiment` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT de la tabla `itcp_budgets`
 --
@@ -550,17 +557,17 @@ ALTER TABLE `itcp_citys`
 -- AUTO_INCREMENT de la tabla `itcp_clients`
 --
 ALTER TABLE `itcp_clients`
-  MODIFY `id_client` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_client` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT de la tabla `itcp_companys`
 --
 ALTER TABLE `itcp_companys`
-  MODIFY `id_company` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_company` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 --
 -- AUTO_INCREMENT de la tabla `itcp_patients`
 --
 ALTER TABLE `itcp_patients`
-  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
+  MODIFY `id_patient` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=186;
 --
 -- AUTO_INCREMENT de la tabla `itcp_payments`
 --
@@ -581,31 +588,6 @@ ALTER TABLE `itcp_status`
 --
 ALTER TABLE `users`
   MODIFY `id` int(25) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `itcp_appoiments`
---
-ALTER TABLE `itcp_appoiments`
-  ADD CONSTRAINT `itcp_appoiments_ibfk_1` FOREIGN KEY (`patient_id`) REFERENCES `itcp_patients` (`id_patient`),
-  ADD CONSTRAINT `itcp_appoiments_ibfk_2` FOREIGN KEY (`service_id`) REFERENCES `itcp_service` (`id_service`),
-  ADD CONSTRAINT `itcp_appoiments_ibfk_5` FOREIGN KEY (`company_id`) REFERENCES `itcp_companys` (`id_company`),
-  ADD CONSTRAINT `itcp_appoiments_ibfk_6` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
-
---
--- Filtros para la tabla `itcp_budgets`
---
-ALTER TABLE `itcp_budgets`
-  ADD CONSTRAINT `itcp_budgets_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `itcp_companys` (`id_company`);
-
---
--- Filtros para la tabla `itcp_budgets_register`
---
-ALTER TABLE `itcp_budgets_register`
-  ADD CONSTRAINT `itcp_budgets_register_ibfk_1` FOREIGN KEY (`service_id`) REFERENCES `itcp_service` (`id_service`);
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

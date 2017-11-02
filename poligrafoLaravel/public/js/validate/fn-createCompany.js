@@ -42,6 +42,7 @@ $(document).ready(function(){
 	        data: dataString,
                 success: function (data) {
                     $('#createCompany')[0].reset();
+                    alertify.success('Compañia creada exitosamente');
                 }, error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.

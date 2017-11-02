@@ -40,7 +40,7 @@
         font-weight: bold; text-align: center;
     }
     .color_body{color: #73879C !important;}
-    @page {header: page-header;footer: page-footer;}
+    @page  {header: page-header;footer: page-footer;}
     #padding_logo_top{padding-top: 10%;}
     #title_principal{font-size: 35px;}
     h3{ color: #73879C !important; font-weight: bold;  }
@@ -51,7 +51,7 @@
 </style>
 
 <body id="body_test">
-{{--header--}}
+<?php /*header*/ ?>
 <htmlpageheader name="page-header" class="thumbnail thumbnail_logo">
     <img src="images/header_poligrafo.png">
 </htmlpageheader>

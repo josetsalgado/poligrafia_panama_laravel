@@ -9,24 +9,24 @@
         <div class="modal-body">
             <div id="testmodal2" style="padding: 5px 20px;">
                 <form id="editQuotePatien" name="editQuotePatien" class="form-horizontal calender" role="form">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="hidden" name="dateEpoch" id="dateEpochEdit" value="{{ $getQuote[0]->time_appoiment }}">
-                    <input type="hidden" name="id" id="id" value="{{ $getQuote[0]->id_appoiment }}">
-                    <input type="hidden" name="id_patient" id="id_patient" value="{{ $getQuote[0]->id_patient }}">
+                    <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
+                    <input type="hidden" name="dateEpoch" id="dateEpochEdit" value="<?php echo e($getQuote[0]->time_appoiment); ?>">
+                    <input type="hidden" name="id" id="id" value="<?php echo e($getQuote[0]->id_appoiment); ?>">
+                    <input type="hidden" name="id_patient" id="id_patient" value="<?php echo e($getQuote[0]->id_patient); ?>">
                     
                     <div class="form-group">
                         <label class="col-sm-3 control-label col-xs-12">Poligrafista</label>
                         <div class="col-sm-9 col-xs-12">
                             <select id="polygraphist" name="polygraphist" class="form-control">
-                                @if($getUser)
-                                <option value="{{ $getUser[0]->id }} ">{{ $getUser[0]->name }}</option>
-                                @else
+                                <?php if($getUser): ?>
+                                <option value="<?php echo e($getUser[0]->id); ?> "><?php echo e($getUser[0]->name); ?></option>
+                                <?php else: ?>
                                 <option value="">Seleccionar</option>
-                                @endif
+                                <?php endif; ?>
 
-                                @foreach($users as $user)
-                                <option value="{{ $user->id }}">{{ $user->name }} {{ $user->last_name }}</option>
-                                @endforeach
+                                <?php foreach($users as $user): ?>
+                                <option value="<?php echo e($user->id); ?>"><?php echo e($user->name); ?> <?php echo e($user->last_name); ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
@@ -34,10 +34,10 @@
                         <label class="col-sm-3 control-label">Empresa</label>
                         <div class="col-sm-9 col-xs-12">
                             <select id="empresaEdit" name="empresaEdit" class="form-control col-xs-12">
-                                <option value="{{ $getQuote[0]->id_company }}">{{ $getQuote[0]->name_company }}</option>
-                                @foreach($companys as $company)
-                                <option value="{{ $company->id_company }}">{{ $company->name_company }}</option>
-                                @endforeach
+                                <option value="<?php echo e($getQuote[0]->id_company); ?>"><?php echo e($getQuote[0]->name_company); ?></option>
+                                <?php foreach($companys as $company): ?>
+                                <option value="<?php echo e($company->id_company); ?>"><?php echo e($company->name_company); ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                         <label class="col-sm-3 control-label">Cliente</label>
                         <div class="col-sm-9 col-xs-12">
                             <select id="clientEdit" name="clientEdit" class="form-control col-xs-12">
-                                <option value="{{ $getQuote[0]->id_client }}">{{ $getQuote[0]->name_client }}</option>
+                                <option value="<?php echo e($getQuote[0]->id_client); ?>"><?php echo e($getQuote[0]->name_client); ?></option>
                             </select>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Horario</label>
                         <div class="col-md-4 col-sm-3 col-xs-12">
                             <select name="scheduleEdit" id="scheduleEdit" class="form-control col-xs-12" required="">
-                                <option value="{{ $getQuote[0]->time_appoiment }}">{{ $getQuote[0]->time_appoiment }}</option>
+                                <option value="<?php echo e($getQuote[0]->time_appoiment); ?>"><?php echo e($getQuote[0]->time_appoiment); ?></option>
                                 <option value="7:00">7:00</option>
                                 <option value="7:30">7:30</option>
                                 <option value="8:00">8:00</option>
@@ -83,7 +83,7 @@
                         <label class="control-label col-md-2 col-sm-3 col-xs-12">Llegada</label>
                         <div class="col-md-3 col-sm-2 col-xs-12">
                             <select id="time_arrival" name="time_arrival" class="form-control col-xs-12">
-                                <option value="{{ $getQuote[0]->time_arrival or '' }}">{{ $getQuote[0]->time_arrival or '' }}</option>
+                                <option value="<?php echo e(isset($getQuote[0]->time_arrival) ? $getQuote[0]->time_arrival : ''); ?>"><?php echo e(isset($getQuote[0]->time_arrival) ? $getQuote[0]->time_arrival : ''); ?></option>
                                 <option value="7:00">7:00</option>
                                 <option value="7:30">7:30</option>
                                 <option value="8:00">8:00</option>
@@ -114,10 +114,10 @@
                         <label class="col-sm-3 control-label">Tipo de Prueba</label>
                         <div class="col-sm-9 col-xs-12">
                             <select id="serviceEdit" name="serviceEdit" class="form-control col-xs-12" required="">
-                                <option value="{{ $getQuote[0]->service_id }}">{{ $getQuote[0]->name_service }}</option>
-                                @foreach($services as $service)
-                                <option value="{{ $service->id_service }}">{{ $service->name_service }}</option>
-                                @endforeach
+                                <option value="<?php echo e($getQuote[0]->service_id); ?>"><?php echo e($getQuote[0]->name_service); ?></option>
+                                <?php foreach($services as $service): ?>
+                                <option value="<?php echo e($service->id_service); ?>"><?php echo e($service->name_service); ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                         <label class="col-sm-3 control-label">Estatus</label>
                         <div class="col-sm-9 col-xs-12">
                             <select id="statusEdit" name="statusEdit" class="form-control col-xs-12" required="">
-                                <option value="{{ $getQuote[0]->status }}">{{ $getQuote[0]->status }}</option>
+                                <option value="<?php echo e($getQuote[0]->status); ?>"><?php echo e($getQuote[0]->status); ?></option>
                                 <option value="No asistió">No asistió</option>
                                 <option value="Asistió">Asistió</option>
                                 <option value="Re-agendada">Re-agendada</option>
@@ -138,39 +138,39 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label col-xs-12">Nombre</label>
                         <div class="col-sm-9 col-xs-12">
-                            <input type="text" class="form-control" id="candidateNameEdit" name="candidateNameEdit" value="{{ $getQuote[0]->name_patient }}">
+                            <input type="text" class="form-control" id="candidateNameEdit" name="candidateNameEdit" value="<?php echo e($getQuote[0]->name_patient); ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label col-xs-12">Apellido</label>
                         <div class="col-sm-9 col-xs-12">
-                            <input type="text" class="form-control" id="candidateLastnameEdit" name="candidateLastnameEdit" value="{{ $getQuote[0]->last_name_patient }}">
+                            <input type="text" class="form-control" id="candidateLastnameEdit" name="candidateLastnameEdit" value="<?php echo e($getQuote[0]->last_name_patient); ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label col-xs-12">Cedula</label>
                         <div class="col-sm-9 col-xs-12">
-                            <input type="number" class="form-control" id="ciCandidateEdit" name="ciCandidateEdit" value="{{ $getQuote[0]->ci_patient }}">
+                            <input type="number" class="form-control" id="ciCandidateEdit" name="ciCandidateEdit" value="<?php echo e($getQuote[0]->ci_patient); ?>">
                         </div>
                     </div>
                     <div class="form-group">
 
                         <label class="col-sm-3 control-label col-xs-12">Puesto</label>
                         <div class="col-sm-9 col-xs-12">
-                            <input type="text" class="form-control" id="jobCandidateEdit" name="jobCandidateEdit" value="{{ $getQuote[0]->job_patient }}">
+                            <input type="text" class="form-control" id="jobCandidateEdit" name="jobCandidateEdit" value="<?php echo e($getQuote[0]->job_patient); ?>">
                         </div>
                     </div>
                     <div class="form-group">
 
                         <label class="col-sm-3 control-label col-xs-12">Celular</label>
                         <div class="col-sm-9 col-xs-12">
-                            <input type="number" class="form-control" id="telCandidateEdit" name="telCandidateEdit" value="{{ $getQuote[0]->phone }}">
+                            <input type="number" class="form-control" id="telCandidateEdit" name="telCandidateEdit" value="<?php echo e($getQuote[0]->phone); ?>">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label col-xs-12">Comentarios</label>
                         <div class="col-sm-9 col-xs-12">
-                            <textarea class="form-control" style="height:55px;" id="descriptionCandidateEdit" name="descriptionCandidateEdit" >{{ $getQuote[0]->comentary_appoiment }}</textarea>
+                            <textarea class="form-control" style="height:55px;" id="descriptionCandidateEdit" name="descriptionCandidateEdit" ><?php echo e($getQuote[0]->comentary_appoiment); ?></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
