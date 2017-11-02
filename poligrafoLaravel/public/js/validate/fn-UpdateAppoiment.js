@@ -39,6 +39,7 @@ $(document).ready(function () {
                     $('#editQuotePatien')[0].reset();
                     $('.close').click();
                     location.reload();
+
                 }, error: function (err) {
                     console.log(err);
                     if (err.status === 422) {

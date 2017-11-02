@@ -1,5 +1,4 @@
-@extends('layouts.default')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="">
         <div class="page-title">
             <div class="title_right">
@@ -24,14 +23,14 @@
                 <div class="x_content">
                     <div id="form-errors"></div>
                     <form class="form-horizontal" id="createBudget">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                         <div class="col-md-offset-1 col-md-9 col-sm-9 col-xs-12">
                             <div class="col-md-5 col-sm-6 col-xs-12 form-group has-feedback">
                                 <select id="empresa" name="empresa" class="form-control selc-empresa">
                                     <option value="">Empresa</option>
-                                    @foreach($companys as $company)
-                                        <option value="{{ $company->id_company }}">{{ $company->name_company }}</option>
-                                    @endforeach
+                                    <?php foreach($companys as $company): ?>
+                                        <option value="<?php echo e($company->id_company); ?>"><?php echo e($company->name_company); ?></option>
+                                    <?php endforeach; ?>
                                 </select>
                                 <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
                             </div>
@@ -61,25 +60,25 @@
                                     <label>Valor Total</label>
                                 </div>
                             </div>
-                            @foreach($services as $service)
+                            <?php foreach($services as $service): ?>
                                 <div class="row">
-                                    <input id="serviceName_{{ $service->id_service }}" name="serviceName_{{ $service->id_service }}" type="hidden" value="{{ $service->name_service }}">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">{{ $service->name_service }}:</label>
+                                    <input id="serviceName_<?php echo e($service->id_service); ?>" name="serviceName_<?php echo e($service->id_service); ?>" type="hidden" value="<?php echo e($service->name_service); ?>">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12"><?php echo e($service->name_service); ?>:</label>
                                     <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="number"  class="form-control has-feedback-left quantity" id="quantity_{{ $service->id_service }}" name="quantity_{{ $service->id_service }}" placeholder="00" min="0">
-                                        <input type="hidden"  class="form-control has-feedback-left quantity" id="service_id_{{ $service->id_service }}" name="service_id_{{ $service->id_service }}" value="{{ $service->id_service }}">
+                                        <input type="number"  class="form-control has-feedback-left quantity" id="quantity_<?php echo e($service->id_service); ?>" name="quantity_<?php echo e($service->id_service); ?>" placeholder="00" min="0">
+                                        <input type="hidden"  class="form-control has-feedback-left quantity" id="service_id_<?php echo e($service->id_service); ?>" name="service_id_<?php echo e($service->id_service); ?>" value="<?php echo e($service->id_service); ?>">
                                         <span class="fa fa-calculator form-control-feedback left" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="number" class="form-control has-feedback-left" id="price_{{ $service->id_service }}" name="price_{{ $service->id_service }}" placeholder="{{ $service->price_service }}" disabled="disabled" required>
-                                        <input type="hidden" class="form-control has-feedback-left" id="price_origin_{{ $service->id_service }}" name="price_origin_{{ $service->id_service }}" placeholder="{{ $service->price_service }}"  value="{{ $service->price_service }}" disabled="disabled">
+                                        <input type="number" class="form-control has-feedback-left" id="price_<?php echo e($service->id_service); ?>" name="price_<?php echo e($service->id_service); ?>" placeholder="<?php echo e($service->price_service); ?>" disabled="disabled" required>
+                                        <input type="hidden" class="form-control has-feedback-left" id="price_origin_<?php echo e($service->id_service); ?>" name="price_origin_<?php echo e($service->id_service); ?>" placeholder="<?php echo e($service->price_service); ?>"  value="<?php echo e($service->price_service); ?>" disabled="disabled">
                                         <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
                                     </div>
                                 </div>
                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
                                     <div class="ln_solid"></div>
                                 </div>
-                            @endforeach
+                            <?php endforeach; ?>
                             <div class="row">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Observaciones:</label>
                                 <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
@@ -231,4 +230,6 @@ alertify.success('Su mensaje fue enviado de forma correcta');
  </script>
 
 
-@stop
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
