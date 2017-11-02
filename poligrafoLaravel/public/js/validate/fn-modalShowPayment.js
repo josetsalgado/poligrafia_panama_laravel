@@ -1,3 +1,3 @@
-function modalBudget(id){
-    $("#myModal").load('modalBudget/'+id);
+function modalPayment(id) {
+    $("#myModal").load('create_payment/' + id);
 }

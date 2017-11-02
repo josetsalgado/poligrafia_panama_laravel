@@ -6,6 +6,7 @@ use App\Appoiment;
 use App\Budget;
 use App\Company;
 use App\Service;
+use App\Client;
 use App\Http\Controllers\Controller;
 use App\Payment;
 use Carbon\Carbon;
@@ -75,12 +76,16 @@ class AccountStatusController extends Controller
      *
      * @return Response
      */
-    public function createPayment($id, $totalPay)
+    public function createPayment($id)
     {
-        $id = Crypt::decrypt($id);
-        return view('AccountStatus.modalCreatePayment', compact('id', 'totalPay'));
+        $payForCompany = Payment::where('id_payment', '=',$id)->get();
+        $clients = Client::where('company_id', '=',$payForCompany[0]->company_id)->get();
+
+        return view('AccountStatus.modalCreatePayment', compact('id', 'payForCompany', "clients"));
     }
 
+    
+    
     /**
      * Store a newly created resource in storage.
      *
@@ -89,28 +94,6 @@ class AccountStatusController extends Controller
      */
     public function store(Request $request)
     {
-        $this->ValidateCreate($request);
-        
-        $totalBudget = Budget::whereIn('id_budget', [$request->id_budget])->select('total_budget')->get();
-        
-        Payment::insert([
-          'budget_id' => $request->id_budget,
-          'facture_number_payment' => intval($request->facture_number),
-          'total_cost_payment' => $request->way_to_pay,
-          'payment_payment' => $request->payment,
-          'comentary_payment' => $request->observations,
-        ]);
-        if($request->discount){
-            Budget::where('id_budget', $request->id_budget)
-                    ->update([
-                        'total_budget' => intval($totalBudget[0]->total_budget - $request->payment - $request->discount),
-            ]);
-        }else{
-            Budget::where('id_budget', $request->id_budget)
-                    ->update([
-                        'total_budget' => intval($totalBudget[0]->total_budget - $request->payment),
-            ]);
-        }
         
     }
     
