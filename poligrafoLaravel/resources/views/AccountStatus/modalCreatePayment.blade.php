@@ -64,10 +64,18 @@
                     </div>
                 </div>
                 <!-- /.selecciona ACH -->
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" value="{{ $payForCompany[0]->full_payment or '' }}">Total a Pagar:</label>
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" >Total a Pagar:</label>
                 <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
-                    <input type="text" class="form-control has-feedback-left" id="full_payment" name="full_payment" placeholder="1500.00" disabled="disabled">
+                    <input type="text" class="form-control has-feedback-left" id="full_payment" name="full_payment" value="{{ $payForCompany[0]->full_payment or ''}}" placeholder="1500.00" disabled="disabled">
                     <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                </div>
+                <!--total a pagar por clientes-->
+                <div id="pay_for_client_hidden">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12"  style="">Pago por clientes:</label>
+                    <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="pay_for_client" name="pay_for_client" placeholder="1500.00" disabled="disabled" value="{{ $payForCompany[0]->full_payment or ''}}">
+                        <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
+                    </div>
                 </div>
                 <label class="control-label col-md-3 col-sm-3 col-xs-12" >Monto a Pagar:</label>
                 <div class="col-md-7 col-sm-6 col-xs-12 form-group has-feedback">
@@ -95,6 +103,7 @@
 
 $("#che_n_hidden").attr("style", "display: none;");
 $("#fe_ach_hidden").attr("style", "display: none;");
+$("#pay_for_client_hidden").attr("style", "display: none;");
 
 $("#method_of_payment").change(function(data){
     var formaPago = $("#method_of_payment").val();
@@ -114,6 +123,14 @@ $("#method_of_payment").change(function(data){
     }
 });
 
-
+$("#client").change(){
+    var client = $("#client").val();
+    if(!client){
+        $("#client").val("");
+        $("#pay_for_client_hidden").attr("style", "display: none;");
+    }else{
+        $("#pay_for_client_hidden").attr("style", "");
+    }
+}
 </script>
 <script src="js/validate/fn-createAccountStatus.js"></script>
