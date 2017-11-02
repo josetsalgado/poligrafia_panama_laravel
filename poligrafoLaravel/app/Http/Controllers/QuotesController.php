@@ -144,12 +144,14 @@ class QuotesController extends Controller
             Payment::insert([
                 'company_id' => intval($request->empresa),
                 'full_payment' => "0",
+                'status_payment' => "Pendiente por Facturar",
             ]); 
         } else{
             if ($payForCompany[0]->amount_payable >= $payForCompany[0]->full_payment) {
                 Payment::insert([
                     'company_id' => intval($request->empresa),
                     'full_payment' => "0",
+                    'full_payment' => "Pendiente por Facturar",
                 ]);
             }
         }
