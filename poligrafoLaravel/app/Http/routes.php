@@ -163,7 +163,9 @@ Route::group(['middleware' => 'auth'], function () {
     //modal para crear pago de estado de cuentas
     Route::get('/create_payment/{id}', 'AccountStatusController@createPayment');
     //modal para crear pago de estado de cuentas
-    Route::post('/create_payment', 'AccountStatusController@store');
+    Route::get('/payment_observations/{id}', 'AccountStatusController@paymentObservation');
+    //modal para crear pago de estado de cuentas
+    Route::post('/create_payment', 'AccountStatusController@update');
 
     //Pdf de informe de prueba
     Route::get('/pdf_test', 'TestReportController@pdfresult');

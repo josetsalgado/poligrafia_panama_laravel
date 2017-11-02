@@ -13,8 +13,7 @@ $(document).ready(function () {
                 success: function (data) {
                     $('#createPay')[0].reset();
                     $('.close').click();
-                    alert("bien");
-                    //location.reload();
+                    $("#datatable-responsive").load("payment_record #datatable-responsive");
                 }, error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.

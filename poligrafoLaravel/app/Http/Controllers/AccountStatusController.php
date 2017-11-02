@@ -83,6 +83,12 @@ class AccountStatusController extends Controller
 
         return view('AccountStatus.modalCreatePayment', compact('id', 'payForCompany', "clients"));
     }
+    
+    public function paymentObservation($id)
+    {
+        $payForCompany = Payment::where('id_payment', '=',$id)->get();
+        return view('AccountStatus.modalObservations', compact('id', 'payForCompany'));
+    }
 
     
     
@@ -142,9 +148,17 @@ class AccountStatusController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        Payment::where("id_payment", "=", $request->id)
+                ->update(array(
+                    "tax_invoice_number" => $request->tax_invoice_number,
+                    "method_of_payment" => $request->method_of_payment,
+                    "check_number" => $request->check_number,
+                    "date_ach" => $request->date_ach,
+                    "observations_payment" => "$request->observations_payment",
+//                    
+        ));
     }
 
     /**
