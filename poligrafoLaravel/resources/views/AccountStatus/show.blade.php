@@ -51,6 +51,9 @@
                                     @elseif(($accountStatu->amount_payable ) && ($accountStatu->amount_payable >= $accountStatu->full_payment))
                                     <a href="sendhtmlemail_retencion"><button type="button" class="btn-click btn btn-success btn-xs"><i class="fa fa-envelope"></i> Solicitar Comprobante</button></a>
                                     @endif
+
+                                     <button onclick="sendRetention('{{$accountStatu->company_id[0]->id_company }}')" type="button" class="btn-click btn btn-success btn-xs"><i class="fa fa-envelope"></i> Solicitar Comprobante</button>
+
                                 </div>
                             </td>
                             <td>{{ $accountStatu->company_id[0]->name_company or ''}}</td>
@@ -118,6 +121,24 @@
 <!-- Custom Theme Scripts -->
 <script src="js/build/js/custom.min.js"></script>
 <script>
+    function sendRetention(id) {
+
+        $.ajax({
+            type: "GET",
+            url: "sendhtmlemail_retencion/"+id,
+            success: function(data) {
+                $(".close").click();
+                alertify.success('Correo enviado');
+                $("#datatable-responsive").load("payment_record #datatable-responsive");
+            },error: function (err) {
+                alert('correo no existe');
+                console.log();
+            }
+        });
+
+
+    }
+
 
                                                         $('#datatable-responsive').DataTable({
                                                 language: {

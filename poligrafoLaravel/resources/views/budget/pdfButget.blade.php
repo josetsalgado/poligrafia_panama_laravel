@@ -239,7 +239,10 @@
                             </table>
                         </div>
                     </div>
+                    <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>    <br>    <br>   <br>   <br>   <br>   <br>   <br>  <br>   <br>  <br>   <br>   <br>   <br>   <br>    <br>   <br>   <br>   <br>  <br>   <br>   <br>   <br>   <br>   <br>
                     <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>COTIZACIÓN</b></h5>
+                    <div style="padding-bottom: 50%"></div>
+
 
                     <!-- Table row -->
                     <div class="row">

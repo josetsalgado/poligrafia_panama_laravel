@@ -207,26 +207,26 @@
 
     <script>
 
-        /*$("#client").change(function(){
+        $("#client").change(function(){
             var id_client = $("#client").val();
             $("#send").attr("href", "sendhtmlemail_cotizacion/"+id_client);
 
-        });*/
-$("#send").click(function (){
-//var serielize=$(createBudget).serialize();
-//console.log(serielize);
-//
-//
-//    $.ajax({
-//        type: "POST",
-//        url: "sendhtmlemail_cotizacion",
-//        data: serielize,
-//        success: function(data) {
-//            alert("asdasd");
-//        }
-//    });
-alertify.success('Su mensaje fue enviado de forma correcta');
-}); 
+        });
+/*$("#send").click(function (){
+var serielize=$(createBudget).serialize();
+console.log(serielize);
+
+
+    $.ajax({
+        type: "POST",
+        url: "sendhtmlemail_cotizacion",
+        data: serielize,
+        success: function(data) {
+            alert("asdasd");
+        }
+    });*/
+/*alertify.success('Su mensaje fue enviado de forma correcta');*/
+/*});*/
  </script>
 
 

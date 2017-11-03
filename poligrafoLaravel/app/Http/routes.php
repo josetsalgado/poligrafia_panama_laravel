@@ -195,7 +195,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('sendhtmlemail_cotizacion','MailController@html_email_budget') ;
 
     //retenciones envio de correo
-    Route::get('sendhtmlemail_retencion','MailController@html_email_retencion') ;
+    Route::get('sendhtmlemail_retencion/{id}','MailController@html_email_retencion') ;
 
     //VIsta interna de tareas
     Route::get('homework','HomeworkController@show') ;

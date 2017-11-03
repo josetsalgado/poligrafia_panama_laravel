@@ -9,21 +9,18 @@ use DB;
 use Illuminate\Support\Facades\Crypt;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Company;
+use App\User;
 
 class MailController extends Controller {
 
-    public function html_email_budget(REQUEST $request) {
-
-       $request=$request::all();
+    public function html_email_budget() {
 
 
-        $pdf = PDF::Make();
-        $pdf->loadView('budget.mailbudget', compact('budgets'));
-        $pdf->Save('../../poligrafoLaravel/public/pdf/cotizacion.pdf');
 
-        $mensajeconf = 'Correo con cotizacion enviado exitosamente';
-        $data = array('name'=>"Jose Velasquez") ;
-        Mail::send('mail', $data, function($message) {
+        $mensajeconf = 'Correo enviado exitosamente';
+         $data = array('name'=>"Jose Velasquez") ;
+         Mail::send('mail', $data, function($message) {
   //correo cliente
             $message->to('velasquezjrvo@gmail.com', 'Jose Velasquez') ->subject
             ('PROPUESTA DE POLIGRAFIA') ;
@@ -31,7 +28,7 @@ class MailController extends Controller {
            /* $message->cc('angie@poligrafia.com.pa');
             $message->cc('info@poligrafia.com.pa');*/
             $message->from('poligrafia@poligrafia.com.pa','IPTC') ;
-            $message->attach('../../poligrafoLaravel/public/pdf/cotizacion.pdf') ;
+            $message->attach('../../public/pdf/cotizacion.pdf') ;
 
 
         });
@@ -61,14 +58,18 @@ class MailController extends Controller {
 
 //Correo de solicitud de retencion.
 
-    public function html_email_retencion() {
+    public function html_email_retencion($id) {
 
+        $user = User::findOrFail(1);
+
+        $company = Company::where('id_company', '=',$id)->get();
+        /*Log::error(print_r($company[0]->email_compamy, true));*/
         $mensajeconf = 'Correo solicitando retencion enviado exitosamente';
         $data = array('name'=>"Jose Velasquez") ;
-        Mail::send('mailretencion', $data, function($message) {
-            //sustituir por correo cliente
-            $message->to('velasquezjrvo@gmail.com', 'Jose Velasquez') ->subject
-            ('SOLICITUD DE RETENCION') ;
+
+        Mail::send('mailretencion', ["nameCom" => $company[0]->name_company], function($message) use ($company) {
+            //sustituir por correo empresa
+            $message->to($company[0]->email_compamy, 'Jose Velasquez')->subject('SOLICITUD DE RETENCION') ;
             //copia a info y angie comentad para que no envie ya se probo
             /* $message->cc('angie@poligrafia.com.pa');
              $message->cc('info@poligrafia.com.pa');*/
@@ -78,6 +79,7 @@ class MailController extends Controller {
         });
         echo ($mensajeconf);
     }
+
 
 
 
