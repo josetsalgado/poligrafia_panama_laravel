@@ -49,17 +49,15 @@
                 <?php foreach($lastAppointments as $lastAppointment): ?>
                     <article class="media event" id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit" onclick="editQuote(<?php echo e($lastAppointment->id_appoiment); ?>)" >
                         <a class="pull-left date" >
-                        
                             <?php 
                                 $date = new DateTime($lastAppointment->time_appoiment);
-                                echo '<p class="day">'.$date->format('H:i').'</p>';
                                 if((intval($date->format('H')) >=  7 ) && (intval($date->format('H')) <  12 )){
                                     echo '<p class="month">AM</p>';
                                 }else{
                                     echo '<p class="month">PM</p>';
                                 }
-                            ?>
-                        
+                                echo '<p class="day">'.$date->format('H:i').'</p>';      
+                            ?>  
                       </a>
                       <div class="media-body">
                         <a class="title" href="#"><?php echo e(isset($lastAppointment->name_company) ? $lastAppointment->name_company : ''); ?><br>
@@ -99,12 +97,15 @@
                     <!--<article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">-->
                     <article class="media event" id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit" onclick="editQuote(<?php echo e($tomorrowAppointment->id_appoiment); ?>)">
                         <a class="pull-left date" >
-                          <p class="day">
-                              <?php
-                                $date = new DateTime($tomorrowAppointment->time_appoiment);
-                                echo $date->format('H:i');
-                              ?>
-                          </p>
+                            <?php 
+                                $date = new DateTime($lastAppointment->time_appoiment);
+                                if((intval($date->format('H')) >=  7 ) && (intval($date->format('H')) <  12 )){
+                                    echo '<p class="month">AM</p>';
+                                }else{
+                                    echo '<p class="month">PM</p>';
+                                }
+                                echo '<p class="day">'.$date->format('H:i').'</p>';      
+                            ?>  
                       </a>
                       <div class="media-body">
                         <a class="title" href="#"><?php echo e(isset($tomorrowAppointment->name_company) ? $tomorrowAppointment->name_company : ''); ?><br>
