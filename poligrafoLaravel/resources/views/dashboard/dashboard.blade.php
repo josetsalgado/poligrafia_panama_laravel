@@ -50,7 +50,6 @@
                 @foreach($lastAppointments as $lastAppointment)
                     <article class="media event" id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit" onclick="editQuote({{ $lastAppointment->id_appoiment }})" >
                         <a class="pull-left date" >
-                        
                             <?php 
                                 $date = new DateTime($lastAppointment->time_appoiment);
                                 if((intval($date->format('H')) >=  7 ) && (intval($date->format('H')) <  12 )){
@@ -58,10 +57,8 @@
                                 }else{
                                     echo '<p class="month">PM</p>';
                                 }
-                                echo '<p class="day">'.$date->format('H:i').'</p>';
-                                
-                            ?>
-                        
+                                echo '<p class="day">'.$date->format('H:i').'</p>';      
+                            ?>  
                       </a>
                       <div class="media-body">
                         <a class="title" href="#">{{ $lastAppointment->name_company or '' }}<br>
@@ -100,12 +97,15 @@
                     <!--<article class="media event"  id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit">-->
                     <article class="media event" id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit" onclick="editQuote({{ $tomorrowAppointment->id_appoiment }})">
                         <a class="pull-left date" >
-                          <p class="day">
-                              <?php
-                                $date = new DateTime($tomorrowAppointment->time_appoiment);
-                                echo $date->format('H:i');
-                              ?>
-                          </p>
+                            <?php 
+                                $date = new DateTime($lastAppointment->time_appoiment);
+                                if((intval($date->format('H')) >=  7 ) && (intval($date->format('H')) <  12 )){
+                                    echo '<p class="month">AM</p>';
+                                }else{
+                                    echo '<p class="month">PM</p>';
+                                }
+                                echo '<p class="day">'.$date->format('H:i').'</p>';      
+                            ?>  
                       </a>
                       <div class="media-body">
                         <a class="title" href="#">{{ $tomorrowAppointment->name_company or '' }}<br>
