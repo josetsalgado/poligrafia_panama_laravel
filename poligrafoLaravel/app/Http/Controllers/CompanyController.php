@@ -9,6 +9,7 @@ use function dd;
 use function trans;
 use function view;
 use App\Company;
+use DB;
 
 class CompanyController extends Controller
 {
@@ -97,7 +98,11 @@ class CompanyController extends Controller
     {
         $companys = Company::all();
 
+        foreach ($companys as $company){
+            $company->client_id = $this->getRelationship($company->id_company, 'itcp_clients', 'company_id');
+        }
         return view("company.show", compact("companys"));
+
     }
 
     /**
@@ -106,9 +111,29 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function edit($id)
+
+    public function getRelationship($id_client, $tb,$tbgRelationship){
+        return DB::table($tb)
+            ->select('*')
+            ->where($tb.'.'.$tbgRelationship, '=', $id_client)
+            ->get();
+    }
+
+
+    public function edit(Request $request)
     {
-        //
+        Company::where('id_company', $request->id)
+            ->update([
+                'name_company' => $request->name_company,
+                'tel_company' => $request->tel_company,
+                'email_compamy' => $request->email_compamy,
+                'address_company' => $request->address_company,
+                'ruc_company' => $request->ruc_company,
+                'cost_test_pre_employment' => $request->cost_test_pre_employment,
+                'cost_routine_test' => $request->cost_routine_test,
+                'cost_specific_test' => $request->reevaluation_test_cost,
+                'reevaluation_test_cost' => $request->reevaluation_test_cost,
+            ]);
     }
 
     /**
@@ -118,9 +143,10 @@ class CompanyController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function update(Request $request, $id)
+    public function update($id)
     {
-        //
+        $company = Company::where('id_company', '=',$id)->get();
+       return view('company.editCompany', compact("company"));
     }
 
     /**

@@ -1,5 +1,4 @@
-@extends('layouts.default')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="">
         <div class="page-title">
             <div class="title_right">
@@ -44,21 +43,21 @@
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($companys as $company)
+                        <?php foreach($companys as $company): ?>
                             <tr>
 
-                                <td>{{ $company->name_company or '' }}</td>
-                                <td>{{ $company->ruc_company or '' }}</td>
+                                <td><?php echo e(isset($company->name_company) ? $company->name_company : ''); ?></td>
+                                <td><?php echo e(isset($company->ruc_company) ? $company->ruc_company : ''); ?></td>
 
                                 <td>
                                     <ul>
-                                        @foreach($company->client_id as $client)
-                                        <li>{{ $client->name_client }}</li>
-                                        @endforeach
+                                        <?php foreach($company->client_id as $client): ?>
+                                        <li><?php echo e($client->name_client); ?></li>
+                                        <?php endforeach; ?>
                                     </ul>
                                 </td>
-                                <td>{{ $company->tel_company or '' }}</td>
-                                <td>{{ $company->email_compamy or '' }}</td>
+                                <td><?php echo e(isset($company->tel_company) ? $company->tel_company : ''); ?></td>
+                                <td><?php echo e(isset($company->email_compamy) ? $company->email_compamy : ''); ?></td>
                                 <td>
                                     <ul>
 
@@ -84,14 +83,14 @@
                                     </ul>
                                 </td>
                                 <td>
-                                    <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"  onclick="edit_company('{{ $company->id_company }}')"><i class="fa fa-pencil"></i> {{ trans("poligrafo.edit") }}</a>
-                                    <button class="btn btn-danger btn-xs" id="delete" name="delete" value="{{ $company->id_company }}" onclick="fnDelete('{{ $company->id_company }}')" data-toggle="tooltip" data-placement="right">
-                                        <i class="fa fa-trash-o"></i> {{ trans('poligrafo.delete') }} </a>
+                                    <a type="button" class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"  onclick="edit_company('<?php echo e($company->id_company); ?>')"><i class="fa fa-pencil"></i> <?php echo e(trans("poligrafo.edit")); ?></a>
+                                    <button class="btn btn-danger btn-xs" id="delete" name="delete" value="<?php echo e($company->id_company); ?>" onclick="fnDelete('<?php echo e($company->id_company); ?>')" data-toggle="tooltip" data-placement="right">
+                                        <i class="fa fa-trash-o"></i> <?php echo e(trans('poligrafo.delete')); ?> </a>
                                     </button>
 
                                 </td>
                             </tr>
-                        @endforeach
+                        <?php endforeach; ?>
                         </tbody>
                     </table>
 
@@ -126,4 +125,5 @@
             }
         } );
     </script>
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

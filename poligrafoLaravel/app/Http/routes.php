@@ -80,6 +80,8 @@ Route::group(['middleware' => 'auth'], function () {
     //solicitudes de citas
     Route::get('/appoiment_company/{code}', 'QuotesController@getClient');
 
+
+
     //iditar una cita
     Route::get('/editQuote/{id}', 'QuotesController@edit');
 
@@ -145,6 +147,12 @@ Route::group(['middleware' => 'auth'], function () {
 
     //crear empresa
     Route::get('/create_company', 'CompanyController@create');
+
+    //editar empresa
+    Route::get('/edit_company/{id}', 'CompanyController@update');
+
+    //crear empresa
+    Route::post('/edit_company', 'CompanyController@edit');
 
     //crear empresas post form
     Route::post('/create_company', 'CompanyController@store');
