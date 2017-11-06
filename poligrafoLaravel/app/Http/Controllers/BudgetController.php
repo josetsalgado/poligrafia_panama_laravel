@@ -81,6 +81,7 @@ class BudgetController extends Controller
         $pdf = PDF::Make();
         $pdf->loadView('budget.pdfButget', compact('budgets'));
         return $pdf->download('cotizacion.pdf');
+        /*return $pdf->Stream('cotizacion.pdf');*/
     }
     
     

@@ -25,7 +25,7 @@ $(document).ready(function(){
 	        url: "create_product",
 	        data: dataString,
 	        success: function(data) {
-                   	alert("bien");
+                        alertify.success('Cliente creado exitosamente');
                         $('#createService')[0].reset();
 	       	},error: function (err) {
                     if (err.status === 422) {

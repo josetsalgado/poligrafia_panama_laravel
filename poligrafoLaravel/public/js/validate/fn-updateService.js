@@ -13,6 +13,8 @@ $(document).ready(function(){
 	        data: dataString,
 	        success: function(data) {
                     $(".close").click();
+                    alertify.success('Datos actualizados');
+                    $("#datatable-responsive").load("show_product #datatable-responsive");
 	       	},error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.

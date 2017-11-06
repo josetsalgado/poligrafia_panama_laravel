@@ -128,7 +128,7 @@
             url: "sendhtmlemail_retencion/"+id,
             success: function(data) {
                 $(".close").click();
-                alertify.success('Correo enviado');
+                alertify.success('Correo solicitando retencion enviado exitosamente');
                 $("#datatable-responsive").load("payment_record #datatable-responsive");
             },error: function (err) {
                 alert('correo no existe');

@@ -117,6 +117,7 @@
                                 </li>
                                 <li><a><i class="fa fa-hospital-o"></i> Productos <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
+                                        <li><a href="create_product">Nuevo Producto</a></li>
                                         <li><a href="show_product">Ver Productos</a></li>
                                     </ul>
                                 </li>

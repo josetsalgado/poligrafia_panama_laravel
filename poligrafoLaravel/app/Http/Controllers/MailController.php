@@ -56,6 +56,9 @@ class MailController extends Controller {
     }
 
 
+
+
+
 //Correo de solicitud de retencion.
 
     public function html_email_retencion($id) {
@@ -63,13 +66,12 @@ class MailController extends Controller {
         $user = User::findOrFail(1);
 
         $company = Company::where('id_company', '=',$id)->get();
-        /*Log::error(print_r($company[0]->email_compamy, true));*/
         $mensajeconf = 'Correo solicitando retencion enviado exitosamente';
-        $data = array('name'=>"Jose Velasquez") ;
+        $data = array('name'=>"") ;
 
         Mail::send('mailretencion', ["nameCom" => $company[0]->name_company], function($message) use ($company) {
             //sustituir por correo empresa
-            $message->to($company[0]->email_compamy, 'Jose Velasquez')->subject('SOLICITUD DE RETENCION') ;
+            $message->to($company[0]->email_compamy, '')->subject('SOLICITUD DE RETENCION') ;
             //copia a info y angie comentad para que no envie ya se probo
             /* $message->cc('angie@poligrafia.com.pa');
              $message->cc('info@poligrafia.com.pa');*/

@@ -239,15 +239,18 @@
                             </table>
                         </div>
                     </div>
-                    <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>   <br>    <br>    <br>   <br>   <br>   <br>   <br>   <br>  <br>   <br>  <br>   <br>   <br>   <br>   <br>    <br>   <br>   <br>   <br>  <br>   <br>   <br>   <br>   <br>   <br>
-                    <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>COTIZACIÓN</b></h5>
+                    <br>
+
+
                     <div style="padding-bottom: 50%"></div>
 
 
                     <!-- Table row -->
                     <div class="row">
-                        <div class="col-xs-12 table">
-                            <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
+                        <div class="col-xs-12 table"><br><br><br><br><br>
+                            <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>COTIZACIÓN</b></h5>
+
+                            <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%" style="margin-top:200px">
                                 <thead>
                                 <tr >
                                     <th style="height: 30px !important; padding-left: 5px">EVALUACION POLIGRÁFICA </th>
