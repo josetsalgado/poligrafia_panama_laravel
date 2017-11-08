@@ -87,7 +87,7 @@
                 <div class="col-xs-5 invoice-col">
                     @foreach($budgets as $budget)
                         <p style="font-weight: bold;">Atencion: {{ $budget->client_id[0]->name_client  or '' }}</p>
-                        <p style="font-weight: bold;">{{ $budget->company_id[0]->name_company or '' }}</p>
+                        <p style="font-weight: bold; margin-left: 68px">{{ $budget->company_id[0]->name_company or '' }}</p>
                     @endforeach
                 </div>
                 <!-- /.col -->
@@ -250,7 +250,7 @@
                         <div class="col-xs-12 table"><br><br><br><br><br>
                             <h5 class="text-center" style="font-size: 14px; font-weight: bold;"><b>COTIZACIÓN</b></h5>
 
-                            <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%" style="margin-top:200px">
+                            <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%" style="margin-top:50px">
                                 <thead>
                                 <tr >
                                     <th style="height: 30px !important; padding-left: 5px">EVALUACION POLIGRÁFICA </th>

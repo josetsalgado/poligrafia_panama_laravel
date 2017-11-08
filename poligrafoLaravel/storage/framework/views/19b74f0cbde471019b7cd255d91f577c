@@ -23,8 +23,10 @@
                     <div class="row invoice-info">
                         <div class="col-sm-6 invoice-col">
                             <address>
-                                <strong>ATENCION: </strong>Licdo. Luis Perez
-                                <br> COCA COLA
+                                <?php foreach($budgets as $budget): ?>
+                                        <p style="font-weight: bold;">Atencion: <?php echo e(isset($budget->client_id[0]->name_client) ? $budget->client_id[0]->name_client : ''); ?></p>
+                                        <p style="font-weight: bold; margin-left: 65px"><?php echo e(isset($budget->company_id[0]->name_company) ? $budget->company_id[0]->name_company : ''); ?></p>
+                                <?php endforeach; ?>
                                 <br>
                             </address>
                         </div>
@@ -192,13 +194,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach($budgets[0]->budgets_register_id as $budget): ?>
+                                <?php foreach($budgets[0]->budgets_register_id as $budget): ?>
                                     <tr>
                                         <td><?php echo e($budget->quantity_budget); ?> <?php echo e($budget->service_id[0]->name_service); ?></td>
                                         <td>B/. <?php echo e($budget->price_service); ?></td>
                                         <td>B/. <?php echo e($budget->total_budget); ?></td>
                                     </tr>
-                                    <?php endforeach; ?>
+                                <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>

@@ -23,8 +23,10 @@
                     <div class="row invoice-info">
                         <div class="col-sm-6 invoice-col">
                             <address>
-                                <strong>ATENCION: </strong>Licdo. Luis Perez
-                                <br> COCA COLA
+                                @foreach($budgets as $budget)
+                                        <p style="font-weight: bold;">Atencion: {{ $budget->client_id[0]->name_client  or '' }}</p>
+                                        <p style="font-weight: bold; margin-left: 65px">{{ $budget->company_id[0]->name_company or '' }}</p>
+                                @endforeach
                                 <br>
                             </address>
                         </div>
@@ -192,13 +194,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach($budgets[0]->budgets_register_id as $budget)
+                                @foreach($budgets[0]->budgets_register_id as $budget)
                                     <tr>
                                         <td>{{ $budget->quantity_budget }} {{ $budget->service_id[0]->name_service }}</td>
                                         <td>B/. {{ $budget->price_service }}</td>
                                         <td>B/. {{ $budget->total_budget }}</td>
                                     </tr>
-                                    @endforeach
+                                @endforeach
                                 </tbody>
                             </table>
                         </div>

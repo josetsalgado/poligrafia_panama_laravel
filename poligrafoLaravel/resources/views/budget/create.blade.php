@@ -186,8 +186,8 @@
     <!-- Modal Agregar Nueva Empresa & cliente-->
        <div class="modal fade" id="myModal" role="dialog"></div>
     <!-- /. modal -->
-    
-    
+
+
     <script src="js/validate/fn-createBudget.js"></script>
 
     <script type="text/javascript">

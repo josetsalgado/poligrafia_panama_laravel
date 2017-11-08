@@ -24,9 +24,10 @@
                     <div class="row invoice-info">
                         <div class="col-sm-6 invoice-col">
                             <address>
-                                <strong>ATENCION: </strong>Cliente compañia
-                                <br> Nombre Compañia
-                                <br>
+                               {{-- @foreach($budgets as $budget)
+                                    <p style="font-weight: bold;">Atencion: {{ $budget->client_id[0]->name_client  or '' }}</p>
+                                    <p style="font-weight: bold;">{{ $budget->company_id[0]->name_company or '' }}</p>
+                                @endforeach--}}
                             </address>
                         </div>
                         <!-- /.col -->
@@ -193,52 +194,52 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                    $serviceName = "";
-                                    $company = "";
-                                    $client = "";
-                                    $serviceId = "";
-                                    $price = "";
-                                    $quantity = "";
-                                    $total = 0;
-                                    foreach ($request->all() as $key => $arrayRequest) {
-                                        if ($key == "empresa") {
-                                            $company = $arrayRequest;
-                                        }
+                                <?php
+                                $serviceName = "";
+                                $company = "";
+                                $client = "";
+                                $serviceId = "";
+                                $price = "";
+                                $quantity = "";
+                                $total = 0;
+                                foreach ($request->all() as $key => $arrayRequest) {
+                                if ($key == "empresa") {
+                                    $company = $arrayRequest;
+                                }
 
-                                        if ($key == "client") {
-                                            $client = $arrayRequest;
-                                        }
-                                        if (strstr($key, 'service_id')) {
-                                            $serviceId = $arrayRequest;
-                                        }
-                                        if (strstr($key, 'price_')) {
-                                            $price = $arrayRequest;
-                                        }
-                                        if (strstr($key, 'observations')) {
-                                            $observations = $arrayRequest;
-                                        }
-                                        if (strstr($key, 'quantity_')) {
-                                            $quantity = $arrayRequest;
-                                        }
-                                        if (strstr($key, 'serviceName_')) {
-                                            $serviceName = $arrayRequest;
-                                        }
-                                        if ($price && $quantity) {
-                                            ?>
-                                            <tr>
-                                                <td>{{ $quantity }} {{ $serviceName }}</td>
-                                                <td>B/.{{ $price/$quantity }}</td>
-                                                <td>B/.{{ $price }}</td>
-                                            </tr>
+                                if ($key == "client") {
+                                    $client = $arrayRequest;
+                                }
+                                if (strstr($key, 'service_id')) {
+                                    $serviceId = $arrayRequest;
+                                }
+                                if (strstr($key, 'price_')) {
+                                    $price = $arrayRequest;
+                                }
+                                if (strstr($key, 'observations')) {
+                                    $observations = $arrayRequest;
+                                }
+                                if (strstr($key, 'quantity_')) {
+                                    $quantity = $arrayRequest;
+                                }
+                                if (strstr($key, 'serviceName_')) {
+                                    $serviceName = $arrayRequest;
+                                }
+                                if ($price && $quantity) {
+                                ?>
+                                <tr>
+                                    <td>{{ $quantity }} {{ $serviceName }}</td>
+                                    <td>B/.{{ $price/$quantity }}</td>
+                                    <td>B/.{{ $price }}</td>
+                                </tr>
 
-                                            <?php
-                                            $total = $total + $price;
-                                            $price = '';
-                                            $quantity = '';
-                                        }
-                                    }
-                                    ?>
+                                <?php
+                                $total = $total + $price;
+                                $price = '';
+                                $quantity = '';
+                                }
+                                }
+                                ?>
                                 </tbody>
                             </table>
                         </div>
@@ -266,7 +267,7 @@
                                     </tr>
                                     <tr>
                                         <th>TOTAL</th>
-                                        <td>B/.{{ $total }}</td>
+                                        <td>B/. {{ $total }}</td>
                                     </tr>
                                 </tbody>
                             </table>
