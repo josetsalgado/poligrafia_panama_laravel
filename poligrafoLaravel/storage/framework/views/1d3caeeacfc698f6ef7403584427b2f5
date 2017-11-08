@@ -85,9 +85,11 @@
         <section class="content invoice">
             <div class="row invoice-info">
                 <div class="col-xs-5 invoice-col">
-                        <strong style="font-size: 14px; font-weight: bold;">ATENCION: </strong><b style="font-size: 14px; font-weight: bold;">Licdo. Luis Perez
-                        <br> COCA COLA</b>
-                        <br>
+                    <?php foreach($budgets as $budget): ?>
+                        <p style="font-weight: bold;">Atencion: <?php echo e(isset($budget->client_id[0]->name_client) ? $budget->client_id[0]->name_client : ''); ?></p>
+                        <p style="font-weight: bold;"><?php echo e(isset($budget->company_id[0]->name_company) ? $budget->company_id[0]->name_company : ''); ?></p>
+                    <?php endforeach; ?>
+
                     </address>
                 </div>
                 <!-- /.col -->
@@ -292,7 +294,7 @@
                                 </tr>
                                 <tr>
                                     <th style="padding-left: 5px; height: 30px !important;">TOTAL</th>
-                                    <td style="padding-left: 5px; height: 30px !important;">$ <?php echo e($budgets[0]->total_budget); ?></td>
+                                    <td style="padding-left: 5px; height: 30px !important;">B/.<?php echo e($budgets[0]->total_budget); ?></td>
                                 </tr>
                                 </tbody>
                             </table>

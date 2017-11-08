@@ -24,8 +24,8 @@
                     <div class="row invoice-info">
                         <div class="col-sm-6 invoice-col">
                             <address>
-                                <strong>ATENCION: </strong>Licdo. Luis Perez
-                                <br> COCA COLA
+                                <strong>ATENCION: </strong>Cliente compañia
+                                <br> Nombre Compañia
                                 <br>
                             </address>
                         </div>
@@ -228,8 +228,8 @@
                                             ?>
                                             <tr>
                                                 <td>{{ $quantity }} {{ $serviceName }}</td>
-                                                <td>{{ $price/$quantity }}</td>
-                                                <td>{{ $price }}</td>
+                                                <td>B/.{{ $price/$quantity }}</td>
+                                                <td>B/.{{ $price }}</td>
                                             </tr>
 
                                             <?php
@@ -266,7 +266,7 @@
                                     </tr>
                                     <tr>
                                         <th>TOTAL</th>
-                                        <td>{{ $total }}</td>
+                                        <td>B/.{{ $total }}</td>
                                     </tr>
                                 </tbody>
                             </table>

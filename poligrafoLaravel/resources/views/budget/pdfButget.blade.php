@@ -85,10 +85,10 @@
         <section class="content invoice">
             <div class="row invoice-info">
                 <div class="col-xs-5 invoice-col">
-                        <strong style="font-size: 14px; font-weight: bold;">ATENCION: </strong><b style="font-size: 14px; font-weight: bold;">Licdo. Luis Perez
-                        <br> COCA COLA</b>
-                        <br>
-                    </address>
+                    @foreach($budgets as $budget)
+                        <p style="font-weight: bold;">Atencion: {{ $budget->client_id[0]->name_client  or '' }}</p>
+                        <p style="font-weight: bold;">{{ $budget->company_id[0]->name_company or '' }}</p>
+                    @endforeach
                 </div>
                 <!-- /.col -->
                 <div class="col-sm-6 invoice-col pull-right" style="padding-left: 100px">
@@ -292,7 +292,7 @@
                                 </tr>
                                 <tr>
                                     <th style="padding-left: 5px; height: 30px !important;">TOTAL</th>
-                                    <td style="padding-left: 5px; height: 30px !important;">$ {{ $budgets[0]->total_budget }}</td>
+                                    <td style="padding-left: 5px; height: 30px !important;">B/.{{ $budgets[0]->total_budget }}</td>
                                 </tr>
                                 </tbody>
                             </table>

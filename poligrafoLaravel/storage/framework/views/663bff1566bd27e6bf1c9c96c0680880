@@ -24,8 +24,8 @@
                     <div class="row invoice-info">
                         <div class="col-sm-6 invoice-col">
                             <address>
-                                <strong>ATENCION: </strong>Licdo. Luis Perez
-                                <br> COCA COLA
+                                <strong>ATENCION: </strong>Cliente compañia
+                                <br> Nombre Compañia
                                 <br>
                             </address>
                         </div>
@@ -228,8 +228,8 @@
                                             ?>
                                             <tr>
                                                 <td><?php echo e($quantity); ?> <?php echo e($serviceName); ?></td>
-                                                <td><?php echo e($price/$quantity); ?></td>
-                                                <td><?php echo e($price); ?></td>
+                                                <td>B/.<?php echo e($price/$quantity); ?></td>
+                                                <td>B/.<?php echo e($price); ?></td>
                                             </tr>
 
                                             <?php
@@ -266,7 +266,7 @@
                                     </tr>
                                     <tr>
                                         <th>TOTAL</th>
-                                        <td><?php echo e($total); ?></td>
+                                        <td>B/.<?php echo e($total); ?></td>
                                     </tr>
                                 </tbody>
                             </table>
