@@ -1,16 +1,16 @@
 
 html , body{
-	
- height:100%;
- 
+
+    height:100%;
+
 }
- 
+
 .full-width {
-	
- width:100%;
- 
- }
- .dash_titulo{
+
+    width:100%;
+
+}
+.dash_titulo{
     margin: 5px 0 6px;
     float: left;
 }
@@ -25,8 +25,8 @@ html , body{
     border: 1px solid #ddd;
 }
 .back_table{
-   background:#f9f9f9;
-   border-top: 1px solid #ddd;
+    background:#f9f9f9;
+    border-top: 1px solid #ddd;
 }
 
 .alert-primary{
@@ -40,8 +40,8 @@ html , body{
 }
 
 .full-height{
- height:100%;
- }
+    height:100%;
+}
 .thumbnail_logo{
     height: 97px !important;
 }
@@ -793,7 +793,7 @@ a:focus {
     top: 0
 }
 .nav-md ul.nav.child_menu li:last-child::after {
-  bottom: 50%;
+    bottom: 50%;
 }
 .nav.side-menu>li>a,
 .nav.child_menu>li>a {
@@ -1700,7 +1700,7 @@ span.right {
     position: fixed;
     width: 230px;
     background: #2d7482;
-	z-index:999;
+    z-index:999;
 }
 .sidebar-footer a {
     padding: 7px 0 3px;
@@ -2094,6 +2094,14 @@ button,
     .mail_list {
         margin-bottom: 5px;
         display: inline-block
+    }
+    .media .date .day {
+        text-align: center;
+        color: #73879C;
+        font-size: 19px;
+        margin: 0;
+        line-height: 20px;
+        font-weight: bold;
     }
 }
 .mail_heading h4 {
@@ -3261,7 +3269,7 @@ ul.project_files li a i {
  * bootstrap-vertical-tabs - v1.2.1
  * https://dbtek.github.io/bootstrap-vertical-tabs
  * 2014-11-07
- * Copyright (c) 2014 İsmail Demirbilek
+ * Copyright (c) 2014 Ã„Â°smail Demirbilek
  * License: MIT
  */
 
@@ -4220,7 +4228,7 @@ ul.notifications {
 
 
 @media (max-width: 767px) {
-   .dataTables_length { float:none; }
+    .dataTables_length { float:none; }
 }
 
 
@@ -4251,22 +4259,22 @@ ul.notifications {
 /*
 
 /*
-.checkbox 																										{ display: block;position:relative;cursor:pointer; }
-.checkbox input 																								{ position:absolute;z-index:-1;opacity:0;left:0;top:0; }
-.checkbox div 																									{ position:absolute;top:2px;left:0;height:20px;width:20px;background:#e6e6e6;border-radius:3px; }
-.checkbox input:checked ~ div 																			{ background: #1ABC9C; }
+.checkbox                                                                                                       { display: block;position:relative;cursor:pointer; }
+.checkbox input                                                                                                 { position:absolute;z-index:-1;opacity:0;left:0;top:0; }
+.checkbox div                                                                                                   { position:absolute;top:2px;left:0;height:20px;width:20px;background:#e6e6e6;border-radius:3px; }
+.checkbox input:checked ~ div                                                                           { background: #1ABC9C; }
 .checkbox:hover input:not([disabled]):checked ~ div,
-.checkbox input:checked:focus ~ div 																	{ background: #1ABC9C; }
-.checkbox input:disabled ~ div 																			{ background: #1ABC9C;opacity: 0.6;pointer-events: none; }
-.checkbox div:after 																							{ content: '';position: absolute;display: none; }
-.checkbox input:checked ~ div:after 																	{ display: block; }
-.checkbox-wp div:after 																					{ left: 7px;top: 3px;width: 7px;height: 11px;border: solid #fff;border-width: 0 2px 2px 0;transform: rotate(40deg); }
-.checkbox-wp input:disabled ~ div:after 																{ border-color: #F2F2F2; }
+.checkbox input:checked:focus ~ div                                                                     { background: #1ABC9C; }
+.checkbox input:disabled ~ div                                                                          { background: #1ABC9C;opacity: 0.6;pointer-events: none; }
+.checkbox div:after                                                                                             { content: '';position: absolute;display: none; }
+.checkbox input:checked ~ div:after                                                                     { display: block; }
+.checkbox-wp div:after                                                                                  { left: 7px;top: 3px;width: 7px;height: 11px;border: solid #fff;border-width: 0 2px 2px 0;transform: rotate(40deg); }
+.checkbox-wp input:disabled ~ div:after                                                                 { border-color: #F2F2F2; }
 
 
-.checkbox-radio div 																							{ border-radius: 50%; }
-.checkbox-radio div:after 																					{ left: 7px;top: 7px;height: 6px;width: 6px;border-radius: 50%;background: #fff; }
-.checkbox-radio input:disabled ~ div:after 															{ background: #F2F2F2; }
+.checkbox-radio div                                                                                             { border-radius: 50%; }
+.checkbox-radio div:after                                                                                   { left: 7px;top: 7px;height: 6px;width: 6px;border-radius: 50%;background: #fff; }
+.checkbox-radio input:disabled ~ div:after                                                          { background: #F2F2F2; }
 
 
 .checkbox, .radio { margin-top:-3px; }
@@ -4274,11 +4282,11 @@ ul.notifications {
 table thead .checkbox { margin-top:-7px;margin-top:-21px; }
 table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 */
-			
+
 .daterangepicker.xdisplay { width:228px; }
 
 .dataTables_wrapper > .row{
-  overflow:auto !important; /*prevent datatables overflowing its container*/
+    overflow:auto !important; /*prevent datatables overflowing its container*/
 }
 
 /** bootstrap-datetimepicker **/
@@ -4341,74 +4349,74 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
 }
 
 /*button float*/
- @import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
 
 
 /* Component styles - this is what you need to grab */
 .absolute-center {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
 }
 .floaty {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
 }
 .floaty-list {
-  margin: 0 0 20px;
-  padding: 0 0 0 6px;
-  list-style: none;
-  opacity: 0;
-  transition: opacity .2s ease-out;
+    margin: 0 0 20px;
+    padding: 0 0 0 6px;
+    list-style: none;
+    opacity: 0;
+    transition: opacity .2s ease-out;
 }
 .floaty:hover .floaty-list {
-  opacity: 1;
+    opacity: 1;
 }
 .floaty-list-item {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  margin: 15px 0;
-  cursor: pointer;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,.25);
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 15px 0;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,.25);
 }
 .floaty-list-item > img {
-  border-radius: 50%;
+    border-radius: 50%;
 }
 .floaty-list-item--yellow {
-  background-color: #d4a717;
+    background-color: #d4a717;
 }
 .floaty-list-item--yellow > svg {
-  fill: #fff;
+    fill: #fff;
 }
 .floaty-list-item--blue {
-  background-color: #3c80f6;
+    background-color: #3c80f6;
 }
 .floaty-list-item--blue > svg {
-  fill: #fff;
+    fill: #fff;
 }
 .floaty-list-item-label {
-  position: absolute;
-  top: 8px;
-  right: 120%;
-  padding: 4px 8px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #424242;
-  border-radius: 2px;
-  opacity: 0;
-  white-space: nowrap;
-  pointer-events: none;
-  transition: opacity .2s ease-out;
+    position: absolute;
+    top: 8px;
+    right: 120%;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #424242;
+    border-radius: 2px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity .2s ease-out;
 }
 .floaty-list-item:hover > .floaty-list-item-label {
-  opacity: 1;
+    opacity: 1;
 }
 .floaty-btn {
     position: fixed;
@@ -4422,43 +4430,43 @@ table thead .checkbox.radio { margin-top:-7px;margin-top:-21px; }
     box-shadow: 0 4px 8px rgba(0,0,0,.25);
 }
 .floaty-btn:hover .floaty-btn-label {
-  opacity: 1;
+    opacity: 1;
 }
 .floaty-btn-label {
-  position: absolute;
-  top: 14px;
-  right: 115%;
-  padding: 4px 8px;
-  font-size: 14px;
-  color: #fff;
-  background-color: #2e64fe;
-  border-radius: 2px;
-  opacity: 0;
-  pointer-events: none;
-  white-space: nowrap;
-  transition: opacity .2s ease-out;
+    position: absolute;
+    top: 14px;
+    right: 115%;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #2d7482;
+    border-radius: 2px;
+    opacity: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    transition: opacity .2s ease-out;
 }
 .floaty-btn-icon {
-  transition: all .2s;
+    transition: all .2s;
 }
 .floaty-btn-icon-plus {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 .floaty.is-active .floaty-btn-icon-plus {
-  opacity: 0;
-  -webkit-transform: rotate(13deg);
-  transform: rotate(130deg);
+    opacity: 0;
+    -webkit-transform: rotate(13deg);
+    transform: rotate(130deg);
 }
 .floaty-btn-icon-create {
-  opacity: 0;
-  -webkit-transform: rotate(-60deg);
-  transform: rotate(-60deg);
+    opacity: 0;
+    -webkit-transform: rotate(-60deg);
+    transform: rotate(-60deg);
 }
 .floaty.is-active .floaty-btn-icon-create {
-  opacity: 1;
-  -webkit-transform: rotate(0deg);
-  transform: rotate(0deg);
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 article#fc_edit:hover {
     background: #ededed;
@@ -4472,7 +4480,7 @@ article#fc_edit:hover {
     width: 90%;
 }
 
- .formulario {
+.formulario {
     color: #212121;
     text-align: center;
 }
@@ -4524,7 +4532,7 @@ article#fc_edit:hover {
     border-left: 1px solid;
 }
 .table_estado_cuenta{
-   margin:0px -32px 0px 0px;
+    margin:0px -32px 0px 0px;
 }
 .tile_count .tile_stats_count a {
     color: #73879C;
@@ -4553,90 +4561,90 @@ article#fc_edit:hover {
 /* TO DO LIST
 ================================================== */
 .tdl-holder{
-  margin:0px auto;
-  width: 100%;
+    margin:0px auto;
+    width: 100%;
 }
 
 .tdl-holder ul, .tdl-holder li {
-  list-style: none;
-  margin:0;
-  padding:0;
+    list-style: none;
+    margin:0;
+    padding:0;
 }
 
 .tdl-holder li{
-  background-color: #fff;
-  border-bottom:1px solid #ededed;
+    background-color: #fff;
+    border-bottom:1px solid #ededed;
 }
 
 .tdl-holder li span{
-  margin-left:30px;
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-       -o-transition: all .2s linear;
-        transition: all .2s linear; 
+    margin-left:30px;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
 }
 
 .tdl-holder label{
-  cursor:pointer;
-  display:block;
-  line-height: 56px;
-  padding: 0 15px; 
-  position: relative;
+    cursor:pointer;
+    display:block;
+    line-height: 56px;
+    padding: 0 15px;
+    position: relative;
 }
 
 .tdl-holder label:hover{
-  background-color: #f7f7f7;
-  color:#8284a3;
+    background-color: #f7f7f7;
+    color:#8284a3;
 }
 
 .tdl-holder label a{
-  background-color:#de3f53;
-  border-radius:50%;
-  color:#fff;
-  display:none;
-  float:right;
-  font-weight: bold;
-  line-height: normal;
-  height:16px;
-  margin-top: 20px;
-  text-align: center;
-  text-decoration: none;
-  width:16px;
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-       -o-transition: all .2s linear;
-        transition: all .2s linear; 
+    background-color:#de3f53;
+    border-radius:50%;
+    color:#fff;
+    display:none;
+    float:right;
+    font-weight: bold;
+    line-height: normal;
+    height:16px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    width:16px;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
 }
 
 .tdl-holder label:hover a{
-  display: block;
+    display: block;
 }
 
-.tdl-holder label a:hover{  
-  background-color:#fff;
-  color:#de3f53;
+.tdl-holder label a:hover{
+    background-color:#fff;
+    color:#de3f53;
 }
 
 .tdl-holder input[type="checkbox"]{
-  cursor: pointer;
-  opacity: 0;
-  position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
 }
 
 .tdl-holder input[type="checkbox"] + i{
-  background-color: #ededed;
-  border-radius: 50%;
-  display: block;
-  height: 16px;
-  position: absolute;
-  top: 20px;
-  width: 16px;
-  z-index: 1;
-  border: 1px solid;
+    background-color: #ededed;
+    border-radius: 50%;
+    display: block;
+    height: 16px;
+    position: absolute;
+    top: 20px;
+    width: 16px;
+    z-index: 1;
+    border: 1px solid;
 }
 
 .tdl-holder input[type="checkbox"]:checked + i::after{
-  border-radius: 50%;
+    border-radius: 50%;
     display: block;
     height: 8px;
     left: -1px;
@@ -4649,33 +4657,33 @@ article#fc_edit:hover {
     font-size: 22px;
 }
 
-.tdl-holder input[type="checkbox"]:checked ~ span{  
-  color: #586186;
-  text-decoration: line-through;
+.tdl-holder input[type="checkbox"]:checked ~ span{
+    color: #586186;
+    text-decoration: line-through;
 }
 
 .tdl-holder input[type="text"], #btn-add{
-  background-color: #f7f7f7;
-  border: none;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  color: #464f72;
-  font-size:14px;
-  margin:0;
-  padding:20px 15px;
-  width:100%;
-  -webkit-transition: all .2s linear;
-     -moz-transition: all .2s linear;
-       -o-transition: all .2s linear;
-        transition: all .2s linear;   
+    background-color: #f7f7f7;
+    border: none;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #464f72;
+    font-size:14px;
+    margin:0;
+    padding:20px 15px;
+    width:100%;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
 }
 
 .tdl-holder input[type="text"]:hover{
-  color:#4c577f;
+    color:#4c577f;
 }
 
 .tdl-holder input[type="text"]:focus{
-  color:#4c577f;
+    color:#4c577f;
 }
 
 .tdl-holder ::-webkit-input-placeholder {color: #464f72;} /* WebKit browsers */
@@ -4686,17 +4694,17 @@ article#fc_edit:hover {
 
 
 .tdl-holder li.remove{
-  -webkit-animation:collapseItem 300ms ease;
-      animation:collapseItem 300ms ease;
-  -webkit-transform-origin: 50% 0%;
+    -webkit-animation:collapseItem 300ms ease;
+    animation:collapseItem 300ms ease;
+    -webkit-transform-origin: 50% 0%;
     -ms-transform-origin: 50% 0%;
-      transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
 
 }
 
 .tdl-holder li.remove span{
-  color: #586186;
-  text-decoration: line-through;
+    color: #586186;
+    text-decoration: line-through;
 }
 
 @keyframes collapseItem {
