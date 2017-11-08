@@ -1,5 +1,5 @@
 var options = {
-    pre_empleo: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "AFMGQT-V1-4R", "AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
+    pre_empleo: ["","AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
     especifica: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "UTAH", "ZCT FEDERAL", "DLST", "RASKIN", "BIZONA"],
     rutina: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "AFMGQT-V1-4R", "AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
     reevaluacion: [""]
@@ -50,18 +50,6 @@ $("#tecnicals").change(function () {
             //servicio pre empleo
             switch (tecnicals) {
                 //tecnicas
-                case "AFMGQT-V1-2R":
-                    $(".hidden-div").attr("class","hidden-div");
-                    $("#AFMGQT_V1_2R").addClass("show-div");
-                    break;
-                case "AFMGQT-V1-3R":
-                    $(".hidden-div").attr("class","hidden-div");
-                    $("#AFMGQT_V1_3R").addClass("show-div");
-                    break;
-                case "AFMGQT-V1-4R":
-                    $(".hidden-div").attr("class","hidden-div");
-                    $("#AFMGQT_V1_4R").addClass("show-div");
-                    break;
                 case "AFMGQT-V2-2R":
                     $(".hidden-div").attr("class","hidden-div");
                     $("#AFMGQT_V2_2R").addClass("show-div");
@@ -97,21 +85,9 @@ $("#tecnicals").change(function () {
                     $(".hidden-div").attr("class","hidden-div");
                     $("#UTAH").addClass("show-div");
                     break;
-                case "ZCT FEDERAL":
-                    $(".hidden-div").attr("class","hidden-div");
-                    $("#ZCT_FEDERAL").addClass("show-div");
-                    break;
-                case "DLST":
-                    $(".hidden-div").attr("class","hidden-div");
-                    $("#DLST").addClass("show-div");
-                    break;
                 case "RASKIN":
                     $(".hidden-div").attr("class","hidden-div");
                     $("#RASKIN").addClass("show-div");
-                    break;
-                case "BIZONA":
-                    $(".hidden-div").attr("class","hidden-div");
-                    $("#BIZONA").addClass("show-div");
                     break;
                 default:
                     break;
