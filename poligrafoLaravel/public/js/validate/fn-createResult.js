@@ -1,6 +1,6 @@
 var options = {
     pre_empleo: ["","AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
-    especifica: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "UTAH", "ZCT FEDERAL", "DLST", "RASKIN", "BIZONA"],
+    especifica: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "UTAH", "RASKIN"],
     rutina: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "AFMGQT-V1-4R", "AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
     reevaluacion: [""]
 }

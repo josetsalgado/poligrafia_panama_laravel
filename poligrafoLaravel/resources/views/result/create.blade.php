@@ -920,6 +920,88 @@
                                         </div>
                                         <!-- /.Especifico  Técnica RASKIN  -->
 
+                                        <!-- DLST - 1 -->
+                                        <div class="hidden-div" id="DLST">
+                                            <div class="form-group">
+                                                <div class="col-md-12"><h4><b>DLST</b></h4></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-md-6"><h4>Verificación con 3 Gráficas </h4></div>
+                                                <div class="col-md-6"><h4>Verificación con 4 Gráficas </h4></div>
+                                            </div>
+                                            <!-- Calificacion R1 -->
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
+                                                    <div class="input-group spinner col-md-3">
+                                                        <input type="text" class="form-control" value="0">
+                                                        <div class="input-group-btn-vertical">
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
+                                                    <div class="input-group spinner col-md-3">
+                                                        <input type="text" class="form-control" value="0">
+                                                        <div class="input-group-btn-vertical">
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Calificacion R2 -->
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
+                                                    <div class="input-group spinner col-md-3">
+                                                        <input type="text" class="form-control" value="0">
+                                                        <div class="input-group-btn-vertical">
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
+                                                    <div class="input-group spinner col-md-3">
+                                                        <input type="text" class="form-control" value="0">
+                                                        <div class="input-group-btn-vertical">
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
+                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- Gran Total-->
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">GT:</label>
+                                                    <div class="input-group spinner col-md-3">
+                                                        <input type="text" class="form-control" value="0" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">GT:</label>
+                                                    <div class="input-group spinner col-md-3">
+                                                        <input type="text" class="form-control" value="0" disabled="disabled">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="alert alert-dismissible fade in" role="alert">
+                                                <h5><i><b><i class="fa fa-list-alt"></i> Cortes: GT +4/ -4 o subtotal -6
+                                                        </b><br></i></h5>
+                                            </div>
+                                            <div id="masdlst"></div>
+                                            <div class="btn-group pull-right">
+                                                <button class="btn btn-default" type="button"  data-toggle="modal" data-target="#newdlst"><i class="fa fa-plus"></i></button>
+                                            </div>
+                                            <br>
+                                            <div class="ln_solid"></div>
+                                        </div>
+                                        <!-- /. DLST -1 -->
                                         <!-- Objetivos -->
                                         <div class="form-group">
                                             <div class="col-md-12">

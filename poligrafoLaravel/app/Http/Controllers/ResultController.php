@@ -51,7 +51,9 @@ class ResultController extends Controller
      */
     public function show()
     {
-        return view('result.show');
+        $services = Service::all();
+
+        return view('result.show',compact("services"));
     }
 
     /**
