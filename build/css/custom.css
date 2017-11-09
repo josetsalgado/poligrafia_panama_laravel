@@ -4706,6 +4706,11 @@ article#fc_edit:hover {
     color: #586186;
     text-decoration: line-through;
 }
+.btn-border-tarea{
+    border: 1px solid #2d7482;
+    background: #f7f7f7;
+    height: 63px;
+}
 
 @keyframes collapseItem {
     0%    { -ms-transform: perspective(500px) rotateX(0deg);transform: perspective(500px) rotateX(0deg);  }
