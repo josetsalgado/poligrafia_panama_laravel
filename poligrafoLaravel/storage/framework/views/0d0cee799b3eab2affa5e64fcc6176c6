@@ -111,7 +111,7 @@
                         <div class="col-xs-3" id="subtitle"><b>Calificaciones con 5 Gráficas</b></div>
                     </div>
                     <br>
-
+                    <!--Desde R4 A R8-->
                     <div class="col-xs-3">
                         <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
                             <thead>
@@ -120,8 +120,6 @@
                                 <th>R5</th>
                                 <th>R7</th>
                                 <th>R8</th>
-                                <th>D1</th>
-                                <th>D2</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -130,8 +128,28 @@
                                 <td>3</td>
                                 <td>-0</td>
                                 <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde R4 A R8-->
+
+                    <div class="col-xs-3">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="15%">
+                            <thead>
+                            <tr>
+                                <th>R4</th>
+                                <th>R5</th>
+                                <th>R7</th>
+                                <th>R8</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>-0</td>
+                                <td>2</td>
                             </tr>
 
                             </tbody>
@@ -145,8 +163,6 @@
                                 <th>R5</th>
                                 <th>R7</th>
                                 <th>R8</th>
-                                <th>D1</th>
-                                <th>D2</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -155,45 +171,75 @@
                                 <td>3</td>
                                 <td>-0</td>
                                 <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
                             </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col-xs-3">
-                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
-                            <thead>
-                            <tr>
-                                <th>R4</th>
-                                <th>R5</th>
-                                <th>R7</th>
-                                <th>R8</th>
-                                <th>D1</th>
-                                <th>D2</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>3</td>
-                                <td>-0</td>
-                                <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
-                            </tr>
-
                             </tbody>
                         </table>
                     </div>
                 </div>
+
+                <!--Desde D1 A D2-->
+                <div class="col-xs-12">
+                    <div class="col-xs-1">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                            <thead>
+                            <tr>
+                                <th>D1</th>
+                                <th>D2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde D1 A D2-->
+                    <!--Desde D1 A D2-->
+                    <div class="col-xs-1 col-xs-offset-2">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                            <thead>
+                            <tr>
+                                <th>D1</th>
+                                <th>D2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde D1 A D2-->
+                    <!--Desde D1 A D2-->
+                    <div class="col-xs-1 col-xs-offset-2">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                            <thead>
+                            <tr>
+                                <th>D1</th>
+                                <th>D2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde D1 A D2-->
+                </div>
+                <br>
                 <div class="" role="alert">
                     <i><b><i class=""></i> Observaciones:</b><br>
                         El eda marginal, cuando le daba instrucciones se reia, contramedida mental y tambíen hay
                         mv de dedos del eda
                     </i>
-                </div><br><br><br>
+                </div><br>
                 <div>
                     <div class="col-xs-12">
                         <div class="col-xs-1">
@@ -217,6 +263,7 @@
                     </div>
                     <br>
 
+                    <!--Desde R4 A R8-->
                     <div class="col-xs-3">
                         <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
                             <thead>
@@ -225,8 +272,6 @@
                                 <th>R5</th>
                                 <th>R7</th>
                                 <th>R8</th>
-                                <th>D1</th>
-                                <th>D2</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -235,22 +280,20 @@
                                 <td>3</td>
                                 <td>-0</td>
                                 <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
+                    <!--FIN Desde R4 A R8-->
+
                     <div class="col-xs-3">
-                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="15%">
                             <thead>
                             <tr>
                                 <th>R4</th>
                                 <th>R5</th>
                                 <th>R7</th>
                                 <th>R8</th>
-                                <th>D1</th>
-                                <th>D2</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -259,8 +302,6 @@
                                 <td>3</td>
                                 <td>-0</td>
                                 <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
                             </tr>
 
                             </tbody>
@@ -274,8 +315,6 @@
                                 <th>R5</th>
                                 <th>R7</th>
                                 <th>R8</th>
-                                <th>D1</th>
-                                <th>D2</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -284,21 +323,75 @@
                                 <td>3</td>
                                 <td>-0</td>
                                 <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
                             </tr>
-
                             </tbody>
                         </table>
                     </div>
-
                 </div>
+
+                <!--Desde D1 A D2-->
+                <div class="col-xs-12">
+                    <div class="col-xs-1">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                            <thead>
+                            <tr>
+                                <th>D1</th>
+                                <th>D2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde D1 A D2-->
+                    <!--Desde D1 A D2-->
+                    <div class="col-xs-1 col-xs-offset-2">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                            <thead>
+                            <tr>
+                                <th>D1</th>
+                                <th>D2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde D1 A D2-->
+                    <!--Desde D1 A D2-->
+                    <div class="col-xs-1 col-xs-offset-2">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                            <thead>
+                            <tr>
+                                <th>D1</th>
+                                <th>D2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde D1 A D2-->
+                </div>
+                <br>
                 <div class="" role="alert">
                     <i><b><i class=""></i> Observaciones:</b><br>
                         El eda marginal, cuando le daba instrucciones se reia, contramedida mental y tambíen hay
                         mv de dedos del eda
                     </i>
-                </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>><br><br>><br><br>
+                </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>><br><br>><br><br>
                 <div>
                     <div class="col-xs-12">
                         <div class="col-xs-1">
@@ -322,6 +415,7 @@
                     </div>
                     <br>
 
+                    <!--Desde R4 A R8-->
                     <div class="col-xs-3">
                         <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
                             <thead>
@@ -330,8 +424,6 @@
                                 <th>R5</th>
                                 <th>R7</th>
                                 <th>R8</th>
-                                <th>D1</th>
-                                <th>D2</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -340,22 +432,20 @@
                                 <td>3</td>
                                 <td>-0</td>
                                 <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
                             </tr>
                             </tbody>
                         </table>
                     </div>
+                    <!--FIN Desde R4 A R8-->
+
                     <div class="col-xs-3">
-                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="15%">
                             <thead>
                             <tr>
                                 <th>R4</th>
                                 <th>R5</th>
                                 <th>R7</th>
                                 <th>R8</th>
-                                <th>D1</th>
-                                <th>D2</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -364,8 +454,6 @@
                                 <td>3</td>
                                 <td>-0</td>
                                 <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
                             </tr>
 
                             </tbody>
@@ -379,8 +467,6 @@
                                 <th>R5</th>
                                 <th>R7</th>
                                 <th>R8</th>
-                                <th>D1</th>
-                                <th>D2</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -389,21 +475,76 @@
                                 <td>3</td>
                                 <td>-0</td>
                                 <td>2</td>
-                                <td>0</td>
-                                <td>0</td>
                             </tr>
-
                             </tbody>
                         </table>
                     </div>
                 </div>
 
+                <!--Desde D1 A D2-->
+                <div class="col-xs-12">
+                    <div class="col-xs-1">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                            <thead>
+                            <tr>
+                                <th>D1</th>
+                                <th>D2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde D1 A D2-->
+                    <!--Desde D1 A D2-->
+                    <div class="col-xs-1 col-xs-offset-2">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                            <thead>
+                            <tr>
+                                <th>D1</th>
+                                <th>D2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde D1 A D2-->
+                    <!--Desde D1 A D2-->
+                    <div class="col-xs-1 col-xs-offset-2">
+                        <table id="datatable-responsive4" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="33%">
+                            <thead>
+                            <tr>
+                                <th>D1</th>
+                                <th>D2</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--FIN Desde D1 A D2-->
+                </div>
+                <br>
                 <div class="" role="alert">
                     <i><b><i class=""></i> Observaciones:</b><br>
                         El eda marginal, cuando le daba instrucciones se reia, contramedida mental y tambíen hay
                         mv de dedos del eda
                     </i>
                 </div>
+                
             </div>
         </div>
 

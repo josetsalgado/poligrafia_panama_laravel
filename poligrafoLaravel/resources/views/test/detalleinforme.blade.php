@@ -71,46 +71,61 @@
                                                 <div class="col-md-2 bordertab"><a class="">R5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R7</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">R4</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R7</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">R4</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R7</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">1</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-3</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">2</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-1</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">3</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-1</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">3</a></div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                            </div>
+                                            <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                             </div>
@@ -142,46 +157,61 @@
                                                 <div class="col-md-2 bordertab"><a class="">R5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R7</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">R4</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R7</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">R4</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R7</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">1</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-3</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">2</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-1</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">3</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-1</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">3</a></div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                            </div>
+                                            <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                             </div>
@@ -213,46 +243,61 @@
                                                 <div class="col-md-2 bordertab"><a class="">R5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R7</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">R4</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R7</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">R4</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R7</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">R8</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">1</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-3</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">2</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-1</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">3</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
-                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-5</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">-1</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">3</a></div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">D1</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">D2</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                                <div class="col-md-2 bordertab"><a class="">0</a></div>
+                                            </div>
+                                            <div class="col-md-4">
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                                 <div class="col-md-2 bordertab"><a class="">0</a></div>
                                             </div>
@@ -268,7 +313,7 @@
                             </li>
                             <div class="row no-print">
                                 <div class="col-xs-12">
-                                    <a href="pdf_test"> <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> PDF</button></a>
+                                    <a href="pdf_test" target="_blank"> <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> PDF</button></a>
                                 </div>
                             </div>
                         </ul>
