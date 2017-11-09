@@ -25,7 +25,7 @@
                             <address>
                                 <?php foreach($budgets as $budget): ?>
                                         <p style="font-weight: bold;">Atencion: <?php echo e(isset($budget->client_id[0]->name_client) ? $budget->client_id[0]->name_client : ''); ?></p>
-                                        <p style="font-weight: bold; margin-left: 65px"><?php echo e(isset($budget->company_id[0]->name_company) ? $budget->company_id[0]->name_company : ''); ?></p>
+                                        <p style="font-weight: bold; margin-left: 70px"><?php echo e(isset($budget->company_id[0]->name_company) ? $budget->company_id[0]->name_company : ''); ?></p>
                                 <?php endforeach; ?>
                                 <br>
                             </address>

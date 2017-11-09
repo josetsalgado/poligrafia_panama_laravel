@@ -24,10 +24,7 @@
                     <div class="row invoice-info">
                         <div class="col-sm-6 invoice-col">
                             <address>
-                               {{-- @foreach($budgets as $budget)
-                                    <p style="font-weight: bold;">Atencion: {{ $budget->client_id[0]->name_client  or '' }}</p>
-                                    <p style="font-weight: bold;">{{ $budget->company_id[0]->name_company or '' }}</p>
-                                @endforeach--}}
+
                             </address>
                         </div>
                         <!-- /.col -->
@@ -206,7 +203,6 @@
                                 if ($key == "empresa") {
                                     $company = $arrayRequest;
                                 }
-
                                 if ($key == "client") {
                                     $client = $arrayRequest;
                                 }
@@ -233,10 +229,12 @@
                                     <td>B/.{{ $price }}</td>
                                 </tr>
 
+
+
                                 <?php
                                 $total = $total + $price;
                                 $price = '';
-                                $quantity = '';
+
                                 }
                                 }
                                 ?>
@@ -267,7 +265,7 @@
                                     </tr>
                                     <tr>
                                         <th>TOTAL</th>
-                                        <td>B/. {{ $total }}</td>
+                                        <td>B/.{{ $total }}</td>
                                     </tr>
                                 </tbody>
                             </table>

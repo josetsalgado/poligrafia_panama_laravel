@@ -25,7 +25,7 @@
                             <address>
                                 @foreach($budgets as $budget)
                                         <p style="font-weight: bold;">Atencion: {{ $budget->client_id[0]->name_client  or '' }}</p>
-                                        <p style="font-weight: bold; margin-left: 65px">{{ $budget->company_id[0]->name_company or '' }}</p>
+                                        <p style="font-weight: bold; margin-left: 70px">{{ $budget->company_id[0]->name_company or '' }}</p>
                                 @endforeach
                                 <br>
                             </address>

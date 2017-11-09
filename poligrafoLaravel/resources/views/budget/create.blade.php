@@ -228,6 +228,7 @@ console.log(serielize);
     });*/
 /*alertify.success('Su mensaje fue enviado de forma correcta');*/
 /*});*/
+
  </script>
 
 

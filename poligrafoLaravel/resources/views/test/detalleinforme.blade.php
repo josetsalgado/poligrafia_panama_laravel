@@ -313,7 +313,7 @@
                             </li>
                             <div class="row no-print">
                                 <div class="col-xs-12">
-                                    <a href="pdf_test" target="_blank"> <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> PDF</button></a>
+                                    <a href="pdf_test"> <button class="btn btn-primary pull-right" style="margin-right: 5px;"><i class="fa fa-download"></i> PDF</button></a>
                                 </div>
                             </div>
                         </ul>

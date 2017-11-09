@@ -24,10 +24,7 @@
                     <div class="row invoice-info">
                         <div class="col-sm-6 invoice-col">
                             <address>
-                               <?php /* <?php foreach($budgets as $budget): ?>
-                                    <p style="font-weight: bold;">Atencion: <?php echo e(isset($budget->client_id[0]->name_client) ? $budget->client_id[0]->name_client : ''); ?></p>
-                                    <p style="font-weight: bold;"><?php echo e(isset($budget->company_id[0]->name_company) ? $budget->company_id[0]->name_company : ''); ?></p>
-                                <?php endforeach; ?>*/ ?>
+                                
                             </address>
                         </div>
                         <!-- /.col -->
@@ -206,7 +203,6 @@
                                 if ($key == "empresa") {
                                     $company = $arrayRequest;
                                 }
-
                                 if ($key == "client") {
                                     $client = $arrayRequest;
                                 }
@@ -233,10 +229,12 @@
                                     <td>B/.<?php echo e($price); ?></td>
                                 </tr>
 
+
+
                                 <?php
                                 $total = $total + $price;
                                 $price = '';
-                                $quantity = '';
+
                                 }
                                 }
                                 ?>
@@ -267,7 +265,7 @@
                                     </tr>
                                     <tr>
                                         <th>TOTAL</th>
-                                        <td>B/. <?php echo e($total); ?></td>
+                                        <td>B/.<?php echo e($total); ?></td>
                                     </tr>
                                 </tbody>
                             </table>
