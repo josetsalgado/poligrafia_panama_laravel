@@ -27,6 +27,7 @@
                         </div>
                         <div class="x_content">
                             <form class="form-horizontal form-label-left input_mask">
+
                                 <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
                                     <div class="profile_img">
                                         <div id="crop-avatar">
@@ -72,7 +73,7 @@
                                             <button type="submit" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             </form>
                         </div>
                     </div>
