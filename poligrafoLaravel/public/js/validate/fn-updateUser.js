@@ -1,9 +1,9 @@
 $(document).ready(function(){
     $("#createUser").validate({
-        
+
         wrapper: "div",
         errorClass: "text-danger",
-        
+
 	rules: {
             name: { required:true },
             lastname: { required:true },
@@ -16,17 +16,17 @@ $(document).ready(function(){
 	messages: {
             name: { required: "El campo nombre es obligatorio." },
             lastname: { required: "El campo apellido es obligatorio." },
-            email: { 
+            email: {
                     required: "El campo email es obligatorio.",
                     email: "Debe ingresar un campo con formato correo",
                 },
-            tel: { 
+            tel: {
                     required: "El campo telefono es obligatorio.",
                     number: "Debe ingresar un campo con formato correo",
                 },
             rol: { required: "El campo rol es obligatorio." },
             password: { required: "El campo clave es obligatorio." },
-            password_confirmation: { 
+            password_confirmation: {
                 required: "El campo confirmar clave es obligatorio.",
                 equalTo: "Este campo debe ser igual que el campo clave",
             },
@@ -40,6 +40,8 @@ $(document).ready(function(){
 	        data: dataString,
 	        success: function(data) {
                     $(".close").click();
+                    alertify.success('Datos actualizados');
+                    $("#load_update_user").load("show_user #load_update_user");
 	       	},error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.
@@ -66,7 +68,7 @@ $(document).ready(function(){
                 }
             });
             //$('#createUser')[0].reset();
-	}//cerrado de la accion del submiting  
-    });//cerrada validating jquery 
+	}//cerrado de la accion del submiting
+    });//cerrada validating jquery
 }); //cerrado de document ready
 

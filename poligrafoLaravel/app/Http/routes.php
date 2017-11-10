@@ -137,7 +137,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/quality_test', 'ResultController@show');
 
     //editar perfil de usuario
-    Route::get('/edit_user', 'EditUserController@edit');
+    Route::get('/edit_user/{id}', 'EditUserController@edit');
 
     //informe de Prueba de resultados
     Route::get('/test_report', 'TestReportController@show');

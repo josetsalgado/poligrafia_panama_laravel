@@ -2,18 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f08d111e-a587-4056-9ac7-f93d3a00cdbd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-modalCreateBudget.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/BudgetController.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/BudgetController.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/create.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/modalCreateBudget.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/modalCreateBudget.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/modalShowBudget.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/modalShowBudget.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/detalleinforme.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/detalleinforme.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/0d0cee799b3eab2affa5e64fcc6176c6" afterPath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/0d0cee799b3eab2affa5e64fcc6176c6" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/19b74f0cbde471019b7cd255d91f577c" afterPath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/19b74f0cbde471019b7cd255d91f577c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/1bd85c3414cddade56a60f799d4d1db7" afterPath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/1bd85c3414cddade56a60f799d4d1db7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/3f313799d4452f93e818304eb5014004" afterPath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/3f313799d4452f93e818304eb5014004" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateUser.js" afterPath="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateUser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/company/create.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/company/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/resources/views/user/show.blade.php" afterPath="$PROJECT_DIR$/poligrafoLaravel/resources/views/user/show.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/599a3733150c63e6dcb29e2a6b8a4931" afterPath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/599a3733150c63e6dcb29e2a6b8a4931" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/663bff1566bd27e6bf1c9c96c0680880" afterPath="$PROJECT_DIR$/poligrafoLaravel/storage/framework/views/663bff1566bd27e6bf1c9c96c0680880" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,95 +19,102 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="BudgetController.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/BudgetController.php">
+    <leaf>
+      <file leaf-file-name="edit.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/user/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fn-createBudget.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-createBudget.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1510257263636" expanded="true" signature="2886:2893" ph="×" />
+                <marker date="1508942880000" expanded="true" signature="190:244" ph="..." />
+                <marker date="1508942880000" expanded="true" signature="433:447" ph="..." />
+                <marker date="1508942880000" expanded="true" signature="500:514" ph="..." />
+                <marker date="1508942880000" expanded="true" signature="716:732" ph="..." />
+                <marker date="1508942880000" expanded="true" signature="1033:1054" ph="..." />
+                <marker date="1508942880000" expanded="true" signature="1365:1382" ph="..." />
+                <marker date="1508942880000" expanded="true" signature="1696:1711" ph="..." />
+                <marker date="1508942880000" expanded="true" signature="2008:2026" ph="..." />
+                <marker date="1508942880000" expanded="true" signature="2032:2052" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modalCreateBudget.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/modalCreateBudget.blade.php">
+      <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/user/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="141">
+              <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="51" />
               <folding>
-                <marker date="1510257264396" expanded="true" signature="1307:1328" ph="..." />
-                <marker date="1510257264396" expanded="true" signature="15567:15578" ph="..." />
-                <marker date="1510257264396" expanded="true" signature="15583:15597" ph="..." />
-                <marker date="1510257264396" expanded="true" signature="15650:15668" ph="..." />
-                <marker date="1510257264396" expanded="true" signature="15721:15729" ph="..." />
-                <marker date="1510257264396" expanded="true" signature="17321:17329" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/create.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2078">
-              <caret line="91" column="81" lean-forward="false" selection-start-line="91" selection-start-column="81" selection-end-line="91" selection-end-column="81" />
-              <folding>
-                <marker date="1510257190752" expanded="true" signature="9:26" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="37:46" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="1132:1146" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="1625:1647" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="1653:1677" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="3856:3878" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="3902:3924" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="3951:3975" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="4075:4099" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="4338:4360" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="4381:4403" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="4560:4582" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="4605:4627" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="4640:4662" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="5049:5071" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="5089:5111" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="5130:5155" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="5308:5330" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="5355:5377" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="5396:5421" ph="..." />
-                <marker date="1510257190752" expanded="true" signature="5435:5460" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="9:26" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="37:46" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="1206:1219" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="1281:1299" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="1449:1475" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="1491:1505" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="1674:1698" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="1706:1718" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="2426:2443" ph="..." />
+                <marker date="1510322231910" expanded="true" signature="2797:2808" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="show.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/show.blade.php">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/company/show.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1512">
-              <caret line="84" column="27" lean-forward="true" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
+            <state relative-caret-position="-162">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1508962190000" expanded="true" signature="9:26" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="37:46" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="1762:1795" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="1841:1885" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="1931:1974" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2020:2064" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2110:2154" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2200:2240" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2286:2316" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2517:2537" ph="..." />
-                <marker date="1508962190000" expanded="true" signature="2643:2663" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="9:26" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="37:46" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="2264:2294" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="2340:2369" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="2583:2605" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="2783:2812" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="2858:2889" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="4195:4217" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="4254:4279" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="4395:4417" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="4442:4464" ph="..." />
+                <marker date="1509718039724" expanded="true" signature="4588:4615" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fn-updateClient.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateClient.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="27" column="97" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="27" selection-end-column="97" />
+              <folding>
+                <marker date="1510322278454" expanded="true" signature="1415:1422" ph="×" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fn-updateCompany.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateCompany.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+              <folding>
+                <marker date="1510322275114" expanded="true" signature="1493:1500" ph="×" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fn-updateUser.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateUser.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="43" column="79" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="43" selection-end-column="79" />
+              <folding>
+                <marker date="1510322231866" expanded="true" signature="2252:2259" ph="×" />
               </folding>
             </state>
           </provider>
@@ -122,8 +123,38 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="103" column="34" lean-forward="false" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="34" />
+            <state relative-caret-position="239">
+              <caret line="139" column="31" lean-forward="false" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClientController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/ClientController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1404">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CompanyController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/CompanyController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="147" column="64" lean-forward="true" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="64" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/UserController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -133,7 +164,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pdf</find>
       <find>crea</find>
       <find>empresa</find>
       <find>nav navbar-right panel_toolbox</find>
@@ -163,6 +193,7 @@
       <find>`</find>
       <find>ver</find>
       <find>modal</find>
+      <find>show</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -177,11 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/homework/homework.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/mail.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/AccountStatus/document.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/report/accountStatus.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/ReportAccountController.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/report/reportpdf.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/quotes/getClient.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/mailbudget/mailbudget.php" />
@@ -198,7 +224,6 @@
         <option value="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/jquery.validate.js" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-UpdateAppoiment.js" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/company/show.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateCompany.js" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/company/editCompany.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/CompanyController.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/.env" />
@@ -221,13 +246,19 @@
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/pdfinforme.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/TestReportController.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/test/detalleinforme.blade.php" />
-        <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-modalCreateBudget.js" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/modalShowBudget.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/create.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/modalCreateBudget.blade.php" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-createBudget.js" />
         <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/BudgetController.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/company/create.blade.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/resources/views/user/show.blade.php" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateUser.js" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateCompany.js" />
+        <option value="$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateClient.js" />
       </list>
     </option>
   </component>
@@ -260,6 +291,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -284,6 +316,106 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="poligrafoLaravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafoLaravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafoLaravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="user" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafoLaravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="company" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="poligrafoLaravel" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="client" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -337,61 +469,12 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="poligrafo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="poligrafo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="poligrafoLaravel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="validate" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="poligrafo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="poligrafo" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="poligrafoLaravel" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -537,34 +620,35 @@
       <workItem from="1509712843746" duration="32221000" />
       <workItem from="1510060198888" duration="28000" />
       <workItem from="1510145707189" duration="5266000" />
-      <workItem from="1510153287445" duration="30577000" />
+      <workItem from="1510153287445" duration="32740000" />
+      <workItem from="1510316955763" duration="3910000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="316808000" />
+    <option name="totallyTimeSpent" value="322881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1362" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28970587" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24485295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -574,18 +658,18 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28970587" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24485295" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32884902" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -599,76 +683,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-UpdateAppoiment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/QuotesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="257" column="8" lean-forward="false" selection-start-line="257" selection-start-column="8" selection-end-line="257" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/client/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/company/editCompany.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="23" column="43" lean-forward="false" selection-start-line="23" selection-start-column="43" selection-end-line="23" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/company/show.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="14" column="64" lean-forward="true" selection-start-line="14" selection-start-column="64" selection-end-line="14" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/mailbudget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4320">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/mail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="78" column="54" lean-forward="false" selection-start-line="78" selection-start-column="54" selection-end-line="78" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/mail.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1433">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/CompanyController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="148" column="5" lean-forward="true" selection-start-line="147" selection-start-column="8" selection-end-line="148" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/MailController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -746,13 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateCompany.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="31" column="98" lean-forward="true" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/service/show.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1278">
@@ -767,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateClient.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Company.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -785,7 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="4717" column="1" lean-forward="false" selection-start-line="4717" selection-start-column="1" selection-end-line="4717" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -801,18 +800,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-432">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1509642987318" expanded="true" signature="411:433" ph="..." />
-            <marker date="1509642987318" expanded="true" signature="488:537" ph="..." />
-            <marker date="1509642987318" expanded="true" signature="611:661" ph="..." />
-            <marker date="1509642987318" expanded="true" signature="732:768" ph="..." />
-            <marker date="1509642987318" expanded="true" signature="841:881" ph="..." />
-            <marker date="1509642987318" expanded="true" signature="962:995" ph="..." />
-            <marker date="1509642987318" expanded="true" signature="1543:1551" ph="..." />
-            <marker date="1509642987318" expanded="true" signature="1760:1780" ph="..." />
-            <marker date="1509642987318" expanded="true" signature="1857:1871" ph="..." />
-            <marker date="1509642987318" expanded="true" signature="2074:2088" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,10 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-702">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1508942880000" expanded="true" signature="9:26" ph="..." />
-            <marker date="1508942880000" expanded="true" signature="37:46" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,12 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="412">
           <caret line="1003" column="59" lean-forward="true" selection-start-line="921" selection-start-column="0" selection-end-line="1003" selection-end-column="59" />
-          <folding>
-            <marker date="1510233826413" expanded="true" signature="9:26" ph="..." />
-            <marker date="1510233826413" expanded="true" signature="37:46" ph="..." />
-            <marker date="1510233826413" expanded="true" signature="5699:5723" ph="..." />
-            <marker date="1510233826413" expanded="true" signature="5729:5753" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -852,12 +829,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="281">
           <caret line="929" column="41" lean-forward="true" selection-start-line="929" selection-start-column="41" selection-end-line="929" selection-end-column="41" />
-          <folding>
-            <marker date="1510234569329" expanded="true" signature="9:26" ph="..." />
-            <marker date="1510234569329" expanded="true" signature="37:46" ph="..." />
-            <marker date="1510234569329" expanded="true" signature="6187:6211" ph="..." />
-            <marker date="1510234569329" expanded="true" signature="6217:6241" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -865,29 +836,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="140" column="20" lean-forward="false" selection-start-line="140" selection-start-column="20" selection-end-line="140" selection-end-column="20" />
-          <folding>
-            <marker date="1510174204108" expanded="true" signature="9:26" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="37:46" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="419:437" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="635:660" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="1993:2025" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="2777:2815" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="2850:2888" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="2893:2936" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="3003:3035" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="3081:3112" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="4616:4652" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="5403:5445" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="5480:5522" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="5527:5574" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="5641:5677" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="5723:5758" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="7915:7929" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="8434:8456" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="8462:8486" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="11789:11811" ph="..." />
-            <marker date="1510174204108" expanded="true" signature="11817:11841" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -895,24 +843,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/client/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding>
-            <marker date="1508942880000" expanded="true" signature="189:243" ph="..." />
-            <marker date="1508942880000" expanded="true" signature="435:449" ph="..." />
-            <marker date="1508942880000" expanded="true" signature="502:531" ph="..." />
-            <marker date="1508942880000" expanded="true" signature="732:757" ph="..." />
-            <marker date="1508942880000" expanded="true" signature="1057:1081" ph="..." />
-            <marker date="1508942880000" expanded="true" signature="1392:1418" ph="..." />
-            <marker date="1508942880000" expanded="true" signature="1727:1749" ph="..." />
-            <marker date="1508942880000" expanded="true" signature="2020:2038" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -920,11 +850,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="530">
           <caret line="315" column="54" lean-forward="false" selection-start-line="315" selection-start-column="54" selection-end-line="315" selection-end-column="54" />
-          <folding>
-            <element signature="e#23890#23916#0#HTML" expanded="true" />
-            <marker date="1510239988857" expanded="true" signature="9:26" ph="..." />
-            <marker date="1510239988857" expanded="true" signature="37:46" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -932,9 +857,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="543" column="43" lean-forward="true" selection-start-line="543" selection-start-column="43" selection-end-line="543" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#7;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -950,11 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-334">
           <caret line="77" column="109" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="109" />
-          <folding>
-            <marker date="1510235134033" expanded="true" signature="369:391" ph="..." />
-            <marker date="1510235134033" expanded="true" signature="11024:11046" ph="..." />
-            <marker date="1510235134033" expanded="true" signature="15364:15373" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -962,7 +879,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="1" column="40" lean-forward="false" selection-start-line="1" selection-start-column="40" selection-end-line="1" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,7 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -978,16 +893,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="90" column="31" lean-forward="true" selection-start-line="90" selection-start-column="31" selection-end-line="90" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#table#0;n#div#0;n#div#3;n#div#3;n#div#1;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1510156053421" expanded="true" signature="3342:3385" ph="..." />
-            <marker date="1510156053421" expanded="true" signature="3466:3510" ph="..." />
-            <marker date="1510156053421" expanded="true" signature="18929:18955" ph="..." />
-            <marker date="1510156053421" expanded="true" signature="18960:18998" ph="..." />
-            <marker date="1510156053421" expanded="true" signature="19136:19160" ph="..." />
-            <marker date="1510156053421" expanded="true" signature="19298:19321" ph="..." />
-            <marker date="1510156053421" expanded="true" signature="21032:21059" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -995,26 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="28" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#address#0;n#div#0;n#div#0;n#section#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <marker date="1510253484544" expanded="true" signature="1161:1204" ph="..." />
-            <marker date="1510253484544" expanded="true" signature="1301:1311" ph="..." />
-            <marker date="1510253484544" expanded="true" signature="1301:1345" ph="..." />
-            <marker date="1510253484544" expanded="true" signature="1344:1345" ph="..." />
-            <marker date="1510253484544" expanded="true" signature="1721:1766" ph="..." />
-            <marker date="1510253484544" expanded="true" signature="14429:14455" ph="..." />
-            <marker date="1510253484544" expanded="true" signature="14460:14498" ph="..." />
-            <marker date="1510253484544" expanded="true" signature="14556:14580" ph="..." />
-            <marker date="1510253484544" expanded="true" signature="14638:14661" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="103" column="34" lean-forward="false" selection-start-line="103" selection-start-column="18" selection-end-line="103" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,62 +907,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
           <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/modalCreateBudget.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <marker date="1510257264396" expanded="true" signature="1307:1328" ph="..." />
-            <marker date="1510257264396" expanded="true" signature="15567:15578" ph="..." />
-            <marker date="1510257264396" expanded="true" signature="15583:15597" ph="..." />
-            <marker date="1510257264396" expanded="true" signature="15650:15668" ph="..." />
-            <marker date="1510257264396" expanded="true" signature="15721:15729" ph="..." />
-            <marker date="1510257264396" expanded="true" signature="17321:17329" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2078">
-          <caret line="91" column="81" lean-forward="false" selection-start-line="91" selection-start-column="81" selection-end-line="91" selection-end-column="81" />
-          <folding>
-            <marker date="1510257190752" expanded="true" signature="9:26" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="37:46" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="1132:1146" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="1625:1647" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="1653:1677" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="3856:3878" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="3902:3924" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="3951:3975" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="4075:4099" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="4338:4360" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="4381:4403" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="4560:4582" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="4605:4627" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="4640:4662" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="5049:5071" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="5089:5111" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="5130:5155" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="5308:5330" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="5355:5377" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="5396:5421" ph="..." />
-            <marker date="1510257190752" expanded="true" signature="5435:5460" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-createBudget.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
-          <folding>
-            <marker date="1510257263636" expanded="true" signature="2886:2893" ph="×" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1085,19 +914,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1512">
           <caret line="84" column="27" lean-forward="true" selection-start-line="84" selection-start-column="27" selection-end-line="84" selection-end-column="27" />
-          <folding>
-            <marker date="1508962190000" expanded="true" signature="9:26" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="37:46" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="1762:1795" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="1841:1885" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="1931:1974" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2020:2064" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2110:2154" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2200:2240" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2286:2316" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2517:2537" ph="..." />
-            <marker date="1508962190000" expanded="true" signature="2643:2663" ph="..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2078">
+          <caret line="91" column="81" lean-forward="false" selection-start-line="91" selection-start-column="81" selection-end-line="91" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/budget/modalCreateBudget.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-createBudget.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="37" lean-forward="false" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1106,6 +943,187 @@
         <state relative-caret-position="54">
           <caret line="51" column="42" lean-forward="false" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/company/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="33" column="149" lean-forward="false" selection-start-line="33" selection-start-column="149" selection-end-line="33" selection-end-column="149" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-createUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-540">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1508942880000" expanded="true" signature="2129:2136" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/user/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1123">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1508942880000" expanded="true" signature="9:26" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="37:46" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="329:384" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="1050:1064" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="1771:1812" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="2135:2159" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="2307:2352" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="2685:2713" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="2861:2903" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="3231:3256" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="3404:3444" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="3778:3801" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="3948:3988" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="4562:4585" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="4733:4778" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="5111:5139" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="5286:5344" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="5711:5752" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/client/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-75">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding>
+            <marker date="1508942880000" expanded="true" signature="189:243" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="435:449" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="502:531" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="732:757" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="1057:1081" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="1392:1418" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="1727:1749" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="2020:2038" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/ClientController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1404">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/CompanyController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="147" column="64" lean-forward="true" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/Controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="139" column="31" lean-forward="false" selection-start-line="139" selection-start-column="31" selection-end-line="139" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/user/edit.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1508942880000" expanded="true" signature="190:244" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="433:447" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="500:514" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="716:732" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="1033:1054" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="1365:1382" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="1696:1711" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="2008:2026" ph="..." />
+            <marker date="1508942880000" expanded="true" signature="2032:2052" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/company/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1509718039724" expanded="true" signature="9:26" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="37:46" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="2264:2294" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="2340:2369" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="2583:2605" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="2783:2812" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="2858:2889" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="4195:4217" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="4254:4279" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="4395:4417" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="4442:4464" ph="..." />
+            <marker date="1509718039724" expanded="true" signature="4588:4615" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateCompany.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding>
+            <marker date="1510322275114" expanded="true" signature="1493:1500" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateClient.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="27" column="97" lean-forward="true" selection-start-line="26" selection-start-column="19" selection-end-line="27" selection-end-column="97" />
+          <folding>
+            <marker date="1510322278454" expanded="true" signature="1415:1422" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/public/js/validate/fn-updateUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="43" column="79" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="43" selection-end-column="79" />
+          <folding>
+            <marker date="1510322231866" expanded="true" signature="2252:2259" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/poligrafoLaravel/resources/views/user/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="20" column="51" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="51" />
+          <folding>
+            <marker date="1510322231910" expanded="true" signature="9:26" ph="..." />
+            <marker date="1510322231910" expanded="true" signature="37:46" ph="..." />
+            <marker date="1510322231910" expanded="true" signature="1206:1219" ph="..." />
+            <marker date="1510322231910" expanded="true" signature="1281:1299" ph="..." />
+            <marker date="1510322231910" expanded="true" signature="1449:1475" ph="..." />
+            <marker date="1510322231910" expanded="true" signature="1491:1505" ph="..." />
+            <marker date="1510322231910" expanded="true" signature="1674:1698" ph="..." />
+            <marker date="1510322231910" expanded="true" signature="1706:1718" ph="..." />
+            <marker date="1510322231910" expanded="true" signature="2426:2443" ph="..." />
+            <marker date="1510322231910" expanded="true" signature="2797:2808" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
