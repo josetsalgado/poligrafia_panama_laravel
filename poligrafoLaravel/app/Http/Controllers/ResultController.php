@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Service;
+use App\Company;
+use DB;
 
 class ResultController extends Controller
 {
@@ -28,8 +30,12 @@ class ResultController extends Controller
     public function create()
     {
         $services = Service::all();
-        
-        return view('result.create',compact("services"));
+         $Company = Company::all();
+
+
+      
+       
+        return view('result.create',compact("services","Company"));
     }
 
     /**
@@ -52,10 +58,23 @@ class ResultController extends Controller
     public function show()
     {
         $services = Service::all();
+        $Company = Company::all();
 
-        return view('result.show',compact("services"));
+
+
+
+        return view('result.show',compact("services","Company"));
     }
 
+ public function getClientEvaluated($code)
+    {
+        $companys = DB::table('itcp_clients_evaluated')
+                ->join('itcp_companys', 'itcp_clients_evaluated.id_company', '=', 'itcp_companys.id_company')
+                ->where('itcp_companys.id_company', '=', $code)
+                ->select('*')
+                ->get();
+        return view("quotes.getClient", compact("companys"));    
+    }
     /**
      * Show the form for editing the specified resource.
      *
