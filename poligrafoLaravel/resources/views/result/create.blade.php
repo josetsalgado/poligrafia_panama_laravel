@@ -48,26 +48,22 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
-                                            <input type="text" class="form-control has-feedback-left" id="poligrafista" name="poligrafista" placeholder="Poligrafista" disabled="disabled">
+                                            <input type="text" class="form-control has-feedback-left" id="poligrafista" name="poligrafista" placeholder="{{ Auth::user()->name }}" disabled="disabled">
                                             <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
                                         </div>
                                         <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
-                                            <select id="pais" class="form-control selc-empresa" required>
+                                            <select id="empresa" name="empresa" class="form-control selc-empresa" required>
                                                 <option value="">Empresa</option>
-                                                <option value="empresa1">Coca cola</option>
-                                                <option value="empresa2">B&G</option>
-                                                <option value="empresa3">Pepsi</option>
+                                                @foreach ($Company as $key => $value)
+                                                <option value="{{$value['id_company']}}">{{strtoupper($value['name_company'])}}</option>
+                                                @endforeach
                                             </select>
                                             <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
                                         </div>
                                         <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
-                                            <select id="pais" class="form-control selc-empresa" required>
-                                                <option value="">Evaluado</option>
-                                                <option value="evaluado1">Evaluado 1</option>
-                                                <option value="evaluado2">Evaluado 2</option>
-                                                <option value="evaluado3">Evaluado 3</option>
-                                                <option value="evaluado4">Evaluado 4</option>
-                                                <option value="evaluado5">Evaluado 5</option>
+                                            <select id="client" name="client" class="form-control selc-empresa" required>
+                                               <option value="">Seleccione</option>
+                                                
                                             </select>
                                             <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                                         </div>
@@ -1108,5 +1104,9 @@
 
 
     </script>
+
+    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+
+    <script src="js/validate/fn-createAppoiment.js"></script>
 
 @stop

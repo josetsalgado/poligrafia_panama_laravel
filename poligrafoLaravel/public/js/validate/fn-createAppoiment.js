@@ -11,6 +11,10 @@ $(document).ready(function () {
             if (resultado == false)
             {
                 alert("Usted debe crear un cliente asociado a esta compañia");
+
+                $("#client").attr("disabled", true);
+                $("#client").empty().append(' <option value="">Seleccione</option>');
+
             }
             else
             {
