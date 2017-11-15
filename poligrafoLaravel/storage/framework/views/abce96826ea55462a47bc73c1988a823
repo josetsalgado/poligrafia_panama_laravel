@@ -990,7 +990,7 @@
                                                 </div>
                                             </div>
                                             <div class="alert alert-dismissible fade in" role="alert">
-                                                <h5><i><b><i class="fa fa-list-alt"></i> Cortes: GT +4/ -4 o subtotal -6
+                                                <h5><i><b><i class="fa fa-list-alt"></i> Cortes: +2/-3
                                                         </b><br></i></h5>
                                             </div>
                                             <div id="masdlst"></div>
@@ -1000,7 +1000,7 @@
                                             <br>
                                             <div class="ln_solid"></div>
                                         </div>
-                                        <!-- /. DLST -1 -->
+                                        <!-- /. DLST -1. -->
                                         <!-- Objetivos -->
                                         <div class="form-group">
                                             <div class="col-md-12">

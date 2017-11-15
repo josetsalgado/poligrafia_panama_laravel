@@ -1001,7 +1001,7 @@
                                             <br>
                                             <div class="ln_solid"></div>
                                         </div>
-                                        <!-- /. DLST -1. -->
+                                        <!-- /. DLST -1 -->
                                         <!-- Objetivos -->
                                         <div class="form-group">
                                             <div class="col-md-12">
