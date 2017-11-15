@@ -1,7 +1,7 @@
 var options = {
     pre_empleo: ["","AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
     especifica: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "UTAH", "RASKIN"],
-    rutina: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "AFMGQT-V1-4R", "AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
+    rutina: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
     reevaluacion: [""]
 }
 
@@ -104,10 +104,6 @@ $("#tecnicals").change(function () {
                 case "AFMGQT-V1-3R":
                     $(".hidden-div").attr("class","hidden-div");
                     $("#AFMGQT_V1_3R").addClass("show-div");
-                    break;
-                case "AFMGQT-V1-4R":
-                    $(".hidden-div").attr("class","hidden-div");
-                    $("#AFMGQT_V1_4R").addClass("show-div");
                     break;
                 case "AFMGQT-V2-2R":
                     $(".hidden-div").attr("class","hidden-div");
