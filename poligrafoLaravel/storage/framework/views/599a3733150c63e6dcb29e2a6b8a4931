@@ -1,5 +1,4 @@
-@extends('layouts.default')
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div id="form-errors"></div>
 
     <div class="">
@@ -20,7 +19,7 @@
                     </div>
                     <div class="x_content">
                         <form id="createCompany" name="createCompany" class="form-horizontal form-label-left input_mask">
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                             <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
                                 <div class="profile_img">
                                     <div id="crop-avatar">
@@ -113,4 +112,5 @@
 
 
     <script src="js/validate/fn-createCompany.js"></script>
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
