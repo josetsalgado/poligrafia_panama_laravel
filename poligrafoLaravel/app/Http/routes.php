@@ -203,10 +203,15 @@ Route::group(['middleware' => 'auth'], function () {
     //VIsta interna de tareas
     Route::get('homework','HomeworkController@show') ;
 
+     //tareas
+    Route::post('homework_create', 'HomeworkController@CreateHomework');
+
     //pdf de reporte estado de cuenta
     Route::get('pdf_account_report','ReportAccountController@pdf') ;
 
     //detalle de informe de prueba
     Route::get('detail_informe_prueba','TestReportController@detail') ;
+
+
 
 });

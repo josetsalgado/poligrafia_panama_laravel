@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use DB;
+use function view;
+use App\Client;
+use App\Homework;
+use Carbon\Carbon;
+
 class HomeworkController extends Controller
 {
     /**
@@ -14,6 +20,30 @@ class HomeworkController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+    public function getDates($date) {
+        $array = array();
+        setlocale(LC_ALL,"es_ES");
+        $date = Carbon::parse(Carbon::parse($date));
+        $dateMonth = strftime("%b", $date->getTimestamp());
+        $getDate = $date->format("d/m/Y");
+        $getDay = $date->day;
+        array_push($array, compact('dateMonth', 'getDay', 'getDate'));
+        return $array;
+    }
+    
+    public function CreateHomework(Request $request){
+        //insertar data de la tarea
+        Homework::insert([
+          'name_homework' => $request->add,
+          'status_homework' =>'',
+          'date_homework' => Carbon::now()->format('Y-m-d'),
+          'userCreate_homework' => $request->userCreate,
+          ]);
+          return view('homework.homeworkCreate');
+      }
+
     public function index()
     {
         //

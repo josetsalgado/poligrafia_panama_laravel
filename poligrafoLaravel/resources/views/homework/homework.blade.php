@@ -6,7 +6,12 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel tile">
                     <div class="x_title">
-                        <h4 class="dash_titulo"> <i class="fa fa-calendar-o"></i> TAREAS</span>
+                        <h4 class="dash_titulo"> <i class="fa fa-calendar-o"></i> TAREAS
+                            <?php
+                            setlocale(LC_ALL,"es_ES");
+                            echo strftime("%A") ." ".date("j") ." ". strftime("%B")." ".date("Y");
+                            ?>
+                            </span> 
                         </h4>
                         <div class="pull-right col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
                          <input type="text" name="birthdate" class="form-control has-feedback-left" value="10/24/1984" />
@@ -15,50 +20,36 @@
                         <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
+                      
+                       
                         <div class="tdl-holder">
                             <h4 id="slopes"></h4><h4 id="performed"></h4>
                             <div class="tdl-content">
                                 <ul>
                                     <li>
                                         <label>
-                                            <input type="checkbox" class="click_check"><i></i>
+                                            <input type="checkbox" name="check1" class="click_check" value="1"><i></i>
                                             <span>Agendar Citas</span>
                                             <a href='#'><i class="fa fa-trash-o" class="click_check"></i></a>
                                         </label>
                                     </li>
                                     <li>
                                         <label>
-                                            <input type="checkbox"  checked class="click_check"><i></i>
+                                            <input type="checkbox"  name="check2" checked class="click_check" value="1"><i></i>
                                             <span>Enviar Correos</span>
-                                            <a href='#'><i class="fa fa-trash-o"></i></a>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox" class="click_check"><i></i>
-                                            <span>Agendar comprobante de pagos</span>
-                                            <a href='#'><i class="fa fa-trash-o"></i></a>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox" checked class="click_check"><i></i>
-                                            <span>Llamar</span>
-                                            <a href='#'><i class="fa fa-trash-o"></i></a>
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label>
-                                            <input type="checkbox" class="click_check"><i></i>
-                                            <span>Actualizar datos de empresa</span>
                                             <a href='#'><i class="fa fa-trash-o"></i></a>
                                         </label>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-md-10 btn-border-tarea"><input type="text" class="tdl-new" placeholder="Agregar nueva tarea y presionar 'Enter'..."></div>
+                            <form action="homework_create" method="post"> 
+                             <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                             <input type="hidden" id="userCreate" name="userCreate" value="{{Auth::user()->name}}">
+                            <div class="col-md-10 btn-border-tarea"><input type="text" class="tdl-new" name="add" placeholder="Agregar nueva tarea y presionar 'Enter'..."></div>
                             <div class="col-md-2 btn-border-tarea"><a href="#." class="btn btn-danger" id="btn-add"><i class="fa fa-plus-circle"></i></a></div>
                         </div>
+                        <input type="submit" value="eviar"/>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -100,7 +91,7 @@
 
         function addTarea(v) {
 
-            $(".tdl-content ul").append("<li><label><input type='checkbox'><i></i><span>"+ v +"</span><a href='#'><i class='fa fa-trash-o'></i></a></label></li>");
+            $(".tdl-content ul").append("<li><label><input type='checkbox' value='1'><i></i><span>"+ v +"</span><a href='#'><i class='fa fa-trash-o'></i></a></label></li>");
         }
         function count(){
             var numberOfChecked = $('input:checkbox:checked').length;
