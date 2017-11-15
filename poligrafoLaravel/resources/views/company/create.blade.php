@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
     <div id="form-errors"></div>
-    
+
     <div class="">
         <div class="clearfix"></div>
 
@@ -71,28 +71,28 @@
                                         <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="number" class="form-control has-feedback-left" id="cost_test_pre_employment" name="cost_test_pre_employment" placeholder="Precio">
                                             <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
-                                        </div>  
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <label class="control-label col-md-4 col-sm-3 col-xs-12"> Especifica:</label>
                                         <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="number" class="form-control has-feedback-left" id="cost_specific_test" name="cost_specific_test" placeholder="Precio">
                                             <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
-                                        </div>  
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <label class="control-label col-md-4 col-sm-3 col-xs-12"> Rutina:</label>
                                         <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="number" class="form-control has-feedback-left" id="cost_routine_test" name="cost_routine_test" placeholder="Precio">
                                             <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
-                                        </div>  
+                                        </div>
                                     </div>
                                     <div class="row">
                                         <label class="control-label col-md-4 col-sm-3 col-xs-12"> Reevaluación:</label>
                                         <div class="col-md-3 col-sm-6 col-xs-12 form-group has-feedback">
                                             <input type="number" class="form-control has-feedback-left" id="reevaluation_test_cost" name="reevaluation_test_cost" placeholder="Precio">
                                             <span class="fa fa-dollar form-control-feedback left" aria-hidden="true"></span>
-                                        </div>  
+                                        </div>
                                     </div>
                                     <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
                                         <div class="ln_solid"></div>

@@ -1,8 +1,7 @@
-@extends('layouts.default')
-@section('content')
+<?php $__env->startSection('content'); ?>
 
 
-    <div class="">
+<div id="reload" class="">
 
         <div class="clearfix"></div>
         <div class="row">
@@ -18,8 +17,10 @@
                         </ul>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="x_content">     
+                    <div class="x_content">
+
                         <div id='calendar'></div>
+
                     </div>
                 </div>
             </div>
@@ -27,73 +28,88 @@
     </div>
 
 
-
-
-    <div class="modal fade" id="myModal" >
+    <!-- calendar modal -->
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-            <!-- Modal content-->
             <div class="modal-content">
                 <div id="form-errors"></div>
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                    <h4 class="modal-title" id="myModalLabel2">Editar cita</h4>
+                    <h4 class="modal-title" id="myModalLabel"><i class="fa fa-calendar"></i> Nueva Citas</h4>
                 </div>
                 <div class="modal-body">
-
-                    <div id="testmodal2" style="padding: 5px 20px;">
+                    <div id="testmodal" style="padding: 5px 20px;">
                         <form id="createQuote" name="createQuote" class="form-horizontal calender" role="form">
-                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                             <input type="hidden" name="dateEpoch" id="dateEpoch">
                             <div class="form-group">
-                                <label class="col-sm-3 control-label col-xs-12">Poligrafista</label>
+                                <label class="col-sm-3 control-label">Empresa</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <select class="form-control" id="polygraphist" name="polygraphist">
+                                    <select id="empresa" name="empresa" class="form-control col-xs-12">
                                         <option value="">Seleccione</option>
-                                        @foreach($users as $user)
-                                            <option value="{{ $user->id_user }}">{{ $user->name_user }}</option>
-                                        @endforeach
+                                        <?php foreach($companys as $company): ?>
+                                            <option value="<?php echo e($company->id_company); ?>"><?php echo e($company->name_company); ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Cliente</label>
                                 <div class="col-sm-9 col-xs-12">
-                                        <select class="form-control col-xs-12" id="client" name="client">
+                                    <select id="client" name="client" class="form-control col-xs-12">
                                         <option value="">Seleccione</option>
-                                        @foreach($clients as $client)
-                                            <option value="{{ $client->id_client }}">{{ $client->name_client }}</option>
-                                        @endforeach
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-3 control-label col-xs-12">Horario</label>
-                                <div class="col-sm-9 col-xs-12">
-                                    <label>
-                                        <input type="radio" name="schedule" id="schedule" class="js-switch" value="07:30" /> 07:30
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="schedule" id="schedule" class="js-switch" value="10:00" /> 10:00
-                                    </label><br>
-                                    <label>
-                                        <input type="radio" name="schedule" id="schedule" class="js-switch" value="01:30" /> 01:30
-                                    </label><br>
-                                    <div id="validSchedule"></div>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Horario</label>
+                                <div class="col-md-4 col-sm-4 col-xs-12">
+                                    <select name="schedule" id="schedule" class="form-control col-xs-12">
+                                        <option value="7:00">7:00</option>
+                                        <option value="7:30">7:30</option>
+                                        <option value="8:00">8:00</option>
+                                        <option value="8:30">8:30</option>
+                                        <option value="9:00">9:00</option>
+                                        <option value="9:30">9:30</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="11:30">11:30</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="12:30">12:30</option>
+                                        <option value="1:00">1:00</option>
+                                        <option value="1:30">1:30</option>
+                                        <option value="2:00">2:00</option>
+                                        <option value="2:30">2:30</option>
+                                        <option value="3:00">3:00</option>
+                                        <option value="3:30">3:30</option>
+                                        <option value="4:00">4:00</option>
+                                        <option value="4:30">4:30</option>
+                                        <option value="5:00">5:00</option>
+                                        <option value="5:30">5:30</option>
+                                        <option value="6:00">6:00</option>
+                                        <option value="6:30">6:30</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label">Tipo de Prueba</label>
                                 <div class="col-sm-9 col-xs-12">
-                                    <select class="form-control col-xs-12" id="service" name="service">
+                                    <select id="service" name="service" class="form-control col-xs-12">
                                         <option value="">Seleccione</option>
-                                        @foreach($services as $service)
-                                            <option value="{{ $service->id_service }}">{{ $service->name_service }}</option>
-                                        @endforeach
+                                        <?php foreach($services as $service): ?>
+                                            <option value="<?php echo e($service->id_service); ?>"><?php echo e($service->name_service); ?></option>
+                                        <?php endforeach; ?>
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <h4>Candidato</h4>
+                                <label class="col-sm-3 control-label">Estatus</label>
+                                <div class="col-sm-9 col-xs-12">
+                                    <input type="text" class="form-control" name="status" id="status" placeholder="Pendiente"  disabled="disabled">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4><i class="fa fa-user"></i> Candidato</h4>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-3 control-label col-xs-12">Nombre</label>
@@ -134,17 +150,25 @@
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <button type="reset" class="btn btn-default antoclose2" data-dismiss="modal">Cancelar</button>
-                                <button type="submit" class="btn btn-primary antosubmit2">Guardar Cita</button>
+                                <button type="button" class="btn btn-default antoclose" data-dismiss="modal">Cancelar</button>
+                                <button type="submit" class="btn btn-primary antosubmit">Guardar Cita</button>
                             </div>
                         </form>
                     </div>
                 </div>
-                
             </div>
         </div>
     </div>
 
-    
+    <!-- Modal editar -->
+    <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
+
+
+    <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
+    <div id="fc_edit" data-toggle="modal" data-target="#CalenderModalEdit"></div>
+    <!-- /calendar modal -->
+
+
     <script src="js/validate/fn-createAppoiment.js"></script>
-@stop
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layouts.default', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

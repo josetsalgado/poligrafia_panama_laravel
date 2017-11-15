@@ -508,7 +508,11 @@
                                                 </div>
                                             </div>
                                             <div class="alert alert-dismissible fade in" role="alert">
-                                                <h5><i><b><i class="fa fa-list-alt"></i> Corte: NDI igual o mayor a +4 y que todos los sub totales tengan signos positivos. DI igual o menor a -4  o cualquier sub total -3</b><br></i></h5>
+                                                <h5><i><b><i class="fa fa-list-alt"></i> Corte: </b><br></i></h5>
+                                                <ul>
+                                                    <li><h5><i><b>1ra Etapa: Corte +4/-4</b><br></i></h5></li>
+                                                    <li><h5><i><b>2da Etapa: Subtotal -6</b><br></i></h5></li>
+                                                </ul>
                                             </div>
                                             <div class="ln_solid"></div>
                                         </div>
@@ -622,7 +626,11 @@
                                                 </div>
                                             </div>
                                             <div class="alert alert-dismissible fade in" role="alert">
-                                                <h5><i><b><i class="fa fa-list-alt"></i> Corte: NDI igual o mayor a +6 y que todos los sub totales tengan signos positivos. DI igual o menor a -6  o cualquier sub total -3</b><br></i></h5>
+                                                <h5><i><b><i class="fa fa-list-alt"></i> Corte: </b><br></i></h5>
+                                                <ul>
+                                                    <li><h5><i><b>1ra Etapa: Corte +5/-4</b><br></i></h5></li>
+                                                    <li><h5><i><b>2da Etapa: Subtotal -7</b><br></i></h5></li>
+                                                </ul>
                                             </div>
                                             <div class="ln_solid"></div>
                                         </div>
@@ -756,10 +764,10 @@
                                                 <div class="col-md-4"><h4>Calificaciones con 4 Gráficas </h4></div>
                                                 <div class="col-md-4"><h4>Calificaciones con 5 Gráficas </h4></div>
                                             </div>
-                                            <!-- Calificacion R5 -->
+                                            <!-- Calificacion R4 -->
                                             <div class="form-group">
                                                 <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
                                                     <div class="input-group spinner col-md-3">
                                                         <input type="text" class="form-control" value="0">
                                                         <div class="input-group-btn-vertical">
@@ -769,7 +777,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
                                                     <div class="input-group spinner col-md-3">
                                                         <input type="text" class="form-control" value="0">
                                                         <div class="input-group-btn-vertical">
@@ -779,7 +787,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
                                                     <div class="input-group spinner col-md-3">
                                                         <input type="text" class="form-control" value="0">
                                                         <div class="input-group-btn-vertical">
@@ -855,10 +863,10 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Calificacion R9 -->
+                                            <!-- Calificacion R10 -->
                                             <div class="form-group">
                                                 <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R9:</label>
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
                                                     <div class="input-group spinner col-md-3">
                                                         <input type="text" class="form-control" value="0">
                                                         <div class="input-group-btn-vertical">
@@ -868,7 +876,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R9:</label>
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
                                                     <div class="input-group spinner col-md-3">
                                                         <input type="text" class="form-control" value="0">
                                                         <div class="input-group-btn-vertical">
@@ -878,7 +886,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
                                                     <div class="input-group spinner col-md-3">
                                                         <input type="text" class="form-control" value="0">
                                                         <div class="input-group-btn-vertical">
@@ -888,29 +896,13 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- Gran Total-->
-                                            <div class="form-group">
-                                                <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">GT:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0" disabled="disabled">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">GT:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0" disabled="disabled">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">GT:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0" disabled="disabled">
-                                                    </div>
-                                                </div>
-                                            </div>
+
                                             <div class="alert alert-dismissible fade in" role="alert">
-                                                <h5><i><b><i class="fa fa-list-alt"></i> Cortes: GT: NDI: Mayor o ssddme cambies las respuestas deda que el culpable a con tabla de probabilidad de inocienciay tu no me cambies las respuestas de­igual +6 // DI: Menor o igual -6.</b><br></i></h5>
+                                                <h5><i><b><i class="fa fa-list-alt"></i> Cortes: </b><br></i></h5>
+                                                <ul>
+                                                    <li><h5><i><b>1ra Etapa: Corte +5/-4</b><br></i></h5></li>
+                                                    <li><h5><i><b>2da Etapa: Subtotal -9</b><br></i></h5></li>
+                                                </ul>
                                             </div>
                                             <div class="ln_solid"></div>
                                         </div>
@@ -987,7 +979,7 @@
                                                 </div>
                                             </div>
                                             <div class="alert alert-dismissible fade in" role="alert">
-                                                <h5><i><b><i class="fa fa-list-alt"></i> Cortes: GT +4/ -4 o subtotal -6
+                                                <h5><i><b><i class="fa fa-list-alt"></i> Cortes: +2/-3
                                                         </b><br></i></h5>
                                             </div>
                                             <div id="masdlst"></div>

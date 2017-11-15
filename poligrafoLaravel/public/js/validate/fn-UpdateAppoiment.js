@@ -32,7 +32,7 @@ $(document).ready(function () {
         submitHandler: function (form) {
             var dataString = $('#editQuotePatien').serialize();
             $.ajax({
-                type: "POST",
+                type: "GET",
                 url: "update_quote",
                 data: dataString,
                 success: function (data) {
