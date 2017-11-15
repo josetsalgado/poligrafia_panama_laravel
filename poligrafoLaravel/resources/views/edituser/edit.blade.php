@@ -7,7 +7,7 @@
                 <div class="col-md-12 col-sm-12 col-xs-12">
                     <div class="x_panel">
                         <div class="x_title">
-                            <h2>Editar Perfil</h2>
+                            <h2>Editar Perfil {{Auth::user()->name}}</h2>
                             <ul class="nav navbar-right panel_toolbox">
                                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                                 </li>
@@ -26,8 +26,9 @@
                             <div class="clearfix"></div>
                         </div>
                         <div class="x_content">
-                            <form class="form-horizontal form-label-left input_mask">
-
+                            <form id="createUser" name="createUser" class="form-horizontal form-label-left input_mask">
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="hidden" name="id" value="{{Auth::user()->id}}">
                                 <div class="col-md-3 col-sm-3 col-xs-12 profile_left">
                                     <div class="profile_img">
                                         <div id="crop-avatar">
@@ -38,30 +39,30 @@
                                 </div>
                                 <div class="col-md-9 col-sm-9 col-xs-12">
                                     <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombres" value="Nicole">
+                                        <input type="text" class="form-control has-feedback-left" id="name" name="name" placeholder="Nombres" value="{{Auth::user()->name}}">
                                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                                     </div>
 
                                     <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Apellidos" value="Pearson">
+                                        <input type="text" class="form-control has-feedback-left" id="lastname" name="lastname" placeholder="Apellidos" value="{{Auth::user()->last_name}}">
                                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                                     </div>
 
                                     <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Correo" value="correo@correo.com">
+                                        <input type="text" class="form-control has-feedback-left" id="email" name="email" placeholder="Correo" value="{{Auth::user()->email}}">
                                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                                     </div>
 
                                     <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Número Telefonico" value="+58 555 55 55">
+                                        <input type="text" class="form-control has-feedback-left" id="tel" name="tel" placeholder="Número Telefonico" value="{{Auth::user()->tel}}">
                                         <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="password" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Cambiar Clave" value="123456">
+                                        <input type="password" class="form-control has-feedback-left" id="password" name="password" placeholder="Cambiar Clave" value="">
                                         <span class="fa fa-lock form-control-feedback left" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-md-8 col-sm-6 col-xs-12 form-group has-feedback">
-                                        <input type="password" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Repetir Clave" value="123456">
+                                        <input type="password" class="form-control has-feedback-left" id="password_confirmation" name="password_confirmation" placeholder="Repetir Clave" value="">
                                         <span class="fa fa-lock form-control-feedback left" aria-hidden="true"></span>
                                     </div>
                                     <div class="col-md-12 col-sm-6 col-xs-12 form-group has-feedback">
@@ -70,7 +71,7 @@
                                     <div class="form-group">
                                         <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                                             <button type="button" class="btn btn-default">Cancelar</button>
-                                            <button type="submit" class="btn btn-primary">Guardar</button>
+                                            <button type="h" class="btn btn-primary">Guardar</button>
                                         </div>
                                     </div>
                                 </div>
@@ -80,4 +81,5 @@
                 </div>
             </div>
     </div>
+    <script src="js/validate/fn-updateProfile.js"></script>
 @stop

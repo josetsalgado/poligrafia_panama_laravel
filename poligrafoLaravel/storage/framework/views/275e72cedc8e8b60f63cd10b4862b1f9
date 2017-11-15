@@ -12,7 +12,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2><i class="fa fa-clipboard"></i> Verificación</h2>
+                    <h2><i class="fa fa-clipboard"></i> Control de Calidad</h2>
                     <ul class="nav navbar-right panel_toolbox">
                         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                         </li>
@@ -47,7 +47,7 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
-                                            <input type="text" class="form-control has-feedback-left" id="poligrafista" name="poligrafista" placeholder="Poligrafista" disabled="disabled">
+                                            <input type="text" class="form-control has-feedback-left" id="poligrafista" name="poligrafista" placeholder="Controlador" disabled="disabled">
                                             <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
                                         </div>
                                         <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
@@ -76,7 +76,11 @@
                                     <!-- 1 Prueba -->
                                     <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                                         <div class="form-group">
-                                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                            <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
+                                                <input type="text" class="form-control has-feedback-left" id="poligrafista" name="poligrafista" placeholder="Poligrafista" disabled="disabled">
+                                                <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
                                                 <select id="services" class="form-control selc-empresa" required>
                                                     <option value="">Tipo de Prueba</option>
                                                     <?php foreach($services as $service): ?>
@@ -85,7 +89,7 @@
                                                 </select>
                                                 <span class="fa fa-hospital-o form-control-feedback left" aria-hidden="true"></span>
                                             </div>
-                                            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                                            <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
                                                 <select id="tecnicals" class="form-control selc-empresa">
                                                     <option value="">Seleccione</option>
                                                 </select>

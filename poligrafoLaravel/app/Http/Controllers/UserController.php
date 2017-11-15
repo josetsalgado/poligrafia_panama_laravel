@@ -150,7 +150,39 @@ class UserController extends Controller
                     'tel' => $request->tel,
         ]);
     }
+    public function updateProfile(Request $request)
+    {
+        $this->ValidateUpdateProfile($request);
 
+        User::where('id', $request->id)
+        ->update([
+            'name' => $request->name,
+            'last_name' => $request->lastname,
+            'password' => bcrypt($request->password),
+            'tel' => $request->tel,
+            ]);
+    }
+    public function ValidateUpdateProfile($request)
+    {
+        $this->validate($request,[
+                'name' => 'required',
+                'lastname' => 'required',
+                'tel' => 'required|numeric',
+                'password' => 'required|confirmed',
+                'password_confirmation' => 'required',
+            ], 
+            [
+                'name.required' => trans("validations.input_required", ['input' => 'nombre']),
+                'lastname.required' => trans("validations.input_required", ['input' => 'apellido']),
+                'tel.required' => trans("validations.input_required", ['input' => 'telefono']),
+                'tel.numeric' => trans("validations.input_format", ['input' => 'telefono']),
+                'password.required' => trans("validations.input_required", ['input' => 'clave']),
+                'password.confirmed' => trans("validations.input_equal", ['input' => 'clave', 'other' => 'confirmar clave']),
+                'password_confirmation.required' => trans("validations.input_required", ['input' => 'confirmar clave']),
+                
+            ]
+        );
+    }
     /**
      * .
      *
