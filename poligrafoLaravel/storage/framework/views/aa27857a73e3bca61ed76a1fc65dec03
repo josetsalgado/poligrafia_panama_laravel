@@ -117,11 +117,12 @@
                                 </li>
                                 <li><a><i class="fa fa-hospital-o"></i> Productos <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
+                                        <li><a href="create_product">Nuevo Producto</a></li>
                                         <li><a href="show_product">Ver Productos</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="quotes_client"><i class="fa fa-calendar"></i> Citas</a></li>
                             <?php endif; ?>
-                            <li><a href="quotes_client"><i class="fa fa-calendar"></i> Citas</a></li>
                             <?php if($rol->rol_id == 1): ?>
                                 <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
@@ -134,13 +135,6 @@
                                         <li><a href="payment_record">Registrar Pago</a></li>
                                     </ul>
                                 </li>
-                                <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
-                                    <ul class="nav child_menu">
-                                        <li><a href="record_result">Registro de Resultados</a></li>
-                                        <li><a href="quality_test">Control de Calidad</a></li>
-                                        <li><a href="test_report">Verificacion</a></li>
-                                    </ul>
-                                </li>
                                 <li><a><i class="fa fa-line-chart"></i>Reportes <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="account_report">Estados de cuenta</a></li>
@@ -148,6 +142,13 @@
                                     </ul>
                                 </li>
                             <?php endif; ?>
+                            <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="record_result">Registro de Resultados</a></li>
+                                    <li><a href="quality_test">Control de Calidad</a></li>
+                                    <li><a href="test_report">Verificacion</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -173,6 +174,7 @@
         </div>
 
         <!-- top navigation -->
+
         <div class="top_nav">
             <div class="nav_menu">
                 <nav>
@@ -183,14 +185,16 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="images/img.jpg" alt="">John Doe
+                                <img src="images/img.jpg" alt=""><?php echo e(Auth::user()->name); ?>
+
                                 <span class=" fa fa-caret-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                <li><a href="editar_perfil.html"><i class="fa fa-edit pull-right"></i> Editar Perfil</a></li>
+                                <li><a href="edit_user"><i class="fa fa-edit pull-right"></i> Editar Perfil</a></li>
                                 <li><a href="logout"><i class="fa fa-sign-out pull-right"></i> Salir</a></li>
                             </ul>
                         </li>
+
                         <li role="presentation" class="dropdown">
                             <a class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"><?php echo e(Session::get('city')); ?> <i class="fa fa-caret-down"></i></a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right" role="menu" aria-labelledby="menu1">
@@ -200,58 +204,59 @@
                                 <li role="presentation"><a class="cityO" value="otros" role="menuitem" tabindex="-1" ><b> OTROS </b></a></li>
                             </ul>
                         </li>
+                        <?php if($rol->rol_id == 1): ?>
                         <li role="presentation" class="dropdown">
                             <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-folder-open-o"></i>
                                 <span class="badge bg-green">6</span>
                             </a>
                             <ul id="menu1 " class="dropdown-menu list-unstyled msg_list" role="menu">
-                                <li>
-                                    <a href="homework">
-                        <span href="homework">
-                          <span>Tarea 1...</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="homework">
 
-                        <div href="homework">
-                          <span>Tarea 2...</span>
-                          <span class="time">3 mins ago</span>
+                                <li>
+                                    <a href="homework">
+                                        <span href="homework">
+                                            <span>Tarea 1...</span>
+                                            <span class="time">3 mins ago</span>
+                                        </span>
                                         <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
-                        </div>
+                                             Film festivals used to be do-or-die moments for movie makers. They were where...
+                                         </span>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="homework">
-                        <span>
-                          <span>Tarea 3...</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
-                                        <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
+                                         <div href="homework">
+                                             <span>Tarea 2...</span>
+                                             <span class="time">3 mins ago</span>
+                                            <span class="message">
+                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                                            </span>
+                                        </div>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="homework">
-                        <span>
-                          <span>Tarea 4..</span>
-                          <span class="time">3 mins ago</span>
-                        </span>
+                                        <span>
+                                            <span>Tarea 3...</span>
+                                            <span class="time">3 mins ago</span>
+                                        </span>
                                         <span class="message">
-                          Film festivals used to be do-or-die moments for movie makers. They were where...
-                        </span>
+                                            Film festivals used to be do-or-die moments for movie makers. They were where...
+                                        </span>
                                     </a>
                                 </li>
-
+                                <li>
+                                    <a href="homework">
+                                        <span>
+                                          <span>Tarea 4..</span>
+                                          <span class="time">3 mins ago</span>
+                                        </span>
+                                        <span class="message">
+                                             Film festivals used to be do-or-die moments for movie makers. They were where...
+                                        </span>
+                                    </a>
+                                </li>
+                                <?php endif; ?>
                             </ul>
                         </li>
                     </ul>
@@ -270,11 +275,10 @@
 
         <!-- footer content -->
         <footer>
-            <div class="pull-right">
-
-                <a href="http://www.monitorbg.com/web/">
-                    <img class="center-block" src="images/logobg.png">
-                    <b> Desarrollado por B&G Consulting and Technologies</b> <a/>
+            <div class="pull-right" style="text-align: center">
+                    <img class="center-block" src="images/logofooter.png">
+                    <p>Tecnología y Profesionalismo que trabajan por la verdad </p>
+                    <p><b> Desarrollado por B&G Consulting and Technologies</b><p>
             </div>
             <div class="clearfix"></div>
         </footer>

@@ -47,6 +47,9 @@ Route::group(['middleware' => 'auth'], function () {
     //informacion de un usuario por id
     Route::post('/update_user', 'UserController@update');
 
+    //actualizar perfil
+    Route::post('/update_profile', 'UserController@updateProfile');
+
     //actualizar datos del usuario por id
     Route::get('/show_user/{id}', 'UserController@edit');
 

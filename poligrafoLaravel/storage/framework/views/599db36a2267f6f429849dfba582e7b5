@@ -51,6 +51,9 @@
                                     <?php elseif(($accountStatu->amount_payable ) && ($accountStatu->amount_payable >= $accountStatu->full_payment)): ?>
                                     <a href="sendhtmlemail_retencion"><button type="button" class="btn-click btn btn-success btn-xs"><i class="fa fa-envelope"></i> Solicitar Comprobante</button></a>
                                     <?php endif; ?>
+
+                                     <button onclick="sendRetention('<?php echo e($accountStatu->company_id[0]->id_company); ?>')" type="button" class="btn-click btn btn-success btn-xs"><i class="fa fa-envelope"></i> Solicitar Comprobante</button>
+
                                 </div>
                             </td>
                             <td><?php echo e(isset($accountStatu->company_id[0]->name_company) ? $accountStatu->company_id[0]->name_company : ''); ?></td>
@@ -118,6 +121,24 @@
 <!-- Custom Theme Scripts -->
 <script src="js/build/js/custom.min.js"></script>
 <script>
+    function sendRetention(id) {
+
+        $.ajax({
+            type: "GET",
+            url: "sendhtmlemail_retencion/"+id,
+            success: function(data) {
+                $(".close").click();
+                alertify.success('Correo solicitando retencion enviado exitosamente');
+                $("#datatable-responsive").load("payment_record #datatable-responsive");
+            },error: function (err) {
+                alert('correo no existe');
+                console.log();
+            }
+        });
+
+
+    }
+
 
                                                         $('#datatable-responsive').DataTable({
                                                 language: {

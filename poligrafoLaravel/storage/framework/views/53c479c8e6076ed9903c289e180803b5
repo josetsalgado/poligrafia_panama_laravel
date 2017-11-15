@@ -1,10 +1,11 @@
 <?php $__env->startSection('content'); ?>
 
-
+<?php $rol = DB::table('users')->where('email','=',session()->all()['email'])->select('rol_id')->get()[0]; ?>
 
   <!-- page content -->
 
     <!-- top tiles -->
+
     <div class="row tile_count">
       <div class="col-md-3 col-sm-4 col-xs-6 tile_stats_count">
         <span class="count_top"><i class="fa fa-calendar"></i> Total Citados</span>
@@ -14,7 +15,7 @@
         <span class="count_top"><i class="fa fa-users"></i> Llegaron a cita</span>
         <div class="count"><?php echo e($totalCitedTodayArrived); ?></div>
       </div>
-
+        <?php if($rol->rol_id == 1): ?>
       <div class="col-md-3 col-sm-3 col-xs-6 tile_stats_count">
         <a href="payment_record">
           <span class="count_top"><i class="fa fa-credit-card"></i> Total Pagos Pendientes</span>
@@ -27,6 +28,7 @@
           <div class="count green">50</div>
         </a>
       </div>
+            <?php endif; ?>
     </div>
     <!-- /top tiles -->
     <br />
@@ -122,6 +124,7 @@
     </div>
     <div class="row">
       <div class="floaty" >
+          <?php if($rol->rol_id == 1): ?>
         <div class="floaty-btn" id="fc_create" data-toggle="modal" data-target="#CalenderModalNew">
                     <span class="floaty-btn-label">
                         <i>Citar a Prueba</i>
@@ -135,6 +138,7 @@
             <path d="M0 0h24v24h-24z" fill="none"/>
           </svg>
         </div>
+              <?php endif; ?>
       </div>
     </div>
   </div>
@@ -283,11 +287,11 @@
           </div>
       </div>
   </div>
-  
+
     <!-- Modal edit-->
     <div id="CalenderModalEdit" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"></div>
     <!-- /. modal -->
-    
+
   <!-- Custom Theme Scripts -->
   <script src="../build/js/custom.min.js"></script>
 <script>

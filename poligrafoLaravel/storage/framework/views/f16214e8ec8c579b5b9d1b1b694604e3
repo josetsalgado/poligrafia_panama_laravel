@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>IPTC</title>
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <link rel="shortcut icon" href="<?php echo e(asset('favicon.ico')); ?>">
 
 
     <!-- Datatables -->
@@ -96,7 +96,7 @@
                                 <a href="dashboard_home"><i class="fa fa-home"></i> Inicio</a>
 
                             </li>
-                            @if($rol->rol_id == 1)
+                            <?php if($rol->rol_id == 1): ?>
                                 <li><a><i class="fa fa-users"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="create_user">Nuevo Usuario</a></li>
@@ -122,8 +122,8 @@
                                     </ul>
                                 </li>
                                 <li><a href="quotes_client"><i class="fa fa-calendar"></i> Citas</a></li>
-                            @endif
-                            @if($rol->rol_id == 1)
+                            <?php endif; ?>
+                            <?php if($rol->rol_id == 1): ?>
                                 <li><a><i class="fa fa-money"></i> Cotizaciones <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu">
                                         <li><a href="butget_client">Cotizar</a></li>
@@ -141,7 +141,7 @@
                                         <li><a href="evaluations_report">Evaluaciones poligraficas</a></li>
                                     </ul>
                                 </li>
-                            @endif
+                            <?php endif; ?>
                             <li><a><i class="fa fa-fax"></i> Prueba de Poligrafo <span class="fa fa-chevron-down"></span></a>
                                 <ul class="nav child_menu">
                                     <li><a href="record_result">Registro de Resultados</a></li>
@@ -185,7 +185,8 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li class="">
                             <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                <img src="images/img.jpg" alt="">{{ Auth::user()->name }}
+                                <img src="images/img.jpg" alt=""><?php echo e(Auth::user()->name); ?>
+
                                 <span class=" fa fa-caret-down"></span>
                             </a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -195,7 +196,7 @@
                         </li>
 
                         <li role="presentation" class="dropdown">
-                            <a class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">{{ Session::get('city') }} <i class="fa fa-caret-down"></i></a>
+                            <a class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false"><?php echo e(Session::get('city')); ?> <i class="fa fa-caret-down"></i></a>
                             <ul class="dropdown-menu dropdown-usermenu pull-right" role="menu" aria-labelledby="menu1">
                                 <li role="presentation"><a class="cityO" value="panama" role="menuitem" tabindex="-1" ><b> PANAMA </b></a></li>
                                 <li role="presentation"><a class="cityO" value="chiriqi" role="menuitem" tabindex="-1" ><b> CHIRIQUI </b></a></li>
@@ -203,7 +204,7 @@
                                 <li role="presentation"><a class="cityO" value="otros" role="menuitem" tabindex="-1" ><b> OTROS </b></a></li>
                             </ul>
                         </li>
-                        @if($rol->rol_id == 1)
+                        <?php if($rol->rol_id == 1): ?>
                         <li role="presentation" class="dropdown">
                             <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-folder-open-o"></i>
@@ -255,7 +256,7 @@
                                         </span>
                                     </a>
                                 </li>
-                                @endif
+                                <?php endif; ?>
                             </ul>
                         </li>
                     </ul>
@@ -268,7 +269,7 @@
         <!-- page content -->
         <div class="right_col" role="main">
             <!-- content page -->
-            @yield('content')
+            <?php echo $__env->yieldContent('content'); ?>
         </div>
         <!-- /page content -->
 
