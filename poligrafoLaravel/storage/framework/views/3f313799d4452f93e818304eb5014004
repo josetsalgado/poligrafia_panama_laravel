@@ -40,7 +40,7 @@
                                 </select>
                                 <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
                             </div>
-                            <div class="btn-group">
+                            <div class="btn-group" data-toggle="tooltip" title="Crear cliente / empresa">
                                 <button class="btn btn-default" type="button"  data-toggle="modal" data-target="#newEmpresa"><i class="fa fa-plus"></i></button>
                             </div>
                             <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
@@ -175,7 +175,7 @@
                                     </div>
                                <div class="modal-footer">
                                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                       <button type="button" class="btn btn-primary">Guardar</button>
+                                       <button type="submit" class="btn btn-primary">Guardar</button>
                                     </div>
                                 </form>
                             </div>
