@@ -101,7 +101,7 @@
         </div>
     </div>
     <!-- Modal Agregar Nueva Empresa & cliente-->
-       <div class="modal fade" id="newEmpresa" role="dialog">
+       <div class="modal fade" style="z-index: 9999" id="newEmpresa" role="dialog">
                 <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                                 <div class="modal-header">
@@ -120,54 +120,57 @@
                                         <!-- row -->
                                        <div class="row">
                                                 <form class="form-horizontal form-label-left input_mask">
+                                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                    <!-- crear empresa -->
                                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                        <input type="text" class="form-control has-feedback-left" id="razon_social" name="razon_social" placeholder="Razón Social">
+                                                                        <input type="text" class="form-control has-feedback-left" id="name_company" name="name_company" placeholder="Razón Social">
                                                                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
 
                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                        <input type="text" class="form-control has-feedback-left" id="ruc" name="ruc" placeholder="R.U.C">
+                                                                        <input type="text" class="form-control has-feedback-left" id="ruc_company" name="ruc_company" placeholder="R.U.C">
                                                                         <span class="fa fa-barcode form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                        <input type="text" class="form-control has-feedback-left" id="numero_telefonico" name="numero_telefonico" placeholder="Número Telefonico">
+                                                                        <input type="text" class="form-control has-feedback-left" id="tel_company" name="tel_company" placeholder="Número Telefonico">
                                                                         <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
 
                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Correo">
+                                                                        <input type="text" class="form-control has-feedback-left" id="email_compamy" name="email_compamy" placeholder="Correo">
                                                                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
 
                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                        <input type="text" class="form-control has-feedback-left" id="direccon" name="direccon" placeholder="Direccón">
+                                                                        <input type="text" class="form-control has-feedback-left" id="address_company" name="address_company" placeholder="Direccón">
                                                                         <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
                                                            </div>
+                                                                                                      <!-- crear cliente -->
                                                         <div class="col-md-6 col-sm-6 col-xs-12">
 
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                       <input type="text" class="form-control has-feedback-left" id="nombre_cliente" name="nombre_cliente" placeholder="Nombre del Cliente">
+                                                                       <input type="text" class="form-control has-feedback-left" id="name_client" name="name" placeholder="Nombre del Cliente">
                                                                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                        <input type="text" class="form-control has-feedback-left" id="cargo" name="cargo" placeholder="Cargo">
+                                                                        <input type="text" class="form-control has-feedback-left" id="position" name="position" placeholder="Cargo">
                                                                         <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
 
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                       <input type="text" class="form-control has-feedback-left" id="numero_telefonico" name="numero_telefonico" placeholder="Número Telefonico">
+                                                                       <input type="text" class="form-control has-feedback-left" id="tel" name="tel" placeholder="Número Telefonico">
                                                                         <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
 
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                        <input type="text" class="form-control has-feedback-left" id="correo" name="correo" placeholder="Correo">
+                                                                        <input type="text" class="form-control has-feedback-left" id="email" name="email" placeholder="Correo">
                                                                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
 
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
-                                                                       <input type="text" class="form-control has-feedback-left" id="ciudad" name="ciudad" placeholder="Ciudad">
+                                                                       <input type="text" class="form-control has-feedback-left" id="city" name="city" placeholder="Ciudad">
                                                                         <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
                                                             </div>
@@ -187,8 +190,9 @@
        <div class="modal fade" id="myModal" role="dialog"></div>
     <!-- /. modal -->
 
-
     <script src="js/validate/fn-createBudget.js"></script>
+
+    <script src="js/validate/fn-createCompany&Client.js"></script>
 
     <script type="text/javascript">
         $('#datatable-responsive').DataTable( {
