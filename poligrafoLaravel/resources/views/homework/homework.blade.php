@@ -29,7 +29,7 @@
                                 @foreach($homeworks as $key => $homework)
                                     <li>
                                         <label>
-                                            <input type="checkbox" id="{{$homework->id_homework}}" name="check1" class="click_check" value="{{$homework->status_homework}}"><i></i>
+                                            <input type="checkbox" id="{{$homework->id_homework}}" name="{{$homework->id_homework}}" class="click_check" value="{{$homework->status_homework}}"><i></i>
                                             <span>{{$homework->name_homework}}</span>
                                             <a href='#'><i class="fa fa-trash-o" class="click_check"></i></a>
                                         </label>
@@ -37,7 +37,6 @@
                                 @endforeach
                                 </ul>
                             </div>
-                            <input type="submit" value="update">
                             </form>
                             <form id="createHomework" name="createHomework"> 
                                <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">

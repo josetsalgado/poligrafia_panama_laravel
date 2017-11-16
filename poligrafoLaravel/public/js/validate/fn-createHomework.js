@@ -4,6 +4,12 @@ $(document).ready(function () {
       //agregar tareas
       $(".click_check").click(function(){
             count();
+          var valor = $(this).val();
+          if (valor==0) {
+            $(this).val("1");
+          }else{
+            $(this).val("0");
+          }
       });
 
       $(".tdl-new").bind('keypress', function(e){

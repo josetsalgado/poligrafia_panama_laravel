@@ -10,9 +10,11 @@ $(".click_check").click(function(){
       function update(id){
           var dataString = $('#homework_update').serialize();
           var url = "homework_update/"+id;
-         // alert(url);
+        //  alert(url);
           console.log(dataString);
-        /*  $.ajax({
+        //  $("#load_update_homework").load("homework #load_update_homework");
+         // $('#homework_update')[0].reset();
+          $.ajax({
                 type: "POST",
                 url: url,
                 data: dataString,
@@ -42,6 +44,6 @@ $(".click_check").click(function(){
                         /// do some thing else
                   }
             }
-      });*/
+      });
       }
 });

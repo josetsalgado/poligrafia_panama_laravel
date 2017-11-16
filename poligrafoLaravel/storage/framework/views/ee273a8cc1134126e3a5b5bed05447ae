@@ -28,7 +28,7 @@
                                 <?php foreach($homeworks as $key => $homework): ?>
                                     <li>
                                         <label>
-                                            <input type="checkbox" id="<?php echo e($homework->id_homework); ?>" name="check1" class="click_check" value="<?php echo e($homework->status_homework); ?>"><i></i>
+                                            <input type="checkbox" id="<?php echo e($homework->id_homework); ?>" name="<?php echo e($homework->id_homework); ?>" class="click_check" value="<?php echo e($homework->status_homework); ?>"><i></i>
                                             <span><?php echo e($homework->name_homework); ?></span>
                                             <a href='#'><i class="fa fa-trash-o" class="click_check"></i></a>
                                         </label>
@@ -36,7 +36,6 @@
                                 <?php endforeach; ?>
                                 </ul>
                             </div>
-                            <input type="submit" value="update">
                             </form>
                             <form id="createHomework" name="createHomework"> 
                                <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">

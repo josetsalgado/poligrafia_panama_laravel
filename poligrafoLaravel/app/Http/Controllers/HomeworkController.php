@@ -59,9 +59,9 @@ class HomeworkController extends Controller
 
     //actualizar tareas
     public function edit($id, Request $request){
-        Homework::where('id_homework', $id->get())
+        Homework::where('id_homework', $id)
         ->update([
-            'status_homework' =>'$request->status',
+            'status_homework' =>'$request->$id',
             ]);
             return view('homework.homeworkUpdate');
     }
