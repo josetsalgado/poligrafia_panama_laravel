@@ -164,8 +164,11 @@ Route::group(['middleware' => 'auth'], function () {
     //borrar clientes
     Route::get('/delete_client/{id}', 'ClientController@destroy');
 
-    //crear cliente y empresa del modal +
+    //crear cliente y empresa del modal + cotizar
     Route::post('/create_client_company', 'ClientCompanyController@store');
+
+    //crear cliente del modal + cotizar
+    Route::post('/create_client_company', 'ClientCompanyController@storeclient');
 
     //registro de pago
     Route::get('/payment_record', 'AccountStatusController@show');

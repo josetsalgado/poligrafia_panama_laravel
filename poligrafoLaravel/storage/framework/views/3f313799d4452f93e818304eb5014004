@@ -100,7 +100,8 @@
         </div>
     </div>
     <!-- Modal Agregar Nueva Empresa & cliente-->
-       <div class="modal fade" style="z-index: 9999" id="newEmpresa" role="dialog">
+
+       <div class="modal fade" style="z-index: 9999;" id="newEmpresa" role="dialog">
                 <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                                 <div class="modal-header">
@@ -109,16 +110,16 @@
                                                 <div class="col-md-5 col-sm-6 col-xs-12">
                                                         <span><b>Agregar Nueva Empresa</b></span>
                                                     </div>
-                                               <div class="col-md-offset-1 col-md-4 col-sm-6 col-xs-12">
-                                                        <span><b>Agregar Nuevo Cliente</b></span>
-                                                    </div>
+                                                <div class="col-md-offset-1 col-md-4 col-sm-6 col-xs-12">
+                                                    <span><b>Agregar Nuevo Cliente</b></span>
+                                                </div>
                                             </div>
                                     </div>
                                 <div class="modal-body">
                                         <!-- content modal -->
                                         <!-- row -->
                                        <div class="row">
-                                                <form id="companyClient" name="companyClient" class="form-horizontal form-label-left input_mask">
+                                                <form id="companyClient" action="create_client_company" method="post" name="companyClient" class="form-horizontal form-label-left input_mask">
                                                     <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>">
                                                                          <!-- crear empresa -->
                                                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -147,50 +148,52 @@
                                                                     </div>
                                                         </div>
                                                                                                       <!-- crear cliente -->
-                                                        <?php /*<div class="col-md-6 col-sm-6 col-xs-12">
+                                                        <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback <?php echo e($errors->has('name') ? 'has-error' : ''); ?>">
+                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback ">
                                                                        <input type="text" class="form-control has-feedback-left" id="name_client" name="name" placeholder="Nombre del Cliente">
                                                                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
-                                                                        <span class="text-danger"><?php echo e($errors->first('name')); ?></span>
+
                                                                     </div>
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback ">
                                                                         <input type="text" class="form-control has-feedback-left" id="position" name="position" placeholder="Cargo">
                                                                         <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
-                                                                         <span class="text-danger"><?php echo e($errors->first('tel')); ?></span>
+
                                                                     </div>
 
-                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback <?php echo e($errors->has('tel') ? 'has-error' : ''); ?>">
+                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback ">
                                                                        <input type="text" class="form-control has-feedback-left" id="tel" name="tel" placeholder="Número Telefonico">
                                                                         <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
-                                                                        <span class="text-danger"><?php echo e($errors->first('tel')); ?></span>
+
                                                                     </div>
 
-                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback <?php echo e($errors->has('email') ? 'has-error' : ''); ?>">
+                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback ">
                                                                         <input type="text" class="form-control has-feedback-left" id="email" name="email" placeholder="Correo">
                                                                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
-                                                                        <span class="text-danger"><?php echo e($errors->first('email')); ?></span>
+
                                                                     </div>
 
-                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback <?php echo e($errors->has('city') ? 'has-error' : ''); ?>">
+                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
                                                                        <input type="text" class="form-control has-feedback-left" id="city" name="city" placeholder="Ciudad">
                                                                         <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
-                                                                        <span class="text-danger"><?php echo e($errors->first('city')); ?></span>
+
                                                                     </div>
-                                                        </div>*/ ?>
+                                                        </div>
 
                                                     <!-- /content modal -->
-                                                    </div>
-                                                   <div class="modal-footer">
+
+
+                                                   <div class="modal-footer col-sm-12" >
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
                                                            <button type="submit" class="btn btn-primary">Guardar</button>
                                                    </div>
                                             </form>
-                                     </div>
+                                       </div>
                             </div>
                     </div>
             </div>
     </div>
+
        <!-- /. modal New Empresa & cliente-->
     <!-- Modal Agregar Nueva Empresa & cliente-->
        <div class="modal fade" id="myModal" role="dialog"></div>
@@ -198,7 +201,7 @@
 
     <script src="js/validate/fn-createBudget.js"></script>
 
-    <script src="js/validate/fn-createCompany&Client.js"></script>
+   <?php /* <script src="js/validate/fn-createCompany&Client.js"></script>*/ ?>
 
     <script type="text/javascript">
         $('#datatable-responsive').DataTable( {

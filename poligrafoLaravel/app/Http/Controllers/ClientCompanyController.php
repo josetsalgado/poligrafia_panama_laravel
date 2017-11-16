@@ -32,7 +32,7 @@ class ClientCompanyController extends Controller
 
     public function store(Request $request)
     {
-        $this->ValidateCreate($request);
+
         Company::insert([
             'id_company' => '',
             'name_company' => $request->name_company,
@@ -42,33 +42,26 @@ class ClientCompanyController extends Controller
             'address_company' => $request->address_company,
         ]);
 
-        return view('company.create');
+        return redirect('butget_client');
     }
-
-    public function ValidateCreate($request)
+    public function storeclient(Request $request)
     {
-        $this->validate($request,[
+        Client::insert([
+            'id_client' => '',
+            'name_client' => $request->name,
+            'tel_client' => $request->tel,
+            'email_client' => $request->email,
+            'city' => $request->city,
+            'company_id' => $request->empresa,
+            'position' => $request->position,
+        ]);
 
-            'tel_company' => 'numeric',
-            'email_compamy' => 'email|unique:itcp_companys,email_compamy',
-            'cost_test_pre_employment' => 'numeric',
-        ],
-            [
-                'tel_company.numeric' => trans("validations.input_format", ['input' => 'telefono']),
-                'email_compamy.email' => trans("validations.input_format", ['input' => 'correo']),
-                'email_compamy.unique' => trans("validations.input_unique", ['input' => 'correo', 'other' => 'correo']),
 
-            ]
-        );
     }
 
 
-    public function update($id)
-    {
-        $company = Company::where('id_company', '=',$id)->get();
-        return view('company.editCompany', compact("company"));
-    }
-    public function show($id)
+
+    public function show()
     {
         //
     }
@@ -79,7 +72,7 @@ class ClientCompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit()
     {
         //
     }
@@ -91,7 +84,7 @@ class ClientCompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update()
     {
         //
     }
@@ -102,7 +95,7 @@ class ClientCompanyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy()
     {
         //
     }
