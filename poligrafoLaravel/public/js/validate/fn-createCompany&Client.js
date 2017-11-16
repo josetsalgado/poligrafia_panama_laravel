@@ -73,6 +73,7 @@ $(document).ready(function(){
 	}//cerrado de la accion del submiting  
     });//cerrada validating jquery 
 }); //cerrado de document ready
+/*
 
 $(document).ready(function(){
     $("#companyClient").validate({
@@ -126,4 +127,5 @@ $(document).ready(function(){
         }//cerrado de la accion del submiting
     });//cerrada validating jquery
 }); //cerrado de document ready
+*/
 

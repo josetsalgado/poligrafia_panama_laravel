@@ -165,7 +165,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/delete_client/{id}', 'ClientController@destroy');
 
     //crear cliente y empresa del modal +
-    Route::post('/create_client_company', 'ClientCompanyController@create');
+    Route::post('/create_client_company', 'ClientCompanyController@store');
 
     //registro de pago
     Route::get('/payment_record', 'AccountStatusController@show');

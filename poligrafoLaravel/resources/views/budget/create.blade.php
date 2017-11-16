@@ -148,7 +148,7 @@
                                                                     </div>
                                                         </div>
                                                                                                       <!-- crear cliente -->
-                                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                                        {{--<div class="col-md-6 col-sm-6 col-xs-12">
 
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('name') ? 'has-error' : '' }}">
                                                                        <input type="text" class="form-control has-feedback-left" id="name_client" name="name" placeholder="Nombre del Cliente">
@@ -178,7 +178,7 @@
                                                                         <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
                                                                         <span class="text-danger">{{ $errors->first('city') }}</span>
                                                                     </div>
-                                                        </div>
+                                                        </div>--}}
 
                                                     <!-- /content modal -->
                                                     </div>
