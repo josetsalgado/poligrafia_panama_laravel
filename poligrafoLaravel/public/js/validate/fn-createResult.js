@@ -54,19 +54,83 @@ $("#tecnicals").change(function () {
                 case "AFMGQT-V2-2R":
                     $(".hidden-div").attr("class","hidden-div");
                     $("#AFMGQT_V2_2R").addClass("show-div");
-                    $("#AFMGQT_V2_2R").attr("name",'AFMGQT-V2-2R');
+                    $("#1").attr("name",'g3_r4');
+                    $("#2").attr("name",'g4_r4');
+                    $("#3").attr("name",'g5_r4');
+                    $("#4").attr("name",'g3_r5');
+                    $("#5").attr("name",'g4_r5');
+                    $("#6").attr("name",'g5_r5');
+
+                    for (var i=7; i<68; i++) {
+                        $("#"+i).removeAttr("name");
+                    }
+                    
                     break;
                 case "AFMGQT-V2-3R":
                     $(".hidden-div").attr("class","hidden-div");
                     $("#AFMGQT_V2_3R").addClass("show-div");
+
+                    //asignar nombre
+                    $("#7").attr("name",'g3_r4');
+                    $("#8").attr("name",'g4_r4');
+                    $("#9").attr("name",'g5_r4');
+                    $("#10").attr("name",'g3_r5');
+                    $("#11").attr("name",'g4_r5');
+                    $("#12").attr("name",'g5_r5');
+                    $("#13").attr("name",'g3_r7');
+                    $("#14").attr("name",'g4_r7');
+                    $("#15").attr("name",'g5_r7');
+
+                    //remove name de los input no seleccionados
+                   for (var i=1; i<7; i++) {
+                        $("#"+i).removeAttr("name");
+                    }
+                    for (var a=16; a<68; a++) {
+                        $("#"+a).removeAttr("name");
+                    }
+
                     break;
                 case "AFMGQT-V2-4R":
                     $(".hidden-div").attr("class","hidden-div");
                     $("#AFMGQT_V2_4R").addClass("show-div");
+                    //asignar nombre
+                    $("#16").attr("name",'g3_r4');
+                    $("#17").attr("name",'g4_r4');
+                    $("#18").attr("name",'g5_r4');
+                    $("#19").attr("name",'g3_r5');
+                    $("#20").attr("name",'g4_r5');
+                    $("#21").attr("name",'g5_r5');
+                    $("#22").attr("name",'g3_r7');
+                    $("#23").attr("name",'g4_r7');
+                    $("#24").attr("name",'g5_r7');
+                    $("#25").attr("name",'g5_r8');
+                    $("#26").attr("name",'g5_r8');
+                    $("#27").attr("name",'g5_r8');
+
+                    //remove name de los input no seleccionados
+                   for (var i=1; i<16; i++) {
+                        $("#"+i).removeAttr("name");
+                    }
+                    for (var a=28; a<68; a++) {
+                        $("#"+a).removeAttr("name");
+                    }
+
+
                     break;
                 case "DLST":
                     $(".hidden-div").attr("class","hidden-div");
                     $("#DLST").addClass("show-div");
+
+
+                    $("#64").attr("name",'g3_r1');
+                    $("#65").attr("name",'g4_r1');
+                    $("#66").attr("name",'g3_r2');
+                    $("#67").attr("name",'g4_r2');
+
+                    for (var a=1; a<64; a++) {
+                        $("#"+a).removeAttr("name");
+                    }
+
                     break;
                 default:
                     break;
@@ -78,6 +142,7 @@ $("#tecnicals").change(function () {
                 case "AFMGQT-V1-2R":
                     $(".hidden-div").attr("class","hidden-div");
                     $("#AFMGQT_V1_2R").addClass("show-div");
+                    
                     break;
                 case "AFMGQT-V1-3R":
                     $(".hidden-div").attr("class","hidden-div");

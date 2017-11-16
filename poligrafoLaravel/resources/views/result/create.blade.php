@@ -9,6 +9,7 @@
             </div>
         </div>
 
+
         <div class="clearfix"></div>
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
@@ -106,32 +107,21 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input id="1" type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input id="1" class="form-control" type="number" min="1" max="9" step="1" value="1">
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
+                                                   <div class="quantity ">
+                                                      <input  id="2" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input id="2" type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-4">
-                                                    <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input id="3" type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                   <div class="quantity ">
+                                                      <input  id="3" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -139,32 +129,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                    <div class="quantity ">
+                                                      <input  id="4" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                    <div class="quantity ">
+                                                      <input  id="5" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                    <div class="quantity ">
+                                                      <input  id="6" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -187,32 +165,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                    <div class="quantity ">
+                                                      <input  id="7" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                    <div class="quantity ">
+                                                      <input  id="8" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                    <div class="quantity ">
+                                                      <input  id="9" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -220,32 +186,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                    <div class="quantity ">
+                                                      <input  id="10" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="11" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="12" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -253,32 +207,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="13" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="14" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="15" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -301,32 +243,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                    <div class="quantity ">
+                                                      <input  id="16" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="17" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="18" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -334,32 +264,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="19" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="20" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="21" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -367,32 +285,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="22" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="23" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R7:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="24" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -400,32 +306,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="25" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="26" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="27" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -448,32 +342,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="28" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="29" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="30" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -481,32 +363,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="31" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="32" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="33" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -533,32 +403,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="34" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="35" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="36" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -566,32 +424,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="37" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="38" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="39" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -599,32 +445,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="40" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="41" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="42" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -651,32 +485,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="43" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="44" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R5:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="45" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -684,32 +506,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="46" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="47" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="48" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -717,32 +527,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R11:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="49" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R11:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="50" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R11:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="51" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -771,32 +569,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="52" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="53" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="54" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -804,32 +590,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="55" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="56" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R6:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="57" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -837,32 +611,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="58" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="59" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R8:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="60" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -870,32 +632,20 @@
                                             <div class="form-group">
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="61" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="62" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R10:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="63" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -924,22 +674,14 @@
                                             <div class="form-group">
                                                 <div class="col-md-6">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="64" class="form-control" type="number" min="-20" max="20" step="1" value="0" >
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R1:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="65" class="form-control" type="number" min="-20" max="20" step="1" value="0">
                                                     </div>
                                                 </div>
                                             </div>
@@ -947,22 +689,14 @@
                                             <div class="form-group">
                                                 <div class="col-md-6">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="66" class="form-control" type="number" min="-20" max="20" step="1" value="0" >
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R2:</label>
-                                                    <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
-                                                        <div class="input-group-btn-vertical">
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                            <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                                        </div>
+                                                     <div class="quantity ">
+                                                      <input  id="67" class="form-control" type="number" min="-20" max="20" step="1" value="0" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -971,13 +705,13 @@
                                                 <div class="col-md-6">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">GT:</label>
                                                     <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0" disabled="disabled">
+                                                        <input type="text" id="gt1" class="form-control" value="0" disabled="disabled">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">GT:</label>
                                                     <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0" disabled="disabled">
+                                                        <input type="text" id="gt2" class="form-control" value="0" disabled="disabled">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1063,19 +797,47 @@
     <script src="js/tab/tab_system.js"></script>
 
 
-    <script type="text/javascript">
-        (function ($) {
-            $('.spinner .btn:first-of-type').on('click', function() {
-                $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
-            });
-            $('.spinner .btn:last-of-type').on('click', function() {
-                $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-            });
-        })(jQuery);
-    </script>
 
 
     <script type="text/javascript">
+        //suma gran total 1
+        $('#64').change(function(){
+            console.log('sss');
+            var x=$('#64').val();
+            var y=$('#66').val();
+            var suma= (parseInt(x)+ parseInt(y));
+
+            $('#gt1').val(suma);
+        });
+
+        $('#66').change(function(){
+            console.log('sss');
+            var x=$('#64').val();
+            var y=$('#66').val();
+            var suma= (parseInt(x)+ parseInt(y));
+
+            $('#gt1').val(suma);
+        });
+        //suma gran total 2
+        $('#65').change(function(){
+            console.log('sss');
+            var x=$('#65').val();
+            var y=$('#67').val();
+            var suma= (parseInt(x)+ parseInt(y));
+
+            $('#gt2').val(suma);
+        });
+
+        $('#67').change(function(){
+            console.log('sss');
+            var x=$('#65').val();
+            var y=$('#67').val();
+            var suma= (parseInt(x)+ parseInt(y));
+
+            $('#gt2').val(suma);
+        });
+
+
         function myFunction(iddlst) {
             document.getElementById(iddlst.id).innerHTML = '';
 
@@ -1097,12 +859,44 @@
         }
 
 
+    jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up"><i class="fa fa-plus-square"></i></div><div class="quantity-button quantity-down"><i class="fa fa-minus-square"></i></div></div>').insertAfter('.quantity input');
+    jQuery('.quantity').each(function() {
+      var spinner = jQuery(this),
+        input = spinner.find('input[type="number"]'),
+        btnUp = spinner.find('.quantity-up'),
+        btnDown = spinner.find('.quantity-down'),
+        min = input.attr('min'),
+        max = input.attr('max');
 
+      btnUp.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue >= max) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue + 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+      btnDown.click(function() {
+        var oldValue = parseFloat(input.val());
+        if (oldValue <= min) {
+          var newVal = oldValue;
+        } else {
+          var newVal = oldValue - 1;
+        }
+        spinner.find("input").val(newVal);
+        spinner.find("input").trigger("change");
+      });
+
+    });
 
     </script>
 
     <div id="fc_create" data-toggle="modal" data-target="#CalenderModalNew"></div>
 
     <script src="js/validate/fn-createAppoiment.js"></script>
+
 
 @stop
