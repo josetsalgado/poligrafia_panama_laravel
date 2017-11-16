@@ -32,65 +32,40 @@ class HomeworkController extends Controller
         array_push($array, compact('dateMonth', 'getDay', 'getDate'));
         return $array;
     }
-    
+    //crear nueva tarea
     public function CreateHomework(Request $request){
         //insertar data de la tarea
         Homework::insert([
-          'name_homework' => $request->add,
-          'status_homework' =>'',
+          'name_homework' => $request->add_homework,
+          'status_homework' =>'0',
           'date_homework' => Carbon::now()->format('Y-m-d'),
           'userCreate_homework' => $request->userCreate,
           ]);
-          return view('homework.homeworkCreate');
-      }
+        return view('homework.homeworkCreate');
+    }
+
 
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+
+    //lista de tareas
+    public function show(){
+        $homeworks = Homework::all();
+        return view("homework.homework", compact("homeworks"));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    //actualizar tareas
+    public function edit($id, Request $request){
+        Homework::where('id_homework', $id->get())
+        ->update([
+            'status_homework' =>'$request->status',
+            ]);
+            return view('homework.homeworkUpdate');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show()
-    {
-        return view('homework.homework');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.

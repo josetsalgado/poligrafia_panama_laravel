@@ -201,11 +201,14 @@ Route::group(['middleware' => 'auth'], function () {
     //retenciones envio de correo
     Route::get('sendhtmlemail_retencion/{id}','MailController@html_email_retencion') ;
 
-    //VIsta interna de tareas
+    //Vista interna de tareas
     Route::get('homework','HomeworkController@show') ;
 
-     //tareas
+     //Crear tareas
     Route::post('homework_create', 'HomeworkController@CreateHomework');
+
+    //Actualizar estatus de tareas
+    Route::post('homework_update', 'HomeworkController@edit');
 
     //pdf de reporte estado de cuenta
     Route::get('pdf_account_report','ReportAccountController@pdf') ;
