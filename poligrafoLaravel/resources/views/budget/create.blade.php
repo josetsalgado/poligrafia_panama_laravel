@@ -119,9 +119,9 @@
                                         <!-- content modal -->
                                         <!-- row -->
                                        <div class="row">
-                                                <form class="form-horizontal form-label-left input_mask">
+                                                <form id="companyClient" name="companyClient" class="form-horizontal form-label-left input_mask">
                                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                    <!-- crear empresa -->
+                                                                         <!-- crear empresa -->
                                                         <div class="col-md-6 col-sm-6 col-xs-12">
                                                                 <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
                                                                         <input type="text" class="form-control has-feedback-left" id="name_company" name="name_company" placeholder="Razón Social">
@@ -146,45 +146,52 @@
                                                                         <input type="text" class="form-control has-feedback-left" id="address_company" name="address_company" placeholder="Direccón">
                                                                         <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
                                                                     </div>
-                                                           </div>
+                                                        </div>
                                                                                                       <!-- crear cliente -->
                                                         <div class="col-md-6 col-sm-6 col-xs-12">
 
-                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
+                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('name') ? 'has-error' : '' }}">
                                                                        <input type="text" class="form-control has-feedback-left" id="name_client" name="name" placeholder="Nombre del Cliente">
                                                                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                                                                        <span class="text-danger">{{ $errors->first('name') }}</span>
                                                                     </div>
-                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
+                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback ">
                                                                         <input type="text" class="form-control has-feedback-left" id="position" name="position" placeholder="Cargo">
                                                                         <span class="fa fa-suitcase form-control-feedback left" aria-hidden="true"></span>
+                                                                         <span class="text-danger">{{ $errors->first('tel') }}</span>
                                                                     </div>
 
-                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
+                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('tel') ? 'has-error' : '' }}">
                                                                        <input type="text" class="form-control has-feedback-left" id="tel" name="tel" placeholder="Número Telefonico">
                                                                         <span class="fa fa-phone form-control-feedback left" aria-hidden="true"></span>
+                                                                        <span class="text-danger">{{ $errors->first('tel') }}</span>
                                                                     </div>
 
-                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
+                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('email') ? 'has-error' : '' }}">
                                                                         <input type="text" class="form-control has-feedback-left" id="email" name="email" placeholder="Correo">
                                                                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
+                                                                        <span class="text-danger">{{ $errors->first('email') }}</span>
                                                                     </div>
 
-                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback">
+                                                                <div class="col-md-10 col-sm-6 col-xs-12 form-group has-feedback {{ $errors->has('city') ? 'has-error' : '' }}">
                                                                        <input type="text" class="form-control has-feedback-left" id="city" name="city" placeholder="Ciudad">
                                                                         <span class="fa fa-map-marker form-control-feedback left" aria-hidden="true"></span>
+                                                                        <span class="text-danger">{{ $errors->first('city') }}</span>
                                                                     </div>
-                                                            </div>
-                                                </div>
-                                        <!-- /content modal -->
-                                    </div>
-                               <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                       <button type="submit" class="btn btn-primary">Guardar</button>
-                                    </div>
-                                </form>
+                                                        </div>
+
+                                                    <!-- /content modal -->
+                                                    </div>
+                                                   <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                           <button type="submit" class="btn btn-primary">Guardar</button>
+                                                   </div>
+                                            </form>
+                                     </div>
                             </div>
-                   </div>
-           </div>
+                    </div>
+            </div>
+    </div>
        <!-- /. modal New Empresa & cliente-->
     <!-- Modal Agregar Nueva Empresa & cliente-->
        <div class="modal fade" id="myModal" role="dialog"></div>

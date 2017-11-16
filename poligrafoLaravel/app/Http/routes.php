@@ -53,24 +53,6 @@ Route::group(['middleware' => 'auth'], function () {
     //actualizar datos del usuario por id
     Route::get('/show_user/{id}', 'UserController@edit');
 
-    //crear cliente
-    Route::get('/create_client', 'ClientController@create');
-
-    //insertar registros del cliente en la bd y validar los mismos
-    Route::post('/create_client', 'ClientController@store');
-
-    //mostrar clientes
-    Route::get('/show_client', 'ClientController@show');
-
-    //editar un clientes por id
-    Route::get('/show_client/{id}', 'ClientController@edit');
-
-    //actualizar informacion de un cliente 
-    Route::post('/update_client', 'ClientController@update');
-
-    //borrar clientes
-    Route::get('/delete_client/{id}', 'ClientController@destroy');
-
     //solicitudes de citas
     Route::get('/quotes_client', 'QuotesController@index');
 
@@ -82,8 +64,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     //solicitudes de citas
     Route::get('/appoiment_company/{code}', 'QuotesController@getClient');
-
-
 
     //iditar una cita
     Route::get('/editQuote/{id}', 'QuotesController@edit');
@@ -151,20 +131,41 @@ Route::group(['middleware' => 'auth'], function () {
     //crear empresa
     Route::get('/create_company', 'CompanyController@create');
 
-    //editar empresa
-    Route::get('/edit_company/{id}', 'CompanyController@update');
-
-    //crear empresa
-    Route::post('/edit_company', 'CompanyController@edit');
-
     //crear empresas post form
     Route::post('/create_company', 'CompanyController@store');
+
+    //editar empresa vista
+    Route::get('/edit_company/{id}', 'CompanyController@update');
+
+    //editar empresa form
+    Route::post('/edit_company', 'CompanyController@edit');
 
     //ver empresas
     Route::get('/show_company', 'CompanyController@show');
 
     //eliminar compañias
     Route::get('/delete_company/{id}', 'CompanyController@delete');
+
+    //crear cliente
+    Route::get('/create_client', 'ClientController@create');
+
+    //insertar registros del cliente en la bd y validar los mismos
+    Route::post('/create_client', 'ClientController@store');
+
+    //mostrar clientes
+    Route::get('/show_client', 'ClientController@show');
+
+    //editar un clientes por id
+    Route::get('/show_client/{id}', 'ClientController@edit');
+
+    //actualizar informacion de un cliente
+    Route::post('/update_client', 'ClientController@update');
+
+    //borrar clientes
+    Route::get('/delete_client/{id}', 'ClientController@destroy');
+
+    //crear cliente y empresa del modal +
+    Route::post('/create_client_company', 'ClientCompanyController@create');
 
     //registro de pago
     Route::get('/payment_record', 'AccountStatusController@show');

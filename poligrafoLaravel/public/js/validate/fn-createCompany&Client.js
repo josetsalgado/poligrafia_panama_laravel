@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $("#createCompany").validate({
+    $("#companyClient").validate({
         
         wrapper: "div",
         errorClass: "text-danger",
@@ -34,14 +34,14 @@ $(document).ready(function(){
             },
 	},
 	submitHandler: function(form){
-            var dataString = $('#createCompany').serialize();
+            var dataString = $('#companyClient').serialize();
             console.log(dataString);
             $.ajax({
 	        type: "POST",
-	        url: "create_company",
+	        url: "create_client_company",
 	        data: dataString,
                 success: function (data) {
-                    $('#createCompany')[0].reset();
+                    $('#companyClient')[0].reset();
                     alertify.success('Compañia creada exitosamente');
                 }, error: function (err) {
                     if (err.status === 422) {
@@ -75,7 +75,7 @@ $(document).ready(function(){
 }); //cerrado de document ready
 
 $(document).ready(function(){
-    $("#createClient").validate({
+    $("#companyClient").validate({
 
         wrapper: "div",
         errorClass: "text-danger",
@@ -87,15 +87,15 @@ $(document).ready(function(){
             empresa: { required: "El campo empresa es obligatorio." },
         },
         submitHandler: function(form){
-            var dataString = $('#createClient').serialize();
+            var dataString = $('#companyClient').serialize();
             console.log(dataString);
             $.ajax({
                 type: "POST",
-                url: "create_client",
+                url: "create_client_company",
                 data: dataString,
                 success: function (data) {
                     alertify.success('El nuevo cliente se a agregado de forma correcta');
-                    $('#createClient')[0].reset();
+                    $('#companyClient')[0].reset();
                 },error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.
