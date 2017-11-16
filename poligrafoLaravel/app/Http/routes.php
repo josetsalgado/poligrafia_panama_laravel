@@ -212,6 +212,10 @@ Route::group(['middleware' => 'auth'], function () {
     //detalle de informe de prueba
     Route::get('detail_informe_prueba','TestReportController@detail') ;
 
+    //strore para registro de resultados de poligrafia
+    Route::post('result_create', 'ResultController@store');
+
+
 
 
 });

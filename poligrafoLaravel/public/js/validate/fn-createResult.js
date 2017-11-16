@@ -1,3 +1,4 @@
+
 var options = {
     pre_empleo: ["","AFMGQT-V2-2R", "AFMGQT-V2-3R", "AFMGQT-V2-4R", "DLST"],
     especifica: ["","AFMGQT-V1-2R", "AFMGQT-V1-3R", "UTAH", "RASKIN"],
@@ -53,6 +54,7 @@ $("#tecnicals").change(function () {
                 case "AFMGQT-V2-2R":
                     $(".hidden-div").attr("class","hidden-div");
                     $("#AFMGQT_V2_2R").addClass("show-div");
+                    $("#AFMGQT_V2_2R").attr("name",'AFMGQT-V2-2R');
                     break;
                 case "AFMGQT-V2-3R":
                     $(".hidden-div").attr("class","hidden-div");

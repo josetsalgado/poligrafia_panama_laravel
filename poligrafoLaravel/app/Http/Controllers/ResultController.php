@@ -8,6 +8,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Service;
 use App\Company;
+use App\ResultQualification;
+use App\ResultData;
 use DB;
 
 class ResultController extends Controller
@@ -47,6 +49,7 @@ class ResultController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request);
     }
 
     /**

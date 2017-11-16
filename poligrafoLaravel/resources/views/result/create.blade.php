@@ -33,10 +33,12 @@
                 </div>
                 <div class="x_content">
                     <div class="col-md-12 col-sm-12 col-xs-12">
-                        <form class="form-horizontal form-label-left">
+                        <form class="form-horizontal form-label-left" action="result_create" method="POST">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
                             <div class="" role="tabpanel" data-example-id="togglable-tabs">
                                 <ul id="myTab" class="nav nav-tabs bar_tabs" role="tablist">
                                     <li id="li1" class="active"><a href="#tab_content1" role="tab" data-toggle="tab">Prueba 1</a></li>
+                                
                                     <li id="last"><a href="#addTab"  onclick="removetab()"><span class="glyphicon glyphicon-plus"></span></a></li>
                                 </ul>
                                 <div id="myTabContent" class="tab-content">
@@ -48,11 +50,12 @@
                                     </div>
                                     <div class="form-group">
                                         <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
-                                            <input type="text" class="form-control has-feedback-left" id="poligrafista" name="poligrafista" placeholder="{{ Auth::user()->name }}" disabled="disabled">
+                                            <input type="text" class="form-control has-feedback-left" id="poligra" name="poligraf" placeholder="{{ Auth::user()->name }}" disabled="disabled">
+                                            <input type="hidden" name="name_poligrafista" value="{{ Auth::user()->name }}">
                                             <span class="fa fa-user-md form-control-feedback left" aria-hidden="true"></span>
                                         </div>
                                         <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
-                                            <select id="empresa" name="empresa" class="form-control selc-empresa" required>
+                                            <select id="empresa" name="id_company" class="form-control selc-empresa" required>
                                                 <option value="">Empresa</option>
                                                 @foreach ($Company as $key => $value)
                                                 <option value="{{$value['id_company']}}">{{strtoupper($value['name_company'])}}</option>
@@ -61,7 +64,7 @@
                                             <span class="fa fa-building form-control-feedback left" aria-hidden="true"></span>
                                         </div>
                                         <div class="col-md-4 col-sm-6 col-xs-12 form-group has-feedback">
-                                            <select id="client" name="client" class="form-control selc-empresa" required>
+                                            <select id="client" name="id_candidate" class="form-control selc-empresa" required>
                                                <option value="">Seleccione</option>
                                                 
                                             </select>
@@ -74,7 +77,7 @@
                                     <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
                                         <div class="form-group">
                                             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                                <select id="services" class="form-control selc-empresa" required>
+                                                <select id="services" name="id_type_service" class="form-control selc-empresa" required>
                                                     <option value="">Tipo de Prueba</option>
                                                     @foreach($services as $service)
                                                         <option value="{{ $service->name_service }}">{{ $service->name_service }}</option>
@@ -83,7 +86,7 @@
                                                 <span class="fa fa-hospital-o form-control-feedback left" aria-hidden="true"></span>
                                             </div>
                                             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                                                <select id="tecnicals" class="form-control selc-empresa">
+                                                <select id="tecnicals" name="tecnical" class="form-control selc-empresa">
                                                     <option value="">Seleccione</option>
                                                 </select>
                                                 <span class="fa fa-clipboard form-control-feedback left" aria-hidden="true"></span>
@@ -104,7 +107,7 @@
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
                                                     <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
+                                                        <input id="1" type="text" class="form-control" value="0">
                                                         <div class="input-group-btn-vertical">
                                                             <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
                                                             <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -114,7 +117,7 @@
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
                                                     <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
+                                                        <input id="2" type="text" class="form-control" value="0">
                                                         <div class="input-group-btn-vertical">
                                                             <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
                                                             <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -124,7 +127,7 @@
                                                 <div class="col-md-4">
                                                     <label class="control-label col-md-5 col-sm-3 col-xs-3">Calificación R4:</label>
                                                     <div class="input-group spinner col-md-3">
-                                                        <input type="text" class="form-control" value="0">
+                                                        <input id="3" type="text" class="form-control" value="0">
                                                         <div class="input-group-btn-vertical">
                                                             <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
                                                             <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -995,7 +998,7 @@
                                             <div class="col-md-12">
                                                 <label class="control-label col-md-2 col-sm-2 col-xs-2">Observaciones:</label>
                                                 <div class="col-md-10">
-                                                    <textarea id="message" rows="6" class="form-control" name="observaciones" id="observaciones"></textarea>
+                                                    <textarea id="message" rows="6" class="form-control" name="observation" id="observaciones"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -1024,7 +1027,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        
                     </div>
                 </div>
             </div>
@@ -1054,6 +1057,7 @@
             </div>
         </div>
     </div>
+    </form>
     <!-- /. Modal DLST -->
     <script src="js/validate/fn-createResult.js"></script>
     <script src="js/tab/tab_system.js"></script>
