@@ -67,53 +67,6 @@ $(document).ready(function () {
             return false;
       });
 
-      //Calendario
-      $(function() {
-            $('input[name="birthdate"]').daterangepicker({
-                  singleDatePicker: true,
-                  showDropdowns: true,
-                  "locale": {
-                        "direction": "ltr",
-                        "format": "DD/MM/YYYY",
-                        "separator": " - ",
-                        "applyLabel": "Aplicar",
-                        "cancelLabel": "Cancelar",
-                        "fromLabel": "From",
-                        "toLabel": "To",
-                        "customRangeLabel": "Personalizado",
-                        "daysOfWeek": [
-                        "Do",
-                        "Lu",
-                        "Ma",
-                        "Mi",
-                        "Ju",
-                        "Vi",
-                        "Sa"
-                        ],
-                        "monthNames": [
-                        "Enero",
-                        "Febrero",
-                        "Marzo",
-                        "Abril",
-                        "Mayo",
-                        "Junio",
-                        "Julio",
-                        "Agosto",
-                        "Septiembre",
-                        "Octubre",
-                        "Noviembre",
-                        "Diciembre"
-                        ],
-                        "firstDay": 1
-                  },
-                  "alwaysShowCalendars": true,
-                  "startDate": "11/01/2017",
-            },
-            function(start, end, label) {
-                  var years = moment().diff(start, 'years');
-            });
-      });
-      
       //validar envio de tarea
       $("#createHomework").validate({
 
@@ -137,6 +90,7 @@ $(document).ready(function () {
                   $('#createHomework')[0].reset();
                   alertify.success('Tarea creada con exito');
                   $("#load_update_homework").load("homework #load_update_homework");
+                  $("#top_nav").load("homework #top_nav");
                   },error: function (err) {
                     if (err.status === 422) {
                         $errors = err.responseJSON; //this will get the errors response data.

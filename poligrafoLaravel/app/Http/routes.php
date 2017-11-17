@@ -164,11 +164,8 @@ Route::group(['middleware' => 'auth'], function () {
     //borrar clientes
     Route::get('/delete_client/{id}', 'ClientController@destroy');
 
-    //crear cliente y empresa del modal + cotizar
+    //crear cliente y empresa del modal +
     Route::post('/create_client_company', 'ClientCompanyController@store');
-
-    //crear cliente del modal + cotizar
-    Route::post('/create_client_company', 'ClientCompanyController@storeclient');
 
     //registro de pago
     Route::get('/payment_record', 'AccountStatusController@show');
@@ -211,7 +208,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('homework_create', 'HomeworkController@CreateHomework');
 
     //Actualizar estatus de tareas
-    Route::post('homework_update', 'HomeworkController@edit');
+    Route::post('homework_update/id', 'HomeworkController@edit');
+
+    //Eliminar tareas
+    Route::get('/delete_homework/{id}', 'HomeworkController@delete');
+
+    //dashboard tareas
+ //   Route::get('homework','HomeworkController@show') ;
 
     //pdf de reporte estado de cuenta
     Route::get('pdf_account_report','ReportAccountController@pdf') ;
