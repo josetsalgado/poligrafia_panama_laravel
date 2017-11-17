@@ -46,10 +46,97 @@ class ResultController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    
+
     public function store(Request $request)
     {
-        //
         dd($request);
+        //
+        ResultData::insert([
+          'name_poligrafista' => $request->name_poligrafista,
+          'id_company' => $request->id_company,
+          'id_candidate' => $request->id_candidate,
+          'type_service' => $request->id_type_service,
+          'tecnical' => $request->tecnical,
+          'observation' => $request->observation
+        ]);
+       
+            switch ($request->id_type_service) {
+                case "Pre-empleo":                 
+                        switch ($request->tecnical) {
+                            case "AFMGQT-V2-2R":
+                             ResultQualification::insert([
+                                  'id_candidate' => $request->id_candidate,
+                                  'type_verification' => "3_graficas",
+                                  'type_calification' => "r_4",
+                                  'result' => $request->g3_r4,
+                                  'name_tecnical' => $request->tecnical                                  
+                                ]);
+                             ResultQualification::insert([
+                                  'id_candidate' => $request->id_candidate,
+                                  'type_verification' => "4_graficas",
+                                  'type_calification' => "r_4",
+                                  'result' => $request->g4_r4,
+                                  'name_tecnical' => $request->tecnical                                  
+                                ]);
+                             ResultQualification::insert([
+                                  'id_candidate' => $request->id_candidate,
+                                  'type_verification' => "5_graficas",
+                                  'type_calification' => "r_4",
+                                  'result' => $request->g5_r4,
+                                  'name_tecnical' => $request->tecnical                                  
+                                ]);
+                             ResultQualification::insert([
+                                  'id_candidate' => $request->id_candidate,
+                                  'type_verification' => "3_graficas",
+                                  'type_calification' => "r_5",
+                                  'result' => $request->g3_r5,
+                                  'name_tecnical' => $request->tecnical                                  
+                                ]);
+                             ResultQualification::insert([
+                                  'id_candidate' => $request->id_candidate,
+                                  'type_verification' => "4_graficas",
+                                  'type_calification' => "r_5",
+                                  'result' => $request->g4_r5,
+                                  'name_tecnical' => $request->tecnical                                  
+                                ]);
+                             ResultQualification::insert([
+                                  'id_candidate' => $request->id_candidate,
+                                  'type_verification' => "5_graficas",
+                                  'type_calification' => "r_5",
+                                  'result' => $request->g5_r5,
+                                  'name_tecnical' => $request->tecnical                                  
+                                ]);
+                            
+                                
+                                break;
+                            case "AFMGQT-V2-3R":
+                                
+                                break;
+                            case "AFMGQT-V2-4R":
+                                
+                                break;
+                            case "DLST":
+                                
+                                break;
+                            default:
+                                
+                        }
+
+                    break;
+                case "Especifica":
+                   
+                    break;
+                case "Rutina":
+
+                    break;
+                case "Reevaluación":
+
+                    break;
+                default:
+                  
+            }
     }
 
     /**
