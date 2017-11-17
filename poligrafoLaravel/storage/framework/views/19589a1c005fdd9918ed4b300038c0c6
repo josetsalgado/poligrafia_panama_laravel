@@ -177,7 +177,7 @@
 
         <div class="top_nav">
             <div class="nav_menu">
-                <nav>
+                <nav id="top_nav">
                     <div class="nav toggle">
                         <a id="menu_toggle"><i class="fa fa-bars"></i></a>
                     </div>
@@ -208,54 +208,20 @@
                         <li role="presentation" class="dropdown">
                             <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                                 <i class="fa fa-folder-open-o"></i>
-                                <span class="badge bg-green">6</span>
+                                <span id="totalhomework" class="badge bg-green"><?php echo e($totalHomework); ?></span>
                             </a>
-                            <ul id="menu1 " class="dropdown-menu list-unstyled msg_list" role="menu">
-
-                                <li>
-                                    <a href="homework">
-                                        <span href="homework">
-                                            <span>Tarea 1...</span>
-                                            <span class="time">3 mins ago</span>
-                                        </span>
-                                        <span class="message">
-                                             Film festivals used to be do-or-die moments for movie makers. They were where...
-                                         </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="homework">
-                                         <div href="homework">
-                                             <span>Tarea 2...</span>
-                                             <span class="time">3 mins ago</span>
-                                            <span class="message">
-                                                Film festivals used to be do-or-die moments for movie makers. They were where...
+                            <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                                    <?php foreach($homeworks as $key => $homework): ?>
+                                    <li>
+                                        <a href="homework">
+                                            <span href="homework">
+                                                <span>Tarea <?php echo e($key + 1); ?></span>
+                                                <span class="time">3 mins ago</span>
                                             </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="homework">
-                                        <span>
-                                            <span>Tarea 3...</span>
-                                            <span class="time">3 mins ago</span>
-                                        </span>
-                                        <span class="message">
-                                            Film festivals used to be do-or-die moments for movie makers. They were where...
-                                        </span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="homework">
-                                        <span>
-                                          <span>Tarea 4..</span>
-                                          <span class="time">3 mins ago</span>
-                                        </span>
-                                        <span class="message">
-                                             Film festivals used to be do-or-die moments for movie makers. They were where...
-                                        </span>
-                                    </a>
-                                </li>
+                                            <span class="message"><?php echo e($homework->name_homework); ?></span>
+                                        </a>
+                                    </li>
+                                    <?php endforeach; ?>
                                 <?php endif; ?>
                             </ul>
                         </li>

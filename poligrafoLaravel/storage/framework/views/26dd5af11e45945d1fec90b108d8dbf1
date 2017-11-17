@@ -1,2 +1,0 @@
-<h4>ok</h4>
-<pre><?php echo e($xx); ?></pre>

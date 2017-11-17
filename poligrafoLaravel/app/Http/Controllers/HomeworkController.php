@@ -32,6 +32,8 @@ class HomeworkController extends Controller
         array_push($array, compact('dateMonth', 'getDay', 'getDate'));
         return $array;
     }
+
+
     //crear nueva tarea
     public function CreateHomework(Request $request){
         //insertar data de la tarea
@@ -54,39 +56,23 @@ class HomeworkController extends Controller
     //lista de tareas
     public function show(){
         $homeworks = Homework::all();
-        return view("homework.homework", compact("homeworks"));
+        $totalHomework = Homework::where("date_homework", "=", Carbon::now()->format('Y-m-d'))->count();
+        return view('homework.homework', compact('homeworks','totalHomework'));
     }
 
     //actualizar tareas
     public function edit($id, Request $request){
-        Homework::where('id_homework', $id->get())
+        Homework::where('id_homework', $id)
         ->update([
-            'status_homework' =>'$request->status',
+            'status_homework' =>'$request->$id',
             ]);
             return view('homework.homeworkUpdate');
     }
 
+    public function delete($id){
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
+        Homework::where('id_homework', '=', $id)->delete();
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+    
 }
