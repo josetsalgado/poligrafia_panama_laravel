@@ -51,7 +51,6 @@ class ResultController extends Controller
 
     public function store(Request $request)
     {
-        dd($request);
         //
         ResultData::insert([
           'name_poligrafista' => $request->name_poligrafista,
